@@ -1,0 +1,84 @@
+/* vars */
+:root {
+  --font-regular: 'Source Sans Pro Regular';
+  --font-italic: 'Source Sans Pro Italic';
+  --font-bold: 'Source Sans Pro Bold';
+  --font-bold-italic: 'Source Sans Pro Bold Italic';
+  --font-light: 'Source Sans Pro Light';
+  --font-light-italic: 'Source Sans Pro Light Italic';
+  --font-semi-bold: 'Source Sans Pro Semi Bold';
+  --font-semi-bold-italic: 'Source Sans Pro Semi Bold Italic';
+  --font-black: 'Source Sans Pro Black';
+  --font-black-italic: 'Source Sans Pro Black Italic';
+}
+
+/*  basics */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/*  Button page */
+.btn-block:not(:first-child) {
+  margin-top: 16px;
+}
+
+.btn-block button:not(:last-child) {
+  margin-right: 5px;
+}
+
+/*  Icon page */
+.icon-type-header {
+  text-align: center;
+  font-family: var(--font-semi-bold);
+  font-size: 2rem;
+}
+
+.icon-wrapper {
+  flex-basis: 10%;
+  margin: 6px;
+}
+
+.icon-label {
+  font-size: 14px;
+  margin-top: 6px;
+  text-align: center;
+  font-family: var(--font-regular);
+}
+
+/*  Radio page */
+.radio {
+  font-family: var(--font-regular);
+}
+
+.radio-wrapper:not(:first-child) {
+  padding-top: 10px;
+}
+
+/* RadioGroup */
+.radio-group-wrapper {
+  font-family: var(--font-regular);
+}
+
+.radio-group-header {
+  font-family: var(--font-black);
+}
+
+/* InputPassword */
+.input-password-wrapper:not(:first-child) {
+  margin-top: 10px;
+}
+
+.input-password-wrapper input {
+  font-family: var(--font-regular);
+}
