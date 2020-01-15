@@ -31,22 +31,26 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "css-loader": "^3.4.2",
-    "glob": "^7.1.6",
-    "postcss-loader": "^3.0.0",
-    "style-loader": "^1.1.2",
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.5",
-    "file-loader": "^5.0.2",
-    "webpack-cli": "^3.3.10",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
     "eslint-plugin-react": "^7.16.0",
+    "file-loader": "^5.0.2",
+    "glob": "^7.1.6",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "react-styleguidist": "^10.2.1",
-    "webpack": "^4.41.2"
+    "style-loader": "^1.1.2",
+    "sugarss": "^2.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "publishConfig": {
     "registry": "http://srv-mvn-repo/repository/npm-private/"

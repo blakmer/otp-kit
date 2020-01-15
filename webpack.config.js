@@ -1,49 +1,49 @@
-const glob = require("glob");
+const glob = require('glob')
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.css$/,
-        exclude: "/src/assets/docs.css",
+        exclude: '/src/assets/docs.css',
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader",
-            options: { modules: true }
+            loader: 'css-loader',
+            options: { modules: true },
           },
-          "postcss-loader"
-        ]
+          'postcss-loader',
+        ],
       },
       {
         test: /\.js$/,
-        exclude: "/node_modules/",
+        exclude: '/node_modules/',
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-env",
+              '@babel/preset-env',
               {
-                plugins: ["@babel/plugin-proposal-class-properties"]
-              }
-            ]
-          }
-        }
+                plugins: ['@babel/plugin-proposal-class-properties'],
+              },
+            ],
+          },
+        },
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         use: [
           {
-            loader: "file-loader"
-          }
-        ]
-      }
-    ]
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
   },
   externals: {
-    react: "React",
-    "react-dom": "ReactDom"
-  }
-};
+    react: 'React',
+    'react-dom': 'ReactDom',
+  },
+}
