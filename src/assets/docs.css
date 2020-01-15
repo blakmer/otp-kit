@@ -1,5 +1,6 @@
-/* vars */
+/** variables */
 :root {
+  /** fonts */
   --font-regular: 'Squad Regular';
   --font-italic: 'Squad RegularItalic';
   --font-bold: 'Squad Bold';
@@ -10,75 +11,46 @@
   --font-semi-bold-italic: 'Squad SemiBoldItalic';
   --font-black: 'Squad Black';
   --font-black-italic: 'Squad BlackItalic';
-}
 
-/*  basics */
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+  /** colors */
+  --color-primary: #52ae30;
+  --color-primary-hover: #74bf1e;
+  --color-highlighted: #ff6600;
+  --color-highlighted-hover: #ff802b;
+  --color-blue: #1b82e3;
+  --color-blue-hover: #3e9ef7;
+  --color-error: #ff435a;
+  --color-error-hover: #ff5c6f;
+  --color-alert: #ffcc00;
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
+  --color-text-primary: #1b1f27;
+  --color-text-secondary: #6e7482;
+  --color-text-disabled: #ababab;
+  --color-text-inverse: #ffffff;
 
-.align-center {
-  align-items: center;
-}
+  --color-border: #8e939f;
+  --color-shadow: rgba(73, 92, 136, 0.15);
 
-/*  Button page */
-.btn-block:not(:first-child) {
-  margin-top: 16px;
-}
+  --color-bg-grey-1: #d3d9e6;
+  --color-bg-grey-2: #e2e6f0;
+  --color-bg-grey-3: #eff2f9;
+  --color-bg-grey-4: #f7f9ff;
+  --color-bg-input-disabled: #f1f1f1;
+  --color-bg-pastel-yellow: #fff8db;
+  --color-bg-pastel-orange: #ffefd6;
+  --color-bg-pastel-red: #ffe0e3;
+  --color-bg-pastel-blue: #dbf4fa;
+  --color-bg-pastel-green: #def7ea;
 
-.btn-block button:not(:last-child) {
-  margin-right: 5px;
-}
+  --color-hero-bg-pastel-yellow: #e9c597;
+  --color-hero-bg-pastel-orange: #f6ae8b;
+  --color-hero-bg-pastel-red: #dbb4c1;
+  --color-hero-bg-pastel-purple: #d1bcdc;
+  --color-hero-bg-pastel-blue: #a3cbe6;
+  --color-hero-bg-pastel-green: #a8ccab;
 
-/*  Icon page */
-.icon-type-header {
-  text-align: center;
-  font-family: var(--font-semi-bold);
-  font-size: 2rem;
-}
-
-.icon-wrapper {
-  flex-basis: 10%;
-  margin: 6px;
-}
-
-.icon-label {
-  font-size: 14px;
-  margin-top: 6px;
-  text-align: center;
-  font-family: var(--font-regular);
-}
-
-/*  Radio page */
-.radio {
-  font-family: var(--font-regular);
-}
-
-.radio-wrapper:not(:first-child) {
-  padding-top: 10px;
-}
-
-/* RadioGroup */
-.radio-group-wrapper {
-  font-family: var(--font-regular);
-}
-
-.radio-group-header {
-  font-family: var(--font-black);
-}
-
-/* InputPassword */
-.input-password-wrapper:not(:first-child) {
-  margin-top: 10px;
-}
-
-.input-password-wrapper input {
-  font-family: var(--font-regular);
+  --color-chart-blue: #1b82e3;
+  --color-chart-yellow: #ffcc00;
+  --color-chart-purple: #650c90;
+  --color-chart-green: #52ae30;
 }

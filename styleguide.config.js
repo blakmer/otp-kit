@@ -6,10 +6,9 @@ module.exports = {
   pagePerSection: true,
   title: 'OTP Styleguide',
   getComponentPathLine(path) {
-    return `import ${path.slice(15, -9)} from 'otp-kit/lib/${path.slice(
-      15,
-      -9
-    )}'`
+    const matches = /src\/[a-z]*\/([A-z]*)\//.exec(path)
+    if (matches) return `import ${matches[1]} from 'otp-kit/lib/${matches[1]}'`
+    return 'Parsing path error'
   },
   sections: [
     {
