@@ -1,16 +1,17 @@
 /** variables */
 :root {
   /** fonts */
-  --font-regular: 'Squad Regular';
-  --font-italic: 'Squad RegularItalic';
-  --font-bold: 'Squad Bold';
-  --font-bold-italic: 'Squad Bold Italic';
-  --font-light: 'Squad Light';
-  --font-light-italic: 'Squad LightItalic';
-  --font-semi-bold: 'Squad SemiBold';
-  --font-semi-bold-italic: 'Squad SemiBoldItalic';
-  --font-black: 'Squad Black';
-  --font-black-italic: 'Squad BlackItalic';
+  --font-hero: 'Squad Heavy';
+  --font-regular: 'Source Sans Pro Regular';
+  --font-italic: 'Source Sans Pro Italic';
+  --font-bold: 'Source Sans Pro Bold';
+  --font-bold-italic: 'Source Sans Pro Bold Italic';
+  --font-light: 'Source Sans Pro Light';
+  --font-light-italic: 'Source Sans Pro Light Italic';
+  --font-semi-bold: 'Source Sans Pro Semi Bold';
+  --font-semi-bold-italic: 'Source Sans Pro Semi Bold Italic';
+  --font-black: 'Source Sans Pro Black';
+  --font-black-italic: 'Source Sans Pro Black Italic';
 
   /** colors */
   --color-primary: #52ae30;

@@ -1,0 +1,18 @@
+@import '../index.css';
+
+.lead {
+  font-family: var(--font-regular);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  display: block;
+}
+
+.highlighted {
+  font-weight: bold;
+}
+
+.compact {
+  line-height: 1.5rem;
+}

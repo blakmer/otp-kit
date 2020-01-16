@@ -1,0 +1,19 @@
+@import '../index.css';
+
+.hero {
+  display: block;
+  font-family: var(--font-hero);
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.subHero {
+  font-size: 1.5rem;
+  font-family: var(--font-regular);
+  line-height: 2rem;
+  display: block;
+  margin: 0;
+  font-weight: bold;
+}

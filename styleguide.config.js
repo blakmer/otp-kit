@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       name: 'Base',
-      components: 'src/base/**/index.js',
+      components: 'src/base/*/index.js',
     },
     {
       name: 'Atomic',

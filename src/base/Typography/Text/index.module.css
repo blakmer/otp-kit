@@ -1,0 +1,26 @@
+@import '../index.css';
+
+.text {
+  font-family: var(--font-regular);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.link,
+.label {
+  font-weight: 600;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.highlighted {
+  font-weight: bold;
+}
+
+.hint {
+  font-style: italic;
+}
