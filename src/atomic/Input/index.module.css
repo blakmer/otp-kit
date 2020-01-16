@@ -1,0 +1,41 @@
+.inputContainer {
+  position: relative;
+}
+
+.inputLabel {
+  font-family: var(--font-regular);
+  color: var(--color-text-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0rem;
+  left: 1.51rem;
+  transition: 0.25s;
+}
+
+.input {
+  outline: none;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  font-family: var(--font-regular);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-text-primary);
+  padding-top: 0.6875rem;
+  padding-bottom: 0.8125rem;
+  padding-left: 1.5rem;
+}
+
+.inputContainer:focus-within > .inputLabel {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  top: calc(50% - 1.5rem / 2 - 1.5rem);
+  background: var(--color-bg-input);
+  padding: 0 0.5rem;
+  border-radius: 1.5rem;
+}

@@ -1,0 +1,5 @@
+#### Input component
+
+```js
+<Input />
+```
