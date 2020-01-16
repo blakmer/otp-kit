@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       name: 'Atomic',
-      components: 'src/atomic/**/index.js',
+      components: 'src/atomic/*/index.js',
     },
   ],
 }
