@@ -4,8 +4,9 @@ import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
 import ArrowUp from './types/arrow-up'
+import { HEX_FILL } from '../../assets/docs'
 
-const references = {
+const REFERENCES = {
   'arrow-right': ArrowRight,
   'arrow-left': ArrowLeft,
   'arrow-down': ArrowDown,
@@ -14,7 +15,7 @@ const references = {
 
 const Icon = props => {
   const { type, size, fill } = props
-  const SVG = references[type]
+  const SVG = REFERENCES[type]
 
   const getDigitSize = () => {
     if (size === 'small') {
@@ -27,17 +28,19 @@ const Icon = props => {
   }
 
   const getHexFill = () => {
+    const { PRIMARY, SECONDARY, DISABLED, INVERSE } = HEX_FILL
+
     switch (fill) {
       case 'primary':
-        return '#1b1f27'
+        return PRIMARY
       case 'secondary':
-        return '#6e7482'
+        return SECONDARY
       case 'disabled':
-        return '#ababab'
+        return DISABLED
       case 'inverse':
-        return '#ffffff'
+        return INVERSE
       default:
-        return '#1b1f27'
+        return PRIMARY
     }
   }
 
