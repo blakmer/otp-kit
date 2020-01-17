@@ -4,13 +4,22 @@ import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
 import ArrowUp from './types/arrow-up'
-import { HEX_FILL } from '../../assets/docs'
+import { COLORS } from '../../assets/docs'
+
+const { TEXT_PRIMARY, TEXT_SECONDARY, TEXT_DISABLED, TEXT_INVERSE } = COLORS
 
 const REFERENCES = {
   'arrow-right': ArrowRight,
   'arrow-left': ArrowLeft,
   'arrow-down': ArrowDown,
   'arrow-up': ArrowUp,
+}
+
+const FILLS = {
+  primary: TEXT_PRIMARY,
+  secondary: TEXT_SECONDARY,
+  disabled: TEXT_DISABLED,
+  inverse: TEXT_INVERSE,
 }
 
 const Icon = props => {
@@ -27,24 +36,7 @@ const Icon = props => {
     }
   }
 
-  const getHexFill = () => {
-    const { PRIMARY, SECONDARY, DISABLED, INVERSE } = HEX_FILL
-
-    switch (fill) {
-      case 'primary':
-        return PRIMARY
-      case 'secondary':
-        return SECONDARY
-      case 'disabled':
-        return DISABLED
-      case 'inverse':
-        return INVERSE
-      default:
-        return PRIMARY
-    }
-  }
-
-  return <SVG digitSize={getDigitSize()} hexFill={getHexFill()} />
+  return <SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />
 }
 
 Icon.propTypes = {
