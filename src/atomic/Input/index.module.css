@@ -1,6 +1,7 @@
 .inputContainer {
   position: relative;
   display: inline-block;
+  margin: 0.75rem;
 }
 
 .inputLabel {
