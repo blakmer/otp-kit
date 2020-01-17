@@ -1,5 +1,19 @@
 #### Input component
 
 ```js
-<Input />
+import Grid from '../../base/Grid'
+const { Container, Row, Col } = Grid
+;<Container>
+  <Row>
+    <Col md={6} style={{ marinBottom: 5 }}>
+      <Input />
+    </Col>
+    <Col md={6} style={{ marinBottom: 5 }}>
+      <Input state="error" />
+    </Col>
+    <Col md={6} style={{ marinBottom: 5 }}>
+      <Input state="warning" />
+    </Col>
+  </Row>
+</Container>
 ```
