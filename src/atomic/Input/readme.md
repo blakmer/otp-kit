@@ -6,16 +6,20 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
     <Col md={6}>
-      <Input />
+      <Input
+        label="Label"
+        onChange={e => console.log(e.target.value)}
+        value="value"
+      />
     </Col>
     <Col md={6}>
-      <Input state="disabled" />
+      <Input state="disabled" label="Disabled input" />
     </Col>
     <Col md={6}>
-      <Input state="error" />
+      <Input state="error" label="Errorable input" />
     </Col>
     <Col md={6}>
-      <Input state="warning" />
+      <Input state="warning" label="Warn input" />
     </Col>
   </Row>
 </Container>
