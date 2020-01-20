@@ -95,7 +95,7 @@ Input.propTypes = {
   type: PropTypes.string,
   autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   autoFocus: PropTypes.bool,
-  defaultValue: propTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   id: PropTypes.string,
   name: PropTypes.string,
   tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
