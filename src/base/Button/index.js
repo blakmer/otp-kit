@@ -30,7 +30,8 @@ const Button = props => {
     size,
     floating,
     ghost,
-    icon,
+    suffix,
+    prefix,
   } = props
 
   const getClasses = () => {
@@ -57,9 +58,14 @@ const Button = props => {
       onClick={onClick}
       type={htmlType}
       className={getClasses()}>
+      {!ghost && prefix && (
+        <Icon type={prefix} fill={!disabled ? 'inverse' : 'disabled'} />
+      )}
+
       {children}
-      {!ghost && icon && (
-        <Icon type={icon} fill={!disabled ? 'inverse' : 'disabled'} />
+
+      {!ghost && suffix && (
+        <Icon type={suffix} fill={!disabled ? 'inverse' : 'disabled'} />
       )}
     </button>
   )
@@ -83,7 +89,8 @@ Button.propTypes = {
   htmlType: PropTypes.string,
   floating: PropTypes.bool,
   ghost: PropTypes.bool,
-  icon: PropTypes.string,
+  suffix: PropTypes.string,
+  prefix: PropTypes.string,
 }
 
 export default Button

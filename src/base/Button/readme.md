@@ -66,19 +66,19 @@ const wrapper = { display: 'flex' }
 
  <h1>Primary Buttons with icons</h1>
   <div style={{ marginTop: mt, ...wrapper }}>
-    <Button variation="primary" icon='arrow-right'>
+    <Button variation="primary" suffix='arrow-right'>
       Primary
     </Button>
-    <Button variation="highlighted" icon='arrow-right'>
+    <Button variation="highlighted" prefix='arrow-right'>
       Highlighted
     </Button>
-    <Button variation="error" icon='arrow-right'>
+    <Button variation="error" suffix='arrow-right'>
       Error
     </Button>
-    <Button variation="blue" icon='arrow-right'>
+    <Button variation="blue" prefix='arrow-right'>
       Blue
     </Button>
-    <Button disabled icon='arrow-right'>
+    <Button disabled suffix='arrow-right'>
       Disabled
     </Button>
   </div>
