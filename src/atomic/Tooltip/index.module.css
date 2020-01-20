@@ -1,0 +1,20 @@
+.tooltipContainer {
+}
+
+.tooltip {
+  max-width: 22.5rem;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--color-blue);
+  color: var(--color-text-inverse);
+  position: relative;
+}
+
+.tooltipArrow {
+  position: absolute;
+  line-height: 0.75rem;
+  transform: rotate(0deg) translate(-50%, 0);
+  top: 100%;
+  left: 50%;
+}
