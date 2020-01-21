@@ -1,4 +1,11 @@
-.tooltipContainer {
+.contentContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.contentContainer:hover > .tooltipContainer {
+  visibility: visible;
+  opacity: 1;
 }
 
 .tooltip {
@@ -11,10 +18,117 @@
   position: relative;
 }
 
+.tooltipContainer {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  max-width: 22.5rem;
+  transition: 0.3s linear;
+}
+
 .tooltipArrow {
   position: absolute;
+}
+
+.tooltipContainer.topLeft {
+  transform: translate(-25%, 0);
+  bottom: calc(100% + 0.75rem);
+  left: 50%;
+}
+
+.tooltipArrow.topLeft {
+  left: 25%;
   line-height: 0.75rem;
   transform: rotate(0deg) translate(-50%, 0);
   top: 100%;
+}
+
+.tooltipContainer.topCenter {
+  transform: translate(-50%, 0);
+  bottom: calc(100% + 0.75rem);
   left: 50%;
+}
+
+.tooltipArrow.topCenter {
+  left: 50%;
+  line-height: 0.75rem;
+  transform: rotate(0deg) translate(-50%, 0);
+  top: 100%;
+}
+
+.tooltipContainer.topRight {
+  transform: translate(-75%, 0);
+  bottom: calc(100% + 0.75rem);
+  left: 50%;
+}
+
+.tooltipArrow.topRight {
+  left: 75%;
+  line-height: 0.75rem;
+  transform: rotate(0deg) translate(-50%, 0);
+  top: 100%;
+}
+
+.tooltipContainer.middleLeft {
+  right: calc(100% + 0.75rem);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.tooltipArrow.middleLeft {
+  transform: rotate(270deg) translateY(-40%) translateX(30%);
+  top: 50%;
+  left: 100%;
+}
+
+.tooltipContainer.middleRight {
+  left: calc(100% + 0.75rem);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.tooltipArrow.middleRight {
+  transform: rotate(90deg) translateY(-40%) translateX(-30%);
+  top: 50%;
+  right: 100%;
+}
+
+.tooltipContainer.bottomLeft {
+  transform: translate(-25%, 0);
+  top: calc(100% + 0.75rem);
+  left: 50%;
+}
+
+.tooltipArrow.bottomLeft {
+  left: 25%;
+  line-height: 0.75rem;
+  transform: rotate(180deg);
+  bottom: 100%;
+}
+
+.tooltipContainer.bottomCenter {
+  transform: translate(-50%, 0);
+  top: calc(100% + 0.75rem);
+  left: 50%;
+}
+
+.tooltipArrow.bottomCenter {
+  left: 50%;
+  line-height: 0.75rem;
+  transform: rotate(180deg) translate(50%, 0);
+  bottom: 100%;
+}
+
+.tooltipContainer.bottomRight {
+  transform: translate(-75%, 0);
+  top: calc(100% + 0.75rem);
+  left: 50%;
+}
+
+.tooltipArrow.bottomRight {
+  left: 75%;
+  line-height: 0.75rem;
+  transform: rotate(180deg) translate(50%, 0);
+  bottom: 100%;
 }
