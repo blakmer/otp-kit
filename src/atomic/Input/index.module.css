@@ -46,7 +46,8 @@
   border-radius: 1.5rem;
 }
 
-.input:focus {
+.input:focus,
+input:hover {
   border: 2px solid var(--color-primary);
 }
 
