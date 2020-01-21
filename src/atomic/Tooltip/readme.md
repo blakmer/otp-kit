@@ -57,3 +57,11 @@ const { Container, Row, Col } = Grid
   </Row>
 </Container>
 ```
+
+###### Autoposition tooltip
+
+```js
+<Tooltip content="Content in tooltip" position="auto">
+  Tooltip text
+</Tooltip>
+```
