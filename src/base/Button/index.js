@@ -81,8 +81,7 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
-  variation: PropTypes.oneOf(['primary', 'highlighted', 'error', 'blue'])
-    .isRequired,
+  variation: PropTypes.oneOf(['primary', 'highlighted', 'error', 'blue']),
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium']),
   onClick: PropTypes.func,
