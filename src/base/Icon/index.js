@@ -40,7 +40,7 @@ const Icon = props => {
 }
 
 Icon.propTypes = {
-  type: PropTypes.string.required,
+  type: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium']),
   fill: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
 }
