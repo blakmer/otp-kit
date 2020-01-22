@@ -1,0 +1,5 @@
+##### Stepper component
+
+```js
+<Stepper />
+```
