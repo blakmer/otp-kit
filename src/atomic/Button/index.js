@@ -44,6 +44,7 @@ const Button = props => {
       className,
       styles.button,
       styles[size],
+      !ghost ? styles.ripple : styles.pulse,
       _variation,
       _floating,
       _disabled,
@@ -51,11 +52,29 @@ const Button = props => {
     )
   }
 
+  const animationHandler = event => {
+    const r = event.target.getBoundingClientRect()
+    const d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2
+
+    event.target.style.cssText = `--s: 0; --o: 1;`
+    event.target.offsetTop
+    event.target.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${event.clientX -
+      r.left}; --y:${event.clientY - r.top};`
+
+    if (onClick) {
+      onClick(event)
+    }
+  }
+
+  const getOnClickFunc = () => {
+    return !ghost ? animationHandler : onClick
+  }
+
   return (
     <button
       style={style}
       disabled={disabled}
-      onClick={onClick}
+      onClick={getOnClickFunc()}
       type={htmlType}
       className={getClasses()}>
       {!ghost && prefix && (
