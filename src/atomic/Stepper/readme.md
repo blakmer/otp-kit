@@ -28,9 +28,9 @@ const [a, setA] = useState(0)
   <Stepper
     closeNextStepPerClick={false}
     steps={[
-      { title: 'title', description: 'desc' },
-      { title: 'title', description: 'desc' },
-      { title: 'title', description: 'desc' },
+      { title: 'title 1', description: 'desc' },
+      { title: 'title 2', description: 'desc' },
+      { title: 'title 3', description: 'desc' },
     ]}
     onChange={({ step }) => {
       setA(step)

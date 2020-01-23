@@ -1,3 +1,18 @@
+.pubStepContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.currentTitle {
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1rem;
+  color: var(--color-text-primary);
+  padding: 1rem;
+}
+
 .stepContainer {
   display: flex;
   flex-direction: row;
@@ -69,6 +84,11 @@
 .step.successStep > .stepDescription,
 .step.currentStep > .stepDescription {
   display: block;
+}
+
+.step.successStep > .stepTitle,
+.step.currentStep > .stepTitle {
+  color: var(--color-text-primary);
 }
 
 .step.successStep > .stepCircle {
