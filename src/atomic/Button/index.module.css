@@ -129,7 +129,7 @@
 
 /** FLOATING BTN */
 .floating {
-  box-shadow: 0 1rem 3rem rgba(27, 31, 39, 0.3);
+  box-shadow: 0 1rem 3rem var(--color-shadow);
 }
 
 /** RIPPLE ANIMATION */
@@ -139,14 +139,14 @@
 }
 
 .ripple:before {
-  --ripple-background: white;
+  --ripple-background: var(--color-bg-input);
   --ripple-opacity: 0.3;
   --ripple-duration: 600ms;
 
   content: '';
   position: absolute;
   display: block;
-  background: var(--ripple-background, white);
+  background: var(--ripple-background, var(--color-bg-input));
   border-radius: 50%;
   pointer-events: none;
   top: calc(var(--y) * 1px);
@@ -162,9 +162,10 @@
 
 /** PULSE ANIMATION */
 .pulse {
-    transition: box-shadow .1s ease-out;
-    box-shadow: 0 0 0 rgba(160, 160, 160, 0);
+  transition: box-shadow 0.1s ease-out;
+  box-shadow: 0 0 0 var(--color-shadow);
 }
 .pulse:active {
-    box-shadow: 0 0 2px 4px rgba(160, 160, 160, 0.4);
+  box-shadow: 0 0 2px 4px var(--color-shadow);
+  border-width: 1.4px;
 }
