@@ -1,0 +1,30 @@
+.breadcrumb {
+    display: inline-flex;
+    list-style-type: none;
+    font-family: var(--font-semi-bold);
+    padding-left: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item > * {
+    display: inline;
+    color: var(--color-primary);
+    transition: color .2s;
+    text-decoration: none;
+}
+
+.item > *:hover {
+    color: var(--color-primary-hover);
+}
+
+.item:last-child > * {
+    color: var(--color-text-disabled);
+}
+
+.item svg {
+    margin: 0 13px
+}
