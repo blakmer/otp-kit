@@ -5,8 +5,17 @@ import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
 import ArrowUp from './types/arrow-up'
 import { COLORS } from '../../assets/docs'
+import classnames from 'classnames'
+import styles from './index.module.css'
 
-const { TEXT_PRIMARY, TEXT_SECONDARY, TEXT_DISABLED, TEXT_INVERSE } = COLORS
+const {
+  TEXT_PRIMARY,
+  TEXT_SECONDARY,
+  TEXT_DISABLED,
+  TEXT_INVERSE,
+  PRIMARY,
+  HIGHLIGHTED,
+} = COLORS
 
 const REFERENCES = {
   'arrow-right': ArrowRight,
@@ -20,6 +29,8 @@ const FILLS = {
   secondary: TEXT_SECONDARY,
   disabled: TEXT_DISABLED,
   inverse: TEXT_INVERSE,
+  green: PRIMARY,
+  highlighted: HIGHLIGHTED,
 }
 
 const Icon = props => {
@@ -36,13 +47,17 @@ const Icon = props => {
     }
   }
 
-  return <SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />
+  return (
+    <span className={classnames(styles[size], styles.wrapper)}>
+      <SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />
+    </span>
+  )
 }
 
 Icon.propTypes = {
   type: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium']),
-  fill: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  fill: PropTypes.oneOf(Object.keys(FILLS)),
 }
 
 Icon.defaultProps = {
