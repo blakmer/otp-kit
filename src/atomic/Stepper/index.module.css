@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .step:not(:first-child)::before {
@@ -60,7 +61,14 @@
   color: var(--color-primary);
   line-height: 1rem;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
+  display: none;
+  cursor: pointer;
+}
+
+.step.successStep > .stepDescription,
+.step.currentStep > .stepDescription {
+  display: block;
 }
 
 .step.successStep > .stepCircle {
