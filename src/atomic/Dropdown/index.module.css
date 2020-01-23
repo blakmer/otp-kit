@@ -1,0 +1,60 @@
+.dropdown {
+  position: relative;
+}
+
+.label {
+  color: var(--color-text-primary);
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.label.isOpen {
+  color: var(--color-primary);
+}
+
+.labelText {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.listArrow {
+  position: absolute;
+  transform: rotate(180deg);
+  top: 100%;
+  right: 0px;
+  z-index: 999;
+  line-height: 0.75rem;
+  text-shadow: 0 0 3rem var(--color-shadow);
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  background: var(--color-bg-input);
+  border-radius: 1rem;
+  position: absolute;
+  padding: 0.5rem;
+  box-shadow: 0 0 3rem var(--color-shadow);
+  outline: none;
+  top: calc(100% + 0.75rem);
+  right: -1rem;
+}
+
+.list > li {
+  line-height: 2.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.list > li.highlighted {
+  background-color: var(--color-bg-grey-3);
+}
+
+.list > li.emptyList {
+  color: var(--color-text-disabled);
+}

@@ -25,6 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
+    "downshift": "^4.0.7",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
