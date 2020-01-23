@@ -21,6 +21,7 @@ export const COLORS = {
   BG_GREY_2: '#e2e6f0',
   BG_GREY_3: '#eff2f9',
   BG_GREY_4: '#f7f9ff',
+  BG_INPUT: '#ffffff',
   BG_INPUT_DISABLED: '#f1f1f1',
   BG_PASTEL_YELLOW: '#fff8db',
   BG_PASTEL_ORANGE: '#ffefd6',
