@@ -47,7 +47,7 @@
 }
 
 .input:focus,
-input:not([disabled]):hover {
+.input:not([disabled]):hover {
   border: 2px solid var(--color-primary);
 }
 

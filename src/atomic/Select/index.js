@@ -24,7 +24,7 @@ const Select = props => {
 
   return (
     <span className={styles.container} {...getComboboxProps()}>
-      <label {...getToggleButtonProps()}>
+      <label {...getToggleButtonProps()} className={styles.labelContainer}>
         <span className={styles.label}>Label</span>
         <input className={styles.input} readOnly {...getInputProps()} />
         <span className={styles.arrowIcon}>
@@ -32,7 +32,7 @@ const Select = props => {
         </span>
       </label>
       <ul {...getMenuProps()} className={styles.menu}>
-        {isOpen &&
+        {true &&
           items.map((item, index) => (
             <li
               className={classnames(

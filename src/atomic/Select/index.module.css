@@ -1,15 +1,97 @@
 .container {
+  position: relative;
+  display: inline-block;
+  margin: 0.75rem;
 }
 
 .label {
+  font-family: var(--font-regular);
+  color: var(--color-text-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0.75rem;
+  left: 1.5rem;
+  transition: 0.25s;
+}
+.labelContainer {
+  outline: none;
 }
 .input {
+  outline: none;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  font-family: var(--font-regular);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 14rem;
+  height: 3rem;
+  color: var(--color-text-primary);
+  padding-top: 0.6875rem;
+  padding-bottom: 0.8125rem;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
 }
 .arrowIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
 }
 .menu {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  background: var(--color-bg-input);
+  border-radius: 0 0 1rem 1rem;
+  border-color: var(--color-border);
+  border-style: solid;
+  border-width: 0 1px 1px 1px 1px;
+  position: absolute;
+  padding: 0.5rem;
+  box-shadow: 0 0 3rem var(--color-shadow);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
 }
+
+.menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1.5rem;
+  width: 1px;
+  background-color: var(--color-border);
+  bottom: 100%;
+  left: -1px;
+}
+
+.menu::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1.5rem;
+  width: 1px;
+  background-color: var(--color-border);
+  bottom: 100%;
+  right: -1px;
+}
+
 .menu > li {
+  line-height: 2.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
 }
 .menu > li.selected {
+  background-color: var(--color-bg-grey-3);
+}
+
+.menu > li.emptyList {
+  color: var(--color-text-disabled);
 }
