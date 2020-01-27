@@ -5,12 +5,28 @@ import { useCombobox } from 'downshift'
 import Icon from '../../base/Icon'
 import styles from './index.module.css'
 
+const STATUSES = {
+  default: 'default',
+  error: 'error',
+  warning: 'warning',
+  disabled: 'disabled',
+}
+
 const Select = props => {
-  const { items } = props
+  const {
+    items,
+    defaultValue,
+    onChange,
+    emptyText,
+    label,
+    filtered,
+    withError,
+  } = props
+  const [val, setVal] = useState(defaultValue)
+  const [filter, setFilter] = useState('')
   const {
     isOpen,
     getToggleButtonProps,
-    getLabelProps,
     getMenuProps,
     getInputProps,
     getComboboxProps,
@@ -19,43 +35,88 @@ const Select = props => {
   } = useCombobox({
     items: items,
     itemToString: i => i.title,
-    onInputValueChange: ({ inputValue }) => {},
+    onInputValueChange: ({ inputValue }) => {
+      const row = items.find(i => i.title === inputValue)
+      if (row) {
+        setVal(inputValue)
+        setFilter('')
+        onChange && onChange(row)
+      } else {
+        setFilter(inputValue)
+        if (inputValue === '') {
+          setVal('')
+        }
+      }
+    },
   })
 
   return (
-    <span className={styles.container} {...getComboboxProps()}>
+    <span
+      className={classnames(styles.container, isOpen && styles.isOpen)}
+      {...getComboboxProps()}>
       <label {...getToggleButtonProps()} className={styles.labelContainer}>
-        <span className={styles.label}>Label</span>
-        <input className={styles.input} readOnly {...getInputProps()} />
-        <span className={styles.arrowIcon}>
-          <Icon type="arrow-down" fill="green" />
+        {label && (
+          <span
+            className={classnames(
+              styles.label,
+              (isOpen || val) && styles.labelUp
+            )}>
+            {label}
+          </span>
+        )}
+        <input
+          readOnly={!filtered}
+          className={styles.input}
+          {...getInputProps()}
+        />
+        <span className={styles.arrowIcon} {...getToggleButtonProps()}>
+          <Icon type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
         </span>
       </label>
-      <ul {...getMenuProps()} className={styles.menu}>
-        {true &&
-          items.map((item, index) => (
-            <li
-              className={classnames(
-                highlightedIndex === index && styles.selected
-              )}
-              key={`${index}`}
-              {...getItemProps({ item, index })}>
-              {item.title}
-            </li>
-          ))}
-      </ul>
+      {isOpen && (
+        <ul {...getMenuProps()} className={styles.menu}>
+          {items
+            .filter(
+              i => i.title.toLowerCase().indexOf(filter.toLowerCase()) > -1
+            )
+            .map((item, index) => (
+              <li
+                className={classnames(
+                  highlightedIndex === index && styles.selected
+                )}
+                key={`${index}`}
+                {...getItemProps({ item, index })}>
+                {item.title}
+              </li>
+            ))}
+          {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
+        </ul>
+      )}
     </span>
   )
 }
 
-Select.propTypes = {}
+Select.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })
+  ),
+  defaultValue: PropTypes.shape({
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  }),
+  onChange: PropTypes.func,
+  emptyText: PropTypes.string,
+  label: PropTypes.string,
+  filtered: PropTypes.bool,
+}
 
 Select.defaultProps = {
-  items: [
-    { value: 1, title: 'one' },
-    { value: 2, title: 'two' },
-    { value: 3, title: 'tree' },
-  ],
+  items: [],
+  emptyText: 'Пусто',
+  filtered: true,
 }
 
 export default Select
