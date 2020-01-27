@@ -14,7 +14,7 @@ const Breadcrumb = props => {
 
   const renderList = data.map((item, index) => {
     return (
-      <li key={item.title} className={styles.item}>
+      <li key={item.key} className={styles.item}>
         {item.node}
         {getSeparator(index)}
       </li>

@@ -20,7 +20,7 @@ const { Container, Row, Col } = Grid
       <div>arrow-down</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1}>
-      <Icon type='arrow-up' />
+      <Icon type='arrow-up'/>
       <div>arrow-up</div>
     </Col>
   </Row>

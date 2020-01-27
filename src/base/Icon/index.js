@@ -14,7 +14,12 @@ const {
   TEXT_DISABLED,
   TEXT_INVERSE,
   PRIMARY,
+  PRIMARY_HOVER,
   HIGHLIGHTED,
+  ERROR,
+  ERROR_HOVER,
+  BLUE,
+  BLUE_HOVER,
 } = COLORS
 
 const REFERENCES = {
@@ -30,7 +35,12 @@ const FILLS = {
   disabled: TEXT_DISABLED,
   inverse: TEXT_INVERSE,
   green: PRIMARY,
+  greenHover: PRIMARY_HOVER,
   highlighted: HIGHLIGHTED,
+  danger: ERROR,
+  dangerHover: ERROR_HOVER,
+  blue: BLUE,
+  blueHover: BLUE_HOVER,
 }
 
 const Icon = props => {
@@ -47,11 +57,11 @@ const Icon = props => {
     }
   }
 
-  return (
+  return SVG ? (
     <span className={classnames(styles[size], styles.wrapper)}>
-      <SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />
+      {<SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />}
     </span>
-  )
+  ) : null
 }
 
 Icon.propTypes = {
