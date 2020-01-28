@@ -20,7 +20,7 @@ const Select = props => {
     emptyText,
     label,
     filtered,
-    withError,
+    status,
   } = props
   const [val, setVal] = useState(defaultValue)
   const [filter, setFilter] = useState('')
@@ -52,9 +52,15 @@ const Select = props => {
 
   return (
     <span
-      className={classnames(styles.container, isOpen && styles.isOpen)}
+      className={classnames(
+        styles.container,
+        styles[STATUSES[status]],
+        isOpen && styles.isOpen
+      )}
       {...getComboboxProps()}>
-      <label {...getToggleButtonProps()} className={styles.labelContainer}>
+      <label
+        {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}
+        className={styles.labelContainer}>
         {label && (
           <span
             className={classnames(
@@ -66,10 +72,13 @@ const Select = props => {
         )}
         <input
           readOnly={!filtered}
+          disabled={status === STATUSES.disabled}
           className={styles.input}
-          {...getInputProps()}
+          {...(status === STATUSES.disabled ? {} : getInputProps())}
         />
-        <span className={styles.arrowIcon} {...getToggleButtonProps()}>
+        <span
+          className={styles.arrowIcon}
+          {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
           <Icon type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
         </span>
       </label>
@@ -111,12 +120,14 @@ Select.propTypes = {
   emptyText: PropTypes.string,
   label: PropTypes.string,
   filtered: PropTypes.bool,
+  status: PropTypes.oneOf(Object.keys(STATUSES)),
 }
 
 Select.defaultProps = {
   items: [],
   emptyText: 'Пусто',
   filtered: true,
+  status: STATUSES.default,
 }
 
 export default Select

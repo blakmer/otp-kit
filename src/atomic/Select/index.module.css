@@ -107,3 +107,57 @@
   border-style: none solid solid solid;
   border-width: 2px;
 }
+
+.container.error .input {
+  border: solid 2px var(--color-error);
+}
+
+.container.error.isOpen .input {
+  border: solid 1px var(--color-error);
+}
+
+.container.error.isOpen {
+  border-color: var(--color-error);
+}
+
+.container.error.isOpen .label.labelUp {
+  color: var(--color-error);
+}
+
+.container.error.isOpen .menu {
+  border-color: var(--color-error);
+}
+
+.container.warning .input {
+  border: solid 2px var(--color-highlighted);
+}
+
+.container.warning.isOpen .input {
+  border: solid 1px var(--color-highlighted);
+}
+
+.container.warning.isOpen {
+  border-color: var(--color-highlighted);
+}
+
+.container.warning.isOpen .label.labelUp {
+  color: var(--color-highlighted);
+}
+
+.container.warning.isOpen .menu {
+  border-color: var(--color-highlighted);
+}
+
+.container.disabled .input:disabled {
+  border: solid 2px var(--color-border);
+  background: var(--color-bg-input-disabled);
+  color: var(--color-text-disabled);
+}
+
+.container.disabled.isOpen {
+  border-color: var(--color-border);
+}
+
+.container.disabled.isOpen .menu {
+  border-color: var(--color-border);
+}
