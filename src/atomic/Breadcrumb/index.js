@@ -26,7 +26,7 @@ const Breadcrumb = props => {
 
 Breadcrumb.propTypes = {
   data: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       node: PropTypes.any,
     })
   ).isRequired,

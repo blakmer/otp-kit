@@ -2,8 +2,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -22,7 +22,7 @@
 
 .secondary {
   background-color: var(--color-bg-input);
-  box-shadow: 0px 4px 8px var(--color-shadow);
+  box-shadow: 0px 0.25rem 0.5rem var(--color-shadow);
 }
 
 .disabled {
@@ -31,29 +31,29 @@
 }
 
 .disabled:hover {
-    background-color: var(--color-bg-input-disabled);
+  background-color: var(--color-bg-input-disabled);
 }
 
 .inverse {
-    box-shadow: none;
-    background-color: var(--color-bg-input);
+  box-shadow: none;
+  background-color: var(--color-bg-input);
 }
 
 .inverse:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .inverse:hover {
-    background-color: var(--color-bg-input);
+  background-color: var(--color-bg-input);
 }
 
 .inverseDisabled {
-    border: 1px solid var(--color-text-disabled);
-    background-color: transparent;
+  border: 1px solid var(--color-text-disabled);
+  background-color: transparent;
 }
 
 .inverseDisabled:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 /** RIPPLE ANIMATION */
 .ripple {

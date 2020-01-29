@@ -5,7 +5,6 @@
   step={1000}
   name="range"
   value={20000}
-  unit='руб.'
-  onChange={event => console.log(event.target.value)}
+  style={{ width: '50%' }}
 />
 ```
