@@ -24,3 +24,9 @@ const { Container, Row, Col } = Grid
   </Row>
 </Container>
 ```
+
+#### Input with mask
+
+```js
+<Input mask="+7 (999) 999 99 99" maskChar="_" label="Your phone" />
+```
