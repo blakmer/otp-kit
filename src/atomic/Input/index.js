@@ -115,7 +115,7 @@ Input.defaultProps = {
   state: STATUSES.default,
   type: 'text',
   maskChar: ' ',
-  mask: false,
+  mask: undefined,
 }
 
 export default Input
