@@ -56,6 +56,6 @@
     "webpack-cli": "^3.3.10"
   },
   "publishConfig": {
-    "registry": "http://srv-mvn-repo/repository/npm-private/"
+    "registry": "http://srv-mvn-repo.isb/repository/npm-private/"
   }
 }
