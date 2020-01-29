@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import InputMask from 'react-input-mask'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -26,6 +27,8 @@ const Input = props => {
     value,
     onChange,
     className,
+    mask,
+    maskChar,
   } = props
 
   const [val, setVal] = useState(value || defaultValue)
@@ -59,7 +62,9 @@ const Input = props => {
           {label}
         </span>
       )}
-      <input
+      <InputMask
+        mask={mask}
+        maskChar={maskChar}
         type={type}
         autoComplete={
           typeof autoComplete === 'string'
@@ -102,11 +107,15 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   className: PropTypes.string,
+  maskChar: PropTypes.string,
+  mask: PropTypes.string,
 }
 
 Input.defaultProps = {
   state: STATUSES.default,
   type: 'text',
+  maskChar: ' ',
+  mask: false,
 }
 
 export default Input
