@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import Icon from '../../base/Icon'
+import Icon from '../Icon'
 
 const RoundButton = props => {
   const {

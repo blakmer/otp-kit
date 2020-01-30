@@ -1,7 +1,7 @@
 ##### Tooltips
 
 ```js
-import Grid from '../../base/Grid'
+import Grid from '../Grid'
 const { Container, Row, Col } = Grid
 ;<Container>
   <Row>

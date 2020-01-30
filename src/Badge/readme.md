@@ -1,7 +1,7 @@
 #### Badges
 
 ```js
-import Icon from '../../base/Icon'
+import Icon from '../Icon'
 ;<>
   <Badge count={1}>String</Badge>
   <br />

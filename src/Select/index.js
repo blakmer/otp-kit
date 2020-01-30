@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox } from 'downshift'
-import Icon from '../../base/Icon'
+import Icon from '../Icon'
 import styles from './index.module.css'
 
 const STATUSES = {

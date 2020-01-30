@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
-import { COLORS } from '../../assets/docs'
+import { COLORS } from '../docs'
 
 const Slider = props => {
   const { name, id, value, max, min, step, onChange, className, style } = props

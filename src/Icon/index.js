@@ -4,7 +4,7 @@ import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
 import ArrowUp from './types/arrow-up'
-import { COLORS } from '../../assets/docs'
+import { COLORS } from '../docs'
 import classnames from 'classnames'
 import styles from './index.module.css'
 

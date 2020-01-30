@@ -1,5 +1,5 @@
 module.exports = {
-  require: ['./src/assets/style.css', './src/assets/docs.css'],
+  require: ['./src/style.css', './src/docs.css'],
   webpackConfig: require('./webpack.config.js'),
   usageMode: 'expand',
   exampleMode: 'collapse',
@@ -30,11 +30,28 @@ module.exports = {
     },
     {
       name: 'Base',
-      components: 'src/base/*/index.js',
+      components: [
+        'src/Grid/index.js',
+        'src/Typography/index.js',
+        'src/Icon/index.js',
+      ],
     },
     {
       name: 'Atomic',
-      components: 'src/atomic/*/index.js',
+      components: [
+        'src/Badge/index.js',
+        'src/Breadcrumb/index.js',
+        'src/Button/index.js',
+        'src/Checkbox/index.js',
+        'src/Dropdown/index.js',
+        'src/Input/index.js',
+        'src/Link/index.js',
+        'src/RadioGroup/index.js',
+        'src/Select/index.js',
+        'src/Slider/index.js',
+        'src/Stepper/index.js',
+        'src/Tooltip/index.js',
+      ],
     },
   ],
 }

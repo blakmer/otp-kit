@@ -3,9 +3,9 @@ import { useSelect } from 'downshift'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
-import Arrow from '../../assets/util/arrow'
-import Icon from '../../base/Icon'
-import { COLORS } from '../../assets/docs'
+import Arrow from '../util/arrow'
+import Icon from '../Icon'
+import { COLORS } from '../docs'
 
 const Dropdown = props => {
   const { items, defaultValue, placeholder, onChange, emptyText } = props

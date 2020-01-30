@@ -1,5 +1,5 @@
 ```js
-import { COLORS } from '../../assets/docs'
+import { COLORS } from '../docs'
 
 const mt = 10
 const wrapper = { display: 'flex' }
@@ -28,7 +28,7 @@ const { SHADOW } = COLORS
   </div>
   <h1>Inverse (for a dark background)</h1>
   <div style={{ ...wrapper, backgroundColor: SHADOW, padding: 10 }}>
-    <RoundButton inverse variation='danger' />
+    <RoundButton inverse variation="danger" />
   </div>
   <h1>Inverse disabled (for a dark background)</h1>
   <div style={{ ...wrapper, backgroundColor: SHADOW, padding: 10 }}>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import Arrow from '../../assets/util/arrow'
+import Arrow from '../util/arrow'
 import styles from './index.module.css'
 
 const Tooltip = props => {
