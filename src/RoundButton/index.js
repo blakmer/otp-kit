@@ -13,6 +13,7 @@ const RoundButton = props => {
     htmlType,
     variation,
     inverse,
+    icon
   } = props
 
   const [flag, setFlag] = useState(false)
@@ -77,7 +78,7 @@ const RoundButton = props => {
       onMouseLeave={() => setFlag(false)}
       type={htmlType}
       className={getClasses()}>
-      <Icon type="arrow-up" fill={getIconFill()} size="medium" />
+     {icon && <Icon type={icon} fill={getIconFill()} size="medium" />}
     </button>
   )
 }
@@ -88,6 +89,12 @@ RoundButton.defaultProps = {
   htmlType: 'button',
 }
 
-RoundButton.propTypes = {}
+RoundButton.propTypes = {
+  variation: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+  inverse: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  icon: PropTypes.string
+}
 
 export default RoundButton
