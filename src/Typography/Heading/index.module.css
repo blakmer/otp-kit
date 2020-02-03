@@ -1,25 +1,28 @@
 @import '../index.css';
 
 h2.head {
-  font-family: var(--font-regular);
+  font-family: var(--font-bold);
   font-style: normal;
   font-weight: 900;
   font-size: 2rem;
   line-height: 2.5rem;
+  margin: 0;
 }
 
 h3.head {
-  font-family: var(--font-regular);
+  font-family: var(--font-bold);
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin: 0;
 }
 
 h4.head {
-  font-family: var(--font-regular);
+  font-family: var(--font-bold);
   font-style: normal;
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 2rem;
+  margin: 0;
 }
