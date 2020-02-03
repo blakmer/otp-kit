@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
@@ -22,12 +22,37 @@ const Textarea = props => {
     label,
     onChange,
     status,
+    stretchHeight,
   } = props
 
   const [stateValue, setValue] = useState(value || '')
+  const textArea = useRef(null)
+
+  useEffect(() => {
+    const computedStyles = getComputedStyle(textArea.current.parentElement)
+    const padding =
+      parseInt(computedStyles.paddingTop) +
+      parseInt(computedStyles.paddingBottom)
+
+    if (stretchHeight) {
+      textArea.current.parentElement.style.height =
+        textArea.current.scrollHeight + padding + 'px'
+    }
+  }, [])
 
   const handleChange = event => {
-    setValue(event.target.value)
+    const { target } = event
+
+    setValue(target.value)
+
+    const computedStyles = getComputedStyle(target.parentElement)
+    const padding =
+      parseInt(computedStyles.paddingTop) +
+      parseInt(computedStyles.paddingBottom)
+
+    if (stretchHeight) {
+      target.parentElement.style.height = target.scrollHeight + padding + 'px'
+    }
 
     if (onChange) {
       onChange(event)
@@ -40,32 +65,35 @@ const Textarea = props => {
       [styles.disabled]: disabled,
     })
 
-  const getTextareaStyles = () =>
-    classnames(styles.textarea, !disabled && styles[status], {
+  const getTextareaWrapperStyles = () =>
+    classnames(styles.textareaWrapper, !disabled && styles[status], {
       [styles.disabled]: disabled,
     })
 
   return (
     <label className={styles.wrapper}>
       <span className={getLabelStyles()}>{label}</span>
-      <textarea
-        id={id}
-        value={stateValue}
-        className={getTextareaStyles()}
-        accessKey={accessKey}
-        autoFocus={autoFocus}
-        cols={cols}
-        disabled={disabled}
-        form={form}
-        maxLength={maxLength}
-        name={name}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        rows={rows}
-        tabIndex={tabIndex}
-        wrap={wrap}
-        onChange={handleChange}
-      />
+      <div className={getTextareaWrapperStyles()}>
+        <textarea
+          id={id}
+          value={stateValue}
+          className={styles.textarea}
+          accessKey={accessKey}
+          autoFocus={autoFocus}
+          cols={cols}
+          disabled={disabled}
+          form={form}
+          maxLength={maxLength}
+          name={name}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          rows={rows}
+          tabIndex={tabIndex}
+          wrap={wrap}
+          onChange={handleChange}
+          ref={textArea}
+        />
+      </div>
       <div className={styles.limit}>{`${stateValue.length}/${maxLength}`}</div>
     </label>
   )
