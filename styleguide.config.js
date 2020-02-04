@@ -47,11 +47,16 @@ module.exports = {
         'src/Input/index.js',
         'src/Link/index.js',
         'src/RadioGroup/index.js',
+        'src/RoundButton/index.js',
         'src/Select/index.js',
         'src/Slider/index.js',
         'src/Stepper/index.js',
         'src/Tooltip/index.js',
       ],
+    },
+    {
+      name: 'Moleculs',
+      components: ['src/Modal/index.js'],
     },
   ],
 }
