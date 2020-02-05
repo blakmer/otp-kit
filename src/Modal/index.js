@@ -55,8 +55,8 @@ const Modal = props => {
             if (e.target.dataset.role === 'modal')
               closable && handleClick(onClose)
           }}>
-          <Col md={SIZES[size]}>
-            <div className={styles.modal}>
+          <Col xs={12} md={SIZES[size]}>
+            <div className={classnames(styles.modal)}>
               <section className={styles.header}>
                 <Typography.Lead highlighted>{header}</Typography.Lead>
                 <RoundButton
@@ -77,6 +77,7 @@ const Modal = props => {
                 )}
               </section>
             </div>
+            )}
           </Col>
         </Row>
       </Container>
