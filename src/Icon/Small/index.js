@@ -1,20 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from '../index.module.css'
+import classnames from 'classnames'
+import { FILLS } from '../fills'
 import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
 import ArrowUp from './types/arrow-up'
-import classnames from 'classnames'
-import styles from '../index.module.css'
-import DatePicker from './types/datepicker'
-import { FILLS } from '../fills'
+import Calendar from './types/calendar'
+import Edit from './types/edit'
+import HourGlass from './types/hourglass'
+import Hammer from './types/hammer'
+import Plus from './types/plus'
+import Minus from './types/minus'
+import Tick from './types/tick'
+import Close from './types/close'
+import Info from './types/info'
+import Refresh from './types/refresh'
 
 const REFERENCES = {
+  edit: Edit,
   'arrow-right': ArrowRight,
   'arrow-left': ArrowLeft,
   'arrow-down': ArrowDown,
   'arrow-up': ArrowUp,
-  datepicker: DatePicker,
+  hourglass: HourGlass,
+  hammer: Hammer,
+  plus: Plus,
+  minus: Minus,
+  tick: Tick,
+  close: Close,
+  info: Info,
+  calendar: Calendar,
+  refresh: Refresh,
 }
 
 const Small = props => {

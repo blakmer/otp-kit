@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import Icon from '../Icon/Small'
+import Icon from '../Icon'
 
 const PRIMARIES = {
   primary: styles.primary,
@@ -78,13 +78,13 @@ const Button = props => {
       type={htmlType}
       className={getClasses()}>
       {!ghost && prefix && (
-        <Icon type={prefix} fill={!disabled ? 'inverse' : 'disabled'} />
+        <Icon.Small type={prefix} fill={!disabled ? 'inverse' : 'disabled'} />
       )}
 
       {children}
 
       {!ghost && suffix && (
-        <Icon type={suffix} fill={!disabled ? 'inverse' : 'disabled'} />
+        <Icon.Small type={suffix} fill={!disabled ? 'inverse' : 'disabled'} />
       )}
     </button>
   )

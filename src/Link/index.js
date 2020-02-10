@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import Icon from '../Icon/Small'
+import Icon from '../Icon'
 
 import styles from './index.module.css'
 
@@ -36,11 +36,17 @@ const Link = props => {
       style={style}
       onClick={onClick}>
       {prefix && (
-        <Icon type={prefix} fill={FILLS[variationColor] || FILLS['primary']} />
+        <Icon.Small
+          type={prefix}
+          fill={FILLS[variationColor] || FILLS['primary']}
+        />
       )}
       {children}
       {suffix && (
-        <Icon type={suffix} fill={FILLS[variationColor] || FILLS['primary']} />
+        <Icon.Small
+          type={suffix}
+          fill={FILLS[variationColor] || FILLS['primary']}
+        />
       )}
     </span>
   )

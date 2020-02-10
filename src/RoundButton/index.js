@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import Icon from '../Icon/Small'
+import Icon from '../Icon'
 
 const RoundButton = props => {
   const {
@@ -78,7 +78,7 @@ const RoundButton = props => {
       onMouseLeave={() => setFlag(false)}
       type={htmlType}
       className={getClasses()}>
-      {icon && <Icon type={icon} fill={getIconFill()} size="medium" />}
+      {icon && <Icon.Medium type={icon} fill={getIconFill()} size="medium" />}
     </button>
   )
 }

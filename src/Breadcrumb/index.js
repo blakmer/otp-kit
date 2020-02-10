@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
-import Icon from '../Icon/Small'
+import Icon from '../Icon'
 
 const Breadcrumb = props => {
   const { data } = props
 
   const getSeparator = index => {
     if (data.length - 1 !== index) {
-      return <Icon type="arrow-right" fill="disabled" />
+      return <Icon.Small type="arrow-right" fill="disabled" />
     }
   }
 

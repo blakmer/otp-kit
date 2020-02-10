@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox } from 'downshift'
-import Icon from '../Icon/Small'
+import Icon from '../Icon'
 import styles from './index.module.css'
 
 const STATUSES = {
@@ -79,7 +79,7 @@ const Select = props => {
         <span
           className={styles.arrowIcon}
           {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
-          <Icon type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
+          <Icon.Small type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
         </span>
       </label>
       {isOpen && (
