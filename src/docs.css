@@ -55,4 +55,7 @@
   --color-chart-yellow: #ffcc00;
   --color-chart-purple: #650c90;
   --color-chart-green: #52ae30;
+
+  --color-notification-success: #298d37;
+  --color-notification-error: #ff435a;
 }

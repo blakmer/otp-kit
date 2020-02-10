@@ -18,6 +18,7 @@
 }
 
 .highlighted {
+  font-family: var(--font-bold);
   font-weight: bold;
 }
 

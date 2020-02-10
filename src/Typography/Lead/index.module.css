@@ -7,9 +7,11 @@
   font-size: 1.125rem;
   line-height: 2rem;
   display: block;
+  margin: 0;
 }
 
 .highlighted {
+  font-family: var(--font-bold);
   font-weight: bold;
 }
 

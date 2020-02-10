@@ -1,0 +1,28 @@
+.modalCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-shadow);
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: var(--color-bg-grey-3);
+  border-radius: 2.5rem;
+  padding: 1.5rem;
+  z-index: 999;
+}
+
+.header {
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
