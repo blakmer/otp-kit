@@ -7,6 +7,7 @@ import ArrowUp from './types/arrow-up'
 import { COLORS } from '../docs'
 import classnames from 'classnames'
 import styles from './index.module.css'
+import DatePicker from './types/datepicker'
 
 const {
   TEXT_PRIMARY,
@@ -27,6 +28,7 @@ const REFERENCES = {
   'arrow-left': ArrowLeft,
   'arrow-down': ArrowDown,
   'arrow-up': ArrowUp,
+  datepicker: DatePicker,
 }
 
 const FILLS = {
@@ -44,7 +46,7 @@ const FILLS = {
 }
 
 const Icon = props => {
-  const { type, size, fill } = props
+  const { type, size, fill, className } = props
   const SVG = REFERENCES[type]
 
   const getDigitSize = () => {
@@ -58,7 +60,7 @@ const Icon = props => {
   }
 
   return SVG ? (
-    <span className={classnames(styles[size], styles.wrapper)}>
+    <span className={classnames(styles[size], styles.wrapper, className)}>
       {<SVG digitSize={getDigitSize()} hexFill={FILLS[fill]} />}
     </span>
   ) : null

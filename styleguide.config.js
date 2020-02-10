@@ -43,6 +43,7 @@ module.exports = {
         'src/Breadcrumb/index.js',
         'src/Button/index.js',
         'src/Checkbox/index.js',
+        'src/DatePicker/index.js',
         'src/Dropdown/index.js',
         'src/Input/index.js',
         'src/Link/index.js',
