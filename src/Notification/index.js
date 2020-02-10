@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect, useRef } from 'react'
 import classnames from 'classnames'
-
+import propTypes from 'prop-types'
 import Icon from '../Icon'
 import Typography from '../Typography'
 import Grid from '../Grid'
@@ -59,6 +59,10 @@ const NotificationProvider = props => {
       {children(showNotification)}
     </Fragment>
   )
+}
+
+NotificationProvider.propTypes = {
+  children: propTypes.func.isRequired,
 }
 
 export default NotificationProvider
