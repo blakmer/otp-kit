@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
-import Icon from '../Icon'
+import Icon from '../Icon/Small'
 
 const Breadcrumb = props => {
   const { data } = props

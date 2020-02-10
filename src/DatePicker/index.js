@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import Icon from '../Icon'
+import Icon from '../Icon/Small'
 import Years from './years'
 import Months from './months'
 import calendarApi from './api'

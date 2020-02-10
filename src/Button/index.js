@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import Icon from '../Icon'
+import Icon from '../Icon/Small'
 
 const PRIMARIES = {
   primary: styles.primary,

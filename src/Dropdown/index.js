@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import Arrow from '../util/arrow'
-import Icon from '../Icon'
+import Icon from '../Icon/Small'
 import { COLORS } from '../docs'
 
 const Dropdown = props => {
