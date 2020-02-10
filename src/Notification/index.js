@@ -16,7 +16,7 @@ const Notification = props => {
       element.current.style.marginLeft = '9999px'
       setTimeout(() => {
         element.current.parentNode.removeChild(element.current)
-      }, 100)
+      }, 500)
     }, 3000)
   }, [])
   return (
