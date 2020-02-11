@@ -34,6 +34,7 @@ module.exports = {
         'src/Grid/index.js',
         'src/Typography/index.js',
         'src/Icon/index.js',
+        'src/Logo/index.js'
       ],
     },
     {
