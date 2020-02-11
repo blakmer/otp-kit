@@ -36,11 +36,17 @@ const Link = props => {
       style={style}
       onClick={onClick}>
       {prefix && (
-        <Icon type={prefix} fill={FILLS[variationColor] || FILLS['primary']} />
+        <Icon.Small
+          type={prefix}
+          fill={FILLS[variationColor] || FILLS['primary']}
+        />
       )}
       {children}
       {suffix && (
-        <Icon type={suffix} fill={FILLS[variationColor] || FILLS['primary']} />
+        <Icon.Small
+          type={suffix}
+          fill={FILLS[variationColor] || FILLS['primary']}
+        />
       )}
     </span>
   )

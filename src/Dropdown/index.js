@@ -30,12 +30,12 @@ const Dropdown = props => {
         className={classnames(styles.label, isOpen && styles.isOpen)}
         {...getToggleButtonProps()}>
         <span className={styles.labelText}>{selectedItem || placeholder}</span>
-        <Icon type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
+        <Icon.Small type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
       </span>
       {isOpen && (
         <Fragment>
           <span className={styles.listArrow}>
-            <Arrow fill={COLORS.BG_INPUT}></Arrow>
+            <Arrow fill={COLORS.BG_INPUT} />
           </span>
           <ul className={styles.list} {...getMenuProps()}>
             {items.map((item, index) => (

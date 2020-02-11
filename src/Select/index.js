@@ -79,7 +79,7 @@ const Select = props => {
         <span
           className={styles.arrowIcon}
           {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
-          <Icon type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
+          <Icon.Small type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
         </span>
       </label>
       {isOpen && (
