@@ -27,7 +27,10 @@ import AlarmBell from './types/alarm-bell'
 import Profil from './types/profil'
 import PowerOff from './types/power-off'
 import Gear from './types/gear'
-import DocumentsTagEditor from './types/documents-tag-editor'
+import DocsTagEditor from './types/docs-tag-editor'
+import MachineLearning from './types/machine-learning'
+import Trash from './types/trash'
+import Folder from './types/folder'
 
 const REFERENCES = {
   edit: Edit,
@@ -54,7 +57,11 @@ const REFERENCES = {
   profil: Profil,
   'power-off': PowerOff,
   gear: Gear,
-  'documents-tag-editor': DocumentsTagEditor,
+  trash: Trash,
+
+  'docs-tag-editor': DocsTagEditor,
+  'machine-learning': MachineLearning,
+  folder: Folder,
 }
 
 const Medium = props => {

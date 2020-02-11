@@ -11,8 +11,11 @@
   box-sizing: border-box;
   cursor: pointer;
   min-width: 8.625rem;
+  font-size: 1rem;
+  font-family: var(--font-semi-bold);
   min-height: 3rem;
   transition: background-color 0.3s ease-in-out, color 0.2s, border-width 0.1s;
+  white-space: nowrap;
 }
 .button:focus {
   outline: none;
@@ -155,7 +158,7 @@
   height: calc(var(--d) * 1px);
   opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
   transition: calc(var(--t, 0) * var(--ripple-duration, 600ms))
-  var(--ripple-easing, linear);
+    var(--ripple-easing, linear);
   transform: translate(-50%, -50%) scale(var(--s, 1));
   transform-origin: center;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DocumentsTagEditor = props => {
+const DocsTagEditor = props => {
   const { hexFill } = props
 
   return (
@@ -91,4 +91,4 @@ const DocumentsTagEditor = props => {
   )
 }
 
-export default DocumentsTagEditor
+export default DocsTagEditor
