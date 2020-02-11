@@ -46,6 +46,7 @@ module.exports = {
         'src/Dropdown/index.js',
         'src/Input/index.js',
         'src/Link/index.js',
+        'src/Pagination/index.js',
         'src/RadioGroup/index.js',
         'src/RoundButton/index.js',
         'src/Select/index.js',
