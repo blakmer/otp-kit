@@ -146,6 +146,59 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="bulb" />
       <div>bulb</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="hamburger" />
+      <div>hamburger</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="car" />
+      <div>car</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="analytics-pie" />
+      <div>analytics-pie</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="alarm-bell" />
+      <div>alarm-bell</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="power-off" />
+      <div>power-off</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="gear" />
+      <div>gear</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="documents-tag-editor" />
+      <div>documents-tag-editor</div>
+    </Col>
+  </Row>
+</Container>
+```
+
+#### ClipArt
+
+```js
+import Grid from '../Grid'
+
+const { Container, Row, Col } = Grid
+
+;<Container>
+  <Row>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.ClipArt type="project-tag" />
+      <div>project-tag</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.ClipArt type="new-folder" />
+      <div>new-folder</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.ClipArt type="list-cards" />
+      <div>list-cards</div>
+    </Col>
   </Row>
 </Container>
 ```

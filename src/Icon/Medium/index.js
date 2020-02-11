@@ -20,6 +20,14 @@ import Refresh from './types/refresh'
 import Search from './types/search'
 import AlertTriangle from './types/alert-trianlge'
 import Bulb from './types/bulb'
+import Hamburger from './types/hamburger'
+import Car from './types/car'
+import AnalyticsPie from './types/analytics-pie'
+import AlarmBell from './types/alarm-bell'
+import Profil from './types/profil'
+import PowerOff from './types/power-off'
+import Gear from './types/gear'
+import DocumentsTagEditor from './types/documents-tag-editor'
 
 const REFERENCES = {
   edit: Edit,
@@ -39,6 +47,14 @@ const REFERENCES = {
   search: Search,
   'alert-triangle': AlertTriangle,
   bulb: Bulb,
+  hamburger: Hamburger,
+  car: Car,
+  'analytics-pie': AnalyticsPie,
+  'alarm-bell': AlarmBell,
+  profil: Profil,
+  'power-off': PowerOff,
+  gear: Gear,
+  'documents-tag-editor': DocumentsTagEditor,
 }
 
 const Medium = props => {
