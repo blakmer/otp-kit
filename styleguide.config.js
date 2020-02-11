@@ -53,12 +53,15 @@ module.exports = {
         'src/Stepper/index.js',
         'src/Textarea/index.js',
         'src/Tooltip/index.js',
-        'src/Notification/index.js',
       ],
     },
     {
       name: 'Moleculs',
-      components: ['src/Modal/index.js'],
+      components: [
+        'src/Modal/index.js',
+        'src/Notification/index.js',
+        'src/Tabs/index.js',
+      ],
     },
   ],
 }
