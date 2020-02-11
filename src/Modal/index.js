@@ -60,7 +60,7 @@ const Modal = props => {
               <section className={styles.header}>
                 <Typography.Lead highlighted>{header}</Typography.Lead>
                 <RoundButton
-                  icon="arrow-up"
+                  icon="close"
                   inverse
                   onClick={() => handleClick(onClose)}
                 />
@@ -77,7 +77,6 @@ const Modal = props => {
                 )}
               </section>
             </div>
-            )}
           </Col>
         </Row>
       </Container>
