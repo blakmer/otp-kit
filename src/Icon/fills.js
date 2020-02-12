@@ -12,6 +12,10 @@ const {
   ERROR_HOVER,
   BLUE,
   BLUE_HOVER,
+  BG_GREY_1,
+  BG_GREY_2,
+  BG_GREY_3,
+  BG_GREY_4,
 } = COLORS
 
 export const FILLS = {
@@ -26,4 +30,8 @@ export const FILLS = {
   dangerHover: ERROR_HOVER,
   blue: BLUE,
   blueHover: BLUE_HOVER,
+  grey1: BG_GREY_1,
+  grey2: BG_GREY_2,
+  grey3: BG_GREY_3,
+  grey4: BG_GREY_4,
 }
