@@ -65,6 +65,10 @@ const { Container, Row, Col } = Grid
       <Icon.Small type="refresh" />
       <div>refresh</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Small type="house-chimney" />
+      <div>house-chimney</div>
+    </Col>
   </Row>
 </Container>
 ```
@@ -171,8 +175,22 @@ const { Container, Row, Col } = Grid
       <div>gear</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1}>
-      <Icon.Medium type="documents-tag-editor" />
-      <div>documents-tag-editor</div>
+      <Icon.Medium type="trash" />
+      <div>trash</div>
+    </Col>
+  </Row>
+  <Row>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="docs-tag-editor" />
+      <div>docs-tag-editor</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="machine-learning" />
+      <div>machine-learning</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="folder" />
+      <div>folder</div>
     </Col>
   </Row>
 </Container>
