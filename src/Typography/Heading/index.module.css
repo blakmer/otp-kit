@@ -1,4 +1,18 @@
-@import '../index.css';
+.primary {
+  color: var(--color-text-primary);
+}
+
+.secondary {
+  color: var(--color-text-secondary);
+}
+
+.disabled {
+  color: var(--color-text-disabled);
+}
+
+.inverse {
+  color: var(--color-text-inverse);
+}
 
 h2.head {
   font-family: var(--font-bold);
