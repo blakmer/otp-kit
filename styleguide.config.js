@@ -65,6 +65,7 @@ module.exports = {
         'src/Modal/index.js',
         'src/Notification/index.js',
         'src/Tabs/index.js',
+        'src/List/index.js',
       ],
     },
   ],

@@ -6,29 +6,29 @@
 
 progress {
   background-color: transparent;
-  height: 8px;
-  border-radius: 9px;
+  height: 0.5rem;
+  border-radius: 0.5625rem;
   position: relative;
 }
 
 progress::-webkit-progress-bar {
   height: 2px;
-  min-width: 100px;
+  min-width: 6.25rem;
   background-color: var(--color-bg-grey-2);
   top: 50%;
   position: absolute;
 }
 
 progress::-webkit-progress-value {
-  border-radius: 5px;
-  height: 8px;
+  border-radius: 0.3125rem;
+  height: 0.5rem;
   background-color: var(--color-primary);
   top: -3px;
   position: absolute;
 }
 
 progress::-moz-progress-bar {
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: var(--color-primary);
 }
 
