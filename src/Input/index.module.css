@@ -59,12 +59,12 @@
   border: 2px solid var(--color-primary);
 }
 
-.input:focus,
+.input.error:focus,
 .input.error:hover {
   border: 2px solid var(--color-error);
 }
 
-.input:focus,
+.input.warning:focus,
 .input.warning:hover {
   border: 2px solid var(--color-highlighted);
 }
