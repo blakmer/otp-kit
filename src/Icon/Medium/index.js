@@ -24,13 +24,19 @@ import Hamburger from './types/hamburger'
 import Car from './types/car'
 import AnalyticsPie from './types/analytics-pie'
 import AlarmBell from './types/alarm-bell'
-import Profil from './types/profil'
+import Profile from './types/profile'
 import PowerOff from './types/power-off'
 import Gear from './types/gear'
 import DocsTagEditor from './types/docs-tag-editor'
 import MachineLearning from './types/machine-learning'
 import Trash from './types/trash'
 import Folder from './types/folder'
+import Photo from './types/photo'
+import Tag from './types/tag'
+import DocumentChecked from './types/document-checked'
+import DocumentEmpty from './types/document-empty'
+import DocumentWarning from './types/document-warning'
+import DocumentIncorrect from './types/document-incorrect'
 
 const REFERENCES = {
   edit: Edit,
@@ -54,7 +60,7 @@ const REFERENCES = {
   car: Car,
   'analytics-pie': AnalyticsPie,
   'alarm-bell': AlarmBell,
-  profil: Profil,
+  profile: Profile,
   'power-off': PowerOff,
   gear: Gear,
   trash: Trash,
@@ -62,6 +68,12 @@ const REFERENCES = {
   'docs-tag-editor': DocsTagEditor,
   'machine-learning': MachineLearning,
   folder: Folder,
+  photo: Photo,
+  tag: Tag,
+  'document-checked': DocumentChecked,
+  'document-empty': DocumentEmpty,
+  'document-warning': DocumentWarning,
+  'document-incorrect': DocumentIncorrect,
 }
 
 const Medium = props => {

@@ -18,6 +18,7 @@ import Close from './types/close'
 import Info from './types/info'
 import Refresh from './types/refresh'
 import HouseChimney from './types/house-chimney'
+import Trash from './types/trash'
 
 const REFERENCES = {
   edit: Edit,
@@ -35,6 +36,7 @@ const REFERENCES = {
   calendar: Calendar,
   refresh: Refresh,
   'house-chimney': HouseChimney,
+  trash: Trash,
 }
 
 const Small = props => {
