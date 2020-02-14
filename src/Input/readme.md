@@ -30,3 +30,9 @@ const { Container, Row, Col } = Grid
 ```js
 <Input mask="+7 (999) 999 99 99" maskChar="_" label="Your phone" />
 ```
+
+#### Input fits to its parent width
+
+```js
+<Input label="Label" value="value" block />
+```

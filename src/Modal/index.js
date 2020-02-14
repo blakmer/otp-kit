@@ -11,12 +11,6 @@ const { Container, Row, Col } = Grid
 
 import styles from './index.module.css'
 
-const SIZES = {
-  small: 6,
-  medium: 8,
-  large: 10,
-}
-
 const Modal = props => {
   const {
     size,
@@ -31,6 +25,7 @@ const Modal = props => {
     onClose,
     isOpen,
   } = props
+
   const [open, setOpen] = useState(isOpen)
 
   useEffect(() => {
@@ -55,7 +50,7 @@ const Modal = props => {
             if (e.target.dataset.role === 'modal')
               closable && handleClick(onClose)
           }}>
-          <Col xs={12} md={SIZES[size]}>
+          <Col {...size}>
             <div className={classnames(styles.modal)}>
               <section className={styles.header}>
                 <Typography.Lead highlighted>{header}</Typography.Lead>
@@ -85,7 +80,13 @@ const Modal = props => {
 }
 
 Modal.propTypes = {
-  size: PropTypes.oneOf(Object.keys(SIZES)),
+  size: PropTypes.shape({
+    xs: PropTypes.number,
+    sm: PropTypes.number,
+    md: PropTypes.number,
+    lg: PropTypes.number,
+    xl: PropTypes.number,
+  }),
   closable: PropTypes.bool,
   header: PropTypes.node,
   body: PropTypes.node,

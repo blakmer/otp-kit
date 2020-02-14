@@ -9,6 +9,11 @@ const [open, setOpen] = useState(false)
   <Modal
     header="Header"
     body="Body of component"
+    size={{
+      xs: 12,
+      sm: 9,
+      md: 6,
+    }}
     onOk={() => {
       setOpen(false)
     }}
