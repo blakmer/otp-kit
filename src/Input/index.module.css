@@ -59,6 +59,16 @@
   border: 2px solid var(--color-primary);
 }
 
+.input:focus,
+.input.error:hover {
+  border: 2px solid var(--color-error);
+}
+
+.input:focus,
+.input.warning:hover {
+  border: 2px solid var(--color-highlighted);
+}
+
 .input:disabled {
   background: var(--color-bg-input-disabled);
   color: var(--color-text-disabled);
