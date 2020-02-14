@@ -1,7 +1,8 @@
+import React from 'react'
 import {
   Container,
   Row,
-  Col,
+  Col as ParentCol,
   Visible,
   Hidden,
   ScreenClassRender,
@@ -18,6 +19,10 @@ setConfiguration({
   gridColumns: 12,
   defaultScreenClass: 'md',
 })
+
+const Col = props => (
+  <ParentCol {...props} style={{ ...props.style, position: 'static' }} />
+)
 
 export default {
   Container,
