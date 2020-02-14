@@ -12,7 +12,6 @@ const Textarea = props => {
     form,
     maxLength,
     name,
-    placeholder,
     readOnly,
     id,
     rows,
@@ -85,7 +84,6 @@ const Textarea = props => {
           form={form}
           maxLength={maxLength}
           name={name}
-          placeholder={placeholder}
           readOnly={readOnly}
           rows={rows}
           tabIndex={tabIndex}
@@ -108,6 +106,19 @@ Textarea.propTypes = {
   status: PropTypes.oneOf(['error', 'warning']),
   disabled: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  accessKey: PropTypes.string,
+  autoFocus: PropTypes.bool,
+  cols: PropTypes.number,
+  form: PropTypes.string,
+  maxLength: PropTypes.number,
+  name: PropTypes.string,
+  readOnly: PropTypes.bool,
+  id: PropTypes.string,
+  rows: PropTypes.number,
+  tabIndex: PropTypes.number,
+  wrap: PropTypes.string,
+  onChange: PropTypes.func,
+  stretchHeight: PropTypes.bool,
 }
 
 export default Textarea
