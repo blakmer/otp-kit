@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--color-shadow);
+  background-color: var(--color-modal-overlay);
   z-index: 998;
   width: 100vw;
   height: 100vh;

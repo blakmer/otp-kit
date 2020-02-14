@@ -29,6 +29,7 @@ const Input = props => {
     className,
     mask,
     maskChar,
+    block,
   } = props
 
   const [val, setVal] = useState(value || defaultValue)
@@ -50,7 +51,8 @@ const Input = props => {
       className={classnames(
         styles.inputContainer,
         changed && styles.changed,
-        styles[status]
+        styles[status],
+        block && styles.block
       )}>
       {label && (
         <span
@@ -87,6 +89,7 @@ const Input = props => {
           styles.input,
           changed && styles.changed,
           styles[status],
+          block && styles.block,
           className
         )}
       />
@@ -109,6 +112,7 @@ Input.propTypes = {
   className: PropTypes.string,
   maskChar: PropTypes.string,
   mask: PropTypes.string,
+  block: PropTypes.bool,
 }
 
 Input.defaultProps = {
