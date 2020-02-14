@@ -46,6 +46,14 @@
   border-radius: 1.5rem;
 }
 
+.inputContainer:focus-within > .inputLabel.error {
+  color: var(--color-error);
+}
+
+.inputContainer:focus-within > .inputLabel.warning {
+  color: var(--color-highlighted);
+}
+
 .input:focus,
 .input:not([disabled]):hover {
   border: 2px solid var(--color-primary);
