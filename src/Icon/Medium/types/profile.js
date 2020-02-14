@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Profil = props => {
+const Profile = props => {
   const { hexFill } = props
 
   return (
@@ -30,4 +30,4 @@ const Profil = props => {
   )
 }
 
-export default Profil
+export default Profile

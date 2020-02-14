@@ -69,6 +69,10 @@ const { Container, Row, Col } = Grid
       <Icon.Small type="house-chimney" />
       <div>house-chimney</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Small type="trash" />
+      <div>trash</div>
+    </Col>
   </Row>
 </Container>
 ```
@@ -167,6 +171,10 @@ const { Container, Row, Col } = Grid
       <div>alarm-bell</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="profile" />
+      <div>profile</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
       <Icon.Medium type="power-off" />
       <div>power-off</div>
     </Col>
@@ -192,6 +200,30 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="folder" />
       <div>folder</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="photo" />
+      <div>photo</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="tag" />
+      <div>tag</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="document-checked" />
+      <div>document-checked</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="document-empty" />
+      <div>document-empty</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="document-warning" />
+      <div>document-warning</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="document-incorrect" />
+      <div>document-incorrect</div>
+    </Col>
   </Row>
 </Container>
 ```
@@ -205,17 +237,25 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row>
-    <Col style={{ textAlign: 'center' }} md={1}>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
       <Icon.ClipArt type="project-tag" />
       <div>project-tag</div>
     </Col>
-    <Col style={{ textAlign: 'center' }} md={1}>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
       <Icon.ClipArt type="new-folder" />
       <div>new-folder</div>
     </Col>
-    <Col style={{ textAlign: 'center' }} md={1}>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
       <Icon.ClipArt type="list-cards" />
       <div>list-cards</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="check" />
+      <div>check</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="empty-state-machine-learning" />
+      <div>empty-state-machine-learning</div>
     </Col>
   </Row>
 </Container>
