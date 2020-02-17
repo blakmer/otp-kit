@@ -100,7 +100,7 @@ Modal.propTypes = {
 }
 
 Modal.defaultProps = {
-  size: 'medium',
+  size: {},
   closable: true,
   okText: 'ok',
   cancelText: 'cancel',
