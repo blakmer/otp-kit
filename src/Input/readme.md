@@ -34,5 +34,5 @@ const { Container, Row, Col } = Grid
 #### Input fits to its parent width
 
 ```js
-<Input label="Label" value="value" block />
+<Input label="Label" defaultValue="value" block />
 ```
