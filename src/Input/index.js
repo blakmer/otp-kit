@@ -30,6 +30,7 @@ const Input = props => {
     mask,
     maskChar,
     block,
+    errorMessage,
   } = props
 
   const [val, setVal] = useState(value || defaultValue)
@@ -47,53 +48,56 @@ const Input = props => {
   }, [state])
 
   return (
-    <label
-      className={classnames(
-        styles.inputContainer,
-        changed && styles.changed,
-        styles[status],
-        block && styles.block
-      )}>
-      {label && (
-        <span
-          className={classnames(
-            styles.inputLabel,
-            changed && styles.changed,
-            styles[status]
-          )}>
-          {label}
-        </span>
-      )}
-      <InputMask
-        mask={mask}
-        maskChar={maskChar}
-        type={type}
-        autoComplete={
-          typeof autoComplete === 'string'
-            ? autoComplete
-            : autoComplete
-            ? 'on'
-            : 'off'
-        }
-        autoFocus={autoFocus}
-        id={id}
-        name={name}
-        tabIndex={tabIndex}
-        disabled={status === STATUSES.disabled}
-        defaultValue={defaultValue && val}
-        value={value && val}
-        onChange={
-          (onChange && value) || !value ? e => changeValue(e) : undefined
-        }
+    <div className={classnames(styles.wrapper, block && styles.block)}>
+      <label
         className={classnames(
-          styles.input,
+          styles.inputContainer,
           changed && styles.changed,
-          styles[status],
-          block && styles.block,
-          className
+          styles[status]
+        )}>
+        {label && (
+          <span
+            className={classnames(
+              styles.inputLabel,
+              changed && styles.changed,
+              styles[status]
+            )}>
+            {label}
+          </span>
         )}
-      />
-    </label>
+        <InputMask
+          mask={mask}
+          maskChar={maskChar}
+          type={type}
+          autoComplete={
+            typeof autoComplete === 'string'
+              ? autoComplete
+              : autoComplete
+              ? 'on'
+              : 'off'
+          }
+          autoFocus={autoFocus}
+          id={id}
+          name={name}
+          tabIndex={tabIndex}
+          disabled={status === STATUSES.disabled}
+          defaultValue={defaultValue && val}
+          value={value && val}
+          onChange={
+            (onChange && value) || !value ? e => changeValue(e) : undefined
+          }
+          className={classnames(
+            styles.input,
+            changed && styles.changed,
+            styles[status],
+            className
+          )}
+        />
+      </label>
+      <p className={styles.errorMessage}>
+        {status === 'error' && errorMessage ? errorMessage : null}
+      </p>
+    </div>
   )
 }
 
@@ -113,6 +117,7 @@ Input.propTypes = {
   maskChar: PropTypes.string,
   mask: PropTypes.string,
   block: PropTypes.bool,
+  errorMessage: PropTypes.string,
 }
 
 Input.defaultProps = {

@@ -36,3 +36,14 @@ const { Container, Row, Col } = Grid
 ```js
 <Input label="Label" defaultValue="value" block />
 ```
+
+#### Input with error message
+
+```js
+<Input
+  label="Label"
+  defaultValue="value"
+  state="error"
+  errorMessage="Поле обязательно для заполнения"
+/>
+```

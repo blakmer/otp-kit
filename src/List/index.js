@@ -9,23 +9,23 @@ const { Container, Row, Col } = Grid
 const List = props => {
   const { columns, data, pagination, headers } = props
 
-  const renderHeaders = columns.map(column => (
+  const renderHeaders = columns.map((column, idx) => (
     <Col
       className={styles.headerCol}
       style={{
         justifyContent: column.align === 'right' ? 'flex-end' : 'flex-start',
       }}
-      key={column.key}
+      key={idx}
       offset={{ ...column.offset }}
       {...column.size}>
       <span>{column.title}</span>
     </Col>
   ))
 
-  const renderItems = data.map(item => (
-    <li className={styles.item} key={item.key}>
+  const renderItems = data.map((item, idx) => (
+    <li className={styles.item} key={idx}>
       <Row>
-        {columns.map(column => {
+        {columns.map((column, idx) => {
           const { dataIndex } = column
 
           return (
@@ -35,7 +35,7 @@ const List = props => {
                 justifyContent:
                   column.align === 'right' ? 'flex-end' : 'flex-start',
               }}
-              key={column.key}
+              key={idx}
               offset={{ ...column.offset }}
               {...column.size}>
               {column.hasOwnProperty('render') ? (
@@ -75,9 +75,9 @@ List.propTypes = {
   }),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
+      render: PropTypes.func,
+      dataIndex: PropTypes.string,
       title: PropTypes.string,
-      dataIndex: PropTypes.string.isRequired,
-      key: PropTypes.string.isRequired,
       size: PropTypes.shape({
         xs: PropTypes.number,
         sm: PropTypes.number,
@@ -94,15 +94,13 @@ List.propTypes = {
       }),
     })
   ),
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string.isRequired,
-    })
-  ),
+  data: PropTypes.arrayOf(PropTypes.object),
 }
 
 List.defaultProps = {
   headers: true,
+  columns: [],
+  data: [],
 }
 
 export default List
