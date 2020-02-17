@@ -1,3 +1,5 @@
+### Textarea component
+
 ```js
 import Grid from '../Grid'
 const { Container, Row, Col } = Grid
@@ -28,4 +30,21 @@ const { Container, Row, Col } = Grid
     </Col>
   </Row>
 </Container>
+```
+
+### Textarea fits to its parent width
+
+```js
+;<Textarea label="Отъезжающий лабель" maxLength={100} block />
+```
+
+### Textarea with error message
+
+```js
+;<Textarea
+  label="Отъезжающий лабель"
+  status="error"
+  maxLength={100}
+  errorMessage="Поле обязательно для заполнения"
+/>
 ```

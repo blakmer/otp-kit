@@ -22,6 +22,8 @@ const Textarea = props => {
     onChange,
     status,
     stretchHeight,
+    errorMessage,
+    block,
   } = props
 
   const [stateValue, setValue] = useState(value || '')
@@ -70,7 +72,7 @@ const Textarea = props => {
     })
 
   return (
-    <label className={styles.wrapper}>
+    <label className={classnames(styles.wrapper, block && styles.block)}>
       <span className={getLabelStyles()}>{label}</span>
       <div className={getTextareaWrapperStyles()}>
         <textarea
@@ -92,7 +94,12 @@ const Textarea = props => {
           ref={textArea}
         />
       </div>
-      <div className={styles.limit}>{`${stateValue.length}/${maxLength}`}</div>
+      {!errorMessage ? (
+        <small
+          className={styles.limit}>{`${stateValue.length}/${maxLength}`}</small>
+      ) : (
+        <p className={styles.errorMessage}>{errorMessage}</p>
+      )}
     </label>
   )
 }
@@ -119,6 +126,8 @@ Textarea.propTypes = {
   wrap: PropTypes.string,
   onChange: PropTypes.func,
   stretchHeight: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  block: PropTypes.bool,
 }
 
 export default Textarea

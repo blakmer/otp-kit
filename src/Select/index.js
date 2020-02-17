@@ -21,6 +21,8 @@ const Select = props => {
     label,
     filtered,
     status,
+    block,
+    errorMessage,
   } = props
   const [val, setVal] = useState(defaultValue)
   const [filter, setFilter] = useState('')
@@ -55,6 +57,7 @@ const Select = props => {
       className={classnames(
         styles.container,
         styles[STATUSES[status]],
+        block && styles.block,
         isOpen && styles.isOpen
       )}
       {...getComboboxProps()}>
@@ -73,7 +76,7 @@ const Select = props => {
         <input
           readOnly={!filtered}
           disabled={status === STATUSES.disabled}
-          className={styles.input}
+          className={classnames(styles.input, block && styles.block)}
           {...(status === STATUSES.disabled ? {} : getInputProps())}
         />
         <span
@@ -101,6 +104,9 @@ const Select = props => {
           {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
         </ul>
       )}
+      <p className={styles.errorMessage}>
+        {status === 'error' && errorMessage ? errorMessage : null}
+      </p>
     </span>
   )
 }

@@ -71,3 +71,34 @@ const { Container, Row, Col } = Grid
   </Row>
 </Container>
 ```
+
+##### Select fits to its parent width
+
+```js
+;<Select
+  items={[
+    { title: 'one', value: 1 },
+    { title: 'two', value: 2 },
+  ]}
+  label="numbers"
+  filtered={false}
+  onChange={val => console.log(val)}
+  block
+/>
+```
+
+##### Select with error message
+
+```js
+;<Select
+  status="error"
+  items={[
+    { title: 'one', value: 1 },
+    { title: 'two', value: 2 },
+  ]}
+  label="numbers"
+  filtered={false}
+  onChange={val => console.log(val)}
+  errorMessage="Поле обязательно для заполнения"
+/>
+```

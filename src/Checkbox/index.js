@@ -27,10 +27,11 @@ const Checkbox = props => {
     onMouseEnter,
     onMouseLeave,
     children,
+    className,
   } = props
 
   return (
-    <span className={styles.checkboxWrapper}>
+    <span className={className}>
       <input
         autoComplete={autoComplete ? 'on' : 'off'}
         autoFocus={autoFocus}

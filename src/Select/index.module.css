@@ -1,9 +1,9 @@
 .container {
   position: relative;
   display: inline-block;
-  margin: 0.75rem;
+  margin: 0 0.75rem 0.75rem 0;
   box-sizing: border-box;
-  min-width: 14rem;
+  width: 14rem;
   height: calc(3rem + 2px);
   z-index: 999;
 }
@@ -162,4 +162,20 @@
 
 .container.disabled.isOpen .menu {
   border-color: var(--color-border);
+}
+
+.block {
+  width: 100%;
+}
+
+.errorMessage {
+  margin: 0;
+  font-size: 0.875rem;
+  height: 1.125rem;
+  color: var(--color-error);
+  padding-top: 0.125rem;
+  padding-left: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

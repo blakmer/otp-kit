@@ -8,8 +8,6 @@ import Progress from '../Progress'
 
 const columns = [
   {
-    dataIndex: 'icon',
-    key: 'icon',
     render: () => (
       <div style={{ background: '#52ae30', borderRadius: '50%' }}>
         <Icon.Medium type="machine-learning" />
@@ -22,7 +20,6 @@ const columns = [
   {
     title: 'Название',
     dataIndex: 'name',
-    key: 'name',
     size: {
       md: 4,
     },
@@ -30,7 +27,6 @@ const columns = [
   {
     title: 'Прогресс',
     dataIndex: 'progress',
-    key: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
       md: 3,
@@ -39,7 +35,6 @@ const columns = [
   {
     title: 'Тэгов',
     dataIndex: 'tags',
-    key: 'tags',
     align: 'right',
     size: {
       md: 1,
@@ -48,7 +43,6 @@ const columns = [
   {
     title: 'Дата',
     dataIndex: 'date',
-    key: 'date',
     size: {
       md: 2,
     },
@@ -60,14 +54,12 @@ const columns = [
 
 const data = [
   {
-    key: '1',
     name: 'Паспорт гражданина РФ',
     progress: 768,
     tags: 32,
     date: '12.02.2020',
   },
   {
-    key: '2',
     name: 'ИНН',
     progress: 1403,
     tags: 16,
@@ -88,8 +80,6 @@ import Progress from '../Progress'
 
 const columns = [
   {
-    dataIndex: 'icon',
-    key: 'icon',
     render: () => (
       <div>
         <Icon.Medium type="machine-learning" />
@@ -102,7 +92,6 @@ const columns = [
   {
     title: 'Название',
     dataIndex: 'name',
-    key: 'name',
     size: {
       md: 4,
     },
@@ -110,7 +99,6 @@ const columns = [
   {
     title: 'Прогресс',
     dataIndex: 'progress',
-    key: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
       md: 3,
@@ -119,7 +107,6 @@ const columns = [
   {
     title: 'Тэгов',
     dataIndex: 'tags',
-    key: 'tags',
     align: 'right',
     size: {
       md: 1,
@@ -128,7 +115,6 @@ const columns = [
   {
     title: 'Дата',
     dataIndex: 'date',
-    key: 'date',
     size: {
       md: 2,
     },
@@ -140,14 +126,12 @@ const columns = [
 
 const data = [
   {
-    key: '1',
     name: 'Паспорт гражданина РФ',
     progress: 768,
     tags: 32,
     date: '12.02.2020',
   },
   {
-    key: '2',
     name: 'ИНН',
     progress: 1403,
     tags: 16,
@@ -168,8 +152,6 @@ import Progress from '../Progress'
 
 const columns = [
   {
-    dataIndex: 'icon',
-    key: 'icon',
     render: () => (
       <div>
         <Icon.Medium type="machine-learning" />
@@ -182,7 +164,6 @@ const columns = [
   {
     title: 'Название',
     dataIndex: 'name',
-    key: 'name',
     size: {
       md: 4,
     },
@@ -190,7 +171,6 @@ const columns = [
   {
     title: 'Прогресс',
     dataIndex: 'progress',
-    key: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
       md: 3,
@@ -199,7 +179,6 @@ const columns = [
   {
     title: 'Тэгов',
     dataIndex: 'tags',
-    key: 'tags',
     align: 'right',
     size: {
       md: 1,
@@ -208,7 +187,6 @@ const columns = [
   {
     title: 'Дата',
     dataIndex: 'date',
-    key: 'date',
     size: {
       md: 2,
     },
@@ -220,14 +198,12 @@ const columns = [
 
 const data = [
   {
-    key: '1',
     name: 'Паспорт гражданина РФ',
     progress: 768,
     tags: 32,
     date: '12.02.2020',
   },
   {
-    key: '2',
     name: 'ИНН',
     progress: 1403,
     tags: 16,
