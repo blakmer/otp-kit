@@ -90,10 +90,13 @@ RoundButton.defaultProps = {
 }
 
 RoundButton.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+  htmlType: PropTypes.string,
   variation: PropTypes.oneOf(['primary', 'secondary', 'danger']),
   inverse: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
   icon: PropTypes.string,
 }
 

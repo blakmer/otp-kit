@@ -3,6 +3,7 @@
   <div>
     <h1>Row</h1>
     <RadioGroup
+      onChange={event => console.log(event.target.value)}
       name="group-1"
       data={[
         { label: 'Group element', value: 'first', defaultChecked: true },
@@ -16,6 +17,7 @@
     <RadioGroup
       name="group-2"
       direction="column"
+      onChange={event => console.log(event.target.value)}
       data={[
         { label: 'Group element', value: 'first', defaultChecked: true },
         { label: 'Group element', value: 'second' },

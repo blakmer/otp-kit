@@ -14,7 +14,7 @@ const Breadcrumb = props => {
 
   const renderList = data.map((item, index) => {
     return (
-      <li key={item.key} className={styles.item}>
+      <li key={index} className={styles.item}>
         {item.node}
         {getSeparator(index)}
       </li>
@@ -27,7 +27,9 @@ const Breadcrumb = props => {
 Breadcrumb.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      node: PropTypes.any,
+      node: PropTypes.node,
+      /** Например, составная часть URL'а */
+      key: PropTypes.string,
     })
   ).isRequired,
 }

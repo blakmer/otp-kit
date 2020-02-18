@@ -4,7 +4,7 @@ import styles from './index.module.css'
 import classnames from 'classnames'
 
 const RadioGroup = props => {
-  const { name, data, direction } = props
+  const { name, data, direction, onChange } = props
 
   return (
     <div
@@ -21,7 +21,6 @@ const RadioGroup = props => {
           checked,
           disabled,
           onBlur,
-          onChange,
           onFocus,
           onKeyDown,
           onKeyPress,
@@ -71,6 +70,8 @@ const RadioGroup = props => {
 RadioGroup.propTypes = {
   direction: PropTypes.string,
   name: PropTypes.string.isRequired,
+  /** Колбэк, который срабатывает при смене активного дочернего элемента. Принимает на вход event: Event */
+  onChange: PropTypes.func,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -79,7 +80,6 @@ RadioGroup.propTypes = {
       disabled: PropTypes.bool,
       ref: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
       onBlur: PropTypes.func,
-      onChange: PropTypes.func,
       onFocus: PropTypes.func,
       onKeyDown: PropTypes.func,
       onKeyPress: PropTypes.func,
