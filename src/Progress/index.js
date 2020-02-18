@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 
 const Progress = props => {
   const { className, value, max } = props
-  const percent = Math.round((value * 100) / max)
+  const percent = value > 0 && max > 0 ? Math.round((value * 100) / max) : 0
 
   return (
     <div className={classnames(styles.progress, className)}>
@@ -18,6 +19,12 @@ const Progress = props => {
       </label>
     </div>
   )
+}
+
+Progress.propTypes = {
+  className: PropTypes.string,
+  value: PropTypes.number,
+  max: PropTypes.number,
 }
 
 export default Progress

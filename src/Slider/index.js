@@ -41,12 +41,15 @@ const Slider = props => {
 }
 
 Slider.propTypes = {
-  value: PropTypes.number.isRequired,
-  min: PropTypes.number.isRequired,
-  max: PropTypes.number.isRequired,
-  step: PropTypes.number.isRequired,
   name: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
   onChange: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 export default Slider

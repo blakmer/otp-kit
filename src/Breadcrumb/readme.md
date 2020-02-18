@@ -1,11 +1,20 @@
 ```js
-<Breadcrumb
+import Icon from '../Icon'
+;<Breadcrumb
   data={[
-    { node: <a href="/">Главная</a>, key: 1 },
-    { node: <a href="#">Меню</a>, key: 2 },
-    { node: <a href="#">Контакты</a>, key: 3 },
-    { node: <a href="#">Разработчик</a>, key: 4 },
-    { node: <span>Вася</span>, key: 5 },
+    {
+      node: (
+        <React.Fragment>
+          <Icon.Small type="house-chimney" fill="green" />
+          <a href="/">Главная</a>
+        </React.Fragment>
+      ),
+      key: '',
+    },
+    { node: <a href="#">Меню</a> },
+    { node: <a href="#">Контакты</a> },
+    { node: <a href="#">Разработчик</a> },
+    { node: <span>Вася</span> },
   ]}
 />
 ```

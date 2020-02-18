@@ -100,11 +100,13 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
+  className: PropTypes.string,
   variation: PropTypes.oneOf(['primary', 'highlighted', 'error', 'blue']),
   disabled: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium']),
   onClick: PropTypes.func,
   htmlType: PropTypes.string,
+  children: PropTypes.node,
+  size: PropTypes.oneOf(['small', 'medium']),
   floating: PropTypes.bool,
   ghost: PropTypes.bool,
   suffix: PropTypes.string,
