@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
+import classnames from 'classnames'
 import Icon from '../Icon'
 
 const Breadcrumb = props => {
-  const { data } = props
+  const { data, className } = props
 
   const getSeparator = index => {
     if (data.length - 1 !== index) {
@@ -21,10 +22,13 @@ const Breadcrumb = props => {
     )
   })
 
-  return <ul className={styles.breadcrumb}>{renderList}</ul>
+  return (
+    <ul className={classnames(styles.breadcrumb, className)}>{renderList}</ul>
+  )
 }
 
 Breadcrumb.propTypes = {
+  className: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       node: PropTypes.node,

@@ -1,7 +1,7 @@
 .wrapper {
-  margin: 0 0.75rem 0.75rem 0;
   display: inline-block;
-  width: 18.5rem;
+  width: 14rem;
+  margin-bottom: 10px;
 }
 
 .inputContainer {
