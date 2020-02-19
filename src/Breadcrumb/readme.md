@@ -9,7 +9,6 @@ import Icon from '../Icon'
           <a href="/">Главная</a>
         </React.Fragment>
       ),
-      key: '',
     },
     { node: <a href="#">Меню</a> },
     { node: <a href="#">Контакты</a> },

@@ -90,15 +90,24 @@ const { Container, Row, Col } = Grid
 ##### Select with error message
 
 ```js
-;<Select
-  status="error"
-  items={[
-    { title: 'one', value: 1 },
-    { title: 'two', value: 2 },
-  ]}
-  label="numbers"
-  filtered={false}
-  onChange={val => console.log(val)}
-  errorMessage="Поле обязательно для заполнения"
-/>
+import Grid from '../Grid'
+const { Container, Row, Col } = Grid
+
+;<Container>
+  <Row align="center">
+    <Col md={4}>
+      <Select
+        status="error"
+        items={[
+          { title: 'one', value: 1 },
+          { title: 'two', value: 2 },
+        ]}
+        label="numbers"
+        filtered={false}
+        onChange={val => console.log(val)}
+        errorMessage="Поле обязательно для заполнения"
+      />
+    </Col>
+  </Row>
+</Container>
 ```

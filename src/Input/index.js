@@ -48,7 +48,8 @@ const Input = props => {
   }, [state])
 
   return (
-    <div className={classnames(styles.wrapper, block && styles.block)}>
+    <div
+      className={classnames(styles.wrapper, block && styles.block, className)}>
       <label
         className={classnames(
           styles.inputContainer,
@@ -89,8 +90,7 @@ const Input = props => {
           className={classnames(
             styles.input,
             changed && styles.changed,
-            styles[status],
-            className
+            styles[status]
           )}
         />
       </label>
