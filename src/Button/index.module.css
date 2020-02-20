@@ -130,6 +130,10 @@
   min-height: 3rem;
 }
 
+.block {
+  width: 100%;
+}
+
 /** FLOATING BTN */
 .floating {
   box-shadow: 0 1rem 3rem var(--color-shadow);

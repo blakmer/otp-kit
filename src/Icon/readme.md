@@ -257,6 +257,10 @@ const { Container, Row, Col } = Grid
       <Icon.ClipArt type="empty-state-machine-learning" />
       <div>empty-state-machine-learning</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="project-to-archive" />
+      <div>project-to-archive</div>
+    </Col>
   </Row>
 </Container>
 ```

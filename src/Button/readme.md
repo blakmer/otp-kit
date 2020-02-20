@@ -14,11 +14,21 @@ const wrapper = { display: 'flex' }
 
   <h1>Secondary Buttons</h1>
   <div style={{ ...wrapper }}>
-    <Button variation="primary" ghost>Primary</Button>
-    <Button variation="highlighted" ghost>Highlighted</Button>
-    <Button variation="error" ghost>Error</Button>
-    <Button variation="blue" ghost>Blue</Button>
-    <Button disabled ghost>Disabled</Button>
+    <Button variation="primary" ghost>
+      Primary
+    </Button>
+    <Button variation="highlighted" ghost>
+      Highlighted
+    </Button>
+    <Button variation="error" ghost>
+      Error
+    </Button>
+    <Button variation="blue" ghost>
+      Blue
+    </Button>
+    <Button disabled ghost>
+      Disabled
+    </Button>
   </div>
 
   <h1>Floating Buttons</h1>
@@ -64,24 +74,30 @@ const wrapper = { display: 'flex' }
     </Button>
   </div>
 
- <h1>Primary Buttons with icons</h1>
+  <h1>Primary Buttons with icons</h1>
   <div style={{ marginTop: mt, ...wrapper }}>
-    <Button variation="primary" suffix='arrow-right'>
+    <Button variation="primary" suffix="arrow-right">
       Primary
     </Button>
-    <Button variation="highlighted" prefix='arrow-right'>
+    <Button variation="highlighted" prefix="arrow-right">
       Highlighted
     </Button>
-    <Button variation="error" suffix='arrow-right'>
+    <Button variation="error" suffix="arrow-right">
       Error
     </Button>
-    <Button variation="blue" prefix='arrow-right'>
+    <Button variation="blue" prefix="arrow-right">
       Blue
     </Button>
-    <Button disabled suffix='arrow-right'>
+    <Button disabled suffix="arrow-right">
       Disabled
     </Button>
   </div>
 
+  <h1>Button fits to its parent width</h1>
+  <div style={{ marginTop: mt, ...wrapper }}>
+    <Button variation="primary" block>
+      Block
+    </Button>
+  </div>
 </React.Fragment>
 ```

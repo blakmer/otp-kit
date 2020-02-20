@@ -32,6 +32,7 @@ const Button = props => {
     ghost,
     suffix,
     prefix,
+    block,
   } = props
 
   const getClasses = () => {
@@ -48,7 +49,8 @@ const Button = props => {
       _variation,
       _floating,
       _disabled,
-      ghostDisabled
+      ghostDisabled,
+      block && styles.block
     )
   }
 
@@ -111,6 +113,7 @@ Button.propTypes = {
   ghost: PropTypes.bool,
   suffix: PropTypes.string,
   prefix: PropTypes.string,
+  block: PropTypes.bool,
 }
 
 export default Button

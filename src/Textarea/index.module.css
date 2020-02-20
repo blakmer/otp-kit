@@ -3,6 +3,7 @@
   display: inline-block;
   width: 14rem;
   margin-bottom: 10px;
+  margin-left: 0;
 }
 
 .wrapper:focus-within > .label {

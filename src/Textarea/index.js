@@ -5,6 +5,8 @@ import classnames from 'classnames'
 
 const Textarea = props => {
   const {
+    className,
+    style,
     accessKey,
     autoFocus,
     cols,
@@ -72,7 +74,9 @@ const Textarea = props => {
     })
 
   return (
-    <label className={classnames(styles.wrapper, block && styles.block)}>
+    <label
+      className={classnames(styles.wrapper, block && styles.block, className)}
+      style={style}>
       <span className={getLabelStyles()}>{label}</span>
       <div className={getTextareaWrapperStyles()}>
         <textarea
@@ -109,8 +113,10 @@ Textarea.defaultProps = {
 }
 
 Textarea.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   label: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(['error', 'warning']),
+  status: PropTypes.oneOf(['error', 'warning', 'default']),
   disabled: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   accessKey: PropTypes.string,

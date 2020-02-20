@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import Icon from '../Icon'
 
 const Breadcrumb = props => {
-  const { data, className } = props
+  const { data, className, style } = props
 
   const getSeparator = index => {
     if (data.length - 1 !== index) {
@@ -23,11 +23,14 @@ const Breadcrumb = props => {
   })
 
   return (
-    <ul className={classnames(styles.breadcrumb, className)}>{renderList}</ul>
+    <ul className={classnames(styles.breadcrumb, className)} style={style}>
+      {renderList}
+    </ul>
   )
 }
 
 Breadcrumb.propTypes = {
+  style: PropTypes.object,
   className: PropTypes.string,
   data: PropTypes.arrayOf(
     PropTypes.shape({
