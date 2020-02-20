@@ -16,16 +16,19 @@ const Select = props => {
   const {
     items,
     defaultValue,
+    value,
     onChange,
     emptyText,
     label,
-    filtered,
     status,
     block,
     errorMessage,
   } = props
-  const [val, setVal] = useState(defaultValue)
-  const [filter, setFilter] = useState('')
+
+  if (value && !onChange) {
+    console.warn('Warning. Use defaultValue or value and onChange')
+  }
+
   const {
     isOpen,
     getToggleButtonProps,
@@ -34,21 +37,13 @@ const Select = props => {
     getComboboxProps,
     highlightedIndex,
     getItemProps,
+    selectedItem,
   } = useCombobox({
     items: items,
+    selectedItem: value && onChange ? value : defaultValue,
     itemToString: i => i.title,
-    onInputValueChange: ({ inputValue }) => {
-      const row = items.find(i => i.title === inputValue)
-      if (row) {
-        setVal(inputValue)
-        setFilter('')
-        onChange && onChange(row)
-      } else {
-        setFilter(inputValue)
-        if (inputValue === '') {
-          setVal('')
-        }
-      }
+    onSelectedItemChange: ({ selectedItem }) => {
+      onChange(selectedItem)
     },
   })
 
@@ -68,16 +63,17 @@ const Select = props => {
           <span
             className={classnames(
               styles.label,
-              (isOpen || val) && styles.labelUp
+              (isOpen || selectedItem) && styles.labelUp
             )}>
             {label}
           </span>
         )}
         <input
-          readOnly={!filtered}
+          readOnly
           disabled={status === STATUSES.disabled}
           className={classnames(styles.input, block && styles.block)}
           {...(status === STATUSES.disabled ? {} : getInputProps())}
+          {...(value && onChange && { value: selectedItem.title })}
         />
         <span
           className={styles.arrowIcon}
@@ -87,20 +83,16 @@ const Select = props => {
       </label>
       {isOpen && (
         <ul {...getMenuProps()} className={styles.menu}>
-          {items
-            .filter(
-              i => i.title.toLowerCase().indexOf(filter.toLowerCase()) > -1
-            )
-            .map((item, index) => (
-              <li
-                className={classnames(
-                  highlightedIndex === index && styles.selected
-                )}
-                key={`${index}`}
-                {...getItemProps({ item, index })}>
-                {item.title}
-              </li>
-            ))}
+          {items.map((item, index) => (
+            <li
+              className={classnames(
+                highlightedIndex === index && styles.selected
+              )}
+              key={`${index}`}
+              {...getItemProps({ item, index })}>
+              {item.title}
+            </li>
+          ))}
           {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
         </ul>
       )}
@@ -125,15 +117,14 @@ Select.propTypes = {
   onChange: PropTypes.func,
   emptyText: PropTypes.string,
   label: PropTypes.string,
-  filtered: PropTypes.bool,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
 }
 
 Select.defaultProps = {
   items: [],
   emptyText: 'Пусто',
-  filtered: true,
   status: STATUSES.default,
+  onChange: value => {},
 }
 
 export default Select

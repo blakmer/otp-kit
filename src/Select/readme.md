@@ -1,17 +1,25 @@
-##### Standart select
+##### Controlled select
 
 ```js
-<Select
-  items={[
-    { title: 'one', value: 1 },
-    { title: 'two', value: 2 },
-  ]}
-  label="numbers"
-  onChange={val => console.log(val)}
-/>
+import { useState, Fragment } from 'react'
+const [a, set] = useState({ title: 'one', value: 1 })
+
+;<Fragment>
+  <Select
+    items={[
+      { title: 'one', value: 1 },
+      { title: 'two', value: 2 },
+      { title: 'tree', value: 3 },
+    ]}
+    label="numbers"
+    value={a}
+    onChange={val => set(val)}
+  />
+  <button onClick={() => set({ title: 'two', value: 2 })}>reset to two</button>
+</Fragment>
 ```
 
-##### Select without filters
+##### Uncontrolled select
 
 ```js
 <Select
@@ -20,7 +28,6 @@
     { title: 'two', value: 2 },
   ]}
   label="numbers"
-  filtered={false}
   onChange={val => console.log(val)}
 />
 ```
@@ -40,7 +47,6 @@ const { Container, Row, Col } = Grid
           { title: 'two', value: 2 },
         ]}
         label="numbers"
-        filtered={false}
         onChange={val => console.log(val)}
       />
     </Col>
@@ -52,7 +58,6 @@ const { Container, Row, Col } = Grid
           { title: 'two', value: 2 },
         ]}
         label="numbers"
-        filtered={false}
         onChange={val => console.log(val)}
       />
     </Col>
@@ -64,7 +69,6 @@ const { Container, Row, Col } = Grid
           { title: 'two', value: 2 },
         ]}
         label="numbers"
-        filtered={false}
         onChange={val => console.log(val)}
       />
     </Col>
@@ -81,7 +85,6 @@ const { Container, Row, Col } = Grid
     { title: 'two', value: 2 },
   ]}
   label="numbers"
-  filtered={false}
   onChange={val => console.log(val)}
   block
 />
@@ -103,7 +106,6 @@ const { Container, Row, Col } = Grid
           { title: 'two', value: 2 },
         ]}
         label="numbers"
-        filtered={false}
         onChange={val => console.log(val)}
         errorMessage="Поле обязательно для заполнения"
       />
