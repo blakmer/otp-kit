@@ -1,14 +1,10 @@
 .container {
   position: relative;
   display: inline-block;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  width: calc(14rem + 4px);
-  margin-bottom: 10px;
-  z-index: 998;
+  width: 14rem;
 }
 
-.container:focus-within {
+.labelContainer:focus-within {
   z-index: 999;
 }
 
@@ -23,7 +19,9 @@
   top: 0.75rem;
   left: 1.5rem;
   transition: 0.25s;
+  pointer-events: none;
 }
+
 .label.labelUp {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -38,6 +36,7 @@
   outline: none;
   margin: 0;
 }
+
 .input {
   outline: none;
   background: var(--color-bg-input);
@@ -55,39 +54,45 @@
   box-sizing: border-box;
 }
 
+.input:focus,
+.input:hover {
+  border-width: 2px !important;
+  border-color: var(--color-primary);
+}
+
 .arrowIcon {
   cursor: pointer;
   position: absolute;
   top: 0.75rem;
-  right: 0.75rem;
+  right: 0.5rem;
   outline: none;
+  pointer-events: none;
 }
+
 .menu {
   position: absolute;
+  top: 80%;
   list-style-type: none;
   margin: 0;
   background: var(--color-bg-input);
-  border-radius: 0 0 1rem 1rem;
-  border-color: var(--color-border);
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
+  border-radius: 1.5rem;
+  border: 2px solid var(--color-primary);
   padding: 0.5rem;
   box-shadow: 0 0 3rem var(--color-shadow);
   outline: none;
-  width: calc(100% + 4px);
-  left: -2px;
+  min-width: 14rem;
   box-sizing: border-box;
   transition: 0.3s;
   z-index: 999;
 }
 
 .menu > li {
-  line-height: 2.5rem;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   line-height: 1.5rem;
   cursor: pointer;
 }
+
 .menu > li.selected {
   background-color: var(--color-bg-grey-3);
 }
@@ -96,74 +101,61 @@
   color: var(--color-text-disabled);
 }
 
-.container.isOpen .label.labelUp {
+.labelContainer:focus-within .label.labelUp {
   color: var(--color-primary);
 }
 
-.container.isOpen {
-  border-color: var(--color-primary);
-  border-style: solid solid none solid;
-  border-width: 2px;
-  border-radius: 1.7rem 1.7rem 0 0;
-}
-
-.container.isOpen .menu {
-  border-color: var(--color-primary);
-  border-style: none solid solid solid;
-  border-width: 2px;
-}
-
-.container.error .input {
-  border: solid 2px var(--color-error);
-}
-
-.container.error.isOpen .input {
+.labelContainer.error .input {
   border: solid 1px var(--color-error);
 }
 
-.container.error.isOpen {
+.labelContainer.error .input {
+  border: solid 1px var(--color-error);
+}
+
+.labelContainer.error {
   border-color: var(--color-error);
 }
 
-.container.error.isOpen .label.labelUp {
+.labelContainer.error .label.labelUp {
   color: var(--color-error);
 }
 
-.container.error.isOpen .menu {
+.labelContainer.error + .menu {
   border-color: var(--color-error);
 }
 
-.container.warning .input {
-  border: solid 2px var(--color-highlighted);
-}
-
-.container.warning.isOpen .input {
+.labelContainer.warning .input {
   border: solid 1px var(--color-highlighted);
 }
 
-.container.warning.isOpen {
+.labelContainer.warning .input {
+  border: solid 1px var(--color-highlighted);
+}
+
+.labelContainer.warning + .menu {
   border-color: var(--color-highlighted);
 }
 
-.container.warning.isOpen .label.labelUp {
+.labelContainer.warning .label.labelUp {
   color: var(--color-highlighted);
 }
 
-.container.warning.isOpen .menu {
+.labelContainer.warning + .menu {
   border-color: var(--color-highlighted);
 }
 
-.container.disabled .input:disabled {
-  border: solid 2px var(--color-border);
+.labelContainer.disabled .input:disabled {
+  border: solid 1px var(--color-border);
   background: var(--color-bg-input-disabled);
   color: var(--color-text-disabled);
 }
 
-.container.disabled.isOpen {
+.labelContainer.disabled {
   border-color: var(--color-border);
 }
 
-.container.disabled.isOpen .menu {
+.labelContainer.disabled + .menu {
   border-color: var(--color-border);
 }
 
