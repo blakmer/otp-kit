@@ -5,6 +5,7 @@ import NewFolder from './types/new-folder'
 import ListCards from './types/list-cards'
 import Check from './types/check'
 import EmptyStateMachineLearning from './types/empty-state-machine-learning'
+import ProjectToArchive from './types/project-to-archive'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -12,6 +13,7 @@ const REFERENCES = {
   'list-cards': ListCards,
   check: Check,
   'empty-state-machine-learning': EmptyStateMachineLearning,
+  'project-to-archive': ProjectToArchive,
 }
 
 const ClipArt = props => {
