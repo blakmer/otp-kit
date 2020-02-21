@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox } from 'downshift'
@@ -48,17 +48,15 @@ const Select = props => {
   })
 
   return (
-    <span
-      className={classnames(
-        styles.container,
-        styles[STATUSES[status]],
-        block && styles.block,
-        isOpen && styles.isOpen
-      )}
-      {...getComboboxProps()}>
+    <div className={classnames(styles.container, block && styles.block)}>
       <label
+        {...getComboboxProps()}
         {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}
-        className={styles.labelContainer}>
+        className={classnames(
+          styles.labelContainer,
+          styles[STATUSES[status]],
+          block && styles.block
+        )}>
         {label && (
           <span
             className={classnames(
@@ -82,7 +80,9 @@ const Select = props => {
         </span>
       </label>
       {isOpen && (
-        <ul {...getMenuProps()} className={styles.menu}>
+        <ul
+          {...getMenuProps()}
+          className={classnames(styles.menu, block && styles.block)}>
           {items.map((item, index) => (
             <li
               className={classnames(
@@ -99,7 +99,7 @@ const Select = props => {
       <p className={styles.errorMessage}>
         {status === 'error' && errorMessage ? errorMessage : null}
       </p>
-    </span>
+    </div>
   )
 }
 
