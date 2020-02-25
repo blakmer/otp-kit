@@ -6,12 +6,16 @@ import RoundButton from '../RoundButton'
 import Grid from '../Grid'
 
 const RANGE_SIZE = 10
-const {Visible, Hidden} = Grid
+const { Visible, Hidden } = Grid
 
 const Pagination = props => {
   const { total, current, onPageChanged, className } = props
 
-  /**@getRange Возвращает массив типа [мин значение, макс значение, разрыв слева, разрыв справа]  */
+  /**
+   * @getRange - массив типа [мин значение, макс значение, разрыв слева, разрыв справа]
+   * @param Number page
+   * @return Array
+   * */
   const getRange = (total, page) => {
     if (total <= RANGE_SIZE) {
       return [1, total, false, false]
@@ -25,9 +29,9 @@ const Pagination = props => {
     return [page + 3 - RANGE_SIZE / 2, page - 2 + RANGE_SIZE / 2, true, true]
   }
 
-  const calculatePaging = (page) => {
+  const calculatePaging = page => {
     let range = getRange(total, page),
-      rangeArea = [];
+      rangeArea = []
     for (let i = range[0]; i <= range[1]; i++) {
       rangeArea.push(i)
     }
@@ -39,11 +43,13 @@ const Pagination = props => {
     }
   }
 
-  const [pagingParams, setPagingParams] = useState(calculatePaging(current || 1))
+  const [pagingParams, setPagingParams] = useState(
+    calculatePaging(current || 1)
+  )
 
-  const handlePageChange = (page) => {
+  const handlePageChange = page => {
     let params = calculatePaging(page)
-    setPagingParams(params);
+    setPagingParams(params)
   }
 
   const handlePrev = () => {
@@ -67,14 +73,18 @@ const Pagination = props => {
     }
   }
   const handlePrevMore = () => {
-    let newPage =  pagingParams.currentPage > RANGE_SIZE / 2
-      ? (pagingParams.currentPage - RANGE_SIZE / 2) : 1
+    let newPage =
+      pagingParams.currentPage > RANGE_SIZE / 2
+        ? pagingParams.currentPage - RANGE_SIZE / 2
+        : 1
     handlePageChange(newPage)
     onPageChanged(newPage)
   }
   const handleNextMore = () => {
-    let newPage = pagingParams.currentPage < total - RANGE_SIZE / 2
-      ? (pagingParams.currentPage + RANGE_SIZE / 2) : total
+    let newPage =
+      pagingParams.currentPage < total - RANGE_SIZE / 2
+        ? pagingParams.currentPage + RANGE_SIZE / 2
+        : total
     handlePageChange(pagingParams.currentPage + RANGE_SIZE / 2)
     onPageChanged(newPage)
   }
@@ -96,7 +106,11 @@ const Pagination = props => {
             </li>
           )}
 
-          {pagingParams.startGap && <li className={styles.more} onClick={handlePrevMore}>...</li>}
+          {pagingParams.startGap && (
+            <li className={styles.more} onClick={handlePrevMore}>
+              ...
+            </li>
+          )}
 
           {!!pagingParams.rangeArea &&
             pagingParams.rangeArea.map(el => {
@@ -112,7 +126,11 @@ const Pagination = props => {
               )
             })}
 
-          {pagingParams.endGap && <li className={styles.more} onClick={handleNextMore}>...</li>}
+          {pagingParams.endGap && (
+            <li className={styles.more} onClick={handleNextMore}>
+              ...
+            </li>
+          )}
           {pagingParams.endGap && (
             <li key="last" onClick={handleUpToPage.bind(null, total)}>
               {total}
@@ -122,14 +140,17 @@ const Pagination = props => {
       </Hidden>
 
       <Visible xs sm>
-        <span className={styles.smallpag}>{pagingParams.currentPage}/{total}</span>
+        <span className={styles.smallpag}>
+          {pagingParams.currentPage}/{total}
+        </span>
       </Visible>
 
       <RoundButton
         disabled={pagingParams.currentPage === total}
         key="next"
         icon="arrow-right"
-        onClick={handleNext} />
+        onClick={handleNext}
+      />
     </div>
   )
 }
@@ -138,13 +159,11 @@ Pagination.propTypes = {
   current: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
   onPageChanged: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
 }
 
 Pagination.defaultProps = {
-  onPageChanged: page => {
-    return page;
-  },
+  onPageChanged: page => {},
 }
 
 export default Pagination
