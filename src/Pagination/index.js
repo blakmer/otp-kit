@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import styles from './index.module.css'
@@ -13,6 +13,7 @@ const Pagination = props => {
 
   /**
    * @getRange - массив типа [мин значение, макс значение, разрыв слева, разрыв справа]
+   * @param Number total
    * @param Number page
    * @return Array
    * */
@@ -43,33 +44,23 @@ const Pagination = props => {
     }
   }
 
-  const [pagingParams, setPagingParams] = useState(
-    calculatePaging(current || 1)
-  )
-
-  const handlePageChange = page => {
-    let params = calculatePaging(page)
-    setPagingParams(params)
-  }
+  let pagingParams = calculatePaging(current+1)
 
   const handlePrev = () => {
     if (pagingParams.currentPage > 1) {
       let newPage = pagingParams.currentPage - 1
-      handlePageChange(newPage)
-      onPageChanged(newPage)
+      onPageChanged(newPage-1)
     }
   }
   const handleNext = () => {
     if (pagingParams.currentPage < total) {
       let newPage = pagingParams.currentPage + 1
-      handlePageChange(newPage)
-      onPageChanged(newPage)
+      onPageChanged(newPage-1)
     }
   }
   const handleUpToPage = page => {
     if (page !== pagingParams.currentPage) {
-      handlePageChange(page)
-      onPageChanged(page)
+      onPageChanged(page-1)
     }
   }
   const handlePrevMore = () => {
@@ -77,16 +68,14 @@ const Pagination = props => {
       pagingParams.currentPage > RANGE_SIZE / 2
         ? pagingParams.currentPage - RANGE_SIZE / 2
         : 1
-    handlePageChange(newPage)
-    onPageChanged(newPage)
+    onPageChanged(newPage-1)
   }
   const handleNextMore = () => {
     let newPage =
       pagingParams.currentPage < total - RANGE_SIZE / 2
         ? pagingParams.currentPage + RANGE_SIZE / 2
         : total
-    handlePageChange(pagingParams.currentPage + RANGE_SIZE / 2)
-    onPageChanged(newPage)
+    onPageChanged(newPage-1)
   }
 
   return (
@@ -156,13 +145,14 @@ const Pagination = props => {
 }
 
 Pagination.propTypes = {
-  current: PropTypes.number.isRequired,
+  current: PropTypes.number,
   total: PropTypes.number.isRequired,
   onPageChanged: PropTypes.func,
   className: PropTypes.string,
 }
 
 Pagination.defaultProps = {
+  current: 0,
   onPageChanged: page => {},
 }
 
