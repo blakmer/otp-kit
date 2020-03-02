@@ -35,7 +35,12 @@ const Lead = props => {
 
 Lead.propTypes = {
   children: PropTypes.string,
-  align: PropTypes.oneOf([
+  align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
+  style: PropTypes.object,
+  className: PropTypes.string,
+  highlighted: PropTypes.bool,
+  compact: PropTypes.bool,
+  color: PropTypes.oneOf([
     'primary',
     'secondary',
     'disabled',
@@ -44,11 +49,6 @@ Lead.propTypes = {
     'orange',
     'red',
   ]),
-  style: PropTypes.object,
-  className: PropTypes.string,
-  highlighted: PropTypes.bool,
-  compact: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
 }
 
 Lead.defaultProps = {
