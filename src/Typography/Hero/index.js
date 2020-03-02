@@ -26,7 +26,15 @@ Hero.propTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   sub: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'disabled',
+    'inverse',
+    'green',
+    'orange',
+    'red',
+  ]),
 }
 
 Hero.defaultProps = {

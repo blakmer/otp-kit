@@ -40,7 +40,15 @@ Text.propTypes = {
   type: PropTypes.oneOf(['default', 'link', 'label', 'highlighted', 'hint']),
   compact: PropTypes.bool,
   size: PropTypes.oneOf(['default', 'small']),
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'disabled',
+    'inverse',
+    'green',
+    'orange',
+    'red',
+  ]),
 }
 
 Text.defaultProps = {

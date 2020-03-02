@@ -37,7 +37,15 @@ Paragraph.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   highlighted: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'disabled',
+    'inverse',
+    'green',
+    'orange',
+    'red',
+  ]),
 }
 
 Paragraph.defaultProps = {
