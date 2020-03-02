@@ -14,6 +14,18 @@
   color: var(--color-text-inverse);
 }
 
+.green {
+  color: var(--color-primary);
+}
+
+.orange {
+  color: var(--color-highlighted);
+}
+
+.red {
+  color: var(--color-error);
+}
+
 .text {
   font-family: var(--font-regular);
   font-style: normal;

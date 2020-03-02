@@ -36,7 +36,15 @@ Heading.propTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   level: PropTypes.oneOf([1, 2, 3]),
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'disabled',
+    'inverse',
+    'green',
+    'orange',
+    'red',
+  ]),
 }
 
 Heading.defaultProps = {
