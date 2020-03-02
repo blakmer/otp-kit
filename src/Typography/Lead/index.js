@@ -40,7 +40,15 @@ Lead.propTypes = {
   className: PropTypes.string,
   highlighted: PropTypes.bool,
   compact: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'secondary', 'disabled', 'inverse']),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'disabled',
+    'inverse',
+    'green',
+    'orange',
+    'red',
+  ]),
 }
 
 Lead.defaultProps = {

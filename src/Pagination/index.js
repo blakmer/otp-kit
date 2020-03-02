@@ -44,23 +44,23 @@ const Pagination = props => {
     }
   }
 
-  let pagingParams = calculatePaging(current+1)
+  let pagingParams = calculatePaging(current + 1)
 
   const handlePrev = () => {
     if (pagingParams.currentPage > 1) {
       let newPage = pagingParams.currentPage - 1
-      onPageChanged(newPage-1)
+      onPageChanged(newPage - 1)
     }
   }
   const handleNext = () => {
     if (pagingParams.currentPage < total) {
       let newPage = pagingParams.currentPage + 1
-      onPageChanged(newPage-1)
+      onPageChanged(newPage - 1)
     }
   }
   const handleUpToPage = page => {
     if (page !== pagingParams.currentPage) {
-      onPageChanged(page-1)
+      onPageChanged(page - 1)
     }
   }
   const handlePrevMore = () => {
@@ -68,14 +68,14 @@ const Pagination = props => {
       pagingParams.currentPage > RANGE_SIZE / 2
         ? pagingParams.currentPage - RANGE_SIZE / 2
         : 1
-    onPageChanged(newPage-1)
+    onPageChanged(newPage - 1)
   }
   const handleNextMore = () => {
     let newPage =
       pagingParams.currentPage < total - RANGE_SIZE / 2
         ? pagingParams.currentPage + RANGE_SIZE / 2
         : total
-    onPageChanged(newPage-1)
+    onPageChanged(newPage - 1)
   }
 
   return (

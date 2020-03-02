@@ -6,6 +6,10 @@ import ListCards from './types/list-cards'
 import Check from './types/check'
 import EmptyStateMachineLearning from './types/empty-state-machine-learning'
 import ProjectToArchive from './types/project-to-archive'
+import BasicPreferences from './types/basic-preferences'
+import ImageUpload from './types/image-upload'
+import EmptyStateFeather from './types/empty-state-feather'
+import Trash from './types/trash'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -14,6 +18,10 @@ const REFERENCES = {
   check: Check,
   'empty-state-machine-learning': EmptyStateMachineLearning,
   'project-to-archive': ProjectToArchive,
+  'basic-preferences': BasicPreferences,
+  'image-upload': ImageUpload,
+  'empty-state-feather': EmptyStateFeather,
+  trash: Trash,
 }
 
 const ClipArt = props => {
