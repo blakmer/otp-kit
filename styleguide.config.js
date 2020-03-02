@@ -62,6 +62,7 @@ module.exports = {
     {
       name: 'Moleculs',
       components: [
+        'src/Cards/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
         'src/Tabs/index.js',
