@@ -31,7 +31,3 @@
   font-family: var(--font-regular);
   color: var(--color-text-secondary);
 }
-
-button {
-  width: 200px;
-}
