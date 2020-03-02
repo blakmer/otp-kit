@@ -37,6 +37,11 @@ import DocumentChecked from './types/document-checked'
 import DocumentEmpty from './types/document-empty'
 import DocumentWarning from './types/document-warning'
 import DocumentIncorrect from './types/document-incorrect'
+import Filet from './types/filet'
+import Preferences from './types/preferences'
+import TagCheck from './types/tag-check'
+import TagAlert from './types/tag-alert'
+import TagBlock from './types/tag-block'
 
 const REFERENCES = {
   edit: Edit,
@@ -70,10 +75,15 @@ const REFERENCES = {
   folder: Folder,
   photo: Photo,
   tag: Tag,
+  'tag-check': TagCheck,
+  'tag-alert': TagAlert,
+  'tag-block': TagBlock,
   'document-checked': DocumentChecked,
   'document-empty': DocumentEmpty,
   'document-warning': DocumentWarning,
   'document-incorrect': DocumentIncorrect,
+  filet: Filet,
+  preferences: Preferences,
 }
 
 const Medium = props => {

@@ -209,6 +209,18 @@ const { Container, Row, Col } = Grid
       <div>tag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="tag-check" fill="green" />
+      <div>tag-check</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="tag-alert" fill="highlighted" />
+      <div>tag-alert</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="tag-block" fill="danger" />
+      <div>tag-block</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
       <Icon.Medium type="document-checked" />
       <div>document-checked</div>
     </Col>
@@ -223,6 +235,14 @@ const { Container, Row, Col } = Grid
     <Col style={{ textAlign: 'center' }} md={1}>
       <Icon.Medium type="document-incorrect" />
       <div>document-incorrect</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="filet" />
+      <div>filet</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="preferences" />
+      <div>preferences</div>
     </Col>
   </Row>
 </Container>
@@ -260,6 +280,22 @@ const { Container, Row, Col } = Grid
     <Col style={{ textAlign: 'center' }} md={1.5}>
       <Icon.ClipArt type="project-to-archive" />
       <div>project-to-archive</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="basic-preferences" />
+      <div>basic-preferences</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="image-upload" />
+      <div>image-upload</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="empty-state-feather" />
+      <div>empty-state-feather</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="trash" />
+      <div>trash</div>
     </Col>
   </Row>
 </Container>
