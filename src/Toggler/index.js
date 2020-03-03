@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 
-const Checkbox = props => {
+const Toggler = props => {
   const {
     defaultChecked,
     fill,
@@ -21,19 +21,21 @@ const Checkbox = props => {
     onKeyUp,
     onMouseEnter,
     onMouseLeave,
-    children,
     className,
+    style,
   } = props
 
   return (
-    <span className={className}>
+    <div className={classnames(styles.wrapper, className)} style={style}>
       <input
+        type="checkbox"
+        id={id}
         defaultChecked={defaultChecked}
+        checked={checked}
         disabled={disabled}
         name={name}
         required={required}
         tabIndex={tabIndex}
-        checked={checked}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
@@ -42,31 +44,30 @@ const Checkbox = props => {
         onKeyUp={onKeyUp}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        className={classnames(styles.checkbox, {
-          [styles.disabledChecked]: disabled,
-          [styles.checkboxBlue]: fill === 'blue',
-          [styles.checkboxYellow]: fill === 'yellow',
-          [styles.checkboxPurple]: fill === 'purple',
-        })}
-        id={id}
-        type="checkbox"
       />
-      <label className={styles.checkmark} htmlFor={id}>
-        {children}
-      </label>
-    </span>
+      <label
+        className={classnames(styles.switch, {
+          [styles.disabled]: disabled,
+          [styles.switchBlue]: fill === 'blue',
+          [styles.switchYellow]: fill === 'yellow',
+          [styles.switchPurple]: fill === 'purple',
+        })}
+        htmlFor={id}
+      />
+      <div className={styles.circle} />
+    </div>
   )
 }
 
-Checkbox.propTypes = {
+Toggler.propTypes = {
   defaultChecked: PropTypes.bool,
+  checked: PropTypes.bool,
   fill: PropTypes.oneOf(['blue', 'yellow', 'purple']),
   disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   required: PropTypes.bool,
   tabIndex: PropTypes.number,
-  checked: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -75,11 +76,10 @@ Checkbox.propTypes = {
   onKeyUp: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  children: PropTypes.node,
 }
 
-Checkbox.defaultProps = {
+Toggler.defaultProps = {
   disabled: false,
 }
 
-export default Checkbox
+export default Toggler

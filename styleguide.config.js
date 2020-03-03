@@ -55,6 +55,7 @@ module.exports = {
         'src/Slider/index.js',
         'src/Stepper/index.js',
         'src/Textarea/index.js',
+        'src/Toggler/index.js',
         'src/Tooltip/index.js',
         'src/Progress/index.js',
       ],

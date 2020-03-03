@@ -51,6 +51,7 @@
 }
 
 .textarea {
+  line-height: 1.4;
   outline: none;
   background: transparent;
   border: none;
