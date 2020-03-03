@@ -31,7 +31,7 @@ Cards.propTypes = {
   img: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
-  shadow: Proptypes.bool,
+  shadow: PropTypes.bool,
   header: PropTypes.node,
   body: PropTypes.node,
   footer: PropTypes.node
