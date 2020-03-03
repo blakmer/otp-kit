@@ -27,8 +27,3 @@
   font-family: var(--font-bold);
   color: var(--color-text-primary);
 }
-
-.footer {
-  font-family: var(--font-regular);
-  color: var(--color-text-secondary);
-}
