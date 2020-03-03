@@ -57,6 +57,7 @@ module.exports = {
         'src/Textarea/index.js',
         'src/Tooltip/index.js',
         'src/Progress/index.js',
+        'src/Uploader/index.js',
       ],
     },
     {
