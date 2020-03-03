@@ -23,7 +23,7 @@ const BarChart = props => {
   const values = data.map(i => i.value)
   const maxValue = Math.max.apply(Math, values)
   const countBars = data.length
-  const barCanvasHeight = height - 52
+  const barCanvasHeight = height - 56
   const canvasPercent = barCanvasHeight / 100
   const percent = maxValue / 100
 
@@ -31,12 +31,12 @@ const BarChart = props => {
     <svg width={'100%'} height={height}>
       {data.map(({ value, title }, k) => {
         const bar = {
-          y1: height - 20 - (value / percent) * canvasPercent,
-          y2: height - 20,
+          y1: height - 24 - (value / percent) * canvasPercent,
+          y2: height - 24,
         }
         const barEmpty = {
           y1: 32,
-          y2: bar.y1 - 6,
+          y2: bar.y1 - 8,
         }
 
         const stroke = getStrokeColor(value / percent)
@@ -112,20 +112,7 @@ BarChart.propTypes = {
 }
 
 BarChart.defaultProps = {
-  data: [
-    { title: 'A', value: 100 },
-    { title: 'B', value: 200 },
-    { title: 'C', value: 49 },
-    { title: 'D', value: 39 },
-    { title: 'BD', value: 24 },
-    { title: 'CS', value: 293 },
-    { title: 'AA', value: 18 },
-    { title: 'BSS', value: 2 },
-    { title: 'Z', value: 0 },
-    { title: 'CCD', value: 252 },
-    { title: 'D', value: 39 },
-    { title: 'BD', value: 24 },
-  ],
+  data: [],
   colorMap: COLOR_MAP,
   height: 224,
 }
