@@ -69,5 +69,9 @@ module.exports = {
         'src/List/index.js',
       ],
     },
+    {
+      name: 'Charts',
+      components: ['src/BarChart/index.js'],
+    },
   ],
 }
