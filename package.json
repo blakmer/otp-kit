@@ -1,6 +1,6 @@
 {
   "name": "ui-kit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "ui kit for otp-bank",
   "main": "index.js",
   "scripts": {
