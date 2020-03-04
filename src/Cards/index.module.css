@@ -22,7 +22,7 @@
   padding: 2rem 1.5rem 1.5rem;
 }
 
-.card > .header {
+.header {
   margin-bottom: 1.5rem;
   font-family: var(--font-bold);
   color: var(--color-text-primary);
