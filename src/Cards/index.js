@@ -26,7 +26,7 @@ const Cards = props => {
           <Typography.Heading level={2}>{header}</Typography.Heading>
         </div>
         <div>{body}</div>
-        <div>{footer}</div>
+        <div className={styles.footer}>{footer}</div>
       </div>
     </div>
   )

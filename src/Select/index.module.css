@@ -2,6 +2,7 @@
   position: relative;
   display: inline-block;
   width: 14rem;
+  margin-bottom: 1.25rem;
 }
 
 .labelContainer:focus-within {

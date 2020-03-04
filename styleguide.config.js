@@ -66,6 +66,7 @@ module.exports = {
         'src/Cards/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
+        'src/StatePage/index.js',
         'src/Tabs/index.js',
         'src/List/index.js',
       ],
