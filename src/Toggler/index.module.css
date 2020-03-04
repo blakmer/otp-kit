@@ -5,7 +5,7 @@
   width: 3rem;
 }
 
-input {
+.input {
   display: none;
 }
 
@@ -42,27 +42,27 @@ input {
   background-color: var(--color-bg-input);
 }
 
-input:checked + .switch + .circle {
+.input:checked + .switch + .circle {
   transform: translateX(1.5rem);
   background-color: var(--color-bg-input);
 }
 
-input:checked + .switch {
+.input:checked + .switch {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-input:checked + .switchBlue {
+.input:checked + .switchBlue {
   background-color: var(--color-chart-blue);
   border-color: var(--color-chart-blue);
 }
 
-input:checked + .switchYellow {
+.input:checked + .switchYellow {
   background-color: var(--color-chart-yellow);
   border-color: var(--color-chart-yellow);
 }
 
-input:checked + .switchPurple {
+.input:checked + .switchPurple {
   background-color: var(--color-chart-purple);
   border-color: var(--color-chart-purple);
 }

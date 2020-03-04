@@ -40,11 +40,13 @@ const REFERENCES = {
 }
 
 const Small = props => {
-  const { type, fill, className } = props
+  const { type, fill, className, onClick } = props
   const SVG = REFERENCES[type]
 
   return SVG ? (
-    <span className={classnames(styles.small, styles.wrapper, className)}>
+    <span
+      className={classnames(styles.small, styles.wrapper, className)}
+      onClick={onClick}>
       {<SVG hexFill={FILLS[fill]} />}
     </span>
   ) : null
@@ -53,6 +55,8 @@ const Small = props => {
 Small.propTypes = {
   type: PropTypes.string.isRequired,
   fill: PropTypes.oneOf(Object.keys(FILLS)),
+  className: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 Small.defaultProps = {

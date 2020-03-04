@@ -25,14 +25,20 @@ const REFERENCES = {
 }
 
 const ClipArt = props => {
-  const { type, className } = props
+  const { type, className, onClick } = props
   const SVG = REFERENCES[type]
 
-  return SVG ? <span className={className}>{<SVG />}</span> : null
+  return SVG ? (
+    <span className={className} onClick={onClick}>
+      {<SVG />}
+    </span>
+  ) : null
 }
 
 ClipArt.propTypes = {
   type: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
 }
 
 export default ClipArt

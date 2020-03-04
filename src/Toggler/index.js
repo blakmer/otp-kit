@@ -28,6 +28,7 @@ const Toggler = props => {
   return (
     <div className={classnames(styles.wrapper, className)} style={style}>
       <input
+        className={styles.input}
         type="checkbox"
         id={id}
         defaultChecked={defaultChecked}
