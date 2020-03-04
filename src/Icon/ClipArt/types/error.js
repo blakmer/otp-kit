@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Error = () => {
+const ErrorState = () => {
   return (
     <svg
       width="96"
@@ -82,4 +82,4 @@ const Error = () => {
   )
 }
 
-export default Error
+export default ErrorState

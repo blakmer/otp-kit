@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import Typography from '../Typography'
 import Icon from '../Icon'
 
-const IMAGESTYPES = {
+const IMAGES_TYPES = {
   success: 'check',
   error: 'error',
   empty: '',
@@ -17,7 +17,7 @@ const StatePage = props => {
   return (
     <div style={style} className={classnames(styles.page, className)}>
       <div className={styles.type}>
-        <Icon.ClipArt type={IMAGESTYPES[type]} />
+        <Icon.ClipArt type={IMAGES_TYPES[type]} />
       </div>
       <div className={styles.body}>
         <div className={styles.header}>
@@ -37,7 +37,7 @@ const StatePage = props => {
 }
 
 StatePage.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.oneOf(Object.keys(IMAGES_TYPES)),
   className: PropTypes.string,
   style: PropTypes.object,
   header: PropTypes.node,
