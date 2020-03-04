@@ -13,9 +13,17 @@
   cursor: pointer;
 }
 
-.uploader:hover,
-.uploader:focus,
-.uploader:active {
+.uploader.process {
+  width: 12.2rem;
+  height: 12.2rem;
+  margin: 0rem;
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-bg-pastel-green);
+}
+
+.uploader.wait:hover,
+.uploader.wait:focus,
+.uploader.wait:active {
   width: 12.2rem;
   height: 12.2rem;
   margin: 0rem;
