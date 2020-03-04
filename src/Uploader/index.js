@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import Typography from '../Typography'
-import Button from '../Button'
+import Link from '../Link'
 import styles from './index.module.css'
 
 const STATUSES = {
@@ -14,7 +14,7 @@ const STATUSES = {
 }
 
 const Uploader = props => {
-  const { status, onChange } = props
+  const { status, onChange, progress } = props
 
   const handleChange = e => {
     onChange({ status: STATUSES.process, files: e.target.files })
@@ -22,7 +22,12 @@ const Uploader = props => {
 
   const handleDrop = e => {
     e.preventDefault()
-    onChange({ status: STATUSES.process, files: e.dataTransfer.files })
+    if (status === STATUSES.wait)
+      onChange({ status: STATUSES.process, files: e.dataTransfer.files })
+  }
+
+  const handleState = status => {
+    onChange({ status })
   }
 
   const innerContent = {
@@ -37,23 +42,27 @@ const Uploader = props => {
     ),
     process: (
       <Fragment>
-        <span>
+        <Typography.Heading level={3} color="green" align="center">
+          {`${progress.from} / ${progress.to}`}
+        </Typography.Heading>
+        <span className={styles.rotateIcon}>
           <Icon.Medium type="refresh" fill="green" />
         </span>
-        <Typography.Heading level={3} color="secondary" align="center">
-          50 / 100
-        </Typography.Heading>
-        <Button size="small">Отменить</Button>
+        <Link onClick={() => handleState(STATUSES.canceled)}>Отменить</Link>
       </Fragment>
     ),
     done: (
       <Fragment>
         <Icon.ClipArt type="check" />
+        <Link onClick={() => handleState(STATUSES.wait)}>Загрузить снова</Link>
       </Fragment>
     ),
     canceled: (
       <Fragment>
-        <Icon.ClipArt type="check" />
+        <Icon.ClipArt type="error" />
+        <Link variation="error" onClick={() => handleState(STATUSES.wait)}>
+          Загрузить снова
+        </Link>
       </Fragment>
     ),
   }
@@ -68,6 +77,17 @@ const Uploader = props => {
   )
 }
 
-Uploader.propTypes = {}
+Uploader.propTypes = {
+  status: PropTypes.oneOf(Object.keys(STATUSES)),
+  /** ({status, [files]}) => {} */
+  onChange: PropTypes.func.isRequired,
+  /** for status Process */
+  progress: PropTypes.shape({ from: PropTypes.number, to: PropTypes.number }),
+}
+
+Uploader.defaultProps = {
+  progress: { from: 0, to: 0 },
+  onChange: () => {},
+}
 
 export default Uploader

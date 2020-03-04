@@ -21,6 +21,14 @@
   background-color: var(--color-bg-pastel-green);
 }
 
+.uploader.canceled {
+  border-color: var(--color-error);
+}
+
+.uploader.done {
+  border-color: var(--color-primary);
+}
+
 .uploader.wait:hover,
 .uploader.wait:focus,
 .uploader.wait:active {
@@ -35,4 +43,14 @@
   opacity: 0;
   position: absolute;
   pointer-events: none;
+}
+
+.rotateIcon {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
 }
