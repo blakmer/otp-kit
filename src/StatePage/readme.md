@@ -26,6 +26,6 @@
 
 ```js
 ;<React.Fragment>
-  <StatePage header="" description="" type="empty" />
+  <StatePage header="Empty page" description="description" type="empty" />
 </React.Fragment>
 ```
