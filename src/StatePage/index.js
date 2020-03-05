@@ -8,7 +8,7 @@ import Icon from '../Icon'
 const IMAGES_TYPES = {
   success: 'check',
   error: 'error',
-  empty: '',
+  empty: 'empty-state-feather',
 }
 
 const StatePage = props => {
