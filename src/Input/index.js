@@ -44,6 +44,10 @@ const Input = props => {
   }
 
   useEffect(() => {
+    setVal(value)
+  }, [value])
+
+  useEffect(() => {
     setStatus(state)
   }, [state])
 
