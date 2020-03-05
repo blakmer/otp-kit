@@ -11,6 +11,7 @@ import ImageUpload from './types/image-upload'
 import EmptyStateFeather from './types/empty-state-feather'
 import Trash from './types/trash'
 import ErrorState from './types/error'
+import ImageSms from './types/image-sms'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -24,6 +25,7 @@ const REFERENCES = {
   'image-upload': ImageUpload,
   'empty-state-feather': EmptyStateFeather,
   trash: Trash,
+  'image-sms': ImageSms
 }
 
 const ClipArt = props => {

@@ -301,6 +301,10 @@ const { Container, Row, Col } = Grid
       <Icon.ClipArt type="error" />
       <div>error</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="image-sms" />
+      <div>image-sms</div>
+    </Col>
   </Row>
 </Container>
 ```
