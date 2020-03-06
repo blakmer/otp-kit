@@ -36,7 +36,10 @@ const Uploader = props => {
   const innerContent = {
     wait: (
       <Fragment>
-        <Icon.ClipArt type="image-upload" fill={hover ? 'green' : 'default'} />
+        <Icon.ClipArt
+          type="image-upload"
+          fill={hover ? 'green' : 'secondary'}
+        />
         <Typography.Text
           className={styles.halfMarginBottom}
           color={hover ? 'green' : 'secondary'}>
