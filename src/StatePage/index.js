@@ -52,7 +52,7 @@ StatePage.propTypes = {
 }
 
 StatePage.defaultProps = {
-  variation: 'empty',
+  type: 'empty',
 }
 
 export default StatePage
