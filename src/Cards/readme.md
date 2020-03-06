@@ -5,7 +5,7 @@
     header="Életreszóló pillanat. Ne csak elképzelje, tegyen is a jövőéért!"
     body={<span></span>}
     shadow={true}
-    footer="Az OTP Pénzügyi tervezővel most 5 000 Ft-os ajándékkupont kaphat."
+    description="Az OTP Pénzügyi tervezővel most 5 000 Ft-os ajándékkupont kaphat."
   />
 </React.Fragment>
 ```
