@@ -14,7 +14,7 @@ const IMAGES_TYPES = {
 const FILLS = {
   success: 'green',
   error: 'danger',
-  empty: '',
+  empty: 'secondary',
 }
 
 const StatePage = props => {
