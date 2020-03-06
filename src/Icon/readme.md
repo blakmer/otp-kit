@@ -258,7 +258,7 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="project-tag" />
+      <Icon.ClipArt type="project-tag" fill="green" />
       <div>project-tag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
@@ -266,15 +266,15 @@ const { Container, Row, Col } = Grid
       <div>new-folder</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="list-cards" />
+      <Icon.ClipArt type="list-cards" fill="blue" />
       <div>list-cards</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="check" />
+      <Icon.ClipArt type="check" fill="green" />
       <div>check</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="empty-state-machine-learning" />
+      <Icon.ClipArt type="empty-state-machine-learning" fill="danger"/>
       <div>empty-state-machine-learning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
@@ -282,15 +282,15 @@ const { Container, Row, Col } = Grid
       <div>project-to-archive</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="basic-preferences" />
+      <Icon.ClipArt type="basic-preferences" fill="danger" />
       <div>basic-preferences</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="image-upload" />
+      <Icon.ClipArt type="image-upload" fill="blue" />
       <div>image-upload</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="empty-state-feather" />
+      <Icon.ClipArt type="empty-state-feather" fill="blue" />
       <div>empty-state-feather</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
@@ -298,11 +298,11 @@ const { Container, Row, Col } = Grid
       <div>trash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="error" />
+      <Icon.ClipArt type="error" fill="danger"/>
       <div>error</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="image-sms" />
+      <Icon.ClipArt type="image-sms" fill="green" />
       <div>image-sms</div>
     </Col>
   </Row>

@@ -12,6 +12,7 @@ import EmptyStateFeather from './types/empty-state-feather'
 import Trash from './types/trash'
 import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
+import { FILLS } from '../fills'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -25,18 +26,21 @@ const REFERENCES = {
   'image-upload': ImageUpload,
   'empty-state-feather': EmptyStateFeather,
   trash: Trash,
-  'image-sms': ImageSms
+  'image-sms': ImageSms,
 }
 
 const ClipArt = props => {
-  const { type, className } = props
+  const { type, fill, className } = props
   const SVG = REFERENCES[type]
 
-  return SVG ? <span className={className}>{<SVG />}</span> : null
+  return SVG ? (
+    <span className={className}>{<SVG hexFill={FILLS[fill]} />}</span>
+  ) : null
 }
 
 ClipArt.propTypes = {
   type: PropTypes.string.isRequired,
+  fill: PropTypes.oneOf(Object.keys(FILLS)),
 }
 
 export default ClipArt
