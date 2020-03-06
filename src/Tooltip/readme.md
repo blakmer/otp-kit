@@ -6,12 +6,12 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
     <Col md={4}>
-      <Tooltip content="content" position="topLeft">
+      <Tooltip content="content" position="topLeft" fill="green">
         Top left
       </Tooltip>
     </Col>
     <Col md={4}>
-      <Tooltip content="content wery wery wery looonnnng" position="topCenter">
+      <Tooltip content="content wery wery wery looonnnng" position="topCenter" fill="danger" >
         Top center
       </Tooltip>
     </Col>
@@ -31,14 +31,15 @@ const { Container, Row, Col } = Grid
     <Col md={4}>
       <Tooltip
         content="content wery wery wery looonnnng"
-        position="middleRight">
+        position="middleRight"
+        fill="green">
         Middle right
       </Tooltip>
     </Col>
   </Row>
   <Row>
     <Col md={4}>
-      <Tooltip content="content" position="bottomLeft">
+      <Tooltip content="content" position="bottomLeft" fill="highlighted">
         Bottom left
       </Tooltip>
     </Col>
@@ -50,7 +51,7 @@ const { Container, Row, Col } = Grid
       </Tooltip>
     </Col>
     <Col md={4}>
-      <Tooltip content="content" position="bottomRight">
+      <Tooltip content="content" position="bottomRight" fill="highlighted">
         Bottom right
       </Tooltip>
     </Col>
