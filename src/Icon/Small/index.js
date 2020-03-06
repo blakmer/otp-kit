@@ -87,6 +87,8 @@ import Earth from './types/earth'
 import Star from './types/star'
 import Chrome from './types/chrome'
 import Firefox from './types/firefox'
+import AiBrain from './types/ai-brain'
+import GlassLab from './types/glass-lab'
 
 const REFERENCES = {
   edit: Edit,
@@ -173,6 +175,8 @@ const REFERENCES = {
   star: Star,
   chrome: Chrome,
   firefox: Firefox,
+  'ai-brain': AiBrain,
+  'glass-lab': GlassLab,
 }
 
 const Small = props => {
@@ -181,7 +185,7 @@ const Small = props => {
 
   return SVG ? (
     <span className={classnames(styles.small, styles.wrapper, className)}>
-      {<SVG hexFill={FILLS[fill]} />}
+      {<SVG hexFill={FILLS[fill] || FILLS['primary']} />}
     </span>
   ) : null
 }

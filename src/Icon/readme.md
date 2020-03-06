@@ -345,6 +345,14 @@ const { Container, Row, Col } = Grid
       <Icon.Small type="firefox" />
       <div>firefox</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Small type="ai-brain" />
+      <div>ai-brain</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Small type="glass-lab" />
+      <div>glass-lab</div>
+    </Col>
   </Row>
 </Container>
 ```
