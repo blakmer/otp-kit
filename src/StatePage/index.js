@@ -11,13 +11,19 @@ const IMAGES_TYPES = {
   empty: 'empty-state-feather',
 }
 
+const FILLS = {
+  success: 'green',
+  error: 'danger',
+  empty: '',
+}
+
 const StatePage = props => {
   const { type, header, body, description, actions, className, style } = props
 
   return (
     <div style={style} className={classnames(styles.page, className)}>
       <div className={styles.type}>
-        <Icon.ClipArt type={IMAGES_TYPES[type]} />
+        <Icon.ClipArt type={IMAGES_TYPES[type]} fill={FILLS[type]} />
       </div>
       <div className={styles.body}>
         <div className={styles.header}>
