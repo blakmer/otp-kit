@@ -907,6 +907,10 @@ const { Container, Row, Col } = Grid
       <div>filter</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="no-filter" />
+      <div>no-filter</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
       <Icon.Medium type="buildings" />
       <div>buildings</div>
     </Col>
