@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
+import RoundButton from '../RoundButton'
+import Button from '../Button'
 import Typography from '../Typography'
 import Link from '../Link'
 import styles from './index.module.css'
@@ -15,6 +17,7 @@ const STATUSES = {
 
 const Uploader = props => {
   const { status, onChange, progress } = props
+  const [hover, setHover] = useState(false)
 
   const handleChange = e => {
     onChange({ status: STATUSES.process, files: e.target.files })
@@ -33,42 +36,95 @@ const Uploader = props => {
   const innerContent = {
     wait: (
       <Fragment>
-        <Icon.ClipArt type="image-upload" />
-        <Typography.Text size="small" align="center">
-          Переместите сюда изображения для загрузки
+        <Icon.ClipArt type="image-upload" fill={hover ? 'green' : 'default'} />
+        <Typography.Text
+          className={styles.halfMarginBottom}
+          color={hover ? 'green' : 'secondary'}>
+          Загрузка изображений
+        </Typography.Text>
+        <Typography.Text
+          size="small"
+          color={hover ? 'green' : 'secondary'}
+          align="center">
+          Нажмите или перетащите файлы для загрузки.
         </Typography.Text>
         <input type="file" onChange={e => handleChange(e)} multiple />
       </Fragment>
     ),
     process: (
       <Fragment>
-        <Typography.Heading level={3} color="green" align="center">
-          {`${progress.from} / ${progress.to}`}
-        </Typography.Heading>
-        <span className={styles.rotateIcon}>
-          <Icon.Medium type="refresh" fill="green" />
+        <span className={classnames(!hover && styles.RoundSpinner)}>
+          <RoundButton
+            onClick={() => handleState(STATUSES.canceled)}
+            icon={hover ? 'close' : 'refresh'}
+            variation={hover ? 'danger' : 'secondary'}
+          />
         </span>
-        <Link onClick={() => handleState(STATUSES.canceled)}>Отменить</Link>
+        <Typography.Text
+          className={classnames(styles.halfMarginTop, styles.halfMarginBottom)}
+          color="green">
+          Загрузка...
+        </Typography.Text>
+        <span>
+          <Typography.Text size="small">Загружено:</Typography.Text>
+          <Typography.Text color="primary" size="small">
+            {` ${progress.from} / ${progress.to}`}
+          </Typography.Text>
+        </span>
       </Fragment>
     ),
     done: (
       <Fragment>
-        <Icon.ClipArt type="check" />
-        <Link onClick={() => handleState(STATUSES.wait)}>Загрузить снова</Link>
+        <Icon.ClipArt type="check" fill="green" />
+        <Typography.Text className={styles.halfMarginBottom} color="green">
+          Успех
+        </Typography.Text>
+        <div className={styles.btnContainer}>
+          {!hover ? (
+            <Typography.Text size="small" color="green" align="center">
+              Все изображения были успешно загружены.
+            </Typography.Text>
+          ) : (
+            <Button
+              variation="primary"
+              size="small"
+              ghost
+              onClick={() => handleState(STATUSES.wait)}>
+              Загрузить ещё
+            </Button>
+          )}
+        </div>
       </Fragment>
     ),
     canceled: (
       <Fragment>
-        <Icon.ClipArt type="error" />
-        <Link variation="error" onClick={() => handleState(STATUSES.wait)}>
-          Загрузить снова
-        </Link>
+        <Icon.ClipArt type="error" fill="danger" />
+        <Typography.Text className={styles.halfMarginBottom} color="red">
+          Ошибка сервера
+        </Typography.Text>
+        <div className={styles.btnContainer}>
+          {!hover ? (
+            <Typography.Text size="small" color="red" align="center">
+              Повторите загрузку позднее, т.к. сервер не доступен.
+            </Typography.Text>
+          ) : (
+            <Button
+              variation="error"
+              size="small"
+              ghost
+              onClick={() => handleState(STATUSES.wait)}>
+              Отменить
+            </Button>
+          )}
+        </div>
       </Fragment>
     ),
   }
 
   return (
     <label
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       className={classnames(styles.uploader, styles[STATUSES[status]])}
       onDrop={e => handleDrop(e)}
       onDragOver={e => e.preventDefault()}>

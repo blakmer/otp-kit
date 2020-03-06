@@ -18,11 +18,38 @@
   height: 12.2rem;
   margin: 0rem;
   border-color: var(--color-primary-hover);
+}
+
+.uploader.process:hover,
+.uploader.process:focus,
+.uploader.process:active {
   background-color: var(--color-bg-pastel-green);
+}
+
+.uploader.done:hover,
+.uploader.done:focus,
+.uploader.done:active {
+  background-color: var(--color-bg-pastel-green);
+}
+
+.uploader.canceled:hover,
+.uploader.canceled:focus,
+.uploader.canceled:active {
+  background-color: var(--color-bg-pastel-red);
 }
 
 .uploader.canceled {
   border-color: var(--color-error);
+}
+
+.halfMarginTop {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.halfMarginBottom {
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .uploader.done {
@@ -45,8 +72,13 @@
   pointer-events: none;
 }
 
-.rotateIcon {
+.RoundSpinner {
   animation: spin 4s linear infinite;
+}
+
+.btnContainer {
+  height: 50px;
+  display: flex;
 }
 
 @keyframes spin {
