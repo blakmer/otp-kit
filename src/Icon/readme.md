@@ -1135,6 +1135,10 @@ const { Container, Row, Col } = Grid
       <Icon.ClipArt type="image-sms" fill="green" />
       <div>image-sms</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1.5}>
+      <Icon.ClipArt type="broken-robot" />
+      <div>broken-robot</div>
+    </Col>
   </Row>
 </Container>
 ```
