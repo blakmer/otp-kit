@@ -65,6 +65,8 @@ module.exports = {
       name: 'Moleculs',
       components: [
         'src/Cards/index.js',
+        'src/ColorSelection/index.js',
+        'src/Filters/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
         'src/Tabs/index.js',
