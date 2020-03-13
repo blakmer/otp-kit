@@ -12,6 +12,7 @@ import EmptyStateFeather from './types/empty-state-feather'
 import Trash from './types/trash'
 import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
+import BrokenRobot from './types/broken-robot'
 import { FILLS } from '../fills'
 
 const REFERENCES = {
@@ -27,6 +28,7 @@ const REFERENCES = {
   'empty-state-feather': EmptyStateFeather,
   trash: Trash,
   'image-sms': ImageSms,
+  'broken-robot': BrokenRobot,
 }
 
 const ClipArt = props => {
