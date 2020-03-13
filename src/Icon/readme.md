@@ -345,14 +345,6 @@ const { Container, Row, Col } = Grid
       <Icon.Small type="firefox" />
       <div>firefox</div>
     </Col>
-    <Col style={{ textAlign: 'center' }} md={1}>
-      <Icon.Small type="ai-brain" />
-      <div>ai-brain</div>
-    </Col>
-    <Col style={{ textAlign: 'center' }} md={1}>
-      <Icon.Small type="glass-lab" />
-      <div>glass-lab</div>
-    </Col>
   </Row>
 </Container>
 ```
@@ -1082,6 +1074,14 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="egyeb" />
       <div>egyeb</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="ai-brain" />
+      <div>ai-brain</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="glass-lab" />
+      <div>glass-lab</div>
+    </Col>
   </Row>
 </Container>
 ```
@@ -1112,7 +1112,7 @@ const { Container, Row, Col } = Grid
       <div>check</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="empty-state-machine-learning" fill="danger"/>
+      <Icon.ClipArt type="empty-state-machine-learning" fill="danger" />
       <div>empty-state-machine-learning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
@@ -1136,7 +1136,7 @@ const { Container, Row, Col } = Grid
       <div>trash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>
-      <Icon.ClipArt type="error" fill="danger"/>
+      <Icon.ClipArt type="error" fill="danger" />
       <div>error</div>
     </Col>
     <Col style={{ textAlign: 'center' }} md={1.5}>

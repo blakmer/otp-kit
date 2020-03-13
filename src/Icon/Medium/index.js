@@ -182,6 +182,8 @@ import VignetteSecond from './types/vignette-second'
 import Tv from './types/tv'
 import Tablet from './types/tablet'
 import Egyeb from './types/egyeb'
+import AiBrain from './types/ai-brain'
+import GlassLab from './types/glass-lab'
 
 const REFERENCES = {
   edit: Edit,
@@ -363,6 +365,8 @@ const REFERENCES = {
   tv: Tv,
   tablet: Tablet,
   egyeb: Egyeb,
+  'ai-brain': AiBrain,
+  'glass-lab': GlassLab,
 }
 
 const Medium = props => {
