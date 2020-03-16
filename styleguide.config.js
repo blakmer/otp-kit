@@ -61,6 +61,7 @@ module.exports = {
         'src/Progress/index.js',
         'src/Uploader/index.js',
         'src/RoundProgress/index.js',
+        'src/Locker/index.js',
       ],
     },
     {
