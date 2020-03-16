@@ -9,19 +9,21 @@ import Grid from '../Grid'
 
 const { Row, Col } = Grid
 
-const [flag, setFlag] = useState(false)
+const [show, toggleShow] = useState(false)
 
 ;<Fragment>
-  <Button onClick={() => setFlag(true)}>Показать фильтры</Button>
+  <Button onClick={() => toggleShow(true)}>Показать фильтры</Button>
   <Filters
-    show={flag}
+    show={show}
+    overlay
+    onClose={() => toggleShow(false)}
     header={
       <Fragment>
         <Typography.Heading level={2}>Название тайтла</Typography.Heading>
         <RoundButton
           inverse
           icon="arrow-right"
-          onClick={() => setFlag(false)}
+          onClick={() => toggleShow(false)}
         />
       </Fragment>
     }
@@ -32,18 +34,16 @@ const [flag, setFlag] = useState(false)
         block
       />
     }
-    midContent={<ColorSelection />}
+    midContent={<ColorSelection selectColor={hex => console.log(hex)} />}
     bottomContent={
       <Row>
         <Col>
-          <Button ghost block onClick={() => setFlag(false)}>
+          <Button ghost block onClick={() => toggleShow(false)}>
             Отмена
           </Button>
         </Col>
         <Col>
-          <Button block onClick={() => setFlag(false)}>
-            Сохранить
-          </Button>
+          <Button block>Сохранить</Button>
         </Col>
       </Row>
     }

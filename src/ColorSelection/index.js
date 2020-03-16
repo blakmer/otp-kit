@@ -8,102 +8,83 @@ import Icon from '../Icon'
 
 const data = [
   {
-    bcg: styles.circleRed,
     selected: false,
     color: '#ff435a',
   },
   {
-    bcg: styles.circlePastelRed,
     selected: false,
     color: '#dbb4c1',
   },
   {
-    bcg: styles.circleLightPurple,
     selected: false,
     color: '#ab47bc',
   },
   {
-    bcg: styles.circlePastelLightPurple,
     selected: false,
     color: '#cf98d9',
   },
   {
-    bcg: styles.circlePurple,
     selected: false,
     color: '#650c90',
   },
   {
-    bcg: styles.circlePastelPurple,
     selected: false,
     color: '#d1bcdc',
   },
   {
-    bcg: styles.circleBlue,
     selected: false,
     color: '#1b82e3',
   },
   {
-    bcg: styles.circlePastelBlue,
     selected: false,
     color: '#dbf4fa',
   },
   {
-    bcg: styles.circleAqua,
     selected: false,
     color: '#1bbc9b',
   },
   {
-    bcg: styles.circlePastelAqua,
     selected: false,
     color: '#84bdb1',
   },
   {
-    bcg: styles.circleGreen,
     selected: false,
     color: '#52ae30',
   },
   {
-    bcg: styles.circlePastelGreen,
     selected: false,
     color: '#a7cebf',
   },
   {
-    bcg: styles.circleAcidGreen,
     selected: false,
     color: '#7ed021',
   },
   {
-    bcg: styles.circlePastelAcidGreen,
     selected: false,
     color: '#aad17d',
   },
   {
-    bcg: styles.circleYellow,
     selected: false,
     color: '#ffcc00',
   },
   {
-    bcg: styles.circlePastelYellow,
     selected: false,
     color: '#e9c597',
   },
   {
-    bcg: styles.circleOrange,
     selected: false,
     color: '#ff6600',
   },
   {
-    bcg: styles.circlePastelOrange,
     selected: false,
     color: '#f6ae8b',
   },
 ]
 
 const ColorSelection = props => {
-  const { className, style } = props
+  const { className, style, selectColor } = props
 
   const [circles, setCircles] = useState(data)
-  const [сolor, selectColor] = useState('') // ?
   const [visibility, setVisibility] = useState(true)
   const [applying, setApplying] = useState(false)
   const [value, setValue] = useState('')
@@ -120,7 +101,7 @@ const ColorSelection = props => {
     newCircles[index].selected = !newCircles[index].selected
 
     setCircles(newCircles)
-    selectColor(newCircles[index].color) // ?
+    selectColor(newCircles[index].color)
     setApplying(false)
   }
 
@@ -132,7 +113,11 @@ const ColorSelection = props => {
       }))
 
       setApplying(!applying)
-      selectColor('#' + value) // ?
+
+      if (!applying) {
+        selectColor('#' + value)
+      }
+
       setCircles(newCircles)
     }
   }
@@ -144,7 +129,8 @@ const ColorSelection = props => {
         {circles.map((circle, index) => {
           return (
             <span
-              className={classnames(styles.circle, circle.bcg)}
+              className={styles.circle}
+              style={{ backgroundColor: circle.color }}
               key={index}
               onClick={() => onToggleColor(index)}>
               {circle.selected && <Icon.Medium type="tick" fill="inverse" />}
@@ -156,7 +142,6 @@ const ColorSelection = props => {
       <div className={styles.customColorTitle}>
         <Typography.Text color="primary">Произвольный цвет</Typography.Text>
         <Toggler
-          id="custom-color"
           checked={visibility}
           onChange={() => {
             setVisibility(!visibility)
@@ -196,6 +181,7 @@ const ColorSelection = props => {
 ColorSelection.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  selectColor: PropTypes.func.isRequired,
 }
 
 export default ColorSelection
