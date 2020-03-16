@@ -11,7 +11,10 @@ const { Container, Row, Col } = Grid
       </Tooltip>
     </Col>
     <Col md={4}>
-      <Tooltip content="content wery wery wery looonnnng" position="topCenter" fill="danger" >
+      <Tooltip
+        content="content wery wery wery looonnnng"
+        position="topCenter"
+        fill="danger">
         Top center
       </Tooltip>
     </Col>

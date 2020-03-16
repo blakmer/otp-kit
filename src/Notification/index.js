@@ -17,7 +17,8 @@ const Notification = props => {
     setTimeout(() => {
       element.current.style.transform = 'translateX(9999px)'
       setTimeout(() => {
-        element.current.parentNode && element.current.parentNode.removeChild(element.current)
+        element.current.parentNode &&
+          element.current.parentNode.removeChild(element.current)
       }, 500)
     }, 3000)
   }, [])
@@ -36,7 +37,7 @@ const Notification = props => {
               <Typography.Text color="inverse">{message}</Typography.Text>
             </div>
             <span className={styles.notificationClose} onClick={onCloseHandle}>
-                <Icon.Small type='close' fill="inverse" />
+              <Icon.Small type="close" fill="inverse" />
             </span>
           </div>
         </Col>
