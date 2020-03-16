@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import Typography from '../Typography'
 
 const Cards = props => {
-  const { img, body, header, footer, shadow, className, style } = props
+  const { img, body, header, description, shadow, className, style } = props
 
   return (
     <div
@@ -26,7 +26,7 @@ const Cards = props => {
           <Typography.Heading level={2}>{header}</Typography.Heading>
         </div>
         <div>{body}</div>
-        <div>{footer}</div>
+        <div className={styles.description}>{description}</div>
       </div>
     </div>
   )

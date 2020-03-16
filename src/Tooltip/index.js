@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Arrow from '../util/arrow'
 import styles from './index.module.css'
+import { FILLS } from './fills'
 
 const Tooltip = props => {
-  const { children, content, position } = props
+  const { children, content, position, fill } = props
   const [pos, setPos] = useState('topCenter')
   const getAutoPosition = el => {
     const { innerHeight, innerWidth } = window
@@ -40,14 +41,15 @@ const Tooltip = props => {
           className={classnames(
             styles.tooltip,
             styles[position === 'auto' ? pos : position]
-          )}>
+          )}
+          style={{ background: FILLS[fill] || FILLS['blue'] }}>
           {content}
           <span
             className={classnames(
               styles.tooltipArrow,
               styles[position === 'auto' ? pos : position]
             )}>
-            <Arrow fill="#1B82E3" />
+            <Arrow fill={FILLS[fill] || FILLS['blue']} />
           </span>
         </div>
       </span>
@@ -59,7 +61,7 @@ const Tooltip = props => {
 Tooltip.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-
+  fill: PropTypes.oneOf(Object.keys(FILLS)),
   position: PropTypes.oneOf([
     'auto',
     'topLeft',
@@ -75,6 +77,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   position: 'auto',
+  fill: 'blue',
 }
 
 export default Tooltip

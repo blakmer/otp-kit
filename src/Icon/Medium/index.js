@@ -37,11 +37,153 @@ import DocumentChecked from './types/document-checked'
 import DocumentEmpty from './types/document-empty'
 import DocumentWarning from './types/document-warning'
 import DocumentIncorrect from './types/document-incorrect'
-import Filet from './types/filet'
 import Preferences from './types/preferences'
 import TagCheck from './types/tag-check'
 import TagAlert from './types/tag-alert'
 import TagBlock from './types/tag-block'
+import TryAgain from './types/try-again'
+import CarOnline from './types/car-online'
+import SmileUnhappy from './types/smile-unhappy'
+import MoveBack from './types/move-back'
+import Email from './types/email'
+import Phone from './types/phone'
+import TimeClockCircle from './types/time-clock-circle'
+import Upload from './types/upload'
+import CreditCard from './types/credit-card'
+import CalendarBlack from './types/calendar-black'
+import CalendarAdd from './types/calendar-add'
+import Bank from './types/bank'
+import Transactions from './types/transactions'
+import Download from './types/download'
+import Entertainment from './types/entertainment'
+import Shopping from './types/shopping'
+import Restaurant from './types/restaurant'
+import Transport from './types/transport'
+import Flash from './types/flash'
+import Lock from './types/lock'
+import Unlock from './types/unlock'
+import SendEmail from './types/send-email'
+import LocationTarget from './types/location-target'
+import SingleNeutral from './types/single-neutral'
+import FamilyChild from './types/family-child'
+import FamilyAddNewMember from './types/family-add-new-member'
+import HospitalFirstAid from './types/hospital-first-aid'
+import AwardRibbonStar from './types/award-ribbon-star'
+import ButtonPlay from './types/button-play'
+import OfficeFilePdf from './types/office-file-pdf'
+import DiscountCircle from './types/discount-circle'
+import MoneyAtm from './types/money-atm'
+import HouseChimney from './types/house-chimney'
+import CalendarClock from './types/calendar-clock'
+import PinLocation from './types/pin-location'
+import ZoomIn from './types/zoom-in'
+import ZoomOut from './types/zoom-out'
+import ReflectRight from './types/reflect-right'
+import RotateForward from './types/rotate-forward'
+import PhoneActionsCall from './types/phone-actions-call'
+import Book from './types/book'
+import TripRoad from './types/trip-road'
+import Bicycle from './types/bicycle'
+import StylethreePinParking from './types/style-three-pin-parking'
+import BabyCareTrolley from './types/baby-care-trolley'
+import SavingSafe from './types/saving-safe'
+import Wifi from './types/wifi'
+import DisabilityWheelchair from './types/disability-wheelchair'
+import Earth from './types/earth'
+import Clock from './types/clock'
+import BankingAccount from './types/banking-account'
+import Hierarchy from './types/hierarchy'
+import BankCustomer from './types/bank-customer'
+import TransferUser from './types/transfer-user'
+import Computer from './types/computer'
+import News from './types/news'
+import PhoneBook from './types/phonebook'
+import LegalScale from './types/legal-scale'
+import TextOptions from './types/text-options'
+import Paragraph from './types/paragraph'
+import Profil from './types/profil'
+import Document from './types/document'
+import CalendarWarning from './types/calendar-warning'
+import CreditCardLock from './types/cradit-card-lock'
+import CreditCardRemove from './types/credit-card-remove'
+import HouseNature from './types/house-nature'
+import Scooter from './types/scooter'
+import QrCode from './types/qr-code'
+import TouchId from './types/touch-id'
+import PartyConfetti from './types/party-confetti'
+import EarthGlobe from './types/earth-globe'
+import CreditCardPayment from './types/credit-card-payment'
+import Trailer from './types/trailer'
+import Bus from './types/bus'
+import EarthLock from './types/earth-lock'
+import LeftRightArrow from './types/left-right-arrow'
+import List from './types/list'
+import TimeLine from './types/timeline'
+import Login from './types/login'
+import Currency from './types/currency'
+import EditUser from './types/edit-user'
+import Vignette from './types/vignette'
+import Health from './types/health'
+import LegalInformaton from './types/legal-information'
+import Chat from './types/chat'
+import Toys from './types/toys'
+import HardOfHearing from './types/hard-of-hearing'
+import View from './types/view'
+import ViewOff from './types/view-off'
+import CardOnlineLimit from './types/card-online-limit'
+import EditProfile from './types/edit-profile'
+import AddPartner from './types/add-partner'
+import SearchPartner from './types/search-partner'
+import QueuingLong from './types/queuing-long'
+import Print from './types/print'
+import OfficeFileIso from './types/office-file-iso'
+import OfficeFileCsv from './types/office-file-csv'
+import OfficeFileXls from './types/office-file-xls'
+import Filter from './types/filter'
+import Buildings from './types/buildings'
+import ShirtPlain from './types/shirt-plain'
+import PhoneCode from './types/phone-code'
+import PhoneNoti from './types/phone-noti'
+import Chair from './types/chair'
+import Announcement from './types/announcement'
+import Wench from './types/wench'
+import Business from './types/business'
+import Shield from './types/shield'
+import MoneyTransferBetweenAccounts from './types/money-transfer-between-accounts'
+import SmileyVeryHappy from './types/smiley-happy'
+import SmileyHappy from './types/smiley-happy'
+import SmileyIndifferent from './types/smiley-indifferent'
+import SmileyUnhappy from './types/smiley-unhappy'
+import SmileySad from './types/smiley-sad'
+import RoomServiceGivePlate from './types/room-service-give-plate'
+import TennisPlayer from './types/tennis-player'
+import HotelBedroom from './types/hotel-bedroom'
+import MapSearch from './types/map-searcch'
+import NoFilter from './types/no-filter'
+import TickInCircle from './types/tick-in-circle'
+import MobilePhone from './types/mobile-phone'
+import Telefone from './types/telefone'
+import Bill from './types/bill'
+import Laptop from './types/laptop'
+import MoneyTransfer from './types/money-transfer'
+import ErrorState from './types/error-state'
+import TravelBag from './types/travel-bag'
+import Envelope from './types/envelope'
+import FixedMoney from './types/fixed-money'
+import Piggy from './types/piggy'
+import LegalHammer from './types/legal-hammer'
+import Repeat from './types/repeat'
+import Star from './types/star'
+import Feed from './types/feed'
+import Cheque from './types/cheque'
+import CsoportosBeszedes from './types/csoportos-beszedes'
+import Kolcson from './types/kolcson'
+import VignetteSecond from './types/vignette-second'
+import Tv from './types/tv'
+import Tablet from './types/tablet'
+import Egyeb from './types/egyeb'
+import AiBrain from './types/ai-brain'
+import GlassLab from './types/glass-lab'
 
 const REFERENCES = {
   edit: Edit,
@@ -69,7 +211,6 @@ const REFERENCES = {
   'power-off': PowerOff,
   gear: Gear,
   trash: Trash,
-
   'docs-tag-editor': DocsTagEditor,
   'machine-learning': MachineLearning,
   folder: Folder,
@@ -82,8 +223,150 @@ const REFERENCES = {
   'document-empty': DocumentEmpty,
   'document-warning': DocumentWarning,
   'document-incorrect': DocumentIncorrect,
-  filet: Filet,
   preferences: Preferences,
+  'try-again': TryAgain,
+  'car-online': CarOnline,
+  'smile-unhappy': SmileUnhappy,
+  'move-back': MoveBack,
+  email: Email,
+  phone: Phone,
+  'time-clock-circle': TimeClockCircle,
+  upload: Upload,
+  'credit-card': CreditCard,
+  'calendar-black': CalendarBlack,
+  'calendar-add': CalendarAdd,
+  bank: Bank,
+  transactions: Transactions,
+  download: Download,
+  entertainment: Entertainment,
+  shopping: Shopping,
+  restaurant: Restaurant,
+  transport: Transport,
+  flash: Flash,
+  lock: Lock,
+  unlock: Unlock,
+  'send-email': SendEmail,
+  'location-target': LocationTarget,
+  'single-neutral': SingleNeutral,
+  'family-child': FamilyChild,
+  'family-add-new-member': FamilyAddNewMember,
+  'hospital-first-aid': HospitalFirstAid,
+  'award-ribbon-star': AwardRibbonStar,
+  'button-play': ButtonPlay,
+  'office-file-pdf': OfficeFilePdf,
+  'discount-circle': DiscountCircle,
+  'money-atm': MoneyAtm,
+  'house-chimney': HouseChimney,
+  'calendar-clock': CalendarClock,
+  'pin-location': PinLocation,
+  'zoom-in': ZoomIn,
+  'zoom-out': ZoomOut,
+  'reflect-right': ReflectRight,
+  'rotate-forward': RotateForward,
+  'phone-actions-call': PhoneActionsCall,
+  book: Book,
+  'trip-road': TripRoad,
+  bicycle: Bicycle,
+  'style-three-pin-parking': StylethreePinParking,
+  'baby-care-trolley': BabyCareTrolley,
+  'saving-safe': SavingSafe,
+  wifi: Wifi,
+  'disability-wheelchair': DisabilityWheelchair,
+  earth: Earth,
+  clock: Clock,
+  'banking-account': BankingAccount,
+  hierarchy: Hierarchy,
+  'bank-customer': BankCustomer,
+  'transfer-user': TransferUser,
+  computer: Computer,
+  news: News,
+  phonebook: PhoneBook,
+  'legal-scale': LegalScale,
+  'text-options': TextOptions,
+  paragraph: Paragraph,
+  profil: Profil,
+  document: Document,
+  'calendar-warning': CalendarWarning,
+  'credit-card-lock': CreditCardLock,
+  'credit-card-remove': CreditCardRemove,
+  'house-nature': HouseNature,
+  scooter: Scooter,
+  'qr-code': QrCode,
+  'touch-id': TouchId,
+  'party-confetti': PartyConfetti,
+  'earth-globe': EarthGlobe,
+  'credit-card-payment': CreditCardPayment,
+  trailer: Trailer,
+  bus: Bus,
+  'earth-lock': EarthLock,
+  'left-right-arrow': LeftRightArrow,
+  list: List,
+  timeline: TimeLine,
+  login: Login,
+  currency: Currency,
+  'edit-user': EditUser,
+  vignette: Vignette,
+  health: Health,
+  'legal-information': LegalInformaton,
+  chat: Chat,
+  toys: Toys,
+  'hard-of-hearing': HardOfHearing,
+  view: View,
+  'view-off': ViewOff,
+  'card-online-limit': CardOnlineLimit,
+  'edit-profile': EditProfile,
+  'add-partner': AddPartner,
+  'search-partner': SearchPartner,
+  'queuing-long': QueuingLong,
+  print: Print,
+  'office-file-iso': OfficeFileIso,
+  'office-file-csv': OfficeFileCsv,
+  'office-file-xls': OfficeFileXls,
+  filter: Filter,
+  buildings: Buildings,
+  'shirt-plain': ShirtPlain,
+  'phone-code': PhoneCode,
+  'phone-noti': PhoneNoti,
+  chair: Chair,
+  announcement: Announcement,
+  wench: Wench,
+  business: Business,
+  shield: Shield,
+  'money-transfer-between-accounts': MoneyTransferBetweenAccounts,
+  'smiley-very-happy': SmileyVeryHappy,
+  'smiley-happy': SmileyHappy,
+  'smiley-indifferent': SmileyIndifferent,
+  'smiley-unhappy': SmileyUnhappy,
+  'smiley-sad': SmileySad,
+  'room-service-give-plate': RoomServiceGivePlate,
+  'tennis-player': TennisPlayer,
+  'hotel-bedroom': HotelBedroom,
+  'map-search': MapSearch,
+  'no-filter': NoFilter,
+  'tick-in-circle': TickInCircle,
+  'mobile-phone': MobilePhone,
+  telefone: Telefone,
+  bill: Bill,
+  laptop: Laptop,
+  'money-transfer': MoneyTransfer,
+  'error-state': ErrorState,
+  'travel-bag': TravelBag,
+  envelope: Envelope,
+  'fixed-money': FixedMoney,
+  piggy: Piggy,
+  'legal-hammer': LegalHammer,
+  repeat: Repeat,
+  star: Star,
+  feed: Feed,
+  cheque: Cheque,
+  'csoportos-beszedes': CsoportosBeszedes,
+  kolcson: Kolcson,
+  'vignette-second': VignetteSecond,
+  tv: Tv,
+  tablet: Tablet,
+  egyeb: Egyeb,
+  'ai-brain': AiBrain,
+  'glass-lab': GlassLab,
 }
 
 const Medium = props => {

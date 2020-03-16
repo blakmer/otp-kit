@@ -1,0 +1,38 @@
+.pageNotFoundBackground {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff2f9;
+}
+
+.pageNotFound {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageNotFound > * {
+  margin: 1rem;
+}
+
+.pageNotFoundLink {
+  cursor: pointer;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  padding: 1rem;
+  width: 85%;
+  border-radius: 2rem;
+  opacity: 1;
+  text-align: center;
+  user-select: none;
+  margin-top: 1rem;
+}
+
+.pageNotFoundLink:hover {
+  text-decoration-line: underline;
+  color: var(--color-primary);
+}

@@ -59,6 +59,8 @@ module.exports = {
         'src/Toggler/index.js',
         'src/Tooltip/index.js',
         'src/Progress/index.js',
+        'src/Uploader/index.js',
+        'src/RoundProgress/index.js',
       ],
     },
     {
@@ -69,9 +71,14 @@ module.exports = {
         'src/Filters/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
+        'src/StatePage/index.js',
         'src/Tabs/index.js',
         'src/List/index.js',
       ],
+    },
+    {
+      name: 'Organisms',
+      components: ['src/PageNotFound/index.js'],
     },
     {
       name: 'Charts',

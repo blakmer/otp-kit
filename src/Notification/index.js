@@ -3,8 +3,10 @@ import classnames from 'classnames'
 import propTypes from 'prop-types'
 import Typography from '../Typography'
 import Grid from '../Grid'
+import Icon from '../Icon'
 
 import styles from './index.module.css'
+import Medium from '../Icon/Medium'
 
 const { Container, Row, Col } = Grid
 
@@ -13,18 +15,30 @@ const Notification = props => {
   const element = useRef(null)
   useEffect(() => {
     setTimeout(() => {
-      element.current.style.marginLeft = '9999px'
+      element.current.style.transform = 'translateX(9999px)'
       setTimeout(() => {
-        element.current.parentNode.removeChild(element.current)
+        element.current.parentNode &&
+          element.current.parentNode.removeChild(element.current)
       }, 500)
     }, 3000)
   }, [])
+
+  const onCloseHandle = () => {
+    element.current.parentNode.removeChild(element.current)
+  }
+
   return (
     <div ref={element} className={styles.notificationWrapped}>
       <Row justify="center">
         <Col md={8}>
           <div className={classnames(styles.notification, styles[type])}>
-            <Typography.Text color="inverse">{message}</Typography.Text>
+            <Icon.Medium type="info" fill="inverse" />
+            <div className={styles.notificationText}>
+              <Typography.Text color="inverse">{message}</Typography.Text>
+            </div>
+            <span className={styles.notificationClose} onClick={onCloseHandle}>
+              <Icon.Small type="close" fill="inverse" />
+            </span>
           </div>
         </Col>
       </Row>
