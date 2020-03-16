@@ -59,6 +59,7 @@ module.exports = {
         'src/Tooltip/index.js',
         'src/Progress/index.js',
         'src/Uploader/index.js',
+        'src/RoundProgress/index.js',
       ],
     },
     {
