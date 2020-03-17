@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import InputMask from 'react-input-mask'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import Typography from '../Typography'
@@ -164,7 +165,9 @@ const ColorSelection = props => {
             </span>
             <span className={styles.inputPrefixText}>HEX #</span>
           </div>
-          <input
+          <InputMask
+            formatChars={{ H: '[0-9A-f]' }}
+            mask="HHHHHH"
             type="text"
             className={styles.input}
             value={value}
