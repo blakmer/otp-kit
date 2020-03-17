@@ -38,3 +38,30 @@
   ]}
 />
 ```
+
+###### Button tabs
+
+```js
+<Tabs
+  level="buttons"
+  data={[
+    { title: 'title 1', value: 1 },
+    { title: 'title 2', value: 2 },
+    { title: 'title 3', value: 3 },
+  ]}
+/>
+```
+
+###### Small Button tabs
+
+```js
+<Tabs
+  level="buttons"
+  size="small"
+  data={[
+    { title: 'title 1', value: 1 },
+    { title: 'title 2', value: 2 },
+    { title: 'title 3', value: 3 },
+  ]}
+/>
+```

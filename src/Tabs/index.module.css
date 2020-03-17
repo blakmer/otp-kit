@@ -43,3 +43,13 @@
   background: var(--color-primary);
   border-radius: 2rem;
 }
+
+.tabContainer.buttons .tab {
+  background: var(--color-bg-grey-3);
+  border-radius: 2rem;
+  margin: 0 0.5rem;
+}
+
+.tabContainer.buttons .tab.activeTab {
+  background: var(--color-primary);
+}

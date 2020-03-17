@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 import styles from './index.module.css'
 
-const LEVELS = { inner: 'inner', outer: 'outer' }
+const LEVELS = { inner: 'inner', outer: 'outer', buttons: 'buttons' }
 
 const SIZES = { default: 'default', small: 'small' }
 
