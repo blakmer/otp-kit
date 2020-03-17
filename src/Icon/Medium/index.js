@@ -184,6 +184,7 @@ import Tablet from './types/tablet'
 import Egyeb from './types/egyeb'
 import AiBrain from './types/ai-brain'
 import GlassLab from './types/glass-lab'
+import EmptyBox from './types/empty-box'
 
 const REFERENCES = {
   edit: Edit,
@@ -367,6 +368,7 @@ const REFERENCES = {
   egyeb: Egyeb,
   'ai-brain': AiBrain,
   'glass-lab': GlassLab,
+  'empty-box': EmptyBox,
 }
 
 const Medium = props => {
