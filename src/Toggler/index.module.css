@@ -47,7 +47,13 @@
   background-color: var(--color-bg-input);
 }
 
-.input:checked + .switch {
+.input:checked + .switch.disabled {
+  background-color: var(--color-text-disabled);
+  cursor: not-allowed;
+  border: 1px solid transparent;
+}
+
+.input:checked + .switchGreen {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
 }

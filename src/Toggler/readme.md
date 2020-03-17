@@ -9,26 +9,33 @@
   <Toggler
     onChange={event => console.log(event.target.className)}
     fill="blue"
-    defaultChecked
     style={{ marginLeft: 10 }}
+    defaultChecked
   />
   <Toggler
     onChange={event => console.log(event.target.className)}
     fill="yellow"
-    defaultChecked
     style={{ marginLeft: 10 }}
+    defaultChecked
   />
   <Toggler
     onChange={event => console.log(event.target.className)}
     fill="purple"
-    defaultChecked
     style={{ marginLeft: 10 }}
+    defaultChecked
   />
   <Toggler
     onChange={event => console.log(event.target.className)}
+    fill="purple"
+    style={{ marginLeft: 10 }}
     disabled
+  />
+  <Toggler
+    onChange={event => console.log(event.target.className)}
     fill="purple"
     style={{ marginLeft: 10 }}
+    defaultChecked
+    disabled
   />
 </React.Fragment>
 ```

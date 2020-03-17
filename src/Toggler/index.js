@@ -48,6 +48,7 @@ const Toggler = props => {
         <div
           className={classnames(styles.switch, {
             [styles.disabled]: disabled,
+            [styles.switchGreen]: fill === 'green',
             [styles.switchBlue]: fill === 'blue',
             [styles.switchYellow]: fill === 'yellow',
             [styles.switchPurple]: fill === 'purple',
@@ -60,9 +61,11 @@ const Toggler = props => {
 }
 
 Toggler.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   defaultChecked: PropTypes.bool,
   checked: PropTypes.bool,
-  fill: PropTypes.oneOf(['blue', 'yellow', 'purple']),
+  fill: PropTypes.oneOf(['green', 'blue', 'yellow', 'purple']),
   disabled: PropTypes.bool,
   name: PropTypes.string,
   required: PropTypes.bool,
@@ -78,6 +81,7 @@ Toggler.propTypes = {
 }
 
 Toggler.defaultProps = {
+  fill: 'green',
   disabled: false,
 }
 
