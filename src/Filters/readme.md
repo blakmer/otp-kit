@@ -15,8 +15,6 @@ const [show, toggleShow] = useState(false)
   <Button onClick={() => toggleShow(true)}>Показать фильтры</Button>
   <Filters
     show={show}
-    overlay
-    onClose={() => toggleShow(false)}
     header={
       <Fragment>
         <Typography.Heading level={2}>Название тайтла</Typography.Heading>
@@ -47,6 +45,8 @@ const [show, toggleShow] = useState(false)
         </Col>
       </Row>
     }
+    overlay
+    onClose={() => toggleShow(false)}
   />
 </Fragment>
 ```

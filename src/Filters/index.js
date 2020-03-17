@@ -17,11 +17,7 @@ const Filters = props => {
   } = props
 
   useEffect(() => {
-    if (overlay && show) {
-      document.body.style.overflowY = 'hidden'
-    } else {
-      document.body.style.overflowY = 'auto'
-    }
+    document.body.style.overflowY = overlay && show ? 'hidden' : 'auto'
   }, [show])
 
   return (
@@ -56,10 +52,10 @@ Filters.propTypes = {
 }
 
 Filters.defaultProps = {
-  header: <p>Шапка</p>,
-  topContent: <p>Верхний контент</p>,
-  midContent: <p>Средний контент</p>,
-  bottomContent: <p>Нижний контент</p>,
+  // header: <p>Шапка</p>,
+  // topContent: <p>Верхний контент</p>,
+  // midContent: <p>Средний контент</p>,
+  // bottomContent: <p>Нижний контент</p>,
   show: false,
   overlay: false,
 }
