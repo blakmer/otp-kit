@@ -7,8 +7,5 @@ const redirect = () => {
   console.log('#redirect')
 }
 
-;<PageNotFound
-        onClick={redirect}
-  />
-
+;<PageNotFound onClick={redirect} />
 ```

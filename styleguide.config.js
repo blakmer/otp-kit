@@ -54,6 +54,7 @@ module.exports = {
         'src/Select/index.js',
         'src/Slider/index.js',
         'src/Stepper/index.js',
+        'src/Tag/index.js',
         'src/Textarea/index.js',
         'src/Toggler/index.js',
         'src/Tooltip/index.js',
@@ -67,6 +68,8 @@ module.exports = {
       name: 'Moleculs',
       components: [
         'src/Cards/index.js',
+        'src/ColorSelection/index.js',
+        'src/Filters/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
         'src/StatePage/index.js',
