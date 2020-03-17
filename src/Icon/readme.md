@@ -1086,6 +1086,10 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="empty-box" />
       <div>empty-box</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} md={1}>
+      <Icon.Medium type="tags" />
+      <div>tags</div>
+    </Col>
   </Row>
 </Container>
 ```
