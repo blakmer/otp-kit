@@ -12,35 +12,35 @@ const VignetteSecond = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M3 22L8 3"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M22 22L17 3"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12.5 17V22"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12.5 9V13"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12.5 3V5"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

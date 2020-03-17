@@ -13,11 +13,11 @@ const ExternalLink = props => {
       <g clipPath="url(#clip0)">
         <path
           d="M6 2H4C2.89543 2 2 2.89543 2 4V12C2 13.1046 2.89543 14 4 14H12C13.1046 14 14 13.1046 14 12V10"
-          stroke="#1B1F27"
+          stroke={hexFill}
           strokeLinecap="round"
         />
-        <path d="M7 9L14 2" stroke="#1B1F27" strokeLinecap="round" />
-        <path d="M9 2H14V7" stroke="#1B1F27" strokeLinecap="round" />
+        <path d="M7 9L14 2" stroke={hexFill} strokeLinecap="round" />
+        <path d="M9 2H14V7" stroke={hexFill} strokeLinecap="round" />
       </g>
       <defs>
         <clipPath id="clip0">

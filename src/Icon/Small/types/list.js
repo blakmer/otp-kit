@@ -16,7 +16,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill="#1B1F27"
+        fill={hexFill}
       />
       <rect
         x="3"
@@ -24,7 +24,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill="#1B1F27"
+        fill={hexFill}
       />
       <rect
         x="3"
@@ -32,7 +32,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill="#1B1F27"
+        fill={hexFill}
       />
       <rect
         x="3"
@@ -40,7 +40,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill="#1B1F27"
+        fill={hexFill}
       />
       <rect
         x="1"
@@ -48,7 +48,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill="#1B1F27"
+        fill={hexFill}
       />
       <rect
         x="1"
@@ -56,7 +56,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill="#1B1F27"
+        fill={hexFill}
       />
     </svg>
   )
