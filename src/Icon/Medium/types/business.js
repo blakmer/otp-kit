@@ -16,28 +16,28 @@ const Business = props => {
         width="22"
         height="15"
         rx="1.5"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M1 12.5H10"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M14.75 12.5H22.75"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -46,7 +46,7 @@ const Business = props => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M12 14C10.8954 14 10 13.403 10 12.6667V11.3333C10 10.597 10.8954 10 12 10C13.1046 10 14 10.597 14 11.3333V12.6667C14 13.403 13.1046 14 12 14Z"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

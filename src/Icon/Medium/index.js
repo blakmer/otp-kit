@@ -184,6 +184,7 @@ import Tablet from './types/tablet'
 import Egyeb from './types/egyeb'
 import AiBrain from './types/ai-brain'
 import GlassLab from './types/glass-lab'
+import EmptyBox from './types/empty-box'
 
 const REFERENCES = {
   edit: Edit,
@@ -367,14 +368,17 @@ const REFERENCES = {
   egyeb: Egyeb,
   'ai-brain': AiBrain,
   'glass-lab': GlassLab,
+  'empty-box': EmptyBox,
 }
 
 const Medium = props => {
-  const { type, fill, className } = props
+  const { type, fill, className, onClick } = props
   const SVG = REFERENCES[type]
 
   return SVG ? (
-    <span className={classnames(styles.medium, styles.wrapper, className)}>
+    <span
+      className={classnames(styles.medium, styles.wrapper, className)}
+      onClick={onClick}>
       {<SVG hexFill={FILLS[fill]} />}
     </span>
   ) : null
@@ -383,6 +387,8 @@ const Medium = props => {
 Medium.propTypes = {
   type: PropTypes.string.isRequired,
   fill: PropTypes.oneOf(Object.keys(FILLS)),
+  className: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 Medium.defaultProps = {

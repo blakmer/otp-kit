@@ -12,28 +12,28 @@ const HospitalFirstAid = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M3.93333 22.001C2.31331 22.001 1 20.6578 1 19.001V10.001C1 8.34414 2.31331 7.00098 3.93333 7.00098H20.0667C21.6867 7.00098 23 8.34414 23 10.001V19.001C23 20.6578 21.6867 22.001 20.0667 22.001H3.93333Z"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M16 6.00098V3.33431C16 2.59793 15.2837 2.00098 14.4 2.00098H9.6V2.00098C8.71634 2.00098 8 2.59793 8 3.33431V3.33431V6.00098"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12 11V17"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9 14H15"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

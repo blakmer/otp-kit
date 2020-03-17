@@ -12,14 +12,14 @@ const LeftRightArrow = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M17 6L23 12L17 18"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M7 18L1 12L7 6"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -12,14 +12,14 @@ const TimeLine = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M2.5 16L9.5 9L14.5 14L20.5 8"
-        stroke="#1B1F27"
+        stroke={hexFill}
         strokeWidth="2"
         strokeLinejoin="round"
       />
-      <circle cx="3.5" cy="15" r="2" fill="#1B1F27" />
-      <circle cx="9.5" cy="9.5" r="2" fill="#1B1F27" />
-      <circle cx="14.5" cy="13.5" r="2" fill="#1B1F27" />
-      <circle cx="20.5" cy="8" r="2" fill="#1B1F27" />
+      <circle cx="3.5" cy="15" r="2" fill={hexFill} />
+      <circle cx="9.5" cy="9.5" r="2" fill={hexFill} />
+      <circle cx="14.5" cy="13.5" r="2" fill={hexFill} />
+      <circle cx="20.5" cy="8" r="2" fill={hexFill} />
     </svg>
   )
 }

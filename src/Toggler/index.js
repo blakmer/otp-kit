@@ -8,7 +8,6 @@ const Toggler = props => {
     defaultChecked,
     fill,
     disabled,
-    id,
     name,
     required,
     tabIndex,
@@ -27,45 +26,47 @@ const Toggler = props => {
 
   return (
     <div className={classnames(styles.wrapper, className)} style={style}>
-      <input
-        className={styles.input}
-        type="checkbox"
-        id={id}
-        defaultChecked={defaultChecked}
-        checked={checked}
-        disabled={disabled}
-        name={name}
-        required={required}
-        tabIndex={tabIndex}
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        onKeyDown={onKeyDown}
-        onKeyPress={onKeyPress}
-        onKeyUp={onKeyUp}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      />
-      <label
-        className={classnames(styles.switch, {
-          [styles.disabled]: disabled,
-          [styles.switchBlue]: fill === 'blue',
-          [styles.switchYellow]: fill === 'yellow',
-          [styles.switchPurple]: fill === 'purple',
-        })}
-        htmlFor={id}
-      />
-      <div className={styles.circle} />
+      <label>
+        <input
+          className={styles.input}
+          type="checkbox"
+          defaultChecked={defaultChecked}
+          checked={checked}
+          disabled={disabled}
+          name={name}
+          required={required}
+          tabIndex={tabIndex}
+          onBlur={onBlur}
+          onChange={onChange}
+          onFocus={onFocus}
+          onKeyDown={onKeyDown}
+          onKeyPress={onKeyPress}
+          onKeyUp={onKeyUp}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
+        <div
+          className={classnames(styles.switch, {
+            [styles.disabled]: disabled,
+            [styles.switchGreen]: fill === 'green',
+            [styles.switchBlue]: fill === 'blue',
+            [styles.switchYellow]: fill === 'yellow',
+            [styles.switchPurple]: fill === 'purple',
+          })}
+        />
+        <div className={styles.circle} />
+      </label>
     </div>
   )
 }
 
 Toggler.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   defaultChecked: PropTypes.bool,
   checked: PropTypes.bool,
-  fill: PropTypes.oneOf(['blue', 'yellow', 'purple']),
+  fill: PropTypes.oneOf(['green', 'blue', 'yellow', 'purple']),
   disabled: PropTypes.bool,
-  id: PropTypes.string.isRequired,
   name: PropTypes.string,
   required: PropTypes.bool,
   tabIndex: PropTypes.number,
@@ -80,6 +81,7 @@ Toggler.propTypes = {
 }
 
 Toggler.defaultProps = {
+  fill: 'green',
   disabled: false,
 }
 

@@ -32,17 +32,21 @@ const REFERENCES = {
 }
 
 const ClipArt = props => {
-  const { type, fill, className } = props
+  const { type, className, onClick, fill } = props
   const SVG = REFERENCES[type]
 
   return SVG ? (
-    <span className={className}>{<SVG hexFill={FILLS[fill]} />}</span>
+    <span className={className} onClick={onClick}>
+      {<SVG hexFill={FILLS[fill]} />}
+    </span>
   ) : null
 }
 
 ClipArt.propTypes = {
   type: PropTypes.string.isRequired,
   fill: PropTypes.oneOf(Object.keys(FILLS)),
+  onClick: PropTypes.func,
+  className: PropTypes.string,
 }
 
 export default ClipArt

@@ -1,0 +1,111 @@
+.tag {
+  min-width: 72px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--color-bg-grey-3);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+.tagSecondary {
+  background-color: var(--color-bg-input);
+}
+
+.tagSecondaryGreen {
+  border: 2px solid var(--color-primary);
+}
+
+.tagSecondaryPurple {
+  border: 2px solid var(--color-chart-purple);
+}
+
+.tagSecondaryOrange {
+  border: 2px solid var(--color-highlighted);
+}
+
+.tagSecondaryBlue {
+  border: 2px solid var(--color-chart-blue);
+}
+
+.tagSecondaryRed {
+  border: 2px solid var(--color-error);
+}
+
+.tagSecondaryYellow {
+  border: 2px solid var(--color-chart-yellow);
+}
+
+.tagDisabled {
+  background-color: var(--color-bg-input-disabled);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+.marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 0.75rem;
+}
+
+.markerGreen {
+  background-color: var(--color-primary);
+}
+
+.markerGreenDisabled {
+  background-color: var(--color-bg-pastel-green);
+}
+
+.markerPurple {
+  background-color: var(--color-chart-purple);
+}
+
+.markerPurpleDisabled {
+  background-color: var(--color-hero-bg-pastel-purple);
+}
+
+.markerOrange {
+  background-color: var(--color-highlighted);
+}
+
+.markerOrangeDisabled {
+  background-color: var(--color-bg-pastel-orange);
+}
+
+.markerBlue {
+  background-color: var(--color-chart-blue);
+}
+
+.markerBlueDisabled {
+  background-color: var(--color-bg-pastel-blue);
+}
+
+.markerRed {
+  background-color: var(--color-error);
+}
+
+.markerRedDisabled {
+  background-color: var(--color-bg-pastel-red);
+}
+
+.markerYellow {
+  background-color: var(--color-chart-yellow);
+}
+
+.markerYellowDisabled {
+  background-color: var(--color-bg-pastel-yellow);
+}
+
+.title {
+  margin: 0 1rem;
+  white-space: nowrap;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  margin-left: -8px;
+  cursor: pointer;
+}
