@@ -185,6 +185,7 @@ import Egyeb from './types/egyeb'
 import AiBrain from './types/ai-brain'
 import GlassLab from './types/glass-lab'
 import EmptyBox from './types/empty-box'
+import Tags from './types/tags'
 
 const REFERENCES = {
   edit: Edit,
@@ -369,6 +370,7 @@ const REFERENCES = {
   'ai-brain': AiBrain,
   'glass-lab': GlassLab,
   'empty-box': EmptyBox,
+  tags: Tags,
 }
 
 const Medium = props => {
