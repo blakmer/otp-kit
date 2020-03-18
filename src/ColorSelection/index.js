@@ -154,10 +154,7 @@ const ColorSelection = props => {
   }
 
   const onChangeInput = event => {
-    const transformedValue = event.target.value
-      .split('')
-      .filter(symbol => symbol !== '_')
-      .join('')
+    const transformedValue = event.target.value.replace(/\_/g, '')
 
     setInput(transformedValue)
   }
@@ -200,7 +197,7 @@ const ColorSelection = props => {
           <span className={styles.inputPrefixText}>HEX #</span>
         </div>
         <InputMask
-          formatChars={{ H: '[0-9A-f]' }}
+          formatChars={{ H: '[0-9A-Fa-f]' }}
           mask="HHHHHH"
           type="text"
           className={classnames(styles.input, { [styles.notAllowed]: accept })}
