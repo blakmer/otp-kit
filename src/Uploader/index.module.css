@@ -1,6 +1,6 @@
 .uploader {
   --uploader-size: 16.5rem;
-
+  box-sizing: border-box;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
