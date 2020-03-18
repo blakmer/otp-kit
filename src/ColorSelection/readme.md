@@ -2,7 +2,7 @@
 
 ```js
 import { useState } from 'react'
-const [сolor, selectColor] = useState('')
+const [color, setColor] = useState('')
 
 ;<div
   style={{
@@ -12,9 +12,10 @@ const [сolor, selectColor] = useState('')
     justifyContent: 'center',
   }}>
   <ColorSelection
-    selectColor={hex => {
+    value={color}
+    onChange={hex => {
       console.log(hex)
-      selectColor(hex)
+      setColor(hex)
     }}
   />
 </div>
