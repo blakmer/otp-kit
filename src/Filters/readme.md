@@ -10,6 +10,7 @@ import Grid from '../Grid'
 const { Row, Col } = Grid
 
 const [show, toggleShow] = useState(false)
+const [color, setColor] = useState('')
 
 ;<Fragment>
   <Button onClick={() => toggleShow(true)}>Показать фильтры</Button>
@@ -21,7 +22,10 @@ const [show, toggleShow] = useState(false)
         <RoundButton
           inverse
           icon="arrow-right"
-          onClick={() => toggleShow(false)}
+          onClick={() => {
+            toggleShow(false)
+            setColor('')
+          }}
         />
       </Fragment>
     }
@@ -32,21 +36,44 @@ const [show, toggleShow] = useState(false)
         block
       />
     }
-    midContent={<ColorSelection selectColor={hex => console.log(hex)} />}
+    midContent={
+      <ColorSelection
+        value={color}
+        onChange={hex => {
+          console.log(hex)
+          setColor(hex)
+        }}
+      />
+    }
     bottomContent={
-      <Row>
-        <Col>
-          <Button ghost block onClick={() => toggleShow(false)}>
-            Отмена
-          </Button>
-        </Col>
-        <Col>
-          <Button block>Сохранить</Button>
-        </Col>
-      </Row>
+      <Fragment>
+        <Row>
+          <Col>
+            <Button
+              ghost
+              block
+              onClick={() => {
+                toggleShow(false)
+                setColor('')
+              }}>
+              Отмена
+            </Button>
+          </Col>
+          <Col>
+            <Button block>Сохранить</Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col />
+          <div style={{ marginTop: '1rem' }}>{color}</div>
+        </Row>
+      </Fragment>
     }
     overlay
-    onClose={() => toggleShow(false)}
+    onClose={() => {
+      toggleShow(false)
+      setColor('')
+    }}
   />
 </Fragment>
 ```

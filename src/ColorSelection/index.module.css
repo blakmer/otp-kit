@@ -46,6 +46,11 @@
   padding: 7px 24px 7px 7px;
 }
 
+.inputWrapper.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .inputPrefix {
   display: flex;
   align-items: center;
@@ -82,8 +87,14 @@
   box-sizing: border-box;
 }
 
+.input.notAllowed {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
 .input:disabled {
   color: var(--color-text-disabled);
+  pointer-events: none;
 }
 
 .input::placeholder {
