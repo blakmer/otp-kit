@@ -20,6 +20,7 @@ const Textarea = props => {
     tabIndex,
     wrap,
     value,
+    defaultValue,
     label,
     onChange,
     status,
@@ -28,7 +29,7 @@ const Textarea = props => {
     block,
   } = props
 
-  const [stateValue, setValue] = useState(value || '')
+  const [stateValue, setValue] = useState(value || defaultValue || '')
   const textArea = useRef(null)
 
   useEffect(() => {
@@ -81,7 +82,8 @@ const Textarea = props => {
       <div className={getTextareaWrapperStyles()}>
         <textarea
           id={id}
-          value={stateValue}
+          value={value && stateValue}
+          defaultValue={defaultValue && stateValue}
           className={styles.textarea}
           accessKey={accessKey}
           autoFocus={autoFocus}
@@ -94,7 +96,7 @@ const Textarea = props => {
           rows={rows}
           tabIndex={tabIndex}
           wrap={wrap}
-          onChange={handleChange}
+          onChange={(onChange && value) || !value ? handleChange : undefined}
           ref={textArea}
         />
       </div>
@@ -119,6 +121,7 @@ Textarea.propTypes = {
   status: PropTypes.oneOf(['error', 'warning', 'default']),
   disabled: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   accessKey: PropTypes.string,
   autoFocus: PropTypes.bool,
   cols: PropTypes.number,
