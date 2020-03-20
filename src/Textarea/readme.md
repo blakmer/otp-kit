@@ -7,7 +7,12 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
     <Col md={6}>
-      <Textarea label="Отъезжающий лабель" maxLength={100} />
+      <Textarea
+        label="Отъезжающий лабель"
+        maxLength={100}
+        value="asd"
+        onChange={event => console.log(event.target.value)}
+      />
     </Col>
     <Col md={6}>
       <Textarea label="Disabled" disabled />
@@ -29,6 +34,7 @@ const { Container, Row, Col } = Grid
       <Textarea
         label="Stretch height"
         value="Напиши что-нибудь подлиннее"
+        onChange={event => console.log(event.target.value)}
         maxLength={100}
         stretchHeight
       />

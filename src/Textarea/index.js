@@ -29,7 +29,8 @@ const Textarea = props => {
     block,
   } = props
 
-  const [stateValue, setValue] = useState(value || defaultValue || '')
+  const [stateValue, setValue] = useState(value || defaultValue)
+  const [changed, setChanged] = useState(stateValue)
   const textArea = useRef(null)
 
   useEffect(() => {
@@ -44,10 +45,16 @@ const Textarea = props => {
     }
   }, [])
 
+  useEffect(() => {
+    setValue(value)
+  }, [value])
+
   const handleChange = event => {
     const { target } = event
 
+    setChanged(!!target.value)
     setValue(target.value)
+    onChange && onChange(event)
 
     const computedStyles = getComputedStyle(target.parentElement)
     const padding =
@@ -57,15 +64,11 @@ const Textarea = props => {
     if (stretchHeight) {
       target.parentElement.style.height = target.scrollHeight + padding + 'px'
     }
-
-    if (onChange) {
-      onChange(event)
-    }
   }
 
   const getLabelStyles = () =>
     classnames(styles.label, !disabled && styles[status], {
-      [styles.changed]: stateValue.trim().length,
+      [styles.changed]: changed,
       [styles.disabled]: disabled,
     })
 
@@ -101,8 +104,9 @@ const Textarea = props => {
         />
       </div>
       {!errorMessage ? (
-        <small
-          className={styles.limit}>{`${stateValue.length}/${maxLength}`}</small>
+        <small className={styles.limit}>{`${
+          changed ? stateValue.length : 0
+        }/${maxLength}`}</small>
       ) : (
         <p className={styles.errorMessage}>{errorMessage}</p>
       )}
