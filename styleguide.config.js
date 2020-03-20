@@ -77,6 +77,7 @@ module.exports = {
         'src/Tabs/index.js',
         'src/List/index.js',
         'src/InfinityScroll/index.js',
+        'src/ActionInput/index.js',
       ],
     },
     {
