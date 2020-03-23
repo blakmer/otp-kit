@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.actionIcon {
+  cursor: pointer;
+}
+
+.actionIcon:not(:last-child):after {
+  content: '';
+  display: inline-block;
+  height: 1.5rem;
+  width: 1px;
+  background: var(--color-bg-grey-2);
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
