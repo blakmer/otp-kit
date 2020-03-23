@@ -7,7 +7,11 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
     <Col md={6}>
-      <Input label="Label" />
+      <Input
+        label="Label"
+        value="asd"
+        onChange={event => console.log(event.target.value)}
+      />
     </Col>
     <Col md={6}>
       <Input state="disabled" label="Disabled input" />
