@@ -23,11 +23,6 @@ function setValue(text) {
 function submitSearch() {
   const smallIcons = document.querySelectorAll('.smallIcons div div')
   smallIcons.forEach(elem => {
-    /** exact match */
-    // if(search.value === elem.textContent)
-    // {
-    //   console.log(elem.textContent);
-    // }
     if (elem.textContent.includes(search.value)) {
       elem.parentElement.style.display = 'block'
     } else {
@@ -42,11 +37,7 @@ const { Container, Row, Col } = Grid
   <div onChange={submitSearch}>
     <Row>
       <Col sm={12} md={4} style={{ textAlign: 'center' }}>
-        <Input
-          label="Search"
-          onChange={e => setValue(e.target.value)}
-          value="Search"
-        />
+        <Input label="Search" onChange={e => setValue(e.target.value)} />
       </Col>
     </Row>
   </div>
@@ -434,11 +425,7 @@ const { Container, Row, Col } = Grid
     <div onChange={submitSearch}>
       <Row>
         <Col sm={12} md={4} style={{ textAlign: 'center' }}>
-          <Input
-            label="Search"
-            onChange={e => setValue(e.target.value)}
-            value="Search"
-          />
+          <Input label="Search" onChange={e => setValue(e.target.value)} />
         </Col>
       </Row>
     </div>
