@@ -1,10 +1,10 @@
 ```js
-<NavPanel
-  header="AAAAAAA"
+import Logo from '../Logo'
+;<NavPanel
+  header={<Logo />}
   actions={[
     { icon: 'profile', action: () => {} },
-    { icon: 'profile', action: () => {} },
-    { icon: 'profile', action: () => {} },
+    { icon: 'close', action: () => {} },
   ]}
 />
 ```
