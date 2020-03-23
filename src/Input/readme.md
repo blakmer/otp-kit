@@ -3,14 +3,11 @@
 ```js
 import Grid from '../Grid'
 const { Container, Row, Col } = Grid
+
 ;<Container>
   <Row>
     <Col md={6}>
-      <Input
-        label="Label"
-        onChange={e => console.log(e.target.value)}
-        value="value"
-      />
+      <Input label="Label" />
     </Col>
     <Col md={6}>
       <Input state="disabled" label="Disabled input" />

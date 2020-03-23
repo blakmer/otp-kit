@@ -20,6 +20,7 @@ const Textarea = props => {
     tabIndex,
     wrap,
     value,
+    defaultValue,
     label,
     onChange,
     status,
@@ -28,7 +29,8 @@ const Textarea = props => {
     block,
   } = props
 
-  const [stateValue, setValue] = useState(value || '')
+  const [stateValue, setValue] = useState(value || defaultValue)
+  const [changed, setChanged] = useState(stateValue)
   const textArea = useRef(null)
 
   useEffect(() => {
@@ -43,10 +45,16 @@ const Textarea = props => {
     }
   }, [])
 
+  useEffect(() => {
+    setValue(value)
+  }, [value])
+
   const handleChange = event => {
     const { target } = event
 
+    setChanged(!!target.value)
     setValue(target.value)
+    onChange && onChange(event)
 
     const computedStyles = getComputedStyle(target.parentElement)
     const padding =
@@ -56,15 +64,11 @@ const Textarea = props => {
     if (stretchHeight) {
       target.parentElement.style.height = target.scrollHeight + padding + 'px'
     }
-
-    if (onChange) {
-      onChange(event)
-    }
   }
 
   const getLabelStyles = () =>
     classnames(styles.label, !disabled && styles[status], {
-      [styles.changed]: stateValue.trim().length,
+      [styles.changed]: changed,
       [styles.disabled]: disabled,
     })
 
@@ -81,7 +85,8 @@ const Textarea = props => {
       <div className={getTextareaWrapperStyles()}>
         <textarea
           id={id}
-          value={stateValue}
+          value={value && stateValue}
+          defaultValue={defaultValue && stateValue}
           className={styles.textarea}
           accessKey={accessKey}
           autoFocus={autoFocus}
@@ -94,13 +99,14 @@ const Textarea = props => {
           rows={rows}
           tabIndex={tabIndex}
           wrap={wrap}
-          onChange={handleChange}
+          onChange={(onChange && value) || !value ? handleChange : undefined}
           ref={textArea}
         />
       </div>
       {!errorMessage ? (
-        <small
-          className={styles.limit}>{`${stateValue.length}/${maxLength}`}</small>
+        <small className={styles.limit}>{`${
+          changed ? stateValue.length : 0
+        }/${maxLength}`}</small>
       ) : (
         <p className={styles.errorMessage}>{errorMessage}</p>
       )}
@@ -119,6 +125,7 @@ Textarea.propTypes = {
   status: PropTypes.oneOf(['error', 'warning', 'default']),
   disabled: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   accessKey: PropTypes.string,
   autoFocus: PropTypes.bool,
   cols: PropTypes.number,
