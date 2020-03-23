@@ -45,6 +45,7 @@ const Input = props => {
 
   useEffect(() => {
     if (value) setVal(value)
+    setChanged(!!value)
   }, [value])
 
   useEffect(() => {
@@ -64,7 +65,7 @@ const Input = props => {
           <span
             className={classnames(
               styles.inputLabel,
-              (changed || value) && styles.changed,
+              changed && styles.changed,
               styles[status]
             )}>
             {label}

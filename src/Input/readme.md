@@ -3,15 +3,12 @@
 ```js
 import Grid from '../Grid'
 const { Container, Row, Col } = Grid
-
+const [a, set] = React.useState(undefined)
 ;<Container>
   <Row>
+    <button onClick={() => set('sss')}>111</button>
     <Col md={6}>
-      <Input
-        label="Label"
-        value="asd"
-        onChange={event => console.log(event.target.value)}
-      />
+      <Input label="Label" value={a} />
     </Col>
     <Col md={6}>
       <Input state="disabled" label="Disabled input" />
