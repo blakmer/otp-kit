@@ -47,6 +47,7 @@ const Textarea = props => {
 
   useEffect(() => {
     if (value) setValue(value)
+    setChanged(!!value)
   }, [value])
 
   const handleChange = event => {
