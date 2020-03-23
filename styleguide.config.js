@@ -79,7 +79,7 @@ module.exports = {
     },
     {
       name: 'Organisms',
-      components: ['src/PageNotFound/index.js'],
+      components: ['src/PageNotFound/index.js', 'src/NavPanel/index.js'],
     },
     {
       name: 'Charts',
