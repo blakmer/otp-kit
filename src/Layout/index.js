@@ -63,7 +63,9 @@ const Layout = props => {
 }
 
 Layout.propTypes = {
-  items: PropTypes.arrayOf({ key: PropTypes.string, icon: PropTypes.string }),
+  items: PropTypes.arrayOf(
+    PropTypes.shape({ key: PropTypes.string, icon: PropTypes.string })
+  ),
   children: PropTypes.node,
   header: PropTypes.node,
   onChange: PropTypes.func,
