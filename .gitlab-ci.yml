@@ -13,7 +13,6 @@ compile:
   script:
     - npm set registry='http://npm.lending.isb/'
     - npm install --progress=false
-    - npm publish
     - npm run static
     - node -p "require('./package.json').version" > version.txt
   artifacts:
@@ -25,6 +24,7 @@ compile:
 build:
   stage: build
   script:
+    - npm publish
     - export PROJECT_VERSION=$(head -1 version.txt)
     - docker image build -t docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA .
     - docker push docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA
@@ -34,7 +34,7 @@ build:
 deploy:
   image:
     name: bitnami/kubectl
-    entrypoint: [""]
+    entrypoint: ['']
   stage: deploy
   script:
     - export PROJECT_VERSION=$(head -1 version.txt)
