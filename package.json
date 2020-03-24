@@ -10,7 +10,8 @@
     "clear": "rm -rf lib",
     "compile": "npm run clear && npm run build",
     "prepublishOnly": "npm run compile",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "static": "styleguidist build"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,46 @@
+stages:
+    - compile
+    - build
+    - deploy
+  
+  cache:
+    paths:
+      - node_modules/
+  
+  compile:
+    image: node
+    stage: compile
+    script:
+    - npm set registry='http://npm.lending.isb/'
+    - npm install --progress=false
+    - npm publish
+    - npm run static
+    - node -p "require('./package.json').version" > version.txt
+    artifacts:
+      paths:
+      - styleguide/
+      - version.txt
+      expire_in: 1 day
+  
+  build:
+    stage: build
+    script:
+    - export PROJECT_VERSION=$(head -1 version.txt)
+    - docker image build -t docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA . 
+    - docker push docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA
+    only:
+    - tags
+  
+  deploy:
+    image:
+      name: bitnami/kubectl
+      entrypoint: [""]
+    stage: deploy
+    script:
+      - export PROJECT_VERSION=$(head -1 version.txt)
+      - |
+        kubectl set image deployment/ui-kit \
+                ui-kit=docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA \
+                --kubeconfig $KUBE_CONFIG --namespace=lending
+    only:
+    - tags
