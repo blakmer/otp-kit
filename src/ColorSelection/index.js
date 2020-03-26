@@ -130,7 +130,12 @@ const ColorSelection = props => {
 
     setCircles(newCircles)
     setFlag(false)
-    onChange(newCircles[index].color)
+
+    if (newCircles[index].color !== value) {
+      onChange(newCircles[index].color)
+    } else {
+      onChange('')
+    }
   }
 
   const onChangeToggler = () => {
