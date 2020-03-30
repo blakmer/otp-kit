@@ -84,6 +84,7 @@ module.exports = {
         'src/PageNotFound/index.js',
         'src/NavPanel/index.js',
         'src/Layout/index.js',
+        'src/LogViewer/index.js',
       ],
     },
     {

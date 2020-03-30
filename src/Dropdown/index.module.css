@@ -2,32 +2,46 @@
   position: relative;
 }
 
-.label {
-  color: var(--color-text-primary);
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-}
-
-.label.isOpen {
-  color: var(--color-primary);
-}
-
-.labelText {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-right: 0.5rem;
-}
-
 .listArrow {
   position: absolute;
-  transform: rotate(180deg);
-  top: 100%;
-  right: 0px;
   z-index: 999;
   line-height: 0.75rem;
   text-shadow: 0 0 3rem var(--color-shadow);
+}
+
+.listArrow.bottomCenter {
+  top: 100%;
+  right: calc(50% - 0.75rem);
+  transform: rotate(180deg);
+}
+.listArrow.bottomLeft {
+  top: 100%;
+  right: 0px;
+  transform: rotate(180deg);
+}
+
+.listArrow.bottomRight {
+  top: 100%;
+  left: 0px;
+  transform: rotate(180deg);
+}
+
+.listArrow.topCenter {
+  bottom: 100%;
+  right: calc(50% - 0.75rem);
+}
+.listArrow.topLeft {
+  bottom: 100%;
+  right: 0px;
+}
+
+.listArrow.topRight {
+  bottom: 100%;
+  left: 0px;
+}
+.listArrow.topLeft {
+  bottom: 100%;
+  right: 0px;
 }
 
 .list {
@@ -39,8 +53,37 @@
   padding: 0.5rem;
   box-shadow: 0 0 3rem var(--color-shadow);
   outline: none;
+}
+
+.list.bottomCenter {
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.list.bottomLeft {
   top: calc(100% + 0.75rem);
   right: -1rem;
+}
+
+.list.bottomRight {
+  top: calc(100% + 0.75rem);
+  left: -1rem;
+}
+.list.topCenter {
+  bottom: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.list.topLeft {
+  bottom: calc(100% + 0.75rem);
+  right: -1rem;
+}
+
+.list.topRight {
+  bottom: calc(100% + 0.75rem);
+  left: -1rem;
 }
 
 .list > li {

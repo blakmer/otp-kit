@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { useSelect } from 'downshift'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
@@ -8,11 +8,18 @@ import Icon from '../Icon'
 import { COLORS } from '../docs'
 
 const Dropdown = props => {
-  const { items, defaultValue, placeholder, onChange, emptyText } = props
+  const {
+    items,
+    defaultValue,
+    onChange,
+    emptyText,
+    listDirection,
+    children,
+    onOpen,
+  } = props
 
   const {
     isOpen,
-    selectedItem,
     getToggleButtonProps,
     getMenuProps,
     highlightedIndex,
@@ -24,20 +31,28 @@ const Dropdown = props => {
       if (onChange) onChange(selectedItem)
     },
   })
+
+  useEffect(() => {
+    onOpen && onOpen(isOpen)
+  }, [isOpen])
   return (
     <span className={styles.dropdown}>
-      <span
-        className={classnames(styles.label, isOpen && styles.isOpen)}
-        {...getToggleButtonProps()}>
-        <span className={styles.labelText}>{selectedItem || placeholder}</span>
-        <Icon.Small type={isOpen ? 'arrow-up' : 'arrow-down'} fill="green" />
-      </span>
+      <span {...getToggleButtonProps()}>{children}</span>
       {isOpen && (
         <Fragment>
-          <span className={styles.listArrow}>
+          <span
+            className={classnames(
+              styles.listArrow,
+              styles[listDirection || 'bottomCenter']
+            )}>
             <Arrow fill={COLORS.BG_INPUT} />
           </span>
-          <ul className={styles.list} {...getMenuProps()}>
+          <ul
+            className={classnames(
+              styles.list,
+              styles[listDirection || 'bottomCenter']
+            )}
+            {...getMenuProps()}>
             {items.map((item, index) => (
               <li
                 className={classnames(
@@ -59,27 +74,25 @@ const Dropdown = props => {
 }
 
 Dropdown.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.node, PropTypes.string, PropTypes.number])
-  ),
-  defaultValue: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.string,
-    PropTypes.number,
-  ]),
-  placeholder: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  items: PropTypes.arrayOf(PropTypes.node),
+  defaultValue: PropTypes.node,
+  onOpen: PropTypes.func,
   onChange: PropTypes.func,
   emptyText: PropTypes.string,
+  listDirection: PropTypes.oneOf([
+    'topLeft',
+    'topCenter',
+    'topRight',
+    'bottomLeft',
+    'bottomCenter',
+    'bottomRight',
+  ]),
 }
 
 Dropdown.defaultProps = {
   items: [],
-  placeholder: 'List',
   emptyText: 'Пусто',
+  listDirection: 'bottomCenter',
 }
 
 export default Dropdown
