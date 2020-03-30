@@ -4,7 +4,6 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import Arrow from '../util/arrow'
-import Icon from '../Icon'
 import { COLORS } from '../docs'
 
 const Dropdown = props => {
@@ -16,6 +15,9 @@ const Dropdown = props => {
     listDirection,
     children,
     onOpen,
+    showArrow,
+    className,
+    style,
   } = props
 
   const {
@@ -35,21 +37,26 @@ const Dropdown = props => {
   useEffect(() => {
     onOpen && onOpen(isOpen)
   }, [isOpen])
+
   return (
     <span className={styles.dropdown}>
       <span {...getToggleButtonProps()}>{children}</span>
       {isOpen && (
         <Fragment>
-          <span
-            className={classnames(
-              styles.listArrow,
-              styles[listDirection || 'bottomCenter']
-            )}>
-            <Arrow fill={COLORS.BG_INPUT} />
-          </span>
+          {showArrow && (
+            <span
+              className={classnames(
+                styles.listArrow,
+                styles[listDirection || 'bottomCenter']
+              )}>
+              <Arrow fill={COLORS.BG_INPUT} />
+            </span>
+          )}
           <ul
+            style={style}
             className={classnames(
               styles.list,
+              className,
               styles[listDirection || 'bottomCenter']
             )}
             {...getMenuProps()}>
@@ -87,12 +94,16 @@ Dropdown.propTypes = {
     'bottomCenter',
     'bottomRight',
   ]),
+  showArrow: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 Dropdown.defaultProps = {
   items: [],
   emptyText: 'Пусто',
   listDirection: 'bottomCenter',
+  showArrow: true,
 }
 
 export default Dropdown
