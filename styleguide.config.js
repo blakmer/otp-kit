@@ -75,6 +75,7 @@ module.exports = {
         'src/StatePage/index.js',
         'src/Tabs/index.js',
         'src/List/index.js',
+        'src/InfinityScroll/index.js',
       ],
     },
     {
