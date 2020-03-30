@@ -14,7 +14,7 @@ const STATUSES = {
 
 const Input = props => {
   const {
-    state,
+    status,
     label,
     /** html props */
     type,
@@ -31,26 +31,14 @@ const Input = props => {
     maskChar,
     block,
     errorMessage,
+    readOnly,
   } = props
 
-  const [val, setVal] = useState(value || defaultValue)
-  const [changed, setChanged] = useState(val)
-  const [status, setStatus] = useState(STATUSES.default)
-
-  const changeValue = e => {
-    setChanged(!!e.target.value)
-    setVal(e.target.value)
-    onChange && onChange(e)
-  }
+  const [changed, setChanged] = useState(!!(value || defaultValue))
 
   useEffect(() => {
-    if (value) setVal(value)
-    setChanged(!!value)
+    if (!defaultValue) setChanged(!!(value || defaultValue))
   }, [value])
-
-  useEffect(() => {
-    setStatus(state)
-  }, [state])
 
   return (
     <div
@@ -72,6 +60,7 @@ const Input = props => {
           </span>
         )}
         <InputMask
+          onBlur={e => setChanged(!!e.target.value)}
           mask={mask}
           maskChar={maskChar}
           type={type}
@@ -87,16 +76,15 @@ const Input = props => {
           name={name}
           tabIndex={tabIndex}
           disabled={status === STATUSES.disabled}
-          defaultValue={defaultValue && val}
-          value={value && val}
-          onChange={
-            (onChange && value) || !value ? e => changeValue(e) : undefined
-          }
+          defaultValue={defaultValue}
+          value={value}
+          onChange={onChange}
           className={classnames(
             styles.input,
             changed && styles.changed,
             styles[status]
           )}
+          readOnly={readOnly}
         />
       </label>
       <p className={styles.errorMessage}>
@@ -107,7 +95,7 @@ const Input = props => {
 }
 
 Input.propTypes = {
-  state: PropTypes.oneOf(Object.values(STATUSES)),
+  status: PropTypes.oneOf(Object.values(STATUSES)),
   label: PropTypes.string,
   type: PropTypes.string,
   autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -123,10 +111,11 @@ Input.propTypes = {
   mask: PropTypes.string,
   block: PropTypes.bool,
   errorMessage: PropTypes.string,
+  readOnly: PropTypes.bool,
 }
 
 Input.defaultProps = {
-  state: STATUSES.default,
+  status: STATUSES.default,
   type: 'text',
   maskChar: ' ',
   mask: undefined,

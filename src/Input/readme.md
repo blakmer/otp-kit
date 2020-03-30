@@ -9,13 +9,13 @@ const { Container, Row, Col } = Grid
       <Input label="Label" />
     </Col>
     <Col md={6}>
-      <Input state="disabled" label="Disabled input" />
+      <Input status="disabled" label="Disabled input" />
     </Col>
     <Col md={6}>
-      <Input state="error" label="Errorable input" />
+      <Input status="error" label="Errorable input" />
     </Col>
     <Col md={6}>
-      <Input state="warning" label="Warn input" />
+      <Input status="warning" label="Warn input" />
     </Col>
   </Row>
 </Container>
@@ -36,10 +36,15 @@ const { Container, Row, Col } = Grid
 #### Input with error message
 
 ```js
-<Input
-  label="Label"
-  defaultValue="value"
-  state="error"
-  errorMessage="Поле обязательно для заполнения"
-/>
+const [a, set] = React.useState('sss')
+;<>
+  <button onClick={() => set('')}>Reset value</button>
+  <Input
+    readOnly
+    label="Label"
+    value={a}
+    status="error"
+    errorMessage="Поле обязательно для заполнения"
+  />
+</>
 ```
