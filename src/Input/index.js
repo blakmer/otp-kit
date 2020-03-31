@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import InputMask from 'react-input-mask'
+import Icon from '../Icon'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -16,6 +17,8 @@ const Input = props => {
   const {
     status,
     label,
+    suffix,
+    suffixColor,
     /** html props */
     type,
     autoComplete,
@@ -81,10 +84,16 @@ const Input = props => {
           onChange={onChange}
           className={classnames(
             styles.input,
+            suffix && styles.withSuffix,
             changed && styles.changed,
             styles[status]
           )}
           readOnly={readOnly}
+        />
+        <Icon.Medium
+          className={styles.suffix}
+          fill={suffixColor}
+          type={suffix}
         />
       </label>
       <p className={styles.errorMessage}>
@@ -112,6 +121,8 @@ Input.propTypes = {
   block: PropTypes.bool,
   errorMessage: PropTypes.string,
   readOnly: PropTypes.bool,
+  suffix: PropTypes.string,
+  suffixColor: PropTypes.string,
 }
 
 Input.defaultProps = {

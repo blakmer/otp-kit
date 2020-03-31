@@ -42,6 +42,10 @@
   box-sizing: border-box;
 }
 
+.input.withSuffix {
+  padding-right: 2rem;
+}
+
 .inputContainer:focus-within > .inputLabel {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -142,4 +146,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.suffix {
+  position: absolute;
+  right: 0px;
 }

@@ -21,6 +21,10 @@ const { Container, Row, Col } = Grid
 </Container>
 ```
 
+```js
+<Input label="Input with suffix" suffix="arrow-down" />
+```
+
 #### Input with mask
 
 ```js
