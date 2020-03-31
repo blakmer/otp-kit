@@ -14,7 +14,7 @@ const Dropdown = props => {
     emptyText,
     listDirection,
     children,
-    onOpen,
+    onAction,
     showArrow,
     className,
     style,
@@ -32,15 +32,12 @@ const Dropdown = props => {
     onSelectedItemChange: ({ selectedItem }) => {
       if (onChange) onChange(selectedItem)
     },
+    onIsOpenChange: onAction,
   })
 
-  useEffect(() => {
-    onOpen && onOpen(isOpen)
-  }, [isOpen])
-
   return (
-    <span className={styles.dropdown}>
-      <span {...getToggleButtonProps()}>{children}</span>
+    <span className={styles.dropdown} {...getToggleButtonProps()}>
+      {children}
       {isOpen && (
         <Fragment>
           {showArrow && (
@@ -83,7 +80,7 @@ const Dropdown = props => {
 Dropdown.propTypes = {
   items: PropTypes.arrayOf(PropTypes.node),
   defaultValue: PropTypes.node,
-  onOpen: PropTypes.func,
+  onAction: PropTypes.func,
   onChange: PropTypes.func,
   emptyText: PropTypes.string,
   listDirection: PropTypes.oneOf([
@@ -97,6 +94,7 @@ Dropdown.propTypes = {
   showArrow: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,
+  children: PropTypes.node,
 }
 
 Dropdown.defaultProps = {

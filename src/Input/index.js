@@ -90,11 +90,13 @@ const Input = props => {
           )}
           readOnly={readOnly}
         />
-        <Icon.Medium
-          className={styles.suffix}
-          fill={suffixColor}
-          type={suffix}
-        />
+        {suffix && (
+          <Icon.Medium
+            className={styles.suffix}
+            fill={suffixColor}
+            type={suffix}
+          />
+        )}
       </label>
       <p className={styles.errorMessage}>
         {status === 'error' && errorMessage ? errorMessage : null}

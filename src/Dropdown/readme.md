@@ -17,9 +17,10 @@ const states = [
     {states.map((i, j) => (
       <Col key={j}>
         <Dropdown
+          onChange={e => console.log(e)}
           listDirection={i}
           items={['Pikachu', 'Charmander', 'Psyduck']}>
-          Pokemons
+          <div>Pokemons</div>
         </Dropdown>
       </Col>
     ))}

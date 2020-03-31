@@ -1,5 +1,6 @@
 .dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .listArrow {
@@ -45,6 +46,7 @@
 }
 
 .list {
+  z-index: 998;
   list-style-type: none;
   margin: 0;
   background: var(--color-bg-input);
