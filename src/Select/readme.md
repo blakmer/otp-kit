@@ -42,6 +42,7 @@ const { Container, Row, Col } = Grid
     <Col md={4}>
       <Select
         status="error"
+        listDirection="top"
         items={[
           { title: 'one', value: 1 },
           { title: 'two', value: 2 },

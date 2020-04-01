@@ -72,7 +72,6 @@
 
 .menu {
   position: absolute;
-  top: 80%;
   list-style-type: none;
   margin: 0;
   background: var(--color-bg-input);
@@ -85,6 +84,14 @@
   box-sizing: border-box;
   transition: 0.3s;
   z-index: 999;
+}
+
+.menu.bottom {
+  top: 80%;
+}
+
+.menu.top {
+  bottom: 120%;
 }
 
 .menu > li {

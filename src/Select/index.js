@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox } from 'downshift'
@@ -23,6 +23,7 @@ const Select = props => {
     status,
     block,
     errorMessage,
+    listDirection,
   } = props
 
   if (value && !onChange) {
@@ -82,7 +83,11 @@ const Select = props => {
       {isOpen && (
         <ul
           {...getMenuProps()}
-          className={classnames(styles.menu, block && styles.block)}>
+          className={classnames(
+            styles.menu,
+            styles[listDirection],
+            block && styles.block
+          )}>
           {items.map((item, index) => (
             <li
               className={classnames(
@@ -118,6 +123,7 @@ Select.propTypes = {
   emptyText: PropTypes.string,
   label: PropTypes.string,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
+  listDirection: PropTypes.oneOf(['bottom', 'top']),
 }
 
 Select.defaultProps = {
@@ -125,6 +131,7 @@ Select.defaultProps = {
   emptyText: 'Пусто',
   status: STATUSES.default,
   onChange: value => {},
+  listDirection: 'bottom',
 }
 
 export default Select
