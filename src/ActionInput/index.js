@@ -13,10 +13,18 @@ const ActionInput = props => {
     style,
     className,
     placeholder,
+    disabled,
   } = props
   return (
-    <div className={styles.inputContainer}>
-      <input className={styles.input} placeholder={placeholder} />
+    <div className={classnames(className, styles.inputContainer)} style={style}>
+      <input
+        className={styles.input}
+        placeholder={placeholder}
+        onChange={onChange}
+        value={value}
+        defaultValue={defaultValue}
+        disabled={disabled}
+      />
       <div className={styles.actions}>{actions()}</div>
     </div>
   )
