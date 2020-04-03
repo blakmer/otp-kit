@@ -62,6 +62,7 @@ module.exports = {
         'src/Uploader/index.js',
         'src/RoundProgress/index.js',
         'src/Locker/index.js',
+        'src/Divider/index.js',
       ],
     },
     {

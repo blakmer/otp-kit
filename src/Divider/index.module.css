@@ -1,0 +1,52 @@
+.vertical {
+    display: inline-flex;
+    align-items: center;
+    height: 1rem;
+}
+
+.vertical::before {
+    content: '';
+    height: 100%;
+    margin: 0 .25rem;
+    border-left: solid 1px;
+    border-left-color: var(--color-bg-grey-2)
+}
+.horisontal {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+}
+.horisontal > * {
+    margin: 0 .25rem
+}
+.horisontal::before, .horisontal::after {
+    content: '';
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--color-bg-grey-2);
+}
+.left::before, .right::after{
+    width: 10%
+}
+.left::after, .center::before, .center::after, .right::before, .empty::before{
+    flex: 1
+}
+.dashed::before, .dashed::after {
+    border-bottom-style: dashed
+}
+.primary::before, .primary::after {
+    border-bottom-color: var(--color-primary);
+    border-left-color: var(--color-primary);
+}
+.blue::before, .blue::after {
+    border-bottom-color: var(--color-blue);
+    border-left-color: var(--color-blue);
+}
+.error::before, .error::after {
+    border-bottom-color: var(--color-error);
+    border-left-color: var(--color-error);
+}
+.grey::before, .grey::after {
+    border-bottom-color: var(--color-bg-grey-2);
+    border-left-color: var(--color-bg-grey-2);
+}
