@@ -1163,6 +1163,14 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="tags" />
       <div>tags</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="play" />
+      <div>play</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="pause" />
+      <div>pause</div>
+    </Col>
   </Row>
 </Container>
 ```

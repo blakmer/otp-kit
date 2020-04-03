@@ -186,6 +186,8 @@ import AiBrain from './types/ai-brain'
 import GlassLab from './types/glass-lab'
 import EmptyBox from './types/empty-box'
 import Tags from './types/tags'
+import Play from './types/play'
+import Pause from './types/pause'
 
 const REFERENCES = {
   edit: Edit,
@@ -371,6 +373,8 @@ const REFERENCES = {
   'glass-lab': GlassLab,
   'empty-box': EmptyBox,
   tags: Tags,
+  play: Play,
+  pause: Pause,
 }
 
 const Medium = props => {

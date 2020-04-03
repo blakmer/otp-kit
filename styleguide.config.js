@@ -63,6 +63,7 @@ module.exports = {
         'src/RoundProgress/index.js',
         'src/Locker/index.js',
         'src/Divider/index.js',
+        'src/PlayPauseButton/index.js',
       ],
     },
     {

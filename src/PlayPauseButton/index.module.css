@@ -1,0 +1,18 @@
+.playpause {
+    border: 2px solid;
+    display: inline-block;
+    position: relative;
+}
+.play > span {
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+.pause > span {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+.primarycircle {
+   border-color: var(--color-primary)
+}
