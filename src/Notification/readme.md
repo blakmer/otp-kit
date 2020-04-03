@@ -23,6 +23,14 @@ Notify
         }>
         Example 3
       </button>
+      <button
+        onClick={() =>
+          showNotification.success(
+            'Popup menu!', true
+          )
+        }>
+        Popup
+      </button>
     </div>
   )}
 </NotificationProvider>

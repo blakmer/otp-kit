@@ -11,9 +11,12 @@ import Medium from '../Icon/Medium'
 const { Container, Row, Col } = Grid
 
 const Notification = props => {
-  const { type, message } = props
+  const { type, message, popup } = props
   const element = useRef(null)
   useEffect(() => {
+    if (popup) {
+      element.current.style.transform = 'translateX(-1000px)'
+    }
     setTimeout(() => {
       element.current.style.transform = 'translateX(9999px)'
       setTimeout(() => {
@@ -30,15 +33,23 @@ const Notification = props => {
   return (
     <div ref={element} className={styles.notificationWrapped}>
       <Row justify="center">
-        <Col md={8}>
-          <div className={classnames(styles.notification, styles[type])}>
+        <Col md={popup ? 12 : 8}>
+          <div
+            className={classnames(
+              popup ? styles.popup : styles.notification,
+              styles[type]
+            )}>
             <Icon.Medium type="info" fill="inverse" />
             <div className={styles.notificationText}>
               <Typography.Text color="inverse">{message}</Typography.Text>
             </div>
-            <span className={styles.notificationClose} onClick={onCloseHandle}>
-              <Icon.Small type="close" fill="inverse" />
-            </span>
+            {!popup && (
+              <span
+                className={styles.notificationClose}
+                onClick={onCloseHandle}>
+                <Icon.Small type="close" fill="inverse" />
+              </span>
+            )}
           </div>
         </Col>
       </Row>
@@ -51,11 +62,11 @@ const NotificationProvider = props => {
   const [messages, setMessages] = useState([])
 
   const showNotification = {
-    success: message => {
-      setMessages([...messages, { message, type: 'success' }])
+    success: (message, popup) => {
+      setMessages([...messages, { message, type: 'success', popup }])
     },
-    error: message => {
-      setMessages([...messages, { message, type: 'error' }])
+    error: (message, popup) => {
+      setMessages([...messages, { message, type: 'error', popup }])
     },
   }
 
