@@ -26,6 +26,18 @@
   color: var(--color-error);
 }
 
+.terminal {
+  color: var(--color-text-terminal-regular);
+}
+
+.inverseSecondary {
+  color: var(--color-text-inverse-secondary);
+}
+
+.inversePrimary {
+  color: var(--color-text-inverse-secondary);
+}
+
 h2.head {
   font-family: var(--font-bold);
   font-style: normal;

@@ -5,6 +5,8 @@ const {
   TEXT_SECONDARY,
   TEXT_DISABLED,
   TEXT_INVERSE,
+  TEXT_INVERSE_SECONDARY,
+  TEXT_INVERSE_PRIMARY,
   PRIMARY,
   PRIMARY_HOVER,
   HIGHLIGHTED,
@@ -16,6 +18,7 @@ const {
   BG_GREY_2,
   BG_GREY_3,
   BG_GREY_4,
+  COLOR_NOTIFICATION_SUCCESS,
 } = COLORS
 
 export const FILLS = {
@@ -34,4 +37,7 @@ export const FILLS = {
   grey2: BG_GREY_2,
   grey3: BG_GREY_3,
   grey4: BG_GREY_4,
+  textInverseSecondary: TEXT_INVERSE_SECONDARY,
+  textInversePrimary: TEXT_INVERSE_PRIMARY,
+  darkGreen: COLOR_NOTIFICATION_SUCCESS,
 }

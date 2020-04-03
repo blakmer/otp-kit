@@ -14,6 +14,7 @@ import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
 import BrokenRobot from './types/broken-robot'
 import { FILLS } from '../fills'
+import TerminalBook from './types/terminal-book'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -29,6 +30,7 @@ const REFERENCES = {
   trash: Trash,
   'image-sms': ImageSms,
   'broken-robot': BrokenRobot,
+  'terminal-book': TerminalBook,
 }
 
 const ClipArt = props => {

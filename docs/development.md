@@ -177,3 +177,4 @@
 - суфиксы для компонента Input
 - Выпадания меню вверх для компонентов Select и Dropdown
 - компонент LogViewer
+- клипарт TerminalBook

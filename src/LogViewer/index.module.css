@@ -1,0 +1,106 @@
+.logStr {
+  font-family: var(--font-code);
+  display: flex;
+  color: var(--color-text-inverse-primary);
+  position: relative;
+}
+.logStr.hover {
+  background: var(--color-bg-dark-2);
+}
+
+.logStr.active,
+.logStr.active.hover {
+  background: var(--color-bg-dark-1);
+}
+
+.logStrPrefix {
+  display: inline-flex;
+  flex-direction: row;
+  width: 32px;
+}
+
+.logStrPrefix > .desired {
+  display: inline-block;
+  margin: 0 4px;
+  width: 4px;
+  height: 100%;
+}
+
+.active .logStrPrefix > .desired.find {
+  background: var(--color-alert);
+}
+
+.logStrPrefix > .desired.find {
+  background: var(--color-bg-pastel-red);
+}
+
+.activeHighlight {
+  background: var(--color-alert);
+}
+.baseHighlight {
+  background: var(--color-bg-pastel-red);
+}
+
+.logStrPrefix > .traceArow {
+  font-size: 6.65px;
+}
+
+.logStrDate {
+  color: var(--color-text-inverse-secondary);
+}
+
+.logStrDate,
+.logStrLevel {
+  margin-right: 1rem;
+}
+
+.logStrLevel.WARN {
+  color: var(--color-alert);
+}
+.logStrLevel.ERROR {
+  color: var(--color-error);
+}
+.logStrLevel.INFO {
+  color: var(--color-notification-success);
+}
+
+.msgBlock {
+  display: inline-flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+}
+
+.copyIcon {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+}
+
+.logViewerContainer {
+  border-radius: 1.5rem;
+  background: var(--color-bg-dark-4);
+}
+
+.logViewer {
+  padding: 1.5rem 0;
+}
+
+.contextViewer {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--color-bg-dark-2);
+}
+
+.contextFull {
+  background: var(--color-bg-dark-4);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.contextEmpty {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

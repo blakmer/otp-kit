@@ -201,6 +201,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'FiraCode';
+  src: url('./fonts/FiraCode-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: var(--font-regular);
   font-size: 16px;

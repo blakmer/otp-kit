@@ -13,6 +13,9 @@ export const COLORS = {
   TEXT_SECONDARY: '#6e7482',
   TEXT_DISABLED: '#ababab',
   TEXT_INVERSE: '#ffffff',
+  TEXT_TERMINAL_REGULAR: '#f2f2f2',
+  TEXT_INVERSE_PRIMARY: '#e6eaf2',
+  TEXT_INVERSE_SECONDARY: '#a1a7b3',
 
   BORDER: '#8e939f',
   SHADOW: 'rgba(73, 92, 136, 0.15)',
@@ -28,6 +31,9 @@ export const COLORS = {
   BG_PASTEL_RED: '#ffe0e3',
   BG_PASTEL_BLUE: '#dbf4fa',
   BG_PASTEL_GREEN: '#def7ea',
+  BG_DARK_1: '#474d59',
+  BG_DARK_2: '#333740',
+  BG_DARK_4: '#1f2226',
 
   HERO_BG_PASTEL_YELLOW: '#e9c597',
   HERO_BG_PASTEL_ORANGE: '#f6ae8b',

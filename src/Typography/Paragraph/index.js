@@ -45,6 +45,9 @@ Paragraph.propTypes = {
     'green',
     'orange',
     'red',
+    'terminal',
+    'inverseSecondary',
+    'inversePrimary',
   ]),
 }
 
