@@ -16,7 +16,9 @@ const PlayPauseButton = props => {
       )}
       inverse={isPlay}
       icon={isPlay ? 'pause' : 'play'}
-      onClick={onChange}
+      onClick={() => {
+        onChange(!isPlay)
+      }}
       disabled={disabled}
     />
   )
@@ -32,6 +34,7 @@ PlayPauseButton.propTypes = {
 
 PlayPauseButton.defaultProps = {
   isPlay: false,
+  onChange: isPlay => {},
 }
 
 export default PlayPauseButton
