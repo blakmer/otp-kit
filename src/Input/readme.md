@@ -24,7 +24,10 @@ const { Container, Row, Col } = Grid
 #### Input with suffix and prefix
 
 ```js
-<Input suffix="suf" prefix="pre" />
+<Input
+  suffix={<span style={{ lineHeight: '3rem' }}>suf</span>}
+  prefix={<span style={{ lineHeight: '3rem' }}>pre</span>}
+/>
 ```
 
 #### Input with mask

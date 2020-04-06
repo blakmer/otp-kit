@@ -9,30 +9,6 @@
   z-index: 999;
 }
 
-.label {
-  font-family: var(--font-regular);
-  color: var(--color-text-secondary);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  position: absolute;
-  top: 0.75rem;
-  left: 1.5rem;
-  transition: 0.25s;
-  pointer-events: none;
-}
-
-.label.labelUp {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  top: calc(50% - 2rem / 2 - 2rem);
-  background: var(--color-bg-input);
-  padding: 0 0.5rem;
-  left: 1rem;
-  border-radius: 1.5rem;
-}
-
 .labelContainer {
   outline: none;
   margin: 0;
@@ -87,11 +63,11 @@
 }
 
 .menu.bottom {
-  top: 80%;
+  top: 110%;
 }
 
 .menu.top {
-  bottom: 120%;
+  bottom: 110%;
 }
 
 .menu > li {
@@ -169,16 +145,4 @@
 
 .block {
   width: 100%;
-}
-
-.errorMessage {
-  margin: 0;
-  font-size: 0.875rem;
-  height: 1.125rem;
-  color: var(--color-error);
-  padding-top: 0.125rem;
-  padding-left: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

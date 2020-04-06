@@ -33,6 +33,7 @@ const Input = props => {
     maskChar,
     block,
     readOnly,
+    ...otherProps
   } = props
 
   return (
@@ -71,6 +72,7 @@ const Input = props => {
           className
         )}
         readOnly={readOnly}
+        {...otherProps}
       />
       <span className={styles.suffix}>{suffix}</span>
     </label>
