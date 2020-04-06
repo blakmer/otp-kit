@@ -33,6 +33,7 @@ const Input = props => {
     maskChar,
     block,
     readOnly,
+    placeholder,
     ...otherProps
   } = props
 
@@ -45,6 +46,7 @@ const Input = props => {
       )}>
       <span className={styles.prefix}>{prefix}</span>
       <InputMask
+        placeholder={placeholder}
         onBlur={onBlur}
         mask={mask}
         maskChar={maskChar}
@@ -97,6 +99,7 @@ Input.propTypes = {
   readOnly: PropTypes.bool,
   suffix: PropTypes.node,
   prefix: PropTypes.node,
+  placeholder: PropTypes.string,
 }
 
 Input.defaultProps = {

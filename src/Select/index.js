@@ -22,7 +22,7 @@ const Select = props => {
     emptyText,
     status,
     block,
-    errorMessage,
+    placeholder,
     listDirection,
   } = props
 
@@ -59,6 +59,7 @@ const Select = props => {
           block && styles.block
         )}>
         <Input
+          placeholder={placeholder}
           readOnly
           status={status}
           block={block}
@@ -116,6 +117,7 @@ Select.propTypes = {
   emptyText: PropTypes.string,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
   listDirection: PropTypes.oneOf(['bottom', 'top']),
+  placeholder: PropTypes.string,
 }
 
 Select.defaultProps = {
