@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import TextareaAutosize from 'react-textarea-autosize'
 import styles from './index.module.css'
 import classnames from 'classnames'
 
@@ -12,6 +13,7 @@ const STATUSES = {
 
 const Textarea = props => {
   const {
+    resize,
     className,
     style,
     accessKey,
@@ -30,33 +32,37 @@ const Textarea = props => {
     defaultValue,
     onChange,
     status,
-    stretchHeight,
     block,
+    maxRows,
+    minRows,
   } = props
 
-  const handleChange = event => {
-    const { target } = event
-    onChange && onChange(event)
-  }
-
   return (
-    <textarea
+    <TextareaAutosize
       id={id}
       value={value}
       defaultValue={defaultValue}
-      className={styles.textarea}
+      className={classnames(
+        styles.textarea,
+        styles[STATUSES[status]],
+        block && styles.block,
+        className
+      )}
+      disabled={status === STATUSES.disabled}
+      style={{ ...style, resize: resize ? undefined : 'none' }}
       accessKey={accessKey}
       autoFocus={autoFocus}
       cols={cols}
-      disabled={disabled}
       form={form}
       maxLength={maxLength}
+      maxRows={maxRows}
+      minRows={minRows}
       name={name}
       readOnly={readOnly}
       rows={rows}
       tabIndex={tabIndex}
       wrap={wrap}
-      onChange={handleChange}
+      onChange={onChange}
     />
   )
 }
@@ -69,7 +75,7 @@ Textarea.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   label: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(['error', 'warning', 'default']),
+  status: PropTypes.oneOf(Object.keys(STATUSES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   accessKey: PropTypes.string,
@@ -84,9 +90,14 @@ Textarea.propTypes = {
   tabIndex: PropTypes.number,
   wrap: PropTypes.oneOf(['soft', 'hard', 'off']),
   onChange: PropTypes.func,
-  stretchHeight: PropTypes.bool,
-  errorMessage: PropTypes.string,
   block: PropTypes.bool,
+  minRows: PropTypes.number,
+  maxRows: PropTypes.number,
+}
+
+Textarea.defaultProps = {
+  onChange: () => {},
+  minRows: 3,
 }
 
 export default Textarea

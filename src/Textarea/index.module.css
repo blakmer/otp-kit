@@ -4,13 +4,56 @@
   background: var(--color-bg-input);
   font-family: var(--font-regular);
   font-size: 1rem;
-  height: 100%;
-  width: 100%;
   color: var(--color-text-primary);
-  resize: none;
   overflow-block: hidden;
+  outline: none;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  color: var(--color-text-primary);
+  padding: 0.875rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .textarea::-webkit-scrollbar {
   width: 0;
+}
+
+.textarea.block {
+  width: 100%;
+}
+
+.textarea:focus,
+.textarea:not([disabled]):hover {
+  border: 2px solid var(--color-primary);
+}
+
+.textarea.error:focus,
+.textarea.error:hover {
+  border: 2px solid var(--color-error);
+}
+
+.textarea.warning:focus,
+.textarea.warning:hover {
+  border: 2px solid var(--color-highlighted);
+}
+
+.textarea:disabled {
+  background: var(--color-bg-input-disabled);
+  color: var(--color-text-disabled);
+}
+
+.textarea.error:focus {
+  border: 2px solid var(--color-error);
+}
+
+.textarea.warning:focus {
+  border: 2px solid var(--color-highlighted);
+}
+
+.textarea.error {
+  border: 1px solid var(--color-error);
+}
+
+.textarea.warning {
+  border: 1px solid var(--color-highlighted);
 }
