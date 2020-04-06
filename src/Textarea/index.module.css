@@ -1,152 +1,16 @@
-.wrapper {
-  position: relative;
-  display: inline-block;
-  width: 14rem;
-  margin-bottom: 10px;
-  margin-left: 0;
-}
-
-.wrapper:focus-within > .label {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  top: -0.8rem;
-  background: var(--color-bg-input);
-  color: var(--color-primary);
-  padding: 0 0.5rem;
-  left: 1rem;
-  border-radius: 1.5rem;
-}
-
-.label {
-  font-family: var(--font-regular);
-  color: var(--color-text-secondary);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  position: absolute;
-  top: 0.75rem;
-  left: 1.5rem;
-  transition: 0.25s;
-  pointer-events: none;
-}
-
-.label.changed {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  top: -0.8rem;
-  background: var(--color-bg-input);
-  padding: 0 0.5rem;
-  left: 1rem;
-  border-radius: 1.5rem;
-}
-
-.textareaWrapper {
-  padding: 0.6875rem 1rem 0.8125rem 1.5rem;
-  background: var(--color-bg-input);
-  border: 1px solid var(--color-border);
-  border-radius: 1.5rem;
-  transition: border-color 0.3s ease-in-out;
-  box-sizing: border-box;
-  min-height: 4.5rem;
-  height: 4.5rem; /* box-sizing без этого не пашет, wtf */
-}
-
 .textarea {
   line-height: 1.4;
   outline: none;
-  background: transparent;
-  border: none;
+  background: var(--color-bg-input);
   font-family: var(--font-regular);
   font-size: 1rem;
   height: 100%;
   width: 100%;
   color: var(--color-text-primary);
   resize: none;
-  overflow-block: hidden; /* скрывает скроллбар в firefox */
+  overflow-block: hidden;
 }
 
 .textarea::-webkit-scrollbar {
   width: 0;
-}
-
-.textareaWrapper:hover,
-.textareaWrapper:focus-within {
-  border: 2px solid var(--color-primary);
-}
-
-.disabled {
-  background: var(--color-bg-input-disabled);
-  color: var(--color-text-disabled);
-}
-
-.disabled:hover {
-  border: 1px solid var(--color-border);
-}
-
-.label.changed.disabled {
-  color: var(--color-border);
-  background: var(--color-bg-input-disabled);
-}
-
-.label.disabled:hover {
-  border: none;
-}
-
-.textareaWrapper.error {
-  border: 1px solid var(--color-error);
-}
-
-.textareaWrapper.error:hover,
-.textareaWrapper.error:focus-within {
-  border: 2px solid var(--color-error);
-}
-
-.label.changed.error {
-  color: var(--color-error);
-}
-
-.wrapper:focus-within > .label.error {
-  color: var(--color-error);
-}
-
-.textareaWrapper.warning {
-  border: 1px solid var(--color-highlighted);
-}
-
-.textareaWrapper.warning:hover,
-.textareaWrapper.warning:focus-within {
-  border: 2px solid var(--color-highlighted);
-}
-
-.label.changed.warning {
-  color: var(--color-highlighted);
-}
-
-.wrapper:focus-within > .label.warning {
-  color: var(--color-highlighted);
-}
-
-.limit {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem;
-  font-family: var(--font-italic);
-  color: var(--color-border);
-  font-size: 0.875rem;
-}
-
-.block {
-  width: 100%;
-}
-
-.errorMessage {
-  margin: 0;
-  font-size: 0.875rem;
-  height: 1.125rem;
-  color: var(--color-error);
-  padding-top: 0.125rem;
-  padding-left: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: var(--font-regular);
 }

@@ -1,7 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
+
+const STATUSES = {
+  default: 'default',
+  error: 'error',
+  warning: 'warning',
+  disabled: 'disabled',
+}
 
 const Textarea = props => {
   const {
@@ -21,97 +28,36 @@ const Textarea = props => {
     wrap,
     value,
     defaultValue,
-    label,
     onChange,
     status,
     stretchHeight,
-    errorMessage,
     block,
   } = props
 
-  const [stateValue, setValue] = useState(value || defaultValue)
-  const [changed, setChanged] = useState(stateValue)
-  const textArea = useRef(null)
-
-  useEffect(() => {
-    const computedStyles = getComputedStyle(textArea.current.parentElement)
-    const padding =
-      parseInt(computedStyles.paddingTop) +
-      parseInt(computedStyles.paddingBottom)
-
-    if (stretchHeight) {
-      textArea.current.parentElement.style.height =
-        textArea.current.scrollHeight + padding + 'px'
-    }
-  }, [])
-
-  useEffect(() => {
-    if (value) setValue(value)
-    setChanged(!!value)
-  }, [value])
-
   const handleChange = event => {
     const { target } = event
-
-    setChanged(!!target.value)
-    setValue(target.value)
     onChange && onChange(event)
-
-    const computedStyles = getComputedStyle(target.parentElement)
-    const padding =
-      parseInt(computedStyles.paddingTop) +
-      parseInt(computedStyles.paddingBottom)
-
-    if (stretchHeight) {
-      target.parentElement.style.height = target.scrollHeight + padding + 'px'
-    }
   }
 
-  const getLabelStyles = () =>
-    classnames(styles.label, !disabled && styles[status], {
-      [styles.changed]: changed,
-      [styles.disabled]: disabled,
-    })
-
-  const getTextareaWrapperStyles = () =>
-    classnames(styles.textareaWrapper, !disabled && styles[status], {
-      [styles.disabled]: disabled,
-    })
-
   return (
-    <label
-      className={classnames(styles.wrapper, block && styles.block, className)}
-      style={style}>
-      <span className={getLabelStyles()}>{label}</span>
-      <div className={getTextareaWrapperStyles()}>
-        <textarea
-          id={id}
-          value={value && stateValue}
-          defaultValue={defaultValue && stateValue}
-          className={styles.textarea}
-          accessKey={accessKey}
-          autoFocus={autoFocus}
-          cols={cols}
-          disabled={disabled}
-          form={form}
-          maxLength={maxLength}
-          name={name}
-          readOnly={readOnly}
-          rows={rows}
-          tabIndex={tabIndex}
-          wrap={wrap}
-          onChange={(onChange && value) || !value ? handleChange : undefined}
-          ref={textArea}
-        />
-      </div>
-      {!errorMessage ? (
-        <small className={styles.limit}>{`${
-          changed ? stateValue.length : 0
-        }/${maxLength}`}</small>
-      ) : (
-        <p className={styles.errorMessage}>{errorMessage}</p>
-      )}
-    </label>
+    <textarea
+      id={id}
+      value={value}
+      defaultValue={defaultValue}
+      className={styles.textarea}
+      accessKey={accessKey}
+      autoFocus={autoFocus}
+      cols={cols}
+      disabled={disabled}
+      form={form}
+      maxLength={maxLength}
+      name={name}
+      readOnly={readOnly}
+      rows={rows}
+      tabIndex={tabIndex}
+      wrap={wrap}
+      onChange={handleChange}
+    />
   )
 }
 
@@ -124,7 +70,6 @@ Textarea.propTypes = {
   style: PropTypes.object,
   label: PropTypes.string.isRequired,
   status: PropTypes.oneOf(['error', 'warning', 'default']),
-  disabled: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   accessKey: PropTypes.string,
@@ -137,7 +82,7 @@ Textarea.propTypes = {
   id: PropTypes.string,
   rows: PropTypes.number,
   tabIndex: PropTypes.number,
-  wrap: PropTypes.string,
+  wrap: PropTypes.oneOf(['soft', 'hard', 'off']),
   onChange: PropTypes.func,
   stretchHeight: PropTypes.bool,
   errorMessage: PropTypes.string,
