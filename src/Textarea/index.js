@@ -19,7 +19,6 @@ const Textarea = props => {
     accessKey,
     autoFocus,
     cols,
-    disabled,
     form,
     maxLength,
     name,
