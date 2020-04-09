@@ -188,6 +188,8 @@ import EmptyBox from './types/empty-box'
 import Tags from './types/tags'
 import Play from './types/play'
 import Pause from './types/pause'
+import BugSearch from './types/bug-search'
+import FileDouble from './types/file-double'
 
 const REFERENCES = {
   edit: Edit,
@@ -375,6 +377,8 @@ const REFERENCES = {
   tags: Tags,
   play: Play,
   pause: Pause,
+  'bug-search': BugSearch,
+  'file-double': FileDouble,
 }
 
 const Medium = props => {
