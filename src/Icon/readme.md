@@ -1171,6 +1171,14 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="pause" />
       <div>pause</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="bug-search" />
+      <div>bug-search</div>
+    </Col>
+     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-double" />
+      <div>file-double</div>
+    </Col>
   </Row>
 </Container>
 ```
