@@ -3,41 +3,28 @@
 ```js
 import Grid from '../Grid'
 const { Container, Row, Col } = Grid
+const [val, setVal] = React.useState('controlled value')
 
 ;<Container>
   <Row>
     <Col md={6}>
       <Textarea
-        label="Отъезжающий лабель"
         maxLength={100}
-        value="asd"
-        onChange={event => console.log(event.target.value)}
+        value={val}
+        onChange={e => setVal(e.target.value)}
       />
     </Col>
     <Col md={6}>
-      <Textarea label="Disabled" disabled />
-    </Col>
-    <Col md={6}>
-      <Textarea label="Error" status="error" />
-    </Col>
-    <Col md={6}>
-      <Textarea label="Warning" status="warning" />
+      <Textarea status="disabled" />
     </Col>
     <Col md={6}>
       <Textarea
-        label="With value"
-        value="Hello, Meow, Woof"
-        onChange={event => console.log(event.target.value)}
+        status="error"
+        defaultValue="errorable and uncontrolled textarea"
       />
     </Col>
     <Col md={6}>
-      <Textarea
-        label="Stretch height"
-        value="Напиши что-нибудь подлиннее"
-        onChange={event => console.log(event.target.value)}
-        maxLength={100}
-        stretchHeight
-      />
+      <Textarea status="warning" value="readOnly field and warning" />
     </Col>
   </Row>
 </Container>
@@ -46,16 +33,5 @@ const { Container, Row, Col } = Grid
 ### Textarea fits to its parent width
 
 ```js
-;<Textarea label="Отъезжающий лабель" maxLength={100} block />
-```
-
-### Textarea with error message
-
-```js
-;<Textarea
-  label="Отъезжающий лабель"
-  status="error"
-  maxLength={100}
-  errorMessage="Поле обязательно для заполнения"
-/>
+;<Textarea block />
 ```

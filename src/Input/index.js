@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import InputMask from 'react-input-mask'
-import Icon from '../Icon'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -16,9 +15,8 @@ const STATUSES = {
 const Input = props => {
   const {
     status,
-    label,
     suffix,
-    suffixColor,
+    prefix,
     /** html props */
     type,
     autoComplete,
@@ -28,86 +26,63 @@ const Input = props => {
     name,
     tabIndex,
     value,
+    onBlur,
     onChange,
     className,
     mask,
     maskChar,
     block,
-    errorMessage,
     readOnly,
+    placeholder,
+    ...otherProps
   } = props
 
-  const [changed, setChanged] = useState(!!(value || defaultValue))
-
-  useEffect(() => {
-    if (!defaultValue) setChanged(!!(value || defaultValue))
-  }, [value])
-
   return (
-    <div
-      className={classnames(styles.wrapper, block && styles.block, className)}>
-      <label
+    <label
+      className={classnames(
+        styles.inputContainer,
+        block && styles.block,
+        styles[status]
+      )}>
+      <span className={styles.prefix}>{prefix}</span>
+      <InputMask
+        placeholder={placeholder}
+        onBlur={onBlur}
+        mask={mask}
+        maskChar={maskChar}
+        type={type}
+        autoComplete={
+          typeof autoComplete === 'string'
+            ? autoComplete
+            : autoComplete
+            ? 'on'
+            : 'off'
+        }
+        autoFocus={autoFocus}
+        id={id}
+        name={name}
+        tabIndex={tabIndex}
+        disabled={status === STATUSES.disabled}
+        defaultValue={defaultValue}
+        value={value}
+        onChange={onChange}
         className={classnames(
-          styles.inputContainer,
-          changed && styles.changed,
-          styles[status]
-        )}>
-        {label && (
-          <span
-            className={classnames(
-              styles.inputLabel,
-              changed && styles.changed,
-              styles[status]
-            )}>
-            {label}
-          </span>
+          styles.input,
+          suffix && styles.withSuffix,
+          prefix && styles.withPrefix,
+          styles[status],
+          className
         )}
-        <InputMask
-          onBlur={e => setChanged(!!e.target.value)}
-          mask={mask}
-          maskChar={maskChar}
-          type={type}
-          autoComplete={
-            typeof autoComplete === 'string'
-              ? autoComplete
-              : autoComplete
-              ? 'on'
-              : 'off'
-          }
-          autoFocus={autoFocus}
-          id={id}
-          name={name}
-          tabIndex={tabIndex}
-          disabled={status === STATUSES.disabled}
-          defaultValue={defaultValue}
-          value={value}
-          onChange={onChange}
-          className={classnames(
-            styles.input,
-            suffix && styles.withSuffix,
-            changed && styles.changed,
-            styles[status]
-          )}
-          readOnly={readOnly}
-        />
-        {suffix && (
-          <Icon.Medium
-            className={styles.suffix}
-            fill={suffixColor}
-            type={suffix}
-          />
-        )}
-      </label>
-      <p className={styles.errorMessage}>
-        {status === 'error' && errorMessage ? errorMessage : null}
-      </p>
-    </div>
+        readOnly={readOnly}
+        {...otherProps}
+      />
+      <span className={styles.suffix}>{suffix}</span>
+    </label>
   )
 }
 
 Input.propTypes = {
   status: PropTypes.oneOf(Object.values(STATUSES)),
-  label: PropTypes.string,
   type: PropTypes.string,
   autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   autoFocus: PropTypes.bool,
@@ -121,10 +96,10 @@ Input.propTypes = {
   maskChar: PropTypes.string,
   mask: PropTypes.string,
   block: PropTypes.bool,
-  errorMessage: PropTypes.string,
   readOnly: PropTypes.bool,
-  suffix: PropTypes.string,
-  suffixColor: PropTypes.string,
+  suffix: PropTypes.node,
+  prefix: PropTypes.node,
+  placeholder: PropTypes.string,
 }
 
 Input.defaultProps = {
