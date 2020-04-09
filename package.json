@@ -11,7 +11,8 @@
     "compile": "npm run clear && npm run build",
     "prepublishOnly": "npm run compile",
     "lint": "eslint src/**/*.js",
-    "static": "styleguidist build"
+    "static": "styleguidist build",
+    "colorgen": "node ./color-gen.js"
   },
   "repository": {
     "type": "git",
