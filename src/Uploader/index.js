@@ -5,7 +5,6 @@ import Icon from '../Icon'
 import RoundButton from '../RoundButton'
 import Button from '../Button'
 import Typography from '../Typography'
-import Link from '../Link'
 import styles from './index.module.css'
 
 const STATUSES = {
