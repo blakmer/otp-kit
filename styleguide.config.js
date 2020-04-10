@@ -79,6 +79,7 @@ module.exports = {
         'src/List/index.js',
         'src/InfinityScroll/index.js',
         'src/ActionInput/index.js',
+        'src/Kebab/index.js',
       ],
     },
     {
