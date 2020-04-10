@@ -73,7 +73,6 @@ Textarea.defaultProps = {
 Textarea.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
-  label: PropTypes.string.isRequired,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
