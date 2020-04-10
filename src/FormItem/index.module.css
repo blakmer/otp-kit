@@ -1,0 +1,77 @@
+.wrapper {
+    display: inline-block;
+    width: 14rem;
+    margin-bottom: 10px;
+}
+
+.child > * {
+    width: 100%;
+}
+
+.itemContainer {
+    position: relative;
+    display: block;
+    margin-left: 0;
+}
+
+.itemContainer div {
+  margin-bottom: 0;
+}
+
+.inputLabel {
+    font-family: var(--font-regular);
+    color: var(--color-text-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+    pointer-events: none;
+}
+.limit {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    font-family: var(--font-italic);
+    color: var(--color-border);
+    font-size: 0.875rem;
+}
+
+.itemContainer:focus-within > .inputLabel {
+    color: var(--color-primary);
+}
+  
+.itemContainer:focus-within > .inputLabel.error {
+    color: var(--color-error);
+}
+  
+.itemContainer:focus-within > .inputLabel.warning {
+    color: var(--color-highlighted);
+}
+
+.disabled {
+    color: var(--color-text-disabled);
+}
+
+.error {
+    color: var(--color-error);
+}
+
+.warning {
+    color: var(--color-highlighted);
+}
+
+.block {
+    width: 100%;
+}
+  
+.description {
+    margin: 0;
+    font-size: 0.875rem;
+    height: 1.125rem;
+    padding-top: 0.125rem;
+    padding-left: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
