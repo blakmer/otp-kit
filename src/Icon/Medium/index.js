@@ -190,6 +190,7 @@ import Play from './types/play'
 import Pause from './types/pause'
 import BugSearch from './types/bug-search'
 import FileDouble from './types/file-double'
+import MenuKebab from './types/menu-kebab'
 
 const REFERENCES = {
   edit: Edit,
@@ -379,6 +380,7 @@ const REFERENCES = {
   pause: Pause,
   'bug-search': BugSearch,
   'file-double': FileDouble,
+  'menu-kebab': MenuKebab,
 }
 
 const Medium = props => {
