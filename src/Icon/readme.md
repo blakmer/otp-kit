@@ -1179,6 +1179,10 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="file-double" />
       <div>file-double</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="menu-kebab" />
+      <div>menu-kebab</div>
+    </Col>
   </Row>
 </Container>
 ```

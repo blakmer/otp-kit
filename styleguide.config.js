@@ -111,7 +111,8 @@ module.exports = {
         'src/List/index.js',
         'src/InfinityScroll/index.js',
         'src/ActionInput/index.js',
-        'src/FormItem/index.js',
+        'src/Kebab/index.js',
+        'src/FormItem/index.js', 
       ],
     },
     {
