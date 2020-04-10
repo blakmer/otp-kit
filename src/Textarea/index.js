@@ -66,10 +66,6 @@ const Textarea = props => {
   )
 }
 
-Textarea.defaultProps = {
-  maxLength: 50,
-}
-
 Textarea.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
