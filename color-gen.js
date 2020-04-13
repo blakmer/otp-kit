@@ -10,7 +10,7 @@ async function readFile() {
   })
   const variables = []
   for await (const line of rl) {
-    if (/\-\-color\-[a-z\-]*\:\ [a-f0-9#]*\;/.test(line)) {
+    if (/\-\-color\-[a-z0-9\-]*\:\ [a-f0-9#]*\;/.test(line)) {
       variables.push(line)
     }
   }
@@ -21,7 +21,7 @@ function createFiles(vars) {
   const path = './src/classes.css'
   fs.writeFileSync(path, '/** == GENERATED FROM `./color-gen.js` FILE == **/')
   vars.forEach(element => {
-    const matches = element.match(/\-\-color\-([a-z\-]*)\:\ [a-f0-9#]*\;/)
+    const matches = element.match(/\-\-color\-([a-z0-9\-]*)\:\ [a-f0-9#]*\;/)
     if (matches) {
       const string = `
             .${matches[1]}-text {
@@ -32,6 +32,9 @@ function createFiles(vars) {
             }
             .${matches[1]}-fill {
                 fill: var(--color-${matches[1]})
+            }
+            .${matches[1]}-stroke {
+                stroke: var(--color-${matches[1]})
             }
         `
       fs.appendFileSync(path, string)
