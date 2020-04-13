@@ -73,7 +73,7 @@ const LogString = props => {
       {(hover || active) && (
         <CopyToClipboard text={message}>
           <div className={styles.copyIcon}>
-            <Icon.Small type="external-link" fill={'textInverseSecondary'} />
+            <Icon.Small type="external-link" fill="text-terminal-secondary" />
           </div>
         </CopyToClipboard>
       )}
@@ -128,7 +128,10 @@ const LogViewer = props => {
                 </div>
               ) : (
                 <div className={styles.contextEmpty}>
-                  <Icon.ClipArt fill="darkGreen" type="terminal-book" />
+                  <Icon.ClipArt
+                    fill="notification-success"
+                    type="terminal-book"
+                  />
                   <Typography.Lead highlighted color="terminal" align="center">
                     Контекст отсутствует
                   </Typography.Lead>

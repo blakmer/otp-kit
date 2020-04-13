@@ -11,12 +11,6 @@ const STATUSES = {
   error: 'error',
 }
 
-const FILLS = {
-  primary: 'green',
-  blue: 'blue',
-  error: 'danger',
-}
-
 const Link = props => {
   const {
     className,
@@ -35,19 +29,9 @@ const Link = props => {
       className={classnames(styles.link, styles[variationColor], className)}
       style={style}
       onClick={onClick}>
-      {prefix && (
-        <Icon.Small
-          type={prefix}
-          fill={FILLS[variationColor] || FILLS['primary']}
-        />
-      )}
+      {prefix && <Icon.Small type={prefix} fill={STATUSES[variation]} />}
       {children}
-      {suffix && (
-        <Icon.Small
-          type={suffix}
-          fill={FILLS[variationColor] || FILLS['primary']}
-        />
-      )}
+      {suffix && <Icon.Small type={suffix} fill={STATUSES[variation]} />}
     </span>
   )
 }

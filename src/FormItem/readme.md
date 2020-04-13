@@ -5,7 +5,6 @@ FormItem
 import React, {useState} from 'react'
 import Grid from '../Grid'
 import Input from '../Input'
-import Icon from '../Icon'
 import Divider from '../Divider'
 const { Container, Row, Col } = Grid
 

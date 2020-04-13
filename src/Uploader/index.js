@@ -37,7 +37,7 @@ const Uploader = props => {
       <Fragment>
         <Icon.ClipArt
           type="image-upload"
-          fill={hover ? 'green' : 'secondary'}
+          fill={hover ? 'primary' : 'text-secondary'}
         />
         <Typography.Text
           className={styles.halfMarginBottom}
@@ -77,7 +77,7 @@ const Uploader = props => {
     ),
     done: (
       <Fragment>
-        <Icon.ClipArt type="check" fill="green" />
+        <Icon.ClipArt type="check" fill="primary" />
         <Typography.Text className={styles.halfMarginBottom} color="green">
           Успех
         </Typography.Text>
@@ -100,7 +100,7 @@ const Uploader = props => {
     ),
     canceled: (
       <Fragment>
-        <Icon.ClipArt type="error" fill="danger" />
+        <Icon.ClipArt type="error" fill="error" />
         <Typography.Text className={styles.halfMarginBottom} color="red">
           Ошибка сервера
         </Typography.Text>

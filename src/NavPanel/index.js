@@ -13,7 +13,7 @@ const NavPanel = props => {
       <span>
         {actions.map((i, k) => (
           <span key={k} onClick={i.action} className={styles.actionIcon}>
-            <Icon.Medium fill="green" type={i.icon} />
+            <Icon.Medium fill="primary" type={i.icon} />
           </span>
         ))}
       </span>

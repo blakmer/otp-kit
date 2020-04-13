@@ -6,7 +6,6 @@ import Grid from '../Grid'
 import Icon from '../Icon'
 
 import styles from './index.module.css'
-import Medium from '../Icon/Medium'
 
 const { Container, Row, Col } = Grid
 
@@ -39,7 +38,7 @@ const Notification = props => {
               popup ? styles.popup : styles.notification,
               styles[type]
             )}>
-            <Icon.Medium type="info" fill="inverse" />
+            <Icon.Medium type="info" fill="text-inverse" />
             <div className={styles.notificationText}>
               <Typography.Text color="inverse">{message}</Typography.Text>
             </div>
@@ -47,7 +46,7 @@ const Notification = props => {
               <span
                 className={styles.notificationClose}
                 onClick={onCloseHandle}>
-                <Icon.Small type="close" fill="inverse" />
+                <Icon.Small type="close" fill="text-inverse" />
               </span>
             )}
           </div>
