@@ -1,20 +1,20 @@
 import React from 'react'
 
 const EmptyBox = props => {
-  const { hexFill } = props
+  const { className } = props
 
   return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24.25"
       height="24.25"
       viewBox="0 0 24.25 24.25">
-      <rect style={{ fill: 'none' }} width="24" height="24" />
+      <rect style={{ fill: 'none', stroke: 'none' }} width="24" height="24" />
       <g transform="translate(1 1)">
         <path
           style={{
             fill: 'none',
-            stroke: hexFill,
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             strokeWidth: 1.5,
@@ -25,7 +25,6 @@ const EmptyBox = props => {
         <path
           style={{
             fill: 'none',
-            stroke: hexFill,
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             strokeWidth: 1.5,

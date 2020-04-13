@@ -1,32 +1,33 @@
 import React from 'react'
 
 const Earth = props => {
-  const { hexFill } = props
+  const { className } = props
 
   return (
     <svg
+      className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path
+        fill="none"
         d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
-        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
+        fill="none"
         d="M1.5 10H6.70098C7.04275 10 7.3747 10.1114 7.64409 10.3165C7.91348 10.5215 8.10485 10.8085 8.18779 11.1317L8.95418 14.1203C9.01071 14.3406 9.01499 14.5705 8.96669 14.7927C8.9184 15.0148 8.81881 15.2233 8.67548 15.4023C8.53214 15.5814 8.34885 15.7262 8.13951 15.8258C7.93018 15.9254 7.70031 15.9772 7.46737 15.9772H6.36479L5.5 20.5"
-        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
+        fill="none"
         d="M21.5 17H19.9885C19.6574 17.0001 19.337 16.8848 19.0843 16.6745C18.8316 16.4643 18.663 16.1727 18.6085 15.8517L17.8709 11.4987H16.3985C16.186 11.4986 15.9762 11.451 15.7852 11.3594C15.5942 11.2677 15.4269 11.1345 15.2961 10.9698C15.1653 10.8052 15.0745 10.6134 15.0304 10.409C14.9863 10.2046 14.9902 9.99308 15.0418 9.79041L15.7412 7.0411C15.8168 6.74375 15.9915 6.47979 16.2373 6.29116C16.4831 6.10254 16.786 6.00006 17.0979 6.00003C17.9062 5.99432 21 6.00051 21 6.00051"
-        stroke={hexFill}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

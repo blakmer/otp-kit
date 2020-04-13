@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import styles from '../index.module.css'
-import { FILLS } from '../fills'
+import classes from '../../classes.css'
 import Edit from './types/edit'
 import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
@@ -391,20 +391,27 @@ const Medium = props => {
     <span
       className={classnames(styles.medium, styles.wrapper, className)}
       onClick={onClick}>
-      {<SVG hexFill={FILLS[fill]} />}
+      {
+        <SVG
+          className={classnames(
+            classes[`${fill}-stroke`],
+            classes[`${fill}-fill`]
+          )}
+        />
+      }
     </span>
   ) : null
 }
 
 Medium.propTypes = {
   type: PropTypes.string.isRequired,
-  fill: PropTypes.oneOf(Object.keys(FILLS)),
+  fill: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
 }
 
 Medium.defaultProps = {
-  fill: 'primary',
+  fill: 'text-primary',
 }
 
 export default Medium

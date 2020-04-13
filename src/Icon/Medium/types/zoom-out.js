@@ -1,10 +1,11 @@
 import React from 'react'
 
 const ZoomOut = props => {
-  const { hexFill } = props
+  const { className } = props
 
   return (
     <svg
+      className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -12,22 +13,22 @@ const ZoomOut = props => {
       xmlns="http://www.w3.org/2000/svg">
       <g>
         <path
+          fill="none"
           d="M19 9.99901V10C19 14.9706 14.9706 19 10 19C5.02943 19 1 14.9706 1 10C1 5.02943 5.02943 1 10 1C10.0003 1 10.0007 1 10.001 1V1C14.9708 1.00055 18.9995 5.02922 19 9.99901V9.99901Z"
-          stroke={hexFill}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
+          fill="none"
           d="M5 10H15"
-          stroke={hexFill}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
+          fill="none"
           d="M16.5 16.5L23.03 23.03"
-          stroke={hexFill}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -35,7 +36,7 @@ const ZoomOut = props => {
       </g>
       <defs>
         <clipPath id="clip0">
-          <path d="M0 0H24V24H0V0Z" fill="white" />
+          <path d="M0 0H24V24H0V0Z" />
         </clipPath>
       </defs>
     </svg>
