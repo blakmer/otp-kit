@@ -80,13 +80,19 @@ const Button = props => {
       type={htmlType}
       className={getClasses()}>
       {!ghost && prefix && (
-        <Icon.Small type={prefix} fill={!disabled ? 'inverse' : 'disabled'} />
+        <Icon.Small
+          type={prefix}
+          fill={!disabled ? 'text-inverse' : 'text-disabled'}
+        />
       )}
 
       {children}
 
       {!ghost && suffix && (
-        <Icon.Small type={suffix} fill={!disabled ? 'inverse' : 'disabled'} />
+        <Icon.Small
+          type={suffix}
+          fill={!disabled ? 'text-inverse' : 'text-disabled'}
+        />
       )}
     </button>
   )

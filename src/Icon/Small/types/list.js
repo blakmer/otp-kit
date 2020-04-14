@@ -1,10 +1,11 @@
 import React from 'react'
 
 const List = props => {
-  const { hexFill } = props
+  const { className } = props
 
   return (
     <svg
+      className={className}
       width="16"
       height="18"
       viewBox="0 0 16 18"
@@ -16,7 +17,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill={hexFill}
+        stroke="none"
       />
       <rect
         x="3"
@@ -24,7 +25,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill={hexFill}
+        stroke="none"
       />
       <rect
         x="3"
@@ -32,7 +33,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill={hexFill}
+        stroke="none"
       />
       <rect
         x="3"
@@ -40,7 +41,7 @@ const List = props => {
         width="12"
         height="1.01536"
         rx="0.507681"
-        fill={hexFill}
+        stroke="none"
       />
       <rect
         x="1"
@@ -48,7 +49,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill={hexFill}
+        stroke="none"
       />
       <rect
         x="1"
@@ -56,7 +57,7 @@ const List = props => {
         width="1"
         height="1.01536"
         rx="0.5"
-        fill={hexFill}
+        stroke="none"
       />
     </svg>
   )

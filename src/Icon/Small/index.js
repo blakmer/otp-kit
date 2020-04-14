@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../index.module.css'
+import classes from '../../classes.css'
 import classnames from 'classnames'
-import { FILLS } from '../fills'
 import ArrowRight from './types/arrow-right'
 import ArrowLeft from './types/arrow-left'
 import ArrowDown from './types/arrow-down'
@@ -183,20 +183,27 @@ const Small = props => {
     <span
       className={classnames(styles.small, styles.wrapper, className)}
       onClick={onClick}>
-      {<SVG hexFill={FILLS[fill] || FILLS['primary']} />}
+      {
+        <SVG
+          className={classnames(
+            classes[`${fill}-stroke`],
+            classes[`${fill}-fill`]
+          )}
+        />
+      }
     </span>
   ) : null
 }
 
 Small.propTypes = {
+  fill: PropTypes.string,
   type: PropTypes.string.isRequired,
-  fill: PropTypes.oneOf(Object.keys(FILLS)),
   className: PropTypes.string,
   onClick: PropTypes.func,
 }
 
 Small.defaultProps = {
-  fill: 'primary',
+  fill: 'text-primary',
 }
 
 export default Small

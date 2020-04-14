@@ -1,10 +1,10 @@
 import React from 'react'
-import propTypes from 'prop-types'
 
 const BrokenRobot = props => {
-  const { hexFill } = props
+  const { className } = props
   return (
     <svg
+      className={className}
       width="96"
       height="96"
       viewBox="0 0 96 96"
@@ -12,119 +12,119 @@ const BrokenRobot = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M34.809 46.095C34.809 45.395 35.945 44.819 37.346 44.819H57.646C59.046 44.819 60.183 45.39 60.183 46.095V51.195C60.183 51.895 59.047 52.471 57.646 52.471H37.346C35.946 52.471 34.809 51.9 34.809 51.195V46.095Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M67.135 52.528C77.69 23.288 59.635 14.936 48.128 14.933C36.621 14.93 18.565 23.287 29.12 52.528"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M75.192 79.267L77.457 62.739C77.6343 61.4824 77.5545 60.203 77.2223 58.9782C76.8902 57.7534 76.3128 56.6089 75.525 55.614C74.7758 54.6605 73.8215 53.888 72.733 53.3536C71.6444 52.8192 70.4496 52.5367 69.237 52.527H27.153C25.9407 52.5386 24.7464 52.8221 23.6583 53.3567C22.5702 53.8914 21.616 54.6634 20.866 55.616C20.078 56.6103 19.4997 57.7541 19.166 58.9782C18.8324 60.2023 18.7504 61.4813 18.925 62.738L21.192 79.267H75.192Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M38.428 40.609C40.4171 40.609 42.3248 39.8188 43.7313 38.4123C45.1378 37.0058 45.928 35.0981 45.928 33.109C45.928 31.1199 45.1378 29.2122 43.7313 27.8057C42.3248 26.3992 40.4171 25.609 38.428 25.609C36.4389 25.609 34.5312 26.3992 33.1247 27.8057C31.7182 29.2122 30.928 31.1199 30.928 33.109C30.928 35.0981 31.7182 37.0058 33.1247 38.4123C34.5312 39.8188 36.4389 40.609 38.428 40.609Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M56.377 39.674C58.0612 39.6716 59.6755 39.0003 60.8648 37.8078C62.0542 36.6153 62.7211 34.9992 62.719 33.315C62.7209 31.631 62.0538 30.0151 60.8645 28.8228C59.6752 27.6305 58.061 26.9594 56.377 26.957C54.6928 26.9594 53.0785 27.6307 51.8892 28.8232C50.6998 30.0157 50.0329 31.6318 50.035 33.316C50.0331 35 50.7002 36.6159 51.8895 37.8082C53.0788 39.0005 54.693 39.6716 56.377 39.674V39.674Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M38.614 34.612C38.781 34.6115 38.9463 34.5781 39.1005 34.5136C39.2546 34.4492 39.3945 34.3551 39.5123 34.2366C39.63 34.1181 39.7233 33.9776 39.7867 33.8231C39.8501 33.6686 39.8825 33.503 39.882 33.336C39.8825 33.169 39.8501 33.0034 39.7867 32.8489C39.7233 32.6944 39.63 32.5539 39.5123 32.4354C39.3945 32.3169 39.2546 32.2228 39.1005 32.1584C38.9463 32.0939 38.781 32.0605 38.614 32.06C38.4469 32.0604 38.2815 32.0937 38.1272 32.1581C37.973 32.2224 37.8329 32.3165 37.7151 32.435C37.5972 32.5535 37.5039 32.6941 37.4404 32.8487C37.3769 33.0033 37.3445 33.1689 37.345 33.336C37.3445 33.5031 37.3769 33.6687 37.4404 33.8233C37.5039 33.9779 37.5972 34.1185 37.7151 34.237C37.8329 34.3555 37.973 34.4496 38.1272 34.5139C38.2815 34.5783 38.4469 34.6116 38.614 34.612Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M58.91 62.681H67.216"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M58.91 70.336H67.216"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M70.326 37.167H79.677"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M24.661 37.167H17.05"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M58.91 48.646H34.81"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M41.151 46.095V51.195"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M47.494 46.095V51.195"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M53.836 46.095V51.195"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M58.266 35.51L53.931 31.15"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M54.143 35.309L58.152 31.277"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M29.735 62.256C29.7227 61.7052 29.9294 61.1719 30.3098 60.7733C30.6902 60.3747 31.2132 60.1434 31.764 60.13H48.001C48.552 60.1431 49.0753 60.3744 49.4559 60.773C49.8365 61.1716 50.0433 61.705 50.031 62.256V70.762C50.0433 71.313 49.8365 71.8464 49.4559 72.245C49.0753 72.6436 48.552 72.8749 48.001 72.888H31.764C31.2132 72.8746 30.6902 72.6433 30.3098 72.2447C29.9294 71.8461 29.7227 71.3128 29.735 70.762V62.256Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -132,12 +132,11 @@ const BrokenRobot = props => {
       <path
         opacity="0.3"
         d="M78.746 82.095H25.746L23.477 66.378C23.3024 65.1091 23.3842 63.818 23.7176 62.5812C24.051 61.3445 24.6292 60.1872 25.418 59.178C26.1626 58.2169 27.1148 57.4365 28.2036 56.8954C29.2923 56.3542 30.4893 56.0663 31.705 56.053H33.677C23.119 26.476 41.177 18.026 52.677 18.026C64.177 18.026 82.24 26.476 71.685 56.05H73.814C74.5942 56.0549 75.3694 56.1759 76.114 56.409C76.7158 56.5997 77.2928 56.8612 77.833 57.188C79.064 57.932 79.086 59 79.811 60.244C80.2513 61.0012 80.5838 61.816 80.799 62.665C81.0136 63.5078 81.1145 64.3755 81.099 65.245C81.0911 65.624 81.0621 66.0023 81.012 66.378L78.746 82.095ZM58.91 72.888H69.057V69.06H58.91V72.888ZM48.762 61.405H31.003V72.888H48.762V61.405ZM58.91 65.233H69.057V61.405H58.91V65.233ZM34.81 52.474H60.177V44.819H34.809L34.81 52.474ZM45.851 33.336C45.851 29.815 42.114 25.755 38.614 25.755C35.114 25.755 31.003 29.815 31.003 33.336C31.003 36.857 35.113 39.715 38.614 39.715C42.115 39.715 45.851 36.857 45.851 33.336ZM62.715 33.336C62.719 31.6501 62.0538 30.0314 60.8655 28.8355C59.6772 27.6395 58.0629 26.9639 56.377 26.957C54.6904 26.9628 53.075 27.6379 51.8859 28.834C50.6967 30.0301 50.031 31.6494 50.035 33.336C50.031 35.0226 50.6967 36.6419 51.8859 37.838C53.075 39.0341 54.6904 39.7092 56.377 39.715C58.0629 39.7081 59.6772 39.0325 60.8655 37.8366C62.0538 36.6406 62.719 35.0219 62.715 33.336V33.336Z"
-        fill={hexFill}
       />
       <path
         opacity="0.5"
         d="M22.565 24.541C25.4377 18.8167 30.1785 14.2446 36.003 11.581"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -145,7 +144,7 @@ const BrokenRobot = props => {
       <path
         opacity="0.5"
         d="M41.347 9.779C43.3642 9.32307 45.4259 9.09365 47.494 9.095"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -153,61 +152,53 @@ const BrokenRobot = props => {
       <path
         opacity="0.5"
         d="M85.55 87.095C86.213 87.095 86.8489 86.8316 87.3178 86.3628C87.7866 85.8939 88.05 85.258 88.05 84.595C88.05 83.932 87.7866 83.2961 87.3178 82.8272C86.8489 82.3584 86.213 82.095 85.55 82.095C84.887 82.095 84.2511 82.3584 83.7822 82.8272C83.3134 83.2961 83.05 83.932 83.05 84.595C83.05 85.258 83.3134 85.8939 83.7822 86.3628C84.2511 86.8316 84.887 87.095 85.55 87.095V87.095Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="1.667"
       />
       <path
         opacity="0.5"
         d="M7 77.044L10.536 80.579"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M13.364 83.408L16.9 86.944"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M10.536 83.408L7 86.944"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M13.363 80.58L16.899 77.045"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M86.05 10.095L80.05 16.095H87.05L81.05 22.095"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M13.05 15.095L9.05 19.095H16.05L12.05 23.095"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
     </svg>
   )
-}
-
-BrokenRobot.propTypes = {
-  hexFill: propTypes.string,
-}
-
-BrokenRobot.defaultProps = {
-  hexFill: '#6E7482',
 }
 
 export default BrokenRobot

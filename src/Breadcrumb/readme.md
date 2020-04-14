@@ -5,7 +5,7 @@ import Icon from '../Icon'
     {
       node: (
         <React.Fragment>
-          <Icon.Small type="house-chimney" fill="green" />
+          <Icon.Small type="house-chimney" fill="primary" />
           <a href="/">Главная</a>
         </React.Fragment>
       ),

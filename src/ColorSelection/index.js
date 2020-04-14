@@ -111,7 +111,7 @@ const ColorSelection = props => {
           style={{ backgroundColor: circle.color }}
           key={index}
           onClick={() => onToggleColor(index)}>
-          {circle.selected && <Icon.Medium type="tick" fill="inverse" />}
+          {circle.selected && <Icon.Medium type="tick" fill="text-inverse" />}
         </span>
       )
     })
@@ -197,7 +197,9 @@ const ColorSelection = props => {
             style={{
               backgroundColor: accept && flag && value,
             }}>
-            {input.length === 6 && <Icon.Small type="tick" fill="inverse" />}
+            {input.length === 6 && (
+              <Icon.Small type="tick" fill="text-inverse" />
+            )}
           </span>
           <span className={styles.inputPrefixText}>HEX #</span>
         </div>

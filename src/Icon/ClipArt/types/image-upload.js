@@ -1,10 +1,10 @@
 import React from 'react'
-import propTypes from 'prop-types'
 
 const ImageUpload = props => {
-  const { hexFill } = props
+  const { className } = props
   return (
     <svg
+      className={className}
       width="73"
       height="73"
       viewBox="0 0 73 73"
@@ -15,88 +15,79 @@ const ImageUpload = props => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M38.39 43.299C36.1717 46.6496 34.9924 50.5807 35 54.599C34.9998 55.4346 35.0502 56.2695 35.151 57.099H17.695C16.2185 57.1312 14.7896 56.5762 13.7219 55.5559C12.6541 54.5357 12.0349 53.1334 12 51.657V38.837L23.967 28.466L38.39 43.299ZM45.61 36.46C43.6076 37.8374 41.7304 39.3884 40 41.095L23.967 25.595C23.802 25.442 12.001 34.895 12.001 34.895V20.816C12.0186 20.0779 12.3282 19.3769 12.8619 18.8668C13.3956 18.3567 14.1099 18.0792 14.848 18.095H62.305C63.7815 18.0628 65.2104 18.6177 66.2781 19.638C67.3459 20.6583 67.9651 22.0606 68 23.537V38.346C64.4194 35.5833 60.0226 34.088 55.5 34.095C52.0628 34.0913 48.6737 34.9018 45.61 36.46V36.46ZM50.5 22.095C51.4283 22.095 52.3185 22.4637 52.9749 23.1201C53.6312 23.7765 54 24.6667 54 25.595C54 26.5232 53.6312 27.4135 52.9749 28.0699C52.3185 28.7262 51.4283 29.095 50.5 29.095C49.5717 29.095 48.6815 28.7262 48.0251 28.0699C47.3687 27.4135 47 26.5232 47 25.595C47 24.6667 47.3687 23.7765 48.0251 23.1201C48.6815 22.4637 49.5717 22.095 50.5 22.095V22.095Z"
-        fill={hexFill}
       />
       <path
         opacity="0.5"
         d="M1 29.037V16.095C1 13.7081 1.94821 11.4189 3.63604 9.73104C5.32387 8.04321 7.61305 7.095 10 7.095H11M1 41.095V33.422V41.095Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         d="M65 34.001V16.095C65 14.7689 64.4732 13.4971 63.5355 12.5595C62.5978 11.6218 61.3261 11.095 60 11.095H10C8.67392 11.095 7.40215 11.6218 6.46447 12.5595C5.52678 13.4971 5 14.7689 5 16.095V49.095C5 50.4211 5.52678 51.6929 6.46447 52.6305C7.40215 53.5682 8.67392 54.095 10 54.095H32"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M61 32.796V20.096C61 18.7699 60.4732 17.4982 59.5355 16.5605C58.5979 15.6228 57.3261 15.096 56 15.096H14C12.6739 15.096 11.4021 15.6228 10.4645 16.5605C9.52678 17.4982 9 18.7699 9 20.096V45.096C9 46.4221 9.52678 47.6939 10.4645 48.6315C11.4021 49.5692 12.6739 50.096 14 50.096H33.21"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9 38.095L24 25.095L38.969 39.689"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M46 56.095V63.095H64.024V59.684"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M55 57.095V46.095"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M36 36.095L43 30.095L46.623 33.976"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M50.5 22.095C51.4283 22.095 52.3185 22.4638 52.9749 23.1201C53.6312 23.7765 54 24.6667 54 25.595C54 26.5233 53.6312 27.4135 52.9749 28.0699C52.3185 28.7263 51.4283 29.095 50.5 29.095C49.5717 29.095 48.6815 28.7263 48.0251 28.0699C47.3687 27.4135 47 26.5233 47 25.595C47 24.6667 47.3687 23.7765 48.0251 23.1201C48.6815 22.4638 49.5717 22.095 50.5 22.095V22.095Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M55 71.095C59.5087 71.095 63.8327 69.3039 67.0208 66.1158C70.2089 62.9277 72 58.6037 72 54.095C72 51.8625 71.5603 49.6519 70.7059 47.5894C69.8516 45.5268 68.5994 43.6528 67.0208 42.0742C65.4422 40.4956 63.5682 39.2434 61.5056 38.389C59.4431 37.5347 57.2325 37.095 55 37.095C50.4913 37.095 46.1673 38.8861 42.9792 42.0742C39.7911 45.2623 38 49.5863 38 54.095C38 58.6037 39.7911 62.9277 42.9792 66.1158C46.1673 69.3039 50.4913 71.095 55 71.095V71.095Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="1.943"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M49 51.095L55 45.095L61 51.095"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
   )
-}
-
-ImageUpload.propTypes = {
-  hexFill: propTypes.string,
-}
-
-ImageUpload.defaultProps = {
-  hexFill: '#6E7482',
 }
 
 export default ImageUpload

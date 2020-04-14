@@ -28,7 +28,7 @@ const DatePicker = () => {
         <input type="text" className={styles.field} />
         <Icon
           type="datepicker"
-          fill="green"
+          fill="primary"
           size="medium"
           className={styles.icon}
         />

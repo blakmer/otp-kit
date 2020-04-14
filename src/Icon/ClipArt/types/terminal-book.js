@@ -1,10 +1,10 @@
 import React from 'react'
-import propTypes from 'prop-types'
 
 const TerminalBook = props => {
-  const { hexFill } = props
+  const { className } = props
   return (
     <svg
+      className={className}
       width="86"
       height="86"
       viewBox="0 0 86 86"
@@ -12,142 +12,127 @@ const TerminalBook = props => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M33 65H44"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M41 59V65"
-        stroke={hexFill}
-        strokeWidth="2"
-        strokeLinejoin="round"
-      />
+      <path d="M41 59V65" fill="none" strokeWidth="2" strokeLinejoin="round" />
       <path
         d="M30.85 31L39.25 37.3L30.85 43.6"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M47 37H57"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="1.953"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M64 53.867C64 49.689 71.542 47.279 79.524 47.013C79.8968 46.9951 80.2642 47.1068 80.564 47.329C80.6968 47.4257 80.8053 47.5519 80.881 47.6977C80.9566 47.8434 80.9974 48.0048 81 48.169V66.515C80.9634 66.8439 80.8019 67.1461 80.5487 67.3592C80.2956 67.5723 79.9703 67.68 79.64 67.66C74.0879 67.562 68.6359 69.1453 64 72.202C59.3663 69.1385 53.9141 67.5485 48.36 67.641C48.0299 67.6603 47.705 67.5523 47.452 67.3393C47.199 67.1264 47.0373 66.8246 47 66.496V48.158C47.0026 47.9938 47.0434 47.8324 47.119 47.6867C47.1947 47.5409 47.3032 47.4147 47.436 47.318C47.7358 47.0958 48.1032 46.9841 48.476 47.002C56.458 47.282 64 49.69 64 53.867Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2.012"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M64 53.859V72.202"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M74 43.499V19.999C74 18.6729 73.4732 17.4011 72.5355 16.4635C71.5978 15.5258 70.3261 14.999 69 14.999H20C18.6739 14.999 17.4021 15.5258 16.4645 16.4635C15.5268 17.4011 15 18.6729 15 19.999V52.999C15 54.3251 15.5268 55.5968 16.4645 56.5345C17.4021 57.4722 18.6739 57.999 20 57.999H44"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
       />
       <path
         opacity="0.15"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M44 62H24C22.4087 62 20.8826 61.3679 19.7574 60.2426C18.6321 59.1174 18 57.5913 18 56V22C18 21.2044 18.3161 20.4413 18.8787 19.8787C19.4413 19.3161 20.2044 19 21 19H71C72.5913 19 74.1174 19.6321 75.2426 20.7574C76.3679 21.8826 77 23.4087 77 25V44.16C73.0821 44.39 69.2478 45.3894 65.716 47.101C65.113 47.4306 64.5389 47.8106 64 48.237C63.4613 47.8107 62.8876 47.4307 62.285 47.101C59.023 45.301 53.898 44.191 48.585 44.001C47.5316 43.9574 46.4952 44.2777 45.65 44.908C45.1475 45.2784 44.7374 45.7599 44.4519 46.315C44.1663 46.8702 44.013 47.4838 44.004 48.108C44.004 48.1227 44.004 48.1373 44.004 48.152L44 62ZM37.75 38.3L30.95 33.2C30.7924 33.0818 30.6597 32.9337 30.5593 32.7642C30.4589 32.5947 30.3929 32.4071 30.3651 32.2121C30.3372 32.0171 30.348 31.8186 30.3969 31.6277C30.4458 31.4369 30.5318 31.2576 30.65 31.1C30.8887 30.7817 31.244 30.5713 31.6379 30.5151C32.0317 30.4588 32.4317 30.5613 32.75 30.8L41.15 37.1C41.3363 37.2397 41.4875 37.4209 41.5916 37.6292C41.6958 37.8375 41.75 38.0671 41.75 38.3C41.75 38.5329 41.6958 38.7625 41.5916 38.9708C41.4875 39.1791 41.3363 39.3603 41.15 39.5L32.75 45.8C32.5924 45.9182 32.4131 46.0042 32.2223 46.0531C32.0315 46.102 31.8329 46.1128 31.6379 46.0849C31.4429 46.0571 31.2553 45.9911 31.0858 45.8907C30.9163 45.7904 30.7682 45.6576 30.65 45.5C30.5318 45.3424 30.4458 45.1631 30.3969 44.9723C30.348 44.7815 30.3372 44.5829 30.3651 44.3879C30.3929 44.1929 30.4589 44.0053 30.5593 43.8358C30.6597 43.6663 30.7924 43.5182 30.95 43.4L37.75 38.3ZM58 37.023H48C47.7409 37.023 47.4924 37.1259 47.3092 37.3092C47.1259 37.4924 47.023 37.7409 47.023 38C47.023 38.2591 47.1259 38.5076 47.3092 38.6908C47.4924 38.8741 47.7409 38.977 48 38.977H58C58.2591 38.977 58.5076 38.8741 58.6908 38.6908C58.8741 38.5076 58.977 38.2591 58.977 38C58.977 37.7409 58.8741 37.4924 58.6908 37.3092C58.5076 37.1259 58.2591 37.023 58 37.023Z"
-        fill={hexFill}
       />
       <path
         opacity="0.5"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.5 4C14.8978 4 15.2794 3.84197 15.5607 3.56066C15.842 3.27936 16 2.89782 16 2.5C16 2.10218 15.842 1.72064 15.5607 1.43934C15.2794 1.15803 14.8978 1 14.5 1C14.1022 1 13.7206 1.15803 13.4393 1.43934C13.158 1.72064 13 2.10218 13 2.5C13 2.89782 13.158 3.27936 13.4393 3.56066C13.7206 3.84197 14.1022 4 14.5 4V4Z"
-        fill={hexFill}
       />
       <path
         opacity="0.5"
         d="M11 32.938V20C11 17.6131 11.9482 15.3239 13.636 13.636C15.3239 11.9482 17.6131 11 20 11H21M11 45V37.323V45Z"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M75 6H78"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M82 6H85"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M80 8V11"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M80 4V1"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M1 78H6"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M10 78H15"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M8 80V85"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M8 76V71"
-        stroke={hexFill}
+        fill="none"
         strokeWidth="2"
         strokeLinecap="round"
       />
       <path
         opacity="0.5"
         d="M67.5 81C67.8978 81 68.2794 80.842 68.5607 80.5607C68.842 80.2794 69 79.8978 69 79.5C69 79.1022 68.842 78.7206 68.5607 78.4393C68.2794 78.158 67.8978 78 67.5 78C67.1022 78 66.7206 78.158 66.4393 78.4393C66.158 78.7206 66 79.1022 66 79.5C66 79.8978 66.158 80.2794 66.4393 80.5607C66.7206 80.842 67.1022 81 67.5 81V81Z"
-        stroke={hexFill}
+        fill="none"
       />
     </svg>
   )
-}
-
-TerminalBook.propTypes = {
-  hexFill: propTypes.string,
-}
-
-TerminalBook.defaultProps = {
-  hexFill: '#6E7482',
 }
 
 export default TerminalBook

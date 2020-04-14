@@ -45,13 +45,17 @@ const Layout = props => {
               )}>
               <Icon
                 type={i.icon}
-                fill={eqPath(i.key, active) ? 'green' : 'grey1'}
+                fill={eqPath(i.key, active) ? 'primary' : 'bg-grey-1'}
               />
             </span>
           ))}
         </section>
         <section className={styles.config}>
-          <Icon type="gear" fill="grey1" onClick={() => onChange('settings')} />
+          <Icon
+            type="gear"
+            fill="bg-grey-1"
+            onClick={() => onChange('settings')}
+          />
         </section>
       </nav>
       <section className={styles.content}>

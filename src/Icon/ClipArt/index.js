@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classes from '../../classes.css'
+import classnames from 'classnames'
 import ProjectTag from './types/project-tag'
 import NewFolder from './types/new-folder'
 import ListCards from './types/list-cards'
@@ -13,7 +15,6 @@ import Trash from './types/trash'
 import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
 import BrokenRobot from './types/broken-robot'
-import { FILLS } from '../fills'
 import TerminalBook from './types/terminal-book'
 
 const REFERENCES = {
@@ -39,16 +40,27 @@ const ClipArt = props => {
 
   return SVG ? (
     <span className={className} onClick={onClick}>
-      {<SVG hexFill={FILLS[fill]} />}
+      {
+        <SVG
+          className={classnames(
+            classes[`${fill}-stroke`],
+            classes[`${fill}-fill`]
+          )}
+        />
+      }
     </span>
   ) : null
 }
 
 ClipArt.propTypes = {
   type: PropTypes.string.isRequired,
-  fill: PropTypes.oneOf(Object.keys(FILLS)),
+  fill: PropTypes.string,
   onClick: PropTypes.func,
   className: PropTypes.string,
+}
+
+ClipArt.defaultProps = {
+  fill: 'text-secondary',
 }
 
 export default ClipArt

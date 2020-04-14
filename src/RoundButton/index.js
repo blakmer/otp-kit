@@ -49,23 +49,23 @@ const RoundButton = props => {
 
   const getIconFill = () => {
     if (disabled) {
-      return 'disabled'
+      return 'text-disabled'
     } else if (variation === 'primary' && !inverse) {
-      return 'inverse'
+      return 'text-inverse'
     } else if (variation === 'secondary' && !flag) {
-      return 'green'
+      return 'primary'
     } else if (variation === 'secondary' && flag) {
-      return 'greenHover'
+      return 'primary-hover'
     } else if (variation === 'danger' && !flag) {
-      return 'danger'
+      return 'error'
     } else if (variation === 'danger' && flag) {
-      return 'dangerHover'
+      return 'error-hover'
     } else if (inverse && !flag && variation === 'primary') {
-      return 'green'
+      return 'primary'
     } else if (inverse && flag && variation === 'primary') {
-      return 'greenHover'
+      return 'primary-hover'
     } else if (inverse && flag && variation === 'danger') {
-      return 'dangerHover'
+      return 'error-hover'
     }
   }
 
