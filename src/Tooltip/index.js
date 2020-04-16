@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Arrow from '../util/arrow'
 import styles from './index.module.css'
-import { FILLS } from './fills'
+import classes from '../classes.css'
 
 const Tooltip = props => {
   const { children, content, position, fill } = props
@@ -40,16 +40,16 @@ const Tooltip = props => {
         <div
           className={classnames(
             styles.tooltip,
-            styles[position === 'auto' ? pos : position]
-          )}
-          style={{ background: FILLS[fill] || FILLS['blue'] }}>
+            styles[position === 'auto' ? pos : position],
+            classes[`${fill}-bg`]
+          )}>
           {content}
           <span
             className={classnames(
               styles.tooltipArrow,
               styles[position === 'auto' ? pos : position]
             )}>
-            <Arrow fill={FILLS[fill] || FILLS['blue']} />
+            <Arrow fill={fill} />
           </span>
         </div>
       </span>
@@ -61,7 +61,7 @@ const Tooltip = props => {
 Tooltip.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
-  fill: PropTypes.oneOf(Object.keys(FILLS)),
+  fill: PropTypes.string,
   position: PropTypes.oneOf([
     'auto',
     'topLeft',
