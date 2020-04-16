@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../classes.css'
 import styles from './index.module.css'
 
 const ActionInput = props => {
@@ -14,9 +14,18 @@ const ActionInput = props => {
     className,
     placeholder,
     disabled,
+    block,
+    fill,
   } = props
   return (
-    <div className={classnames(className, styles.inputContainer)} style={style}>
+    <div
+      className={classnames(
+        className,
+        styles.inputContainer,
+        disabled ? styles.disabled : classes[`${fill}-border`],
+        block && styles.block
+      )}
+      style={style}>
       <input
         className={styles.input}
         placeholder={placeholder}
@@ -37,11 +46,15 @@ ActionInput.propTypes = {
   actions: PropTypes.func,
   style: PropTypes.object,
   className: PropTypes.string,
+  block: PropTypes.bool,
+  fill: PropTypes.string,
+  disabled: PropTypes.bool,
 }
 
 ActionInput.defaultProps = {
   actions: () => {},
   onChange: () => {},
+  fill: 'primary',
 }
 
 export default ActionInput
