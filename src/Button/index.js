@@ -1,27 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import Icon from '../Icon'
-
-const PRIMARIES = {
-  primary: styles.primary,
-  highlighted: styles.highlighted,
-  error: styles.error,
-  blue: styles.blue,
-}
-
-const SECONDARIES = {
-  primary: styles.ghostPrimary,
-  highlighted: styles.ghostHighlighted,
-  error: styles.ghostError,
-  blue: styles.ghostBlue,
-}
+import classes from '../classes.css'
 
 const Button = props => {
   const {
     className,
-    variation,
     disabled,
     style,
     onClick,
@@ -33,28 +19,14 @@ const Button = props => {
     suffix,
     prefix,
     block,
+    fill,
+    prefixFill,
+    suffixFill,
   } = props
 
-  const getClasses = () => {
-    const _variation = !ghost ? PRIMARIES[variation] : SECONDARIES[variation],
-      _floating = floating && !ghost && !disabled ? styles.floating : null,
-      _disabled = disabled && !ghost ? styles.disabled : null,
-      ghostDisabled = disabled && ghost ? styles.ghostDisabled : null
+  const [flag, setFlag] = useState(false)
 
-    return classnames(
-      className,
-      styles.button,
-      styles[size],
-      !ghost ? styles.ripple : styles.pulse,
-      _variation,
-      _floating,
-      _disabled,
-      ghostDisabled,
-      block && styles.block
-    )
-  }
-
-  const animationHandler = event => {
+  const handleClick = event => {
     const r = event.target.getBoundingClientRect()
     const d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2
 
@@ -63,26 +35,35 @@ const Button = props => {
     event.target.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${event.clientX -
       r.left}; --y:${event.clientY - r.top};`
 
-    if (onClick) {
-      onClick(event)
-    }
-  }
-
-  const getOnClickFunc = () => {
-    return !ghost ? animationHandler : onClick
+    onClick(event)
   }
 
   return (
     <button
       style={style}
       disabled={disabled}
-      onClick={getOnClickFunc()}
+      onClick={handleClick}
       type={htmlType}
-      className={getClasses()}>
+      onMouseEnter={() => setFlag(true)}
+      onMouseLeave={() => setFlag(false)}
+      className={classnames(
+        styles.button,
+        styles[size],
+        !ghost && (flag ? classes[`${fill}-hover-bg`] : classes[`${fill}-bg`]),
+        !ghost && classes[`text-inverse-text`],
+        ghost ? styles.pulse : styles.ripple,
+        ghost && styles.ghost,
+        ghost && classes[`${fill}-text`],
+        ghost && !disabled && classes[`${fill}-border`],
+        floating && !ghost && !disabled && styles.floating,
+        disabled && styles.disabled,
+        block && styles.block,
+        className
+      )}>
       {!ghost && prefix && (
         <Icon.Small
           type={prefix}
-          fill={!disabled ? 'text-inverse' : 'text-disabled'}
+          fill={!disabled ? prefixFill : 'text-disabled'}
         />
       )}
 
@@ -91,7 +72,7 @@ const Button = props => {
       {!ghost && suffix && (
         <Icon.Small
           type={suffix}
-          fill={!disabled ? 'text-inverse' : 'text-disabled'}
+          fill={!disabled ? suffixFill : 'text-disabled'}
         />
       )}
     </button>
@@ -99,17 +80,19 @@ const Button = props => {
 }
 
 Button.defaultProps = {
-  variation: 'primary',
   disabled: false,
   size: 'medium',
   htmlType: 'button',
   floating: false,
   ghost: false,
+  onClick: e => {},
+  fill: 'primary',
+  prefixFill: 'text-inverse',
+  suffixFill: 'text-inverse',
 }
 
 Button.propTypes = {
   className: PropTypes.string,
-  variation: PropTypes.oneOf(['primary', 'highlighted', 'error', 'blue']),
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   htmlType: PropTypes.string,
@@ -119,6 +102,9 @@ Button.propTypes = {
   ghost: PropTypes.bool,
   suffix: PropTypes.string,
   prefix: PropTypes.string,
+  fill: PropTypes.string,
+  prefixFill: PropTypes.string,
+  suffixFill: PropTypes.string,
   block: PropTypes.bool,
 }
 

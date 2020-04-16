@@ -89,7 +89,6 @@ const Uploader = props => {
             </Typography.Text>
           ) : (
             <Button
-              variation="primary"
               size="small"
               ghost
               onClick={() => handleState(STATUSES.wait)}>
@@ -112,7 +111,7 @@ const Uploader = props => {
             </Typography.Text>
           ) : (
             <Button
-              variation="error"
+              fill="error"
               size="small"
               ghost
               onClick={() => handleState(STATUSES.wait)}>
