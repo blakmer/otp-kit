@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
+import classes from '../classes.css'
 
 const Toggler = props => {
   const {
@@ -15,14 +16,19 @@ const Toggler = props => {
     onBlur,
     onChange,
     onFocus,
-    onKeyDown,
-    onKeyPress,
-    onKeyUp,
     onMouseEnter,
     onMouseLeave,
     className,
     style,
   } = props
+
+  const [check, setCheck] = useState(checked || defaultChecked || false)
+  const handleChange = e => {
+    if (checked === undefined) {
+      setCheck(e.target.checked)
+    }
+    onChange(e)
+  }
 
   return (
     <div className={classnames(styles.wrapper, className)} style={style}>
@@ -37,22 +43,19 @@ const Toggler = props => {
           required={required}
           tabIndex={tabIndex}
           onBlur={onBlur}
-          onChange={onChange}
+          onChange={handleChange}
           onFocus={onFocus}
-          onKeyDown={onKeyDown}
-          onKeyPress={onKeyPress}
-          onKeyUp={onKeyUp}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         />
         <div
-          className={classnames(styles.switch, {
-            [styles.disabled]: disabled,
-            [styles.switchGreen]: fill === 'green',
-            [styles.switchBlue]: fill === 'blue',
-            [styles.switchYellow]: fill === 'yellow',
-            [styles.switchPurple]: fill === 'purple',
-          })}
+          className={classnames(
+            styles.switch,
+            check && !disabled && classes[`${fill}-bg`],
+            check && !disabled && classes[`${fill}-border`],
+            !check && !disabled && classes['bg-input-bg'],
+            disabled && styles.disabled
+          )}
         />
         <div className={styles.circle} />
       </label>
@@ -65,7 +68,7 @@ Toggler.propTypes = {
   style: PropTypes.object,
   defaultChecked: PropTypes.bool,
   checked: PropTypes.bool,
-  fill: PropTypes.oneOf(['green', 'blue', 'yellow', 'purple']),
+  fill: PropTypes.string,
   disabled: PropTypes.bool,
   name: PropTypes.string,
   required: PropTypes.bool,
@@ -81,8 +84,8 @@ Toggler.propTypes = {
 }
 
 Toggler.defaultProps = {
-  fill: 'green',
-  disabled: false,
+  fill: 'primary',
+  onChange: e => {},
 }
 
 export default Toggler

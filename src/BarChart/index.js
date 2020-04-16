@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { COLORS } from '../docs'
+import classes from '../classes.css'
 
 const COLOR_MAP = {
-  0: COLORS.TEXT_DISABLED,
-  5: COLORS.ERROR,
-  20: COLORS.HIGHLIGHTED,
-  50: COLORS.ALERT,
-  100: COLORS.PRIMARY,
+  0: 'text-disabled',
+  5: 'error',
+  20: 'highlighted',
+  50: 'alert',
+  100: 'primary',
 }
 
 const getStrokeColor = percent => {
@@ -46,44 +46,44 @@ const BarChart = props => {
         return (
           <Fragment key={k}>
             <text
+              className={classes['text-secondary-stroke']}
               x={x}
               y={20}
               style={{
-                stroke: COLORS.TEXT_SECONDARY,
                 fontSize: 14,
               }}
               textAnchor="middle">
               {title}
             </text>
             <line
+              className={classes['bg-grey-1-stroke']}
               x1={x}
               x2={x}
               y1={barEmpty.y1}
               y2={barEmpty.y2}
               style={{
-                stroke: COLORS.BG_GREY_1,
                 strokeWidth: 1,
               }}
               strokeLinecap="round"
             />
 
             <line
+              className={classes[`${stroke}-stroke`]}
               x1={x}
               x2={x}
               y1={bar.y1}
               y2={bar.y2}
               style={{
-                stroke: stroke,
                 strokeWidth: 8,
               }}
               strokeLinecap="round"
             />
 
             <text
+              className={classes['text-primary-stroke']}
               x={x}
               y={height}
               style={{
-                stroke: COLORS.TEXT_PRIMARY,
                 fontSize: 14,
               }}
               textAnchor="middle">
