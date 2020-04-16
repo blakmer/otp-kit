@@ -5,11 +5,12 @@
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
+import classes from '../classes.css'
 
 const columns = [
   {
     render: () => (
-      <div style={{ background: '#52ae30', borderRadius: '50%' }}>
+      <div className={classes['bg-grey-2-bg']} style={{ borderRadius: '50%' }}>
         <Icon.Medium type="machine-learning" />
       </div>
     ),
@@ -67,7 +68,7 @@ const data = [
   },
 ]
 
-;<div style={{ backgroundColor: '#EFF2F9', padding: 10 }}>
+;<div className={classes['bg-grey-2-bg']} style={{ padding: 10 }}>
   <List columns={columns} data={data} />
 </div>
 ```
@@ -77,6 +78,7 @@ const data = [
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
+import classes from '../classes.css'
 
 const columns = [
   {
@@ -139,7 +141,7 @@ const data = [
   },
 ]
 
-;<div style={{ backgroundColor: '#EFF2F9', padding: 10 }}>
+;<div className={classes['bg-grey-2-bg']} style={{ padding: 10 }}>
   <List columns={columns} data={data} headers={false} />
 </div>
 ```
@@ -149,6 +151,7 @@ const data = [
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
+import classes from '../classes.css'
 
 const columns = [
   {
@@ -211,7 +214,7 @@ const data = [
   },
 ]
 
-;<div style={{ backgroundColor: '#EFF2F9', padding: 10 }}>
+;<div className={classes['bg-grey-2-bg']} style={{ padding: 10 }}>
   <List
     columns={columns}
     data={data}

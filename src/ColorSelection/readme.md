@@ -2,11 +2,12 @@
 
 ```js
 import { useState } from 'react'
+import classes from '../classes.css'
 const [color, setColor] = useState('')
 
 ;<div
+  className={classes['bg-grey-2-bg']}
   style={{
-    backgroundColor: '#E2E6F0',
     padding: '1rem',
     display: 'flex',
     justifyContent: 'center',

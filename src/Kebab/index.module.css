@@ -18,7 +18,7 @@
   z-index: 999;
 }
 
-.container {
+  .container {
     position: relative;
     display: inline-block;
     width: 14rem;
@@ -52,14 +52,10 @@
   }
   
   .menu > li {
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     cursor: pointer;
   }
-  
-  .menu > li.selected {
-    background-color: var(--color-bg-grey-3);
-  }
-  
+
   .menu > li.emptyList {
     color: var(--color-text-disabled);
   }
