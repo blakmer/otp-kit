@@ -83,4 +83,9 @@
   --color-bg-terminal-4: #1f2226;
   --color-bg-terminal-2: #333740;
   --color-bg-terminal-1: #474d59;
+
+  /** logo colors */
+  --color-logo-1: #006648;
+  --color-logo-2: #52ae30;
+
 }

@@ -815,3 +815,35 @@
               border-color: var(--color-bg-terminal-1) !important
             }
         
+            .logo-1-text, .logo-1-text-before:before, .logo-1-text-after:after {
+                color: var(--color-logo-1)
+            }
+            .logo-1-bg, .logo-1-bg-before:before, .logo-1-bg-after:after {
+                background-color: var(--color-logo-1)
+            }
+            .logo-1-fill {
+                fill: var(--color-logo-1)
+            }
+            .logo-1-stroke {
+                stroke: var(--color-logo-1)
+            }
+            .logo-1-border, .logo-1-border-before:before, .logo-1-border-after:after {
+              border-color: var(--color-logo-1) !important
+            }
+        
+            .logo-2-text, .logo-2-text-before:before, .logo-2-text-after:after {
+                color: var(--color-logo-2)
+            }
+            .logo-2-bg, .logo-2-bg-before:before, .logo-2-bg-after:after {
+                background-color: var(--color-logo-2)
+            }
+            .logo-2-fill {
+                fill: var(--color-logo-2)
+            }
+            .logo-2-stroke {
+                stroke: var(--color-logo-2)
+            }
+            .logo-2-border, .logo-2-border-before:before, .logo-2-border-after:after {
+              border-color: var(--color-logo-2) !important
+            }
+        
