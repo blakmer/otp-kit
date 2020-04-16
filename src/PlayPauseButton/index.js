@@ -5,7 +5,7 @@ import RoundButton from '../RoundButton'
 import styles from './index.module.css'
 
 const PlayPauseButton = props => {
-  const { className, isPlay, onChange, disabled } = props
+  const { className, isPlay, onChange, disabled, style } = props
   return (
     <RoundButton
       className={classnames(
@@ -14,7 +14,9 @@ const PlayPauseButton = props => {
         !disabled && styles.primarycircle,
         className
       )}
-      inverse={isPlay}
+      fill={isPlay ? 'bg-input' : 'primary'}
+      iconFill={isPlay ? 'primary' : 'text-inverse'}
+      style={style}
       icon={isPlay ? 'pause' : 'play'}
       onClick={() => {
         onChange(!isPlay)

@@ -32,7 +32,8 @@ const Kebab = props => {
         <RoundButton
           className={styles.kebab}
           icon={!isOpen ? 'menu-kebab' : 'close'}
-          inverse
+          fill="bg-input"
+          iconFill="primary"
           disabled={disabled}
         />
       </label>

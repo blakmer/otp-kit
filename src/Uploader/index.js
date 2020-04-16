@@ -59,7 +59,8 @@ const Uploader = props => {
           <RoundButton
             onClick={() => handleState(STATUSES.canceled)}
             icon={hover ? 'close' : 'refresh'}
-            variation={hover ? 'danger' : 'secondary'}
+            fill="bg-input"
+            iconFill={hover ? 'error' : 'primary'}
           />
         </span>
         <Typography.Text

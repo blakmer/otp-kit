@@ -9,56 +9,18 @@
   outline: none;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
-
-button * {
-  pointer-events: none;
-}
-
-.primary {
-  background-color: var(--color-primary);
-}
-
-.primary:hover,
-.primary:active {
-  background-color: var(--color-primary-hover);
-}
-
-.secondary {
-  background-color: var(--color-bg-input);
   box-shadow: 0px 0.25rem 0.5rem var(--color-shadow);
 }
 
-.disabled {
+.button * {
+  pointer-events: none;
+}
+
+.button:disabled {
   background-color: var(--color-bg-input-disabled);
   cursor: not-allowed;
 }
 
-.disabled:hover {
-  background-color: var(--color-bg-input-disabled);
-}
-
-.inverse {
-  box-shadow: none;
-  background-color: var(--color-bg-input);
-}
-
-.inverse:active {
-  box-shadow: none;
-}
-
-.inverse:hover {
-  background-color: var(--color-bg-input);
-}
-
-.inverseDisabled {
-  border: 1px solid var(--color-text-disabled);
-  background-color: transparent;
-}
-
-.inverseDisabled:hover {
-  background-color: transparent;
-}
 /** RIPPLE ANIMATION */
 .ripple {
   composes: ripple from '../Button/index.module.css';

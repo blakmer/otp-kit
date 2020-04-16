@@ -56,7 +56,8 @@ const Modal = props => {
                 <Typography.Lead highlighted>{header}</Typography.Lead>
                 <RoundButton
                   icon="close"
-                  inverse
+                  fill="bg-input"
+                  iconFill="primary"
                   onClick={() => handleClick(onClose)}
                 />
               </section>
