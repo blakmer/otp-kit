@@ -56,7 +56,6 @@ const Button = props => {
         ghost && classes[`${fill}-text`],
         ghost && !disabled && classes[`${fill}-border`],
         floating && !ghost && !disabled && styles.floating,
-        disabled && styles.disabled,
         block && styles.block,
         className
       )}>
