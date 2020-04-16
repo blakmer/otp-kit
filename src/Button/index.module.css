@@ -19,6 +19,10 @@
   outline: none;
 }
 
+.button * {
+  pointer-events: none;
+}
+
 /** BACKGROUNDS */
 .primary {
   background-color: var(--color-primary);
