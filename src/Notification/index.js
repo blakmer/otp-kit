@@ -40,7 +40,7 @@ const Notification = props => {
             )}>
             <Icon.Medium type="info" fill="text-inverse" />
             <div className={styles.notificationText}>
-              <Typography.Text color="inverse">{message}</Typography.Text>
+              <Typography.Text fill="text-inverse">{message}</Typography.Text>
             </div>
             {!popup && (
               <span

@@ -41,12 +41,12 @@ const Uploader = props => {
         />
         <Typography.Text
           className={styles.halfMarginBottom}
-          color={hover ? 'green' : 'secondary'}>
+          fill={hover ? 'primary' : 'text-secondary'}>
           Загрузка изображений
         </Typography.Text>
         <Typography.Text
           size="small"
-          color={hover ? 'green' : 'secondary'}
+          fill={hover ? 'primary' : 'text-secondary'}
           align="center">
           Нажмите или перетащите файлы для загрузки.
         </Typography.Text>
@@ -65,12 +65,12 @@ const Uploader = props => {
         </span>
         <Typography.Text
           className={classnames(styles.halfMarginTop, styles.halfMarginBottom)}
-          color="green">
+          fill="primary">
           Загрузка...
         </Typography.Text>
         <span>
           <Typography.Text size="small">Загружено:</Typography.Text>
-          <Typography.Text color="primary" size="small">
+          <Typography.Text fill="text-primary" size="small">
             {` ${progress.from} / ${progress.to}`}
           </Typography.Text>
         </span>
@@ -79,7 +79,7 @@ const Uploader = props => {
     done: (
       <Fragment>
         <Icon.ClipArt type="check" fill="primary" />
-        <Typography.Text className={styles.halfMarginBottom} color="green">
+        <Typography.Text className={styles.halfMarginBottom} fill="primary">
           Успех
         </Typography.Text>
         <div className={styles.btnContainer}>

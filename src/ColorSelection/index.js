@@ -176,7 +176,7 @@ const ColorSelection = props => {
       <div className={styles.colors}>{renderCircles()}</div>
       <div className={styles.divider} />
       <div className={styles.customColorTitle}>
-        <Typography.Text color="primary">Произвольный цвет</Typography.Text>
+        <Typography.Text fill="text-primary">Произвольный цвет</Typography.Text>
         <Toggler checked={flag} onChange={onChangeToggler} />
       </div>
       <div

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../../classes.css'
 import styles from './index.module.css'
 
 const Text = props => {
@@ -13,7 +13,7 @@ const Text = props => {
     style,
     className,
     children,
-    color,
+    fill,
     ...otherProps
   } = props
 
@@ -21,7 +21,7 @@ const Text = props => {
     className,
     styles[size],
     styles[type],
-    styles[color],
+    classes[`${fill}-text`],
     compact && styles.compact
   )
 
@@ -33,25 +33,14 @@ const Text = props => {
 }
 
 Text.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   className: PropTypes.string,
   type: PropTypes.oneOf(['default', 'link', 'label', 'highlighted', 'hint']),
   compact: PropTypes.bool,
   size: PropTypes.oneOf(['default', 'small']),
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'disabled',
-    'inverse',
-    'green',
-    'orange',
-    'red',
-    'terminal',
-    'inverseSecondary',
-    'inversePrimary',
-  ]),
+  fill: PropTypes.string,
 }
 
 Text.defaultProps = {
@@ -59,7 +48,7 @@ Text.defaultProps = {
   compact: false,
   type: 'default',
   size: 'default',
-  color: 'secondary',
+  fill: 'text-secondary',
 }
 
 export default Text
