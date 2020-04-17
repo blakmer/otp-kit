@@ -10,12 +10,12 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         title="Tag title"
-        marker="green"
+        fill="primary"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={2}>
-      <Tag title="Tag title" marker="purple" />
+      <Tag title="Tag title" fill="chart-purple" />
     </Col>
     <Col md={2}>
       <Tag title="Tag title" onRemove={() => console.log('tag')} />
@@ -23,7 +23,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         disabled
-        marker="purple"
+        fill="chart-purple"
         title="Disabled"
         onRemove={() => console.log('tag')}
       />
@@ -44,7 +44,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="green"
+        fill="primary"
         title="green"
         onRemove={() => console.log('tag')}
       />
@@ -52,7 +52,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="purple"
+        fill="chart-purple"
         title="purple"
         onRemove={() => console.log('tag')}
       />
@@ -60,7 +60,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="orange"
+        fill="highlighted"
         title="orange"
         onRemove={() => console.log('tag')}
       />
@@ -68,7 +68,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="blue"
+        fill="chart-blue"
         title="blue"
         onRemove={() => console.log('tag')}
       />
@@ -76,7 +76,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="red"
+        fill="error"
         title="red"
         onRemove={() => console.log('tag')}
       />
@@ -84,7 +84,7 @@ const { Container, Row, Col } = Grid
     <Col md={2}>
       <Tag
         secondary
-        marker="yellow"
+        fill="chart-yellow"
         title="yellow"
         onRemove={() => console.log('tag')}
       />
@@ -103,13 +103,13 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row justify="between">
     <Col md={2}>
-      <Tag markerHEX="#333" onRemove={() => console.log('tag')} />
+      <Tag fillHex="#FF7777" onRemove={() => console.log('tag')} />
     </Col>
     <Col md={2}>
-      <Tag secondary markerHEX="#333" onRemove={() => console.log('tag')} />
+      <Tag secondary fillHex="#77CC77" onRemove={() => console.log('tag')} />
     </Col>
     <Col md={2}>
-      <Tag markerHEX="#333" onRemove={() => console.log('tag')} disabled />
+      <Tag fillHex="#7777FF" onRemove={() => console.log('tag')} disabled />
     </Col>
   </Row>
 </Container>
