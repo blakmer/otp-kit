@@ -11,15 +11,15 @@ Divider
     <Divider>Center</Divider>
     <Divider orientation="right">Right</Divider>
     <i>Colored:</i>
-    <Divider color="primary">Primary</Divider>
-    <Divider color="blue">Blue</Divider>
-    <Divider color="error">Error</Divider>
+    <Divider fill="primary">Primary</Divider>
+    <Divider fill="blue">Blue</Divider>
+    <Divider fill="error">Error</Divider>
     <i>Vertical:</i>
     <div style={{display:'flex', alignItems: 'center'}}>
     1
-    <Divider type="vertical" color="primary" />
+    <Divider type="vertical" fill="primary" />
     2
-    <Divider type="vertical" color="error" />
+    <Divider type="vertical" fill="error" />
     3
     </div>
 </div>
