@@ -1,5 +1,4 @@
 .button {
-  color: var(--color-text-inverse);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -19,104 +18,38 @@
   outline: none;
 }
 
-/** BACKGROUNDS */
-.primary {
-  background-color: var(--color-primary);
-}
-.primary:hover,
-.primary:active {
-  background-color: var(--color-primary-hover);
+.button * {
+  pointer-events: none;
 }
 
-.highlighted {
-  background-color: var(--color-highlighted);
-}
-.highlighted:hover,
-.highlighted:active {
-  background-color: var(--color-highlighted-hover);
-}
-
-.error {
-  background-color: var(--color-error);
-}
-.error:hover,
-.error:active {
-  background-color: var(--color-error-hover);
-}
-
-.blue {
-  background-color: var(--color-blue);
-}
-.blue:hover,
-.blue:active {
-  background-color: var(--color-blue-hover);
-}
-
-.disabled {
+button:disabled {
   background-color: var(--color-bg-input-disabled);
   color: var(--color-text-disabled);
   cursor: not-allowed;
 }
-.disabled:hover {
+button:disabled:hover {
   background-color: var(--color-bg-input-disabled);
   color: var(--color-text-disabled);
 }
 
 /** GHOST BACKGROUNDS */
-.ghostPrimary {
+.ghost {
   background-color: transparent;
-  color: var(--color-primary);
-  border: 1px solid currentColor;
+  border: 1px solid;
 }
-.ghostPrimary:hover,
-.ghostPrimary:active {
-  color: var(--color-primary-hover);
-  border: 2px solid currentColor;
+.ghost:not(:disabled):hover,
+.ghost:not(:disabled):active {
+  border: 2px solid;
 }
 
-.ghostHighlighted {
-  background-color: transparent;
-  color: var(--color-highlighted);
-  border: 1px solid currentColor;
-}
-.ghostHighlighted:hover,
-.ghostHighlighted:active {
-  color: var(--color-highlighted-hover);
-  border: 2px solid currentColor;
-}
-
-.ghostError {
-  background-color: transparent;
-  color: var(--color-error);
-  border: 1px solid currentColor;
-}
-.ghostError:hover,
-.ghostError:active {
-  color: var(--color-error-hover);
-  border: 2px solid currentColor;
-}
-
-.ghostBlue {
-  background-color: transparent;
-  color: var(--color-blue);
-  border: 1px solid currentColor;
-}
-.ghostBlue:hover,
-.ghostBlue:active {
-  color: var(--color-blue-hover);
-  border: 2px solid currentColor;
-}
-
-.ghostDisabled {
+.ghost:disabled {
   background-color: transparent;
   color: var(--color-text-disabled);
-  border: 1px solid currentColor;
   cursor: not-allowed;
 }
-.ghostDisabled:hover {
+
+.ghost:disabled:hover {
   background-color: transparent;
-  border: 1px solid currentColor;
-  color: var(--color-text-disabled);
 }
 
 /** SIZES */

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import Icon from '../Icon'
+import classes from '../classes.css'
 
 const RoundButton = props => {
   const {
@@ -11,14 +12,15 @@ const RoundButton = props => {
     style,
     onClick,
     htmlType,
-    variation,
-    inverse,
     icon,
+    fill,
+    iconFill,
+    animation,
   } = props
 
   const [flag, setFlag] = useState(false)
 
-  const animationHandler = event => {
+  const handleClick = event => {
     const r = event.currentTarget.getBoundingClientRect()
     const d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2
 
@@ -27,58 +29,31 @@ const RoundButton = props => {
     event.currentTarget.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${event.clientX -
       r.left}; --y:${event.clientY - r.top};`
 
-    if (onClick) {
-      onClick(event)
-    }
-  }
-
-  const getOnClickFunc = () => {
-    return variation === 'primary' && !inverse ? animationHandler : onClick
-  }
-
-  const getClasses = () => {
-    return classnames(className, styles.button, styles[variation], {
-      [styles.secondary]: variation === 'danger' && !disabled,
-      [styles.ripple]: variation === 'primary' && !disabled,
-      [styles.pulse]: variation !== 'primary' && !disabled,
-      [styles.disabled]: disabled,
-      [styles.inverse]: inverse && !disabled,
-      [styles.inverseDisabled]: inverse && disabled,
-    })
-  }
-
-  const getIconFill = () => {
-    if (disabled) {
-      return 'text-disabled'
-    } else if (variation === 'primary' && !inverse) {
-      return 'text-inverse'
-    } else if (variation === 'secondary' && !flag) {
-      return 'primary'
-    } else if (variation === 'secondary' && flag) {
-      return 'primary-hover'
-    } else if (variation === 'danger' && !flag) {
-      return 'error'
-    } else if (variation === 'danger' && flag) {
-      return 'error-hover'
-    } else if (inverse && !flag && variation === 'primary') {
-      return 'primary'
-    } else if (inverse && flag && variation === 'primary') {
-      return 'primary-hover'
-    } else if (inverse && flag && variation === 'danger') {
-      return 'error-hover'
-    }
+    onClick(event)
   }
 
   return (
     <button
       style={style}
       disabled={disabled}
-      onClick={getOnClickFunc()}
+      onClick={handleClick}
       onMouseEnter={() => setFlag(true)}
       onMouseLeave={() => setFlag(false)}
       type={htmlType}
-      className={getClasses()}>
-      {icon && <Icon.Medium type={icon} fill={getIconFill()} size="medium" />}
+      className={classnames(
+        className,
+        styles.button,
+        styles[animation],
+        !disabled &&
+          ((flag && classes[`${fill}-hover-bg`]) || classes[`${fill}-bg`])
+      )}>
+      {icon && (
+        <Icon.Medium
+          type={icon}
+          fill={disabled ? 'text-disabled' : iconFill}
+          size="medium"
+        />
+      )}
     </button>
   )
 }
@@ -87,6 +62,10 @@ RoundButton.defaultProps = {
   variation: 'primary',
   disabled: false,
   htmlType: 'button',
+  fill: 'primary',
+  iconFill: 'text-primary',
+  animation: 'ripple',
+  onClick: e => {},
 }
 
 RoundButton.propTypes = {
@@ -95,7 +74,7 @@ RoundButton.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
   htmlType: PropTypes.string,
-  variation: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+  animation: PropTypes.oneOf(['ripple', 'pulse', 'none']),
   inverse: PropTypes.bool,
   icon: PropTypes.string,
 }

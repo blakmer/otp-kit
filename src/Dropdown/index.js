@@ -1,10 +1,9 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import { useSelect } from 'downshift'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import Arrow from '../util/arrow'
-import { COLORS } from '../docs'
 
 const Dropdown = props => {
   const {
@@ -46,7 +45,7 @@ const Dropdown = props => {
                 styles.listArrow,
                 styles[listDirection || 'bottomCenter']
               )}>
-              <Arrow fill={COLORS.BG_INPUT} />
+              <Arrow fill="bg-input" />
             </span>
           )}
           <ul

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../../classes.css'
 import styles from './index.module.css'
 
 const Heading = props => {
@@ -11,12 +11,12 @@ const Heading = props => {
     style,
     className,
     level,
-    color,
+    fill,
     ...otherProps
   } = props
   const innerProps = {
     align,
-    className: classnames(className, styles.head, styles[color]),
+    className: classnames(className, styles.head, classes[`${fill}-text`]),
     style,
     ...otherProps,
   }
@@ -32,28 +32,17 @@ const Heading = props => {
 }
 
 Heading.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   level: PropTypes.oneOf([1, 2, 3]),
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'disabled',
-    'inverse',
-    'green',
-    'orange',
-    'red',
-    'terminal',
-    'inverseSecondary',
-    'inversePrimary',
-  ]),
+  fill: PropTypes.string,
 }
 
 Heading.defaultProps = {
   level: 1,
   align: 'left',
-  color: 'primary',
+  fill: 'text-primary',
 }
 
 export default Heading

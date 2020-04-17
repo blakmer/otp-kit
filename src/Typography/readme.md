@@ -37,14 +37,16 @@
 ##### Text
 
 ```js
-<Typography.Text color="disabled">Text</Typography.Text>
+import classes from '../classes.css'
+;<div>
+<Typography.Text fill="text-disabled">Text</Typography.Text>
 <br/>
-<Typography.Text color="primary" type="link">Link text</Typography.Text>
+<Typography.Text fill="text-primary" type="link">Link text</Typography.Text>
 <br/>
 <Typography.Text type="label">Label text</Typography.Text>
 <br/>
-<div style={{background: '#000', display: 'inline-block'}}>
-<Typography.Text color="inverse" type="highlighted">Highlighted text</Typography.Text>
+<div className={classes['text-primary-bg']} style={{ display: 'inline-block'}}>
+<Typography.Text fill="text-inverse" type="highlighted">Highlighted text</Typography.Text>
 </div>
 <br/>
 <Typography.Text type="hint">Hint text</Typography.Text>
@@ -53,4 +55,5 @@
 <Typography.Text type="hint" size="small">small hint text</Typography.Text>
 <br/>
 <Typography.Text compact>compact text</Typography.Text>
+</div>
 ```

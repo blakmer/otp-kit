@@ -13,17 +13,17 @@ const mt = 10
     </Checkbox>
   </div>
   <div style={{marginTop: mt}}>
-    <Checkbox id="third" defaultChecked fill='blue'>
+    <Checkbox id="third" defaultChecked fill='chart-blue'>
       Chart blue
     </Checkbox>
   </div>
   <div style={{marginTop: mt}}>
-    <Checkbox id="fourth" defaultChecked fill='yellow'>
+    <Checkbox id="fourth" defaultChecked fill='chart-yellow'>
       Chart yellow
     </Checkbox>
   </div>
 <div style={{marginTop: mt}}>
-    <Checkbox id="fifth" defaultChecked fill='purple'>
+    <Checkbox id="fifth" defaultChecked fill='chart-purple'>
       Chart purple
     </Checkbox>
   </div>

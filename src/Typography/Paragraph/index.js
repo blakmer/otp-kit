@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../../classes.css'
 import styles from './index.module.css'
 
 const Paragraph = props => {
@@ -11,7 +11,7 @@ const Paragraph = props => {
     style,
     className,
     highlighted,
-    color,
+    fill,
     ...otherProps
   } = props
 
@@ -22,7 +22,7 @@ const Paragraph = props => {
       className={classnames(
         className,
         styles.paragraph,
-        styles[color],
+        classes[`${fill}-text`],
         highlighted && styles.highlighted
       )}
       {...otherProps}>
@@ -32,29 +32,18 @@ const Paragraph = props => {
 }
 
 Paragraph.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   className: PropTypes.string,
   highlighted: PropTypes.bool,
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'disabled',
-    'inverse',
-    'green',
-    'orange',
-    'red',
-    'terminal',
-    'inverseSecondary',
-    'inversePrimary',
-  ]),
+  fill: PropTypes.string,
 }
 
 Paragraph.defaultProps = {
   highlighted: false,
   align: 'left',
-  color: 'secondary',
+  fill: 'text-secondary',
 }
 
 export default Paragraph

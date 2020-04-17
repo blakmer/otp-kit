@@ -6,6 +6,11 @@
 ;<Logo />
 ```
 
+#### Colored
+```js
+;<Logo fill="text-secondary"/>
+```
+
 #### Mini
 
 ```js

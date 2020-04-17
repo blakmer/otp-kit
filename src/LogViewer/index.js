@@ -132,10 +132,10 @@ const LogViewer = props => {
                     fill="notification-success"
                     type="terminal-book"
                   />
-                  <Typography.Lead highlighted color="terminal" align="center">
+                  <Typography.Lead highlighted fill="text-terminal-primary" align="center">
                     Контекст отсутствует
                   </Typography.Lead>
-                  <Typography.Text color="inverseSecondary" align="center">
+                  <Typography.Text fill="text-terminal-secondary" align="center">
                     Для отображения контекста выберите хотя бы одно событие в
                     журнале событий
                   </Typography.Text>

@@ -20,7 +20,8 @@ const [color, setColor] = useState('')
       <Fragment>
         <Typography.Heading level={2}>Название тайтла</Typography.Heading>
         <RoundButton
-          inverse
+          fill="bg-input"
+          iconFill="primary"
           icon="arrow-right"
           onClick={() => {
             toggleShow(false)

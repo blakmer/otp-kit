@@ -3,8 +3,9 @@ Kebab Menu
 ```js
 
 import Icon from '../Icon'
+import classes from '../classes.css'
 
-;<div style={{padding: '8rem 0 0 1rem', backgroundColor: '#EFF2F9'}}>
+;<div className={classes['bg-grey-2-bg']} style={{padding: '8rem 0 0 1rem'}}>
   <Kebab 
     items={[
       { title: 'first', jsx:<Icon.Medium fill="primary" type="file-double" onClick={()=>{console.log('click')}} />, value: 1 },

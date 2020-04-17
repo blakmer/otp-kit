@@ -24,10 +24,10 @@ function createFiles(vars) {
     const matches = element.match(/\-\-color\-([a-z0-9\-]*)\:\ [a-f0-9#]*\;/)
     if (matches) {
       const string = `
-            .${matches[1]}-text {
+            .${matches[1]}-text, .${matches[1]}-text-before:before, .${matches[1]}-text-after:after {
                 color: var(--color-${matches[1]})
             }
-            .${matches[1]}-bg {
+            .${matches[1]}-bg, .${matches[1]}-bg-before:before, .${matches[1]}-bg-after:after {
                 background-color: var(--color-${matches[1]})
             }
             .${matches[1]}-fill {
@@ -35,6 +35,9 @@ function createFiles(vars) {
             }
             .${matches[1]}-stroke {
                 stroke: var(--color-${matches[1]})
+            }
+            .${matches[1]}-border, .${matches[1]}-border-before:before, .${matches[1]}-border-after:after {
+              border-color: var(--color-${matches[1]}) !important
             }
         `
       fs.appendFileSync(path, string)

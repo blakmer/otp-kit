@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eff2f9;
 }
 
 .pageNotFound {
@@ -22,7 +21,6 @@
 
 .pageNotFoundLink {
   cursor: pointer;
-  background: #ffffff 0% 0% no-repeat padding-box;
   padding: 1rem;
   width: 85%;
   border-radius: 2rem;

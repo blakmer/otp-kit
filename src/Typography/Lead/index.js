@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../../classes.css'
 import styles from './index.module.css'
 
 const Lead = props => {
@@ -12,7 +12,7 @@ const Lead = props => {
     className,
     highlighted,
     compact,
-    color,
+    fill,
     ...otherProps
   } = props
 
@@ -23,7 +23,7 @@ const Lead = props => {
       className={classnames(
         className,
         styles.lead,
-        styles[color],
+        classes[`${fill}-text`],
         highlighted && styles.highlighted,
         compact && styles.compact
       )}
@@ -34,31 +34,20 @@ const Lead = props => {
 }
 
 Lead.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   className: PropTypes.string,
   highlighted: PropTypes.bool,
   compact: PropTypes.bool,
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'disabled',
-    'inverse',
-    'green',
-    'orange',
-    'red',
-    'terminal',
-    'inverseSecondary',
-    'inversePrimary',
-  ]),
+  fill: PropTypes.string,
 }
 
 Lead.defaultProps = {
   highlighted: false,
   compact: false,
   align: 'left',
-  color: 'primary',
+  fill: 'text-primary',
 }
 
 export default Lead

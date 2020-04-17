@@ -1,5 +1,6 @@
 import React from 'react'
-import classNames from 'classnames'
+import classnames from 'classnames'
+import classes from '../classes.css'
 import propTypes from 'prop-types'
 import styles from './index.module.css'
 import Typography from '../Typography'
@@ -7,16 +8,18 @@ import Link from '../Link'
 import Icon from '../Icon'
 
 const PageNotFound = props => {
-  const { className, onClick, style, fill, linkText } = props
+  const { className, onClick, style, iconFill, fill, linkText } = props
   return (
     <div
-      className={classNames(styles.pageNotFoundBackground, className)}
+      className={classnames(styles.pageNotFoundBackground, className)}
       style={style}>
-      <div className={classNames(styles.pageNotFound)}>
-        <Icon.ClipArt type="broken-robot" fill={fill} />
+      <div className={classnames(styles.pageNotFound)}>
+        <Icon.ClipArt type="broken-robot" fill={iconFill} />
         <Typography.Heading>404 ошибка</Typography.Heading>
         <span>Запрашиваемая страница отсутствует</span>
-        <div className={styles.pageNotFoundLink} onClick={onClick}>
+        <div
+          className={classnames(styles.pageNotFoundLink, classes[`${fill}-bg`])}
+          onClick={onClick}>
           <Link suffix="arrow-right">{linkText}</Link>
         </div>
       </div>
@@ -26,6 +29,8 @@ const PageNotFound = props => {
 
 PageNotFound.defaultProps = {
   linkText: 'Перейти на главную',
+  fill: 'bg-grey-2',
+  iconFill: 'text-secondary',
 }
 
 PageNotFound.propTypes = {
@@ -34,6 +39,7 @@ PageNotFound.propTypes = {
   onClick: propTypes.func,
   fill: propTypes.string,
   linkText: propTypes.string,
+  iconFill: propTypes.string,
 }
 
 export default PageNotFound

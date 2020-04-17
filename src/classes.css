@@ -1,8 +1,8 @@
 /** == GENERATED FROM `./color-gen.js` FILE == **/
-            .primary-text {
+            .primary-text, .primary-text-before:before, .primary-text-after:after {
                 color: var(--color-primary)
             }
-            .primary-bg {
+            .primary-bg, .primary-bg-before:before, .primary-bg-after:after {
                 background-color: var(--color-primary)
             }
             .primary-fill {
@@ -11,11 +11,14 @@
             .primary-stroke {
                 stroke: var(--color-primary)
             }
+            .primary-border, .primary-border-before:before, .primary-border-after:after {
+              border-color: var(--color-primary) !important
+            }
         
-            .primary-hover-text {
+            .primary-hover-text, .primary-hover-text-before:before, .primary-hover-text-after:after {
                 color: var(--color-primary-hover)
             }
-            .primary-hover-bg {
+            .primary-hover-bg, .primary-hover-bg-before:before, .primary-hover-bg-after:after {
                 background-color: var(--color-primary-hover)
             }
             .primary-hover-fill {
@@ -24,11 +27,14 @@
             .primary-hover-stroke {
                 stroke: var(--color-primary-hover)
             }
+            .primary-hover-border, .primary-hover-border-before:before, .primary-hover-border-after:after {
+              border-color: var(--color-primary-hover) !important
+            }
         
-            .highlighted-text {
+            .highlighted-text, .highlighted-text-before:before, .highlighted-text-after:after {
                 color: var(--color-highlighted)
             }
-            .highlighted-bg {
+            .highlighted-bg, .highlighted-bg-before:before, .highlighted-bg-after:after {
                 background-color: var(--color-highlighted)
             }
             .highlighted-fill {
@@ -37,11 +43,14 @@
             .highlighted-stroke {
                 stroke: var(--color-highlighted)
             }
+            .highlighted-border, .highlighted-border-before:before, .highlighted-border-after:after {
+              border-color: var(--color-highlighted) !important
+            }
         
-            .highlighted-hover-text {
+            .highlighted-hover-text, .highlighted-hover-text-before:before, .highlighted-hover-text-after:after {
                 color: var(--color-highlighted-hover)
             }
-            .highlighted-hover-bg {
+            .highlighted-hover-bg, .highlighted-hover-bg-before:before, .highlighted-hover-bg-after:after {
                 background-color: var(--color-highlighted-hover)
             }
             .highlighted-hover-fill {
@@ -50,11 +59,14 @@
             .highlighted-hover-stroke {
                 stroke: var(--color-highlighted-hover)
             }
+            .highlighted-hover-border, .highlighted-hover-border-before:before, .highlighted-hover-border-after:after {
+              border-color: var(--color-highlighted-hover) !important
+            }
         
-            .blue-text {
+            .blue-text, .blue-text-before:before, .blue-text-after:after {
                 color: var(--color-blue)
             }
-            .blue-bg {
+            .blue-bg, .blue-bg-before:before, .blue-bg-after:after {
                 background-color: var(--color-blue)
             }
             .blue-fill {
@@ -63,11 +75,14 @@
             .blue-stroke {
                 stroke: var(--color-blue)
             }
+            .blue-border, .blue-border-before:before, .blue-border-after:after {
+              border-color: var(--color-blue) !important
+            }
         
-            .blue-hover-text {
+            .blue-hover-text, .blue-hover-text-before:before, .blue-hover-text-after:after {
                 color: var(--color-blue-hover)
             }
-            .blue-hover-bg {
+            .blue-hover-bg, .blue-hover-bg-before:before, .blue-hover-bg-after:after {
                 background-color: var(--color-blue-hover)
             }
             .blue-hover-fill {
@@ -76,11 +91,14 @@
             .blue-hover-stroke {
                 stroke: var(--color-blue-hover)
             }
+            .blue-hover-border, .blue-hover-border-before:before, .blue-hover-border-after:after {
+              border-color: var(--color-blue-hover) !important
+            }
         
-            .error-text {
+            .error-text, .error-text-before:before, .error-text-after:after {
                 color: var(--color-error)
             }
-            .error-bg {
+            .error-bg, .error-bg-before:before, .error-bg-after:after {
                 background-color: var(--color-error)
             }
             .error-fill {
@@ -89,11 +107,14 @@
             .error-stroke {
                 stroke: var(--color-error)
             }
+            .error-border, .error-border-before:before, .error-border-after:after {
+              border-color: var(--color-error) !important
+            }
         
-            .error-hover-text {
+            .error-hover-text, .error-hover-text-before:before, .error-hover-text-after:after {
                 color: var(--color-error-hover)
             }
-            .error-hover-bg {
+            .error-hover-bg, .error-hover-bg-before:before, .error-hover-bg-after:after {
                 background-color: var(--color-error-hover)
             }
             .error-hover-fill {
@@ -102,11 +123,14 @@
             .error-hover-stroke {
                 stroke: var(--color-error-hover)
             }
+            .error-hover-border, .error-hover-border-before:before, .error-hover-border-after:after {
+              border-color: var(--color-error-hover) !important
+            }
         
-            .alert-text {
+            .alert-text, .alert-text-before:before, .alert-text-after:after {
                 color: var(--color-alert)
             }
-            .alert-bg {
+            .alert-bg, .alert-bg-before:before, .alert-bg-after:after {
                 background-color: var(--color-alert)
             }
             .alert-fill {
@@ -115,11 +139,14 @@
             .alert-stroke {
                 stroke: var(--color-alert)
             }
+            .alert-border, .alert-border-before:before, .alert-border-after:after {
+              border-color: var(--color-alert) !important
+            }
         
-            .white-text {
+            .white-text, .white-text-before:before, .white-text-after:after {
                 color: var(--color-white)
             }
-            .white-bg {
+            .white-bg, .white-bg-before:before, .white-bg-after:after {
                 background-color: var(--color-white)
             }
             .white-fill {
@@ -128,11 +155,14 @@
             .white-stroke {
                 stroke: var(--color-white)
             }
+            .white-border, .white-border-before:before, .white-border-after:after {
+              border-color: var(--color-white) !important
+            }
         
-            .black-text {
+            .black-text, .black-text-before:before, .black-text-after:after {
                 color: var(--color-black)
             }
-            .black-bg {
+            .black-bg, .black-bg-before:before, .black-bg-after:after {
                 background-color: var(--color-black)
             }
             .black-fill {
@@ -141,11 +171,14 @@
             .black-stroke {
                 stroke: var(--color-black)
             }
+            .black-border, .black-border-before:before, .black-border-after:after {
+              border-color: var(--color-black) !important
+            }
         
-            .bg-grey-1-text {
+            .bg-grey-1-text, .bg-grey-1-text-before:before, .bg-grey-1-text-after:after {
                 color: var(--color-bg-grey-1)
             }
-            .bg-grey-1-bg {
+            .bg-grey-1-bg, .bg-grey-1-bg-before:before, .bg-grey-1-bg-after:after {
                 background-color: var(--color-bg-grey-1)
             }
             .bg-grey-1-fill {
@@ -154,11 +187,14 @@
             .bg-grey-1-stroke {
                 stroke: var(--color-bg-grey-1)
             }
+            .bg-grey-1-border, .bg-grey-1-border-before:before, .bg-grey-1-border-after:after {
+              border-color: var(--color-bg-grey-1) !important
+            }
         
-            .bg-grey-2-text {
+            .bg-grey-2-text, .bg-grey-2-text-before:before, .bg-grey-2-text-after:after {
                 color: var(--color-bg-grey-2)
             }
-            .bg-grey-2-bg {
+            .bg-grey-2-bg, .bg-grey-2-bg-before:before, .bg-grey-2-bg-after:after {
                 background-color: var(--color-bg-grey-2)
             }
             .bg-grey-2-fill {
@@ -167,11 +203,14 @@
             .bg-grey-2-stroke {
                 stroke: var(--color-bg-grey-2)
             }
+            .bg-grey-2-border, .bg-grey-2-border-before:before, .bg-grey-2-border-after:after {
+              border-color: var(--color-bg-grey-2) !important
+            }
         
-            .bg-grey-3-text {
+            .bg-grey-3-text, .bg-grey-3-text-before:before, .bg-grey-3-text-after:after {
                 color: var(--color-bg-grey-3)
             }
-            .bg-grey-3-bg {
+            .bg-grey-3-bg, .bg-grey-3-bg-before:before, .bg-grey-3-bg-after:after {
                 background-color: var(--color-bg-grey-3)
             }
             .bg-grey-3-fill {
@@ -180,11 +219,14 @@
             .bg-grey-3-stroke {
                 stroke: var(--color-bg-grey-3)
             }
+            .bg-grey-3-border, .bg-grey-3-border-before:before, .bg-grey-3-border-after:after {
+              border-color: var(--color-bg-grey-3) !important
+            }
         
-            .bg-grey-4-text {
+            .bg-grey-4-text, .bg-grey-4-text-before:before, .bg-grey-4-text-after:after {
                 color: var(--color-bg-grey-4)
             }
-            .bg-grey-4-bg {
+            .bg-grey-4-bg, .bg-grey-4-bg-before:before, .bg-grey-4-bg-after:after {
                 background-color: var(--color-bg-grey-4)
             }
             .bg-grey-4-fill {
@@ -193,11 +235,14 @@
             .bg-grey-4-stroke {
                 stroke: var(--color-bg-grey-4)
             }
+            .bg-grey-4-border, .bg-grey-4-border-before:before, .bg-grey-4-border-after:after {
+              border-color: var(--color-bg-grey-4) !important
+            }
         
-            .bg-input-text {
+            .bg-input-text, .bg-input-text-before:before, .bg-input-text-after:after {
                 color: var(--color-bg-input)
             }
-            .bg-input-bg {
+            .bg-input-bg, .bg-input-bg-before:before, .bg-input-bg-after:after {
                 background-color: var(--color-bg-input)
             }
             .bg-input-fill {
@@ -206,11 +251,14 @@
             .bg-input-stroke {
                 stroke: var(--color-bg-input)
             }
+            .bg-input-border, .bg-input-border-before:before, .bg-input-border-after:after {
+              border-color: var(--color-bg-input) !important
+            }
         
-            .bg-input-disabled-text {
+            .bg-input-disabled-text, .bg-input-disabled-text-before:before, .bg-input-disabled-text-after:after {
                 color: var(--color-bg-input-disabled)
             }
-            .bg-input-disabled-bg {
+            .bg-input-disabled-bg, .bg-input-disabled-bg-before:before, .bg-input-disabled-bg-after:after {
                 background-color: var(--color-bg-input-disabled)
             }
             .bg-input-disabled-fill {
@@ -219,11 +267,14 @@
             .bg-input-disabled-stroke {
                 stroke: var(--color-bg-input-disabled)
             }
+            .bg-input-disabled-border, .bg-input-disabled-border-before:before, .bg-input-disabled-border-after:after {
+              border-color: var(--color-bg-input-disabled) !important
+            }
         
-            .border-text {
+            .border-text, .border-text-before:before, .border-text-after:after {
                 color: var(--color-border)
             }
-            .border-bg {
+            .border-bg, .border-bg-before:before, .border-bg-after:after {
                 background-color: var(--color-border)
             }
             .border-fill {
@@ -232,11 +283,14 @@
             .border-stroke {
                 stroke: var(--color-border)
             }
+            .border-border, .border-border-before:before, .border-border-after:after {
+              border-color: var(--color-border) !important
+            }
         
-            .modal-overlay-text {
+            .modal-overlay-text, .modal-overlay-text-before:before, .modal-overlay-text-after:after {
                 color: var(--color-modal-overlay)
             }
-            .modal-overlay-bg {
+            .modal-overlay-bg, .modal-overlay-bg-before:before, .modal-overlay-bg-after:after {
                 background-color: var(--color-modal-overlay)
             }
             .modal-overlay-fill {
@@ -245,11 +299,14 @@
             .modal-overlay-stroke {
                 stroke: var(--color-modal-overlay)
             }
+            .modal-overlay-border, .modal-overlay-border-before:before, .modal-overlay-border-after:after {
+              border-color: var(--color-modal-overlay) !important
+            }
         
-            .text-primary-text {
+            .text-primary-text, .text-primary-text-before:before, .text-primary-text-after:after {
                 color: var(--color-text-primary)
             }
-            .text-primary-bg {
+            .text-primary-bg, .text-primary-bg-before:before, .text-primary-bg-after:after {
                 background-color: var(--color-text-primary)
             }
             .text-primary-fill {
@@ -258,11 +315,14 @@
             .text-primary-stroke {
                 stroke: var(--color-text-primary)
             }
+            .text-primary-border, .text-primary-border-before:before, .text-primary-border-after:after {
+              border-color: var(--color-text-primary) !important
+            }
         
-            .text-secondary-text {
+            .text-secondary-text, .text-secondary-text-before:before, .text-secondary-text-after:after {
                 color: var(--color-text-secondary)
             }
-            .text-secondary-bg {
+            .text-secondary-bg, .text-secondary-bg-before:before, .text-secondary-bg-after:after {
                 background-color: var(--color-text-secondary)
             }
             .text-secondary-fill {
@@ -271,11 +331,14 @@
             .text-secondary-stroke {
                 stroke: var(--color-text-secondary)
             }
+            .text-secondary-border, .text-secondary-border-before:before, .text-secondary-border-after:after {
+              border-color: var(--color-text-secondary) !important
+            }
         
-            .text-disabled-text {
+            .text-disabled-text, .text-disabled-text-before:before, .text-disabled-text-after:after {
                 color: var(--color-text-disabled)
             }
-            .text-disabled-bg {
+            .text-disabled-bg, .text-disabled-bg-before:before, .text-disabled-bg-after:after {
                 background-color: var(--color-text-disabled)
             }
             .text-disabled-fill {
@@ -284,11 +347,14 @@
             .text-disabled-stroke {
                 stroke: var(--color-text-disabled)
             }
+            .text-disabled-border, .text-disabled-border-before:before, .text-disabled-border-after:after {
+              border-color: var(--color-text-disabled) !important
+            }
         
-            .text-inverse-text {
+            .text-inverse-text, .text-inverse-text-before:before, .text-inverse-text-after:after {
                 color: var(--color-text-inverse)
             }
-            .text-inverse-bg {
+            .text-inverse-bg, .text-inverse-bg-before:before, .text-inverse-bg-after:after {
                 background-color: var(--color-text-inverse)
             }
             .text-inverse-fill {
@@ -297,11 +363,14 @@
             .text-inverse-stroke {
                 stroke: var(--color-text-inverse)
             }
+            .text-inverse-border, .text-inverse-border-before:before, .text-inverse-border-after:after {
+              border-color: var(--color-text-inverse) !important
+            }
         
-            .chart-blue-text {
+            .chart-blue-text, .chart-blue-text-before:before, .chart-blue-text-after:after {
                 color: var(--color-chart-blue)
             }
-            .chart-blue-bg {
+            .chart-blue-bg, .chart-blue-bg-before:before, .chart-blue-bg-after:after {
                 background-color: var(--color-chart-blue)
             }
             .chart-blue-fill {
@@ -310,11 +379,14 @@
             .chart-blue-stroke {
                 stroke: var(--color-chart-blue)
             }
+            .chart-blue-border, .chart-blue-border-before:before, .chart-blue-border-after:after {
+              border-color: var(--color-chart-blue) !important
+            }
         
-            .chart-yellow-text {
+            .chart-yellow-text, .chart-yellow-text-before:before, .chart-yellow-text-after:after {
                 color: var(--color-chart-yellow)
             }
-            .chart-yellow-bg {
+            .chart-yellow-bg, .chart-yellow-bg-before:before, .chart-yellow-bg-after:after {
                 background-color: var(--color-chart-yellow)
             }
             .chart-yellow-fill {
@@ -323,11 +395,14 @@
             .chart-yellow-stroke {
                 stroke: var(--color-chart-yellow)
             }
+            .chart-yellow-border, .chart-yellow-border-before:before, .chart-yellow-border-after:after {
+              border-color: var(--color-chart-yellow) !important
+            }
         
-            .chart-purple-text {
+            .chart-purple-text, .chart-purple-text-before:before, .chart-purple-text-after:after {
                 color: var(--color-chart-purple)
             }
-            .chart-purple-bg {
+            .chart-purple-bg, .chart-purple-bg-before:before, .chart-purple-bg-after:after {
                 background-color: var(--color-chart-purple)
             }
             .chart-purple-fill {
@@ -336,11 +411,14 @@
             .chart-purple-stroke {
                 stroke: var(--color-chart-purple)
             }
+            .chart-purple-border, .chart-purple-border-before:before, .chart-purple-border-after:after {
+              border-color: var(--color-chart-purple) !important
+            }
         
-            .chart-violet-text {
+            .chart-violet-text, .chart-violet-text-before:before, .chart-violet-text-after:after {
                 color: var(--color-chart-violet)
             }
-            .chart-violet-bg {
+            .chart-violet-bg, .chart-violet-bg-before:before, .chart-violet-bg-after:after {
                 background-color: var(--color-chart-violet)
             }
             .chart-violet-fill {
@@ -349,11 +427,14 @@
             .chart-violet-stroke {
                 stroke: var(--color-chart-violet)
             }
+            .chart-violet-border, .chart-violet-border-before:before, .chart-violet-border-after:after {
+              border-color: var(--color-chart-violet) !important
+            }
         
-            .chart-coral-text {
+            .chart-coral-text, .chart-coral-text-before:before, .chart-coral-text-after:after {
                 color: var(--color-chart-coral)
             }
-            .chart-coral-bg {
+            .chart-coral-bg, .chart-coral-bg-before:before, .chart-coral-bg-after:after {
                 background-color: var(--color-chart-coral)
             }
             .chart-coral-fill {
@@ -362,11 +443,14 @@
             .chart-coral-stroke {
                 stroke: var(--color-chart-coral)
             }
+            .chart-coral-border, .chart-coral-border-before:before, .chart-coral-border-after:after {
+              border-color: var(--color-chart-coral) !important
+            }
         
-            .chart-green-text {
+            .chart-green-text, .chart-green-text-before:before, .chart-green-text-after:after {
                 color: var(--color-chart-green)
             }
-            .chart-green-bg {
+            .chart-green-bg, .chart-green-bg-before:before, .chart-green-bg-after:after {
                 background-color: var(--color-chart-green)
             }
             .chart-green-fill {
@@ -375,11 +459,14 @@
             .chart-green-stroke {
                 stroke: var(--color-chart-green)
             }
+            .chart-green-border, .chart-green-border-before:before, .chart-green-border-after:after {
+              border-color: var(--color-chart-green) !important
+            }
         
-            .bg-pastel-yellow-text {
+            .bg-pastel-yellow-text, .bg-pastel-yellow-text-before:before, .bg-pastel-yellow-text-after:after {
                 color: var(--color-bg-pastel-yellow)
             }
-            .bg-pastel-yellow-bg {
+            .bg-pastel-yellow-bg, .bg-pastel-yellow-bg-before:before, .bg-pastel-yellow-bg-after:after {
                 background-color: var(--color-bg-pastel-yellow)
             }
             .bg-pastel-yellow-fill {
@@ -388,11 +475,14 @@
             .bg-pastel-yellow-stroke {
                 stroke: var(--color-bg-pastel-yellow)
             }
+            .bg-pastel-yellow-border, .bg-pastel-yellow-border-before:before, .bg-pastel-yellow-border-after:after {
+              border-color: var(--color-bg-pastel-yellow) !important
+            }
         
-            .bg-pastel-orange-text {
+            .bg-pastel-orange-text, .bg-pastel-orange-text-before:before, .bg-pastel-orange-text-after:after {
                 color: var(--color-bg-pastel-orange)
             }
-            .bg-pastel-orange-bg {
+            .bg-pastel-orange-bg, .bg-pastel-orange-bg-before:before, .bg-pastel-orange-bg-after:after {
                 background-color: var(--color-bg-pastel-orange)
             }
             .bg-pastel-orange-fill {
@@ -401,11 +491,14 @@
             .bg-pastel-orange-stroke {
                 stroke: var(--color-bg-pastel-orange)
             }
+            .bg-pastel-orange-border, .bg-pastel-orange-border-before:before, .bg-pastel-orange-border-after:after {
+              border-color: var(--color-bg-pastel-orange) !important
+            }
         
-            .bg-pastel-red-text {
+            .bg-pastel-red-text, .bg-pastel-red-text-before:before, .bg-pastel-red-text-after:after {
                 color: var(--color-bg-pastel-red)
             }
-            .bg-pastel-red-bg {
+            .bg-pastel-red-bg, .bg-pastel-red-bg-before:before, .bg-pastel-red-bg-after:after {
                 background-color: var(--color-bg-pastel-red)
             }
             .bg-pastel-red-fill {
@@ -414,11 +507,14 @@
             .bg-pastel-red-stroke {
                 stroke: var(--color-bg-pastel-red)
             }
+            .bg-pastel-red-border, .bg-pastel-red-border-before:before, .bg-pastel-red-border-after:after {
+              border-color: var(--color-bg-pastel-red) !important
+            }
         
-            .bg-pastel-blue-text {
+            .bg-pastel-blue-text, .bg-pastel-blue-text-before:before, .bg-pastel-blue-text-after:after {
                 color: var(--color-bg-pastel-blue)
             }
-            .bg-pastel-blue-bg {
+            .bg-pastel-blue-bg, .bg-pastel-blue-bg-before:before, .bg-pastel-blue-bg-after:after {
                 background-color: var(--color-bg-pastel-blue)
             }
             .bg-pastel-blue-fill {
@@ -427,11 +523,14 @@
             .bg-pastel-blue-stroke {
                 stroke: var(--color-bg-pastel-blue)
             }
+            .bg-pastel-blue-border, .bg-pastel-blue-border-before:before, .bg-pastel-blue-border-after:after {
+              border-color: var(--color-bg-pastel-blue) !important
+            }
         
-            .bg-pastel-green-text {
+            .bg-pastel-green-text, .bg-pastel-green-text-before:before, .bg-pastel-green-text-after:after {
                 color: var(--color-bg-pastel-green)
             }
-            .bg-pastel-green-bg {
+            .bg-pastel-green-bg, .bg-pastel-green-bg-before:before, .bg-pastel-green-bg-after:after {
                 background-color: var(--color-bg-pastel-green)
             }
             .bg-pastel-green-fill {
@@ -440,11 +539,14 @@
             .bg-pastel-green-stroke {
                 stroke: var(--color-bg-pastel-green)
             }
+            .bg-pastel-green-border, .bg-pastel-green-border-before:before, .bg-pastel-green-border-after:after {
+              border-color: var(--color-bg-pastel-green) !important
+            }
         
-            .hero-bg-pastel-ocher-text {
+            .hero-bg-pastel-ocher-text, .hero-bg-pastel-ocher-text-before:before, .hero-bg-pastel-ocher-text-after:after {
                 color: var(--color-hero-bg-pastel-ocher)
             }
-            .hero-bg-pastel-ocher-bg {
+            .hero-bg-pastel-ocher-bg, .hero-bg-pastel-ocher-bg-before:before, .hero-bg-pastel-ocher-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-ocher)
             }
             .hero-bg-pastel-ocher-fill {
@@ -453,11 +555,14 @@
             .hero-bg-pastel-ocher-stroke {
                 stroke: var(--color-hero-bg-pastel-ocher)
             }
+            .hero-bg-pastel-ocher-border, .hero-bg-pastel-ocher-border-before:before, .hero-bg-pastel-ocher-border-after:after {
+              border-color: var(--color-hero-bg-pastel-ocher) !important
+            }
         
-            .hero-bg-pastel-yellow-text {
+            .hero-bg-pastel-yellow-text, .hero-bg-pastel-yellow-text-before:before, .hero-bg-pastel-yellow-text-after:after {
                 color: var(--color-hero-bg-pastel-yellow)
             }
-            .hero-bg-pastel-yellow-bg {
+            .hero-bg-pastel-yellow-bg, .hero-bg-pastel-yellow-bg-before:before, .hero-bg-pastel-yellow-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-yellow)
             }
             .hero-bg-pastel-yellow-fill {
@@ -466,11 +571,14 @@
             .hero-bg-pastel-yellow-stroke {
                 stroke: var(--color-hero-bg-pastel-yellow)
             }
+            .hero-bg-pastel-yellow-border, .hero-bg-pastel-yellow-border-before:before, .hero-bg-pastel-yellow-border-after:after {
+              border-color: var(--color-hero-bg-pastel-yellow) !important
+            }
         
-            .hero-bg-pastel-orange-text {
+            .hero-bg-pastel-orange-text, .hero-bg-pastel-orange-text-before:before, .hero-bg-pastel-orange-text-after:after {
                 color: var(--color-hero-bg-pastel-orange)
             }
-            .hero-bg-pastel-orange-bg {
+            .hero-bg-pastel-orange-bg, .hero-bg-pastel-orange-bg-before:before, .hero-bg-pastel-orange-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-orange)
             }
             .hero-bg-pastel-orange-fill {
@@ -479,11 +587,14 @@
             .hero-bg-pastel-orange-stroke {
                 stroke: var(--color-hero-bg-pastel-orange)
             }
+            .hero-bg-pastel-orange-border, .hero-bg-pastel-orange-border-before:before, .hero-bg-pastel-orange-border-after:after {
+              border-color: var(--color-hero-bg-pastel-orange) !important
+            }
         
-            .hero-bg-pastel-red-text {
+            .hero-bg-pastel-red-text, .hero-bg-pastel-red-text-before:before, .hero-bg-pastel-red-text-after:after {
                 color: var(--color-hero-bg-pastel-red)
             }
-            .hero-bg-pastel-red-bg {
+            .hero-bg-pastel-red-bg, .hero-bg-pastel-red-bg-before:before, .hero-bg-pastel-red-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-red)
             }
             .hero-bg-pastel-red-fill {
@@ -492,11 +603,14 @@
             .hero-bg-pastel-red-stroke {
                 stroke: var(--color-hero-bg-pastel-red)
             }
+            .hero-bg-pastel-red-border, .hero-bg-pastel-red-border-before:before, .hero-bg-pastel-red-border-after:after {
+              border-color: var(--color-hero-bg-pastel-red) !important
+            }
         
-            .hero-bg-pastel-purple-text {
+            .hero-bg-pastel-purple-text, .hero-bg-pastel-purple-text-before:before, .hero-bg-pastel-purple-text-after:after {
                 color: var(--color-hero-bg-pastel-purple)
             }
-            .hero-bg-pastel-purple-bg {
+            .hero-bg-pastel-purple-bg, .hero-bg-pastel-purple-bg-before:before, .hero-bg-pastel-purple-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-purple)
             }
             .hero-bg-pastel-purple-fill {
@@ -505,11 +619,14 @@
             .hero-bg-pastel-purple-stroke {
                 stroke: var(--color-hero-bg-pastel-purple)
             }
+            .hero-bg-pastel-purple-border, .hero-bg-pastel-purple-border-before:before, .hero-bg-pastel-purple-border-after:after {
+              border-color: var(--color-hero-bg-pastel-purple) !important
+            }
         
-            .hero-bg-pastel-violet-text {
+            .hero-bg-pastel-violet-text, .hero-bg-pastel-violet-text-before:before, .hero-bg-pastel-violet-text-after:after {
                 color: var(--color-hero-bg-pastel-violet)
             }
-            .hero-bg-pastel-violet-bg {
+            .hero-bg-pastel-violet-bg, .hero-bg-pastel-violet-bg-before:before, .hero-bg-pastel-violet-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-violet)
             }
             .hero-bg-pastel-violet-fill {
@@ -518,11 +635,14 @@
             .hero-bg-pastel-violet-stroke {
                 stroke: var(--color-hero-bg-pastel-violet)
             }
+            .hero-bg-pastel-violet-border, .hero-bg-pastel-violet-border-before:before, .hero-bg-pastel-violet-border-after:after {
+              border-color: var(--color-hero-bg-pastel-violet) !important
+            }
         
-            .hero-bg-pastel-blue-text {
+            .hero-bg-pastel-blue-text, .hero-bg-pastel-blue-text-before:before, .hero-bg-pastel-blue-text-after:after {
                 color: var(--color-hero-bg-pastel-blue)
             }
-            .hero-bg-pastel-blue-bg {
+            .hero-bg-pastel-blue-bg, .hero-bg-pastel-blue-bg-before:before, .hero-bg-pastel-blue-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-blue)
             }
             .hero-bg-pastel-blue-fill {
@@ -531,11 +651,14 @@
             .hero-bg-pastel-blue-stroke {
                 stroke: var(--color-hero-bg-pastel-blue)
             }
+            .hero-bg-pastel-blue-border, .hero-bg-pastel-blue-border-before:before, .hero-bg-pastel-blue-border-after:after {
+              border-color: var(--color-hero-bg-pastel-blue) !important
+            }
         
-            .hero-bg-pastel-green-text {
+            .hero-bg-pastel-green-text, .hero-bg-pastel-green-text-before:before, .hero-bg-pastel-green-text-after:after {
                 color: var(--color-hero-bg-pastel-green)
             }
-            .hero-bg-pastel-green-bg {
+            .hero-bg-pastel-green-bg, .hero-bg-pastel-green-bg-before:before, .hero-bg-pastel-green-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-green)
             }
             .hero-bg-pastel-green-fill {
@@ -544,11 +667,14 @@
             .hero-bg-pastel-green-stroke {
                 stroke: var(--color-hero-bg-pastel-green)
             }
+            .hero-bg-pastel-green-border, .hero-bg-pastel-green-border-before:before, .hero-bg-pastel-green-border-after:after {
+              border-color: var(--color-hero-bg-pastel-green) !important
+            }
         
-            .hero-bg-pastel-lime-text {
+            .hero-bg-pastel-lime-text, .hero-bg-pastel-lime-text-before:before, .hero-bg-pastel-lime-text-after:after {
                 color: var(--color-hero-bg-pastel-lime)
             }
-            .hero-bg-pastel-lime-bg {
+            .hero-bg-pastel-lime-bg, .hero-bg-pastel-lime-bg-before:before, .hero-bg-pastel-lime-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-lime)
             }
             .hero-bg-pastel-lime-fill {
@@ -557,11 +683,14 @@
             .hero-bg-pastel-lime-stroke {
                 stroke: var(--color-hero-bg-pastel-lime)
             }
+            .hero-bg-pastel-lime-border, .hero-bg-pastel-lime-border-before:before, .hero-bg-pastel-lime-border-after:after {
+              border-color: var(--color-hero-bg-pastel-lime) !important
+            }
         
-            .hero-bg-pastel-coral-text {
+            .hero-bg-pastel-coral-text, .hero-bg-pastel-coral-text-before:before, .hero-bg-pastel-coral-text-after:after {
                 color: var(--color-hero-bg-pastel-coral)
             }
-            .hero-bg-pastel-coral-bg {
+            .hero-bg-pastel-coral-bg, .hero-bg-pastel-coral-bg-before:before, .hero-bg-pastel-coral-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-coral)
             }
             .hero-bg-pastel-coral-fill {
@@ -570,11 +699,14 @@
             .hero-bg-pastel-coral-stroke {
                 stroke: var(--color-hero-bg-pastel-coral)
             }
+            .hero-bg-pastel-coral-border, .hero-bg-pastel-coral-border-before:before, .hero-bg-pastel-coral-border-after:after {
+              border-color: var(--color-hero-bg-pastel-coral) !important
+            }
         
-            .notification-success-text {
+            .notification-success-text, .notification-success-text-before:before, .notification-success-text-after:after {
                 color: var(--color-notification-success)
             }
-            .notification-success-bg {
+            .notification-success-bg, .notification-success-bg-before:before, .notification-success-bg-after:after {
                 background-color: var(--color-notification-success)
             }
             .notification-success-fill {
@@ -583,11 +715,14 @@
             .notification-success-stroke {
                 stroke: var(--color-notification-success)
             }
+            .notification-success-border, .notification-success-border-before:before, .notification-success-border-after:after {
+              border-color: var(--color-notification-success) !important
+            }
         
-            .notification-error-text {
+            .notification-error-text, .notification-error-text-before:before, .notification-error-text-after:after {
                 color: var(--color-notification-error)
             }
-            .notification-error-bg {
+            .notification-error-bg, .notification-error-bg-before:before, .notification-error-bg-after:after {
                 background-color: var(--color-notification-error)
             }
             .notification-error-fill {
@@ -596,11 +731,14 @@
             .notification-error-stroke {
                 stroke: var(--color-notification-error)
             }
+            .notification-error-border, .notification-error-border-before:before, .notification-error-border-after:after {
+              border-color: var(--color-notification-error) !important
+            }
         
-            .text-terminal-primary-text {
+            .text-terminal-primary-text, .text-terminal-primary-text-before:before, .text-terminal-primary-text-after:after {
                 color: var(--color-text-terminal-primary)
             }
-            .text-terminal-primary-bg {
+            .text-terminal-primary-bg, .text-terminal-primary-bg-before:before, .text-terminal-primary-bg-after:after {
                 background-color: var(--color-text-terminal-primary)
             }
             .text-terminal-primary-fill {
@@ -609,11 +747,14 @@
             .text-terminal-primary-stroke {
                 stroke: var(--color-text-terminal-primary)
             }
+            .text-terminal-primary-border, .text-terminal-primary-border-before:before, .text-terminal-primary-border-after:after {
+              border-color: var(--color-text-terminal-primary) !important
+            }
         
-            .text-terminal-secondary-text {
+            .text-terminal-secondary-text, .text-terminal-secondary-text-before:before, .text-terminal-secondary-text-after:after {
                 color: var(--color-text-terminal-secondary)
             }
-            .text-terminal-secondary-bg {
+            .text-terminal-secondary-bg, .text-terminal-secondary-bg-before:before, .text-terminal-secondary-bg-after:after {
                 background-color: var(--color-text-terminal-secondary)
             }
             .text-terminal-secondary-fill {
@@ -622,11 +763,14 @@
             .text-terminal-secondary-stroke {
                 stroke: var(--color-text-terminal-secondary)
             }
+            .text-terminal-secondary-border, .text-terminal-secondary-border-before:before, .text-terminal-secondary-border-after:after {
+              border-color: var(--color-text-terminal-secondary) !important
+            }
         
-            .bg-terminal-4-text {
+            .bg-terminal-4-text, .bg-terminal-4-text-before:before, .bg-terminal-4-text-after:after {
                 color: var(--color-bg-terminal-4)
             }
-            .bg-terminal-4-bg {
+            .bg-terminal-4-bg, .bg-terminal-4-bg-before:before, .bg-terminal-4-bg-after:after {
                 background-color: var(--color-bg-terminal-4)
             }
             .bg-terminal-4-fill {
@@ -635,11 +779,14 @@
             .bg-terminal-4-stroke {
                 stroke: var(--color-bg-terminal-4)
             }
+            .bg-terminal-4-border, .bg-terminal-4-border-before:before, .bg-terminal-4-border-after:after {
+              border-color: var(--color-bg-terminal-4) !important
+            }
         
-            .bg-terminal-2-text {
+            .bg-terminal-2-text, .bg-terminal-2-text-before:before, .bg-terminal-2-text-after:after {
                 color: var(--color-bg-terminal-2)
             }
-            .bg-terminal-2-bg {
+            .bg-terminal-2-bg, .bg-terminal-2-bg-before:before, .bg-terminal-2-bg-after:after {
                 background-color: var(--color-bg-terminal-2)
             }
             .bg-terminal-2-fill {
@@ -648,11 +795,14 @@
             .bg-terminal-2-stroke {
                 stroke: var(--color-bg-terminal-2)
             }
+            .bg-terminal-2-border, .bg-terminal-2-border-before:before, .bg-terminal-2-border-after:after {
+              border-color: var(--color-bg-terminal-2) !important
+            }
         
-            .bg-terminal-1-text {
+            .bg-terminal-1-text, .bg-terminal-1-text-before:before, .bg-terminal-1-text-after:after {
                 color: var(--color-bg-terminal-1)
             }
-            .bg-terminal-1-bg {
+            .bg-terminal-1-bg, .bg-terminal-1-bg-before:before, .bg-terminal-1-bg-after:after {
                 background-color: var(--color-bg-terminal-1)
             }
             .bg-terminal-1-fill {
@@ -660,5 +810,40 @@
             }
             .bg-terminal-1-stroke {
                 stroke: var(--color-bg-terminal-1)
+            }
+            .bg-terminal-1-border, .bg-terminal-1-border-before:before, .bg-terminal-1-border-after:after {
+              border-color: var(--color-bg-terminal-1) !important
+            }
+        
+            .logo-1-text, .logo-1-text-before:before, .logo-1-text-after:after {
+                color: var(--color-logo-1)
+            }
+            .logo-1-bg, .logo-1-bg-before:before, .logo-1-bg-after:after {
+                background-color: var(--color-logo-1)
+            }
+            .logo-1-fill {
+                fill: var(--color-logo-1)
+            }
+            .logo-1-stroke {
+                stroke: var(--color-logo-1)
+            }
+            .logo-1-border, .logo-1-border-before:before, .logo-1-border-after:after {
+              border-color: var(--color-logo-1) !important
+            }
+        
+            .logo-2-text, .logo-2-text-before:before, .logo-2-text-after:after {
+                color: var(--color-logo-2)
+            }
+            .logo-2-bg, .logo-2-bg-before:before, .logo-2-bg-after:after {
+                background-color: var(--color-logo-2)
+            }
+            .logo-2-fill {
+                fill: var(--color-logo-2)
+            }
+            .logo-2-stroke {
+                stroke: var(--color-logo-2)
+            }
+            .logo-2-border, .logo-2-border-before:before, .logo-2-border-after:after {
+              border-color: var(--color-logo-2) !important
             }
         

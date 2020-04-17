@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
+import classes from '../../classes.css'
 import styles from './index.module.css'
 
 const Hero = props => {
-  const { children, align, style, className, sub, color, ...otherProps } = props
+  const { children, align, style, className, sub, fill, ...otherProps } = props
   return (
     <h1
       align={align}
       className={classnames(
         className,
-        styles[color],
+        classes[`${fill}-text`],
         sub ? styles.subHero : styles.hero
       )}
       style={style}
@@ -22,28 +22,17 @@ const Hero = props => {
 }
 
 Hero.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
   style: PropTypes.object,
   sub: PropTypes.bool,
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'disabled',
-    'inverse',
-    'green',
-    'orange',
-    'red',
-    'terminal',
-    'inverseSecondary',
-    'inversePrimary',
-  ]),
+  fill: PropTypes.string,
 }
 
 Hero.defaultProps = {
   sub: false,
   align: 'left',
-  color: 'primary',
+  fill: 'text-primary',
 }
 
 export default Hero
