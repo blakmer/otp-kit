@@ -12,32 +12,32 @@ const { Container, Row, Col } = Grid
   <Row>
     <Col md={4}>
         <FormItem label="Label input field">
-            <Input placeholder="Type here..." onChange={e=>{console.log(e.target.value)}}/>   
+            <Input onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
     <Col md={4}>
         <FormItem label="Warning label">
-            <Input placeholder="Type here..." status="warning" onChange={e=>{console.log(e.target.value)}}/>   
+            <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
     <Col md={4}>
         <FormItem label="Error label">
-            <Input placeholder="Type here..." status="error" onChange={e=>{console.log(e.target.value)}}/>   
+            <Input status="error" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
     <Col md={4}>
         <FormItem label="Label input field" description="Description input field">
-            <Input placeholder="Type here..." onChange={e=>{console.log(e.target.value)}}/>   
+            <Input onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
     <Col md={4}>
         <FormItem label="Disabled" description="Disabled description">
-            <Input placeholder="Type here..." status="disabled" onChange={e=>{console.log(e.target.value)}}/>   
+            <Input status="disabled" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
     <Col md={4}>
         <FormItem label="Label" description="Warning description">
-            <Input placeholder="Type here..." status="warning" onChange={e=>{console.log(e.target.value)}}/>   
+            <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
   </Row>
