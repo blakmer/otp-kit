@@ -1,16 +1,16 @@
 .logStr {
   font-family: var(--font-code);
   display: flex;
-  color: var(--color-text-inverse-primary);
+  color: var(--color-text-terminal-primary);
   position: relative;
 }
 .logStr.hover {
-  background: var(--color-bg-dark-2);
+  background: var(--color-bg-terminal-2);
 }
 
 .logStr.active,
 .logStr.active.hover {
-  background: var(--color-bg-dark-1);
+  background: var(--color-bg-terminal-1);
 }
 
 .logStrPrefix {
@@ -46,7 +46,7 @@
 }
 
 .logStrDate {
-  color: var(--color-text-inverse-secondary);
+  color: var(--color-text-terminal-secondary);
 }
 
 .logStrDate,
@@ -78,7 +78,7 @@
 
 .logViewerContainer {
   border-radius: 1.5rem;
-  background: var(--color-bg-dark-4);
+  background: var(--color-bg-terminal-4);
 }
 
 .logViewer {
@@ -88,11 +88,11 @@
 .contextViewer {
   padding: 1.5rem;
   border-radius: 1.5rem;
-  background: var(--color-bg-dark-2);
+  background: var(--color-bg-terminal-2);
 }
 
 .contextFull {
-  background: var(--color-bg-dark-4);
+  background: var(--color-bg-terminal-4);
   border-radius: 1rem;
   padding: 1rem;
 }
