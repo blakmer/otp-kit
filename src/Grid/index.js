@@ -15,7 +15,7 @@ setConfiguration({
   // sm, md, lg, xl
   breakpoints: [768, 1024, 1280, 1536],
   containerWidths: [744, 1000, 1256, 1512],
-  gutterWidth: 12,
+  gutterWidth: 24,
   gridColumns: 12,
   defaultScreenClass: 'md',
 })

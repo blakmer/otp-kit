@@ -17,6 +17,7 @@ const Input = props => {
     status,
     suffix,
     prefix,
+    inputRef,
     /** html props */
     type,
     autoComplete,
@@ -46,6 +47,7 @@ const Input = props => {
       )}>
       <span className={styles.prefix}>{prefix}</span>
       <InputMask
+        inputRef={inputRef}
         placeholder={placeholder}
         onBlur={onBlur}
         mask={mask}
@@ -100,6 +102,7 @@ Input.propTypes = {
   suffix: PropTypes.node,
   prefix: PropTypes.node,
   placeholder: PropTypes.string,
+  inputRef: PropTypes.any,
 }
 
 Input.defaultProps = {

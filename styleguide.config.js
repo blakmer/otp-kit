@@ -1,5 +1,5 @@
 module.exports = {
-  require: ['./src/style.css', './src/themes/dark.css'],
+  require: ['./src/style.css', './src/themes/light.css'],
   webpackConfig: require('./webpack.config.js'),
   usageMode: 'expand',
   exampleMode: 'collapse',
@@ -112,7 +112,7 @@ module.exports = {
         'src/InfinityScroll/index.js',
         'src/ActionInput/index.js',
         'src/Kebab/index.js',
-        'src/FormItem/index.js', 
+        'src/FormItem/index.js',
       ],
     },
     {

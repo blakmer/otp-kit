@@ -26,10 +26,6 @@ const Select = props => {
     listDirection,
   } = props
 
-  if (value && !onChange) {
-    console.warn('Warning. Use defaultValue or value and onChange')
-  }
-
   const {
     isOpen,
     getToggleButtonProps,
@@ -38,16 +34,19 @@ const Select = props => {
     getComboboxProps,
     highlightedIndex,
     getItemProps,
-    selectedItem,
   } = useCombobox({
     items: items,
-    selectedItem: value && onChange ? value : defaultValue,
+    initialSelectedItem: defaultValue,
+    ...(value && { inputValue: value.title }),
     itemToString: i => i.title,
     onSelectedItemChange: ({ selectedItem }) => {
       onChange(selectedItem)
     },
   })
 
+  const inputProps = getInputProps()
+  inputProps.inputRef = inputProps.ref
+  inputProps.ref = undefined
   return (
     <div className={classnames(styles.container, block && styles.block)}>
       <label
@@ -63,8 +62,7 @@ const Select = props => {
           readOnly
           status={status}
           block={block}
-          {...(status === STATUSES.disabled ? {} : getInputProps())}
-          {...(value && onChange && { value: selectedItem.title })}
+          {...(status === STATUSES.disabled ? {} : inputProps)}
           suffix={
             <span
               className={styles.arrowIcon}

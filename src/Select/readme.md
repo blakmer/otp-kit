@@ -10,6 +10,12 @@ const [a, set] = useState({ title: 'one', value: 1 })
       { title: 'one', value: 1 },
       { title: 'two', value: 2 },
       { title: 'tree', value: 3 },
+      { title: 'one', value: 1 },
+      { title: 'two', value: 2 },
+      { title: 'tree', value: 3 },
+      { title: 'one', value: 1 },
+      { title: 'two', value: 2 },
+
     ]}
     label="numbers"
     value={a}
@@ -27,6 +33,7 @@ const [a, set] = useState({ title: 'one', value: 1 })
     { title: 'one', value: 1 },
     { title: 'two', value: 2 },
   ]}
+  defaultValue={{ title: 'one', value: 1 }}
   label="numbers"
   onChange={val => console.log(val)}
 />
