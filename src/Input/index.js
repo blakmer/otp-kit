@@ -12,12 +12,22 @@ const STATUSES = {
   disabled: 'disabled',
 }
 
+const toCurrency = number => {
+  let n = number
+  if (typeof n === 'string') {
+    n = n.replace(/[^0-9]*/g, '')
+  }
+  const res = isNaN(parseInt(n)) ? '' : parseInt(n)
+  return res.toLocaleString()
+}
+
 const Input = props => {
   const {
     status,
     suffix,
     prefix,
     inputRef,
+    currency,
     /** html props */
     type,
     autoComplete,
@@ -66,7 +76,7 @@ const Input = props => {
         tabIndex={tabIndex}
         disabled={status === STATUSES.disabled}
         defaultValue={defaultValue}
-        value={value}
+        value={currency ? toCurrency(value) : value}
         onChange={onChange}
         className={classnames(
           styles.input,
@@ -103,6 +113,7 @@ Input.propTypes = {
   prefix: PropTypes.node,
   placeholder: PropTypes.string,
   inputRef: PropTypes.any,
+  currency: PropTypes.bool,
 }
 
 Input.defaultProps = {
