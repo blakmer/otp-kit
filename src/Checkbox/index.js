@@ -32,7 +32,7 @@ const Checkbox = props => {
   }
 
   return (
-    <span className={className}>
+    <label className={className}>
       <input
         defaultChecked={defaultChecked}
         disabled={disabled}
@@ -49,16 +49,16 @@ const Checkbox = props => {
         id={id}
         type="checkbox"
       />
-      <label
+      <span
         className={classnames(
+          styles.label,
           styles.checkmark,
           disabled && classes[`bg-input-disabled-bg-before`],
           check && classes[`${fill}-bg-before`]
-        )}
-        htmlFor={id}>
+        )}>
         {children}
-      </label>
-    </span>
+      </span>
+    </label>
   )
 }
 
