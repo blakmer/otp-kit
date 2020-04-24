@@ -83,6 +83,7 @@ const Pagination = props => {
       <RoundButton
         key="prev"
         icon="arrow-left"
+        iconFill="text-inverse"
         disabled={pagingParams.currentPage === 1}
         onClick={handlePrev}
       />
@@ -136,6 +137,7 @@ const Pagination = props => {
 
       <RoundButton
         disabled={pagingParams.currentPage === total}
+        iconFill="text-inverse"
         key="next"
         icon="arrow-right"
         onClick={handleNext}

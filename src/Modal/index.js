@@ -51,7 +51,7 @@ const Modal = props => {
           <Col {...size}>
             <div className={classnames(styles.modal)}>
               <section className={styles.header}>
-                <Typography.Lead highlighted>{header}</Typography.Lead>
+                {header}
                 <RoundButton
                   icon="close"
                   fill="bg-input"
