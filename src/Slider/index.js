@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
-import { COLORS } from '../docs'
 
 const Slider = props => {
   const { name, id, value, max, min, step, onChange, className, style } = props
@@ -13,13 +12,11 @@ const Slider = props => {
     setValue(event.target.value)
     setPercent((event.target.value / max) * 100)
 
-    if (onChange) {
-      onChange(event)
-    }
+    onChange(event)
   }
 
   const inlineStyles = {
-    background: `linear-gradient(90deg, ${COLORS.PRIMARY} ${percent}%, ${COLORS.BG_GREY_2} ${percent}%)`,
+    background: `linear-gradient(90deg, var(--color-primary) ${percent}%, var(--color-bg-grey-2) ${percent}%)`,
   }
 
   return (
@@ -50,6 +47,10 @@ Slider.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
+}
+
+Slider.defaultProps = {
+  onChange: e => {},
 }
 
 export default Slider

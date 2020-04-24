@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { COLORS } from '../docs'
+import classes from '../classes.css'
 
 const diameter = Math.round(Math.PI * 175 * 2)
 const getOffset = (val = 0) =>
   Math.round(((100 - Math.min(val, 100)) / 100) * diameter)
 
 const getStrokeColor = progress => {
-  if (progress <= 1) return COLORS.TEXT_DISABLED
-  if (progress > 1 && progress <= 10) return COLORS.ERROR
-  if (progress > 10 && progress <= 25) return COLORS.HIGHLIGHTED
-  return COLORS.PRIMARY
+  if (progress <= 1) return 'text-disabled'
+  if (progress > 1 && progress <= 10) return 'error'
+  if (progress > 10 && progress <= 25) return 'highlighted'
+  return 'primary'
 }
 
 const RoundProgress = props => {
@@ -25,7 +25,7 @@ const RoundProgress = props => {
   return (
     <svg width={38} height={38} viewBox="-25 -25 400 400">
       <circle
-        stroke={COLORS.BG_GREY_1}
+        className={classes['bg-grey-1-stroke']}
         cx="175"
         cy="175"
         r="175"
@@ -33,7 +33,7 @@ const RoundProgress = props => {
         fill="none"
       />
       <circle
-        stroke={getStrokeColor(progress)}
+        className={classes[getStrokeColor(progress) + '-stroke']}
         transform="rotate(-90 175 175)"
         cx="175"
         cy="175"
@@ -46,10 +46,10 @@ const RoundProgress = props => {
       />
       {progress < 100 ? (
         <text
+          className={classes['text-primary-fill']}
           style={{
             font: 'bold 10rem Source Sans Pro Regular',
           }}
-          fill={'#1B1F27'}
           x="175"
           y="175"
           textAnchor="middle"
@@ -58,9 +58,9 @@ const RoundProgress = props => {
         </text>
       ) : (
         <path
+          className={classes['primary-stroke']}
           style={{
             fill: 'none',
-            stroke: COLORS.PRIMARY,
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             strokeWidth: 2,

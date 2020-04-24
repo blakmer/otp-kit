@@ -17,10 +17,8 @@ const Modal = props => {
     closable,
     header,
     body,
-    okText,
-    onOk,
-    cancelText,
-    onCancel,
+    okConfig,
+    cancelConfig,
     onOpen,
     onClose,
     isOpen,
@@ -63,13 +61,18 @@ const Modal = props => {
               </section>
               <section className={styles.body}>{body}</section>
               <section className={styles.footer}>
-                {onCancel && (
-                  <Button ghost onClick={() => handleClick(onCancel)}>
-                    {cancelText}
-                  </Button>
+                {cancelConfig && (
+                  <Button
+                    ghost
+                    {...cancelConfig}
+                    onClick={() => handleClick(cancelConfig.onClick)}
+                  />
                 )}
-                {onOk && (
-                  <Button onClick={() => handleClick(onOk)}>{okText}</Button>
+                {okConfig && (
+                  <Button
+                    {...okConfig}
+                    onClick={() => handleClick(okConfig.onClick)}
+                  />
                 )}
               </section>
             </div>
@@ -91,10 +94,8 @@ Modal.propTypes = {
   closable: PropTypes.bool,
   header: PropTypes.node,
   body: PropTypes.node,
-  okText: PropTypes.string,
-  onOk: PropTypes.func,
-  cancelText: PropTypes.string,
-  onCancel: PropTypes.func,
+  okConfig: PropTypes.object,
+  cancelConfig: PropTypes.object,
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   isOpen: PropTypes.bool,
@@ -103,8 +104,6 @@ Modal.propTypes = {
 Modal.defaultProps = {
   size: {},
   closable: true,
-  okText: 'ok',
-  cancelText: 'cancel',
   isOpen: false,
 }
 

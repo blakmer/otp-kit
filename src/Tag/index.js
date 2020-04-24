@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import Icon from '../Icon'
+import classes from '../classes.css'
 
 const Tag = props => {
   const {
     className,
     onRemove,
-    marker,
-    markerHEX,
+    fill,
+    fillHex,
     style,
     title,
     disabled,
@@ -19,44 +20,25 @@ const Tag = props => {
   return (
     <div
       style={{
-        border: secondary && !disabled && '2px solid ' + markerHEX,
+        border: fillHex && secondary && !disabled && '2px solid ' + fillHex,
         ...style,
       }}
-      className={classnames(styles.tag, className, {
-        [styles.tagDisabled]: disabled,
-        [styles.tagSecondary]: secondary && !disabled,
-        [styles.tagSecondaryGreen]:
-          secondary && marker === 'green' && !disabled,
-        [styles.tagSecondaryPurple]:
-          secondary && marker === 'purple' && !disabled,
-        [styles.tagSecondaryOrange]:
-          secondary && marker === 'orange' && !disabled,
-        [styles.tagSecondaryBlue]: secondary && marker === 'blue' && !disabled,
-        [styles.tagSecondaryRed]: secondary && marker === 'red' && !disabled,
-        [styles.tagSecondaryYellow]:
-          secondary && marker === 'yellow' && !disabled,
-      })}>
-      {marker || markerHEX ? (
+      className={classnames(
+        styles.tag,
+        secondary && !disabled && !fillHex && classes[`${fill}-border`],
+        !disabled && secondary
+          ? classes[`bg-input-bg`]
+          : classes[`bg-grey-3-bg`],
+        disabled && styles.tagDisabled,
+        className
+      )}>
+      {fill || fillHex ? (
         <span
           style={{
-            backgroundColor: markerHEX,
-            opacity: disabled && markerHEX && '0.5',
+            backgroundColor: fillHex,
+            opacity: disabled && '0.5',
           }}
-          className={classnames(styles.marker, {
-            [styles.markerGreen]: marker === 'green' && !disabled,
-            [styles.markerPurple]: marker === 'purple' && !disabled,
-            [styles.markerOrange]: marker === 'orange' && !disabled,
-            [styles.markerBlue]: marker === 'blue' && !disabled,
-            [styles.markerRed]: marker === 'red' && !disabled,
-            [styles.markerYellow]: marker === 'yellow' && !disabled,
-
-            [styles.markerGreenDisabled]: marker === 'green' && disabled,
-            [styles.markerPurpleDisabled]: marker === 'purple' && disabled,
-            [styles.markerOrangeDisabled]: marker === 'orange' && disabled,
-            [styles.markerBlueDisabled]: marker === 'blue' && disabled,
-            [styles.markerRedDisabled]: marker === 'red' && disabled,
-            [styles.markerYellowDisabled]: marker === 'yellow' && disabled,
-          })}
+          className={classnames(styles.marker, classes[`${fill}-bg`])}
         />
       ) : null}
       <span className={styles.title}>{title}</span>
@@ -70,16 +52,9 @@ const Tag = props => {
 Tag.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
-  markerHEX: PropTypes.string,
+  fillHex: PropTypes.string,
   onRemove: PropTypes.func,
-  marker: PropTypes.oneOf([
-    'green',
-    'purple',
-    'orange',
-    'blue',
-    'red',
-    'yellow',
-  ]),
+  fill: PropTypes.string,
   disabled: PropTypes.bool,
   title: PropTypes.string,
   secondary: PropTypes.bool,

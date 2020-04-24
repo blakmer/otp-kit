@@ -1,35 +1,73 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import styles from './index.module.css'
 
 const FormItem = props => {
   const { label, className, block, description, children, count } = props
+  const [focus, setFocus] = useState(false)
+  const element = useRef(null)
+  const isSimple = children ? !children.length : false
 
-  const status = children[0] ? children[0].props.status : children.props.status
-  const maxLength = children[0]
-    ? children[0].props.maxLength
-    : children.props.maxLength
+  useEffect(() => {
+    const el =
+      element.current.querySelector('textarea') ||
+      element.current.querySelector('input')
+    if (el) {
+      el.addEventListener('change', e => {
+        if (e.target.value && !focus) {
+          setFocus(true)
+        }
+        if (!e.target.value) {
+          setFocus(false)
+        }
+      })
+    }
+  }, [])
+
+  if (
+    !focus &&
+    (isSimple
+      ? children.type.name === 'Select' ||
+        children.props.value ||
+        children.props.defaultValue
+      : true)
+  ) {
+    setFocus(true)
+  }
 
   return (
     <div
+      ref={element}
       className={classnames(styles.wrapper, block && styles.block, className)}>
-      <label className={classnames(styles.itemContainer, styles[status])}>
+      <div className={classnames(styles.child)}>
         {label && (
-          <span className={classnames(styles.inputLabel, styles[status])}>
+          <span
+            className={classnames(
+              styles.label,
+              styles[isSimple ? children.props.status : null],
+              focus && styles.focused
+            )}>
             {label}
           </span>
         )}
-
-        <div className={classnames(styles.child)}>{children}</div>
-      </label>
-
-      {!description && count >= 0 && maxLength && (
-        <small className={styles.limit}>{`${count}/${maxLength}`}</small>
-      )}
+        {children}
+      </div>
+      {!description &&
+        count >= 0 &&
+        (isSimple ? !!children.props.maxLength : null) && (
+          <small
+            className={
+              styles.limit
+            }>{`${count}/${children.props.maxLength}`}</small>
+        )}
 
       {description && (
-        <p className={classnames(styles.description, styles[status])}>
+        <p
+          className={classnames(
+            styles.description,
+            styles[isSimple ? children.props.status : null]
+          )}>
           {description}
         </p>
       )}
@@ -42,7 +80,7 @@ FormItem.propTypes = {
   className: PropTypes.string,
   block: PropTypes.bool,
   description: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.element.isRequired,
   count: PropTypes.number,
 }
 
