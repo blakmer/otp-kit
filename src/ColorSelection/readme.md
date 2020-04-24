@@ -2,7 +2,7 @@
 
 ```js
 import { useState } from 'react'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 const [color, setColor] = useState('')
 
 ;<div

@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 import propTypes from 'prop-types'
 import styles from './index.module.css'
 import Typography from '../Typography'

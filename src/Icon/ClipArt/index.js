@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classes from '../../classes.css'
+import classes from '../../classes.module.css'
 import classnames from 'classnames'
 import ProjectTag from './types/project-tag'
 import NewFolder from './types/new-folder'

@@ -37,7 +37,7 @@
 ##### Text
 
 ```js
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 ;<div>
 <Typography.Text fill="text-disabled">Text</Typography.Text>
 <br/>

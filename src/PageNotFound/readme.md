@@ -2,7 +2,7 @@
 
 ```js
 import React from 'react'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const redirect = () => {
   console.log('#redirect')

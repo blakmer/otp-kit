@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import classes from '../../classes.css'
+import classes from '../../classes.module.css'
 import styles from './index.module.css'
 
 const Heading = props => {
