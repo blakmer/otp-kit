@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import Typography from '../Typography'
 import styles from './index.module.css'
 
 const FormItem = props => {
@@ -63,13 +64,13 @@ const FormItem = props => {
         )}
 
       {description && (
-        <p
+        <Typography.Text
           className={classnames(
             styles.description,
             styles[isSimple ? children.props.status : null]
           )}>
           {description}
-        </p>
+        </Typography.Text>
       )}
     </div>
   )
