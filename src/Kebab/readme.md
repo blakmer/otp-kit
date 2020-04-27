@@ -3,7 +3,7 @@ Kebab Menu
 ```js
 
 import Icon from '../Icon'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 ;<div className={classes['bg-grey-2-bg']} style={{padding: '8rem 0 0 1rem'}}>
   <Kebab 

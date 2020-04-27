@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const COLOR_MAP = {
   0: 'text-disabled',

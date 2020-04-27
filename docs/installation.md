@@ -6,7 +6,20 @@
    <pre>
    <code>
    import 'ui-kit/lib/style.css'
-   import 'ui-kit/lib/docs.css'
+   </code>
+   </pre>
+
+3. Export theme
+
+   <pre>
+   <code>
+   import 'ui-kit/lib/themes/light.css'
+   </code>
+   </pre>
+   or
+   <pre>
+   <code>
+   import 'ui-kit/lib/themes/dark.css'
    </code>
    </pre>
 

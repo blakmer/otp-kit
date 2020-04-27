@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Arrow from '../util/arrow'
 import styles from './index.module.css'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const Tooltip = props => {
   const { children, content, position, fill } = props

@@ -18,7 +18,7 @@ async function readFile() {
 }
 
 function createFiles(vars) {
-  const path = './src/classes.css'
+  const path = './src/classes.module.css'
   fs.writeFileSync(path, '/** == GENERATED FROM `./color-gen.js` FILE == **/')
   vars.forEach(element => {
     const matches = element.match(/\-\-color\-([a-z0-9\-]*)\:\ [a-f0-9#]*\;/)

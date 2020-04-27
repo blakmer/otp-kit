@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const Toggler = props => {
   const {

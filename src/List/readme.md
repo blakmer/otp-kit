@@ -5,7 +5,7 @@
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const columns = [
   {
@@ -78,7 +78,7 @@ const data = [
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const columns = [
   {
@@ -151,7 +151,7 @@ const data = [
 ```js
 import Icon from '../Icon'
 import Progress from '../Progress'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const columns = [
   {

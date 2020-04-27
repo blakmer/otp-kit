@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styles from './index.module.css'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classes from '../classes.css'
+import classes from '../classes.module.css'
 
 const diameter = Math.round(Math.PI * 175 * 2)
 const getOffset = (val = 0) =>
