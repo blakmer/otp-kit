@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
@@ -22,7 +22,14 @@ const Toggler = props => {
     style,
   } = props
 
-  const [check, setCheck] = useState(checked || defaultChecked || false)
+  const [check, setCheck] = useState(defaultChecked || false)
+
+  useEffect(() => {
+    if (!defaultChecked) {
+      setCheck(checked)
+    }
+  }, [checked])
+
   const handleChange = e => {
     if (checked === undefined) {
       setCheck(e.target.checked)
