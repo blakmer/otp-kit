@@ -51,8 +51,11 @@ const Modal = props => {
           <Col {...size}>
             <div className={classnames(styles.modal)}>
               <section className={styles.header}>
-                {header}
+                <Typography.Lead highlighted className={styles.headerText}>
+                  {header}
+                </Typography.Lead>
                 <RoundButton
+                  className={styles.closeButton}
                   icon="close"
                   fill="bg-input"
                   iconFill="primary"
@@ -60,21 +63,23 @@ const Modal = props => {
                 />
               </section>
               <section className={styles.body}>{body}</section>
-              <section className={styles.footer}>
-                {cancelConfig && (
-                  <Button
-                    ghost
-                    {...cancelConfig}
-                    onClick={() => handleClick(cancelConfig.onClick)}
-                  />
-                )}
-                {okConfig && (
-                  <Button
-                    {...okConfig}
-                    onClick={() => handleClick(okConfig.onClick)}
-                  />
-                )}
-              </section>
+              {(cancelConfig || okConfig) && (
+                <section className={styles.footer}>
+                  {cancelConfig && (
+                    <Button
+                      ghost
+                      {...cancelConfig}
+                      onClick={() => handleClick(cancelConfig.onClick)}
+                    />
+                  )}
+                  {okConfig && (
+                    <Button
+                      {...okConfig}
+                      onClick={() => handleClick(okConfig.onClick)}
+                    />
+                  )}
+                </section>
+              )}
             </div>
           </Col>
         </Row>
