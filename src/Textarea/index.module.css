@@ -2,7 +2,7 @@
   line-height: 1.4;
   outline: none;
   background: var(--color-bg-input);
-  font-family: var(--font-regular);
+  font-family: var(--font-semi-bold);
   font-size: 1rem;
   color: var(--color-text-primary);
   overflow-block: hidden;
