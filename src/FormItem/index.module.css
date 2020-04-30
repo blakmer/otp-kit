@@ -1,17 +1,13 @@
 .wrapper {
   display: inline-block;
-  width: 14rem;
+  width: max-content;
   margin: 10px 0;
 }
 .child {
   position: relative;
 }
 
-.child > :not(.label) {
-  width: 100%;
-}
-
-.child * {
+.child > * {
   margin: 0;
 }
 
@@ -55,8 +51,13 @@
 }
 
 .wrapper:focus-within .label,
-.focused {
+.child:hover .focused.default,
+.focused :not(.label) {
   color: var(--color-primary);
+}
+
+.child:hover .focused.default {
+  transition: none;
 }
 
 .error,
