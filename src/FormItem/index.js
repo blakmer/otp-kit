@@ -40,7 +40,11 @@ const FormItem = props => {
   return (
     <div
       ref={element}
-      className={classnames(styles.wrapper, block && styles.block, className)}>
+      className={classnames(
+        styles.wrapper,
+        isSimple ? !!children.props.block && styles.block : null,
+        className
+      )}>
       <div className={classnames(styles.child)}>
         {label && (
           <span

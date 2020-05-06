@@ -91,6 +91,7 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   onChange: () => {},
+  status: 'default',
   minRows: 3,
 }
 

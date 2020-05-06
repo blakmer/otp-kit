@@ -57,11 +57,11 @@ const handleChange = e => {
 }
 
 ;<div>
-    <FormItem block label="Label Textarea" description="Textarea description">
-        <Textarea/>   
+    <FormItem label="Label Textarea" description="Textarea description">
+        <Textarea block/>   
     </FormItem>
-     <FormItem block label="Textarea with counter" count={count}>
-        <Textarea onChange={handleChange} maxLength={50}/>   
+     <FormItem label="Textarea with counter" count={count}>
+        <Textarea onChange={handleChange} block maxLength={50}/>   
     </FormItem>
 </div>
 ```
