@@ -3,6 +3,10 @@
   display: inline-block;
 }
 
+.hide {
+  display: none;
+}
+
 .listArrow {
   position: absolute;
   z-index: 999;

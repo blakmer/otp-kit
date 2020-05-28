@@ -37,41 +37,40 @@ const Dropdown = props => {
   return (
     <span className={styles.dropdown} {...getToggleButtonProps()}>
       {children}
-      {isOpen && (
-        <Fragment>
-          {showArrow && (
-            <span
-              className={classnames(
-                styles.listArrow,
-                styles[listDirection || 'bottomCenter']
-              )}>
-              <Arrow fill="bg-input" />
-            </span>
-          )}
-          <ul
-            style={style}
+
+      <div className={classnames(!isOpen && styles.hide)}>
+        {showArrow && (
+          <span
             className={classnames(
-              styles.list,
-              className,
+              styles.listArrow,
               styles[listDirection || 'bottomCenter']
-            )}
-            {...getMenuProps()}>
-            {items.map((item, index) => (
-              <li
-                className={classnames(
-                  highlightedIndex === index && styles.highlighted
-                )}
-                key={`${item}${index}`}
-                {...getItemProps({ item, index })}>
-                {item}
-              </li>
-            ))}
-            {items.length === 0 && (
-              <li className={styles.emptyList}>{emptyText}</li>
-            )}
-          </ul>
-        </Fragment>
-      )}
+            )}>
+            <Arrow fill="bg-input" />
+          </span>
+        )}
+        <ul
+          style={style}
+          className={classnames(
+            styles.list,
+            className,
+            styles[listDirection || 'bottomCenter']
+          )}
+          {...getMenuProps()}>
+          {items.map((item, index) => (
+            <li
+              className={classnames(
+                highlightedIndex === index && styles.highlighted
+              )}
+              key={`${item}${index}`}
+              {...getItemProps({ item, index })}>
+              {item}
+            </li>
+          ))}
+          {items.length === 0 && (
+            <li className={styles.emptyList}>{emptyText}</li>
+          )}
+        </ul>
+      </div>
     </span>
   )
 }
