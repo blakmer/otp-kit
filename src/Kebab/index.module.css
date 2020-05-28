@@ -2,37 +2,6 @@
   box-shadow: 0px 4px 8px #495c8826;
 }
 
-.menu {
-  position: absolute;
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  background: var(--color-bg-input);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 3rem var(--color-shadow);
-  outline: none;
-  width: 3rem;
-  min-height: 2rem;
-  box-sizing: border-box;
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.container {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 1.25rem;
-}
-
-.labelContainer:focus-within {
-  z-index: 999;
-}
-
-.labelContainer {
-  outline: none;
-  margin: 0;
-}
-
 .kebab icon {
   cursor: pointer;
   position: absolute;
@@ -42,23 +11,12 @@
   pointer-events: none;
 }
 
-.menu.bottom {
-  top: 110%;
-}
-
-.menu.top {
-  bottom: 110%;
-}
-
-.menu > li {
+.menuWithoutPadding {
+  padding: 0;
   border-radius: 1.5rem;
-  cursor: pointer;
 }
 
-.menu > li.emptyList {
-  color: var(--color-text-disabled);
-}
-
-.labelContainer:focus-within .label.labelUp {
-  color: var(--color-primary);
+.menuWithoutPadding > li {
+  padding: 0;
+  border-radius: 1.5rem;
 }
