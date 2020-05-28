@@ -13,6 +13,8 @@ const [timeRange, setTimeRange] = useState(['07:51', '22:08'])
             console.log(value)
             setTimeRange(value)       
         }}
+        minInterval={2}
+        withBubbles
     />
 </Fragment>
 ```

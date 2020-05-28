@@ -9,11 +9,12 @@ import Days from './elements/days'
 import Input from '../Input'
 import Arrow from '../util/arrow'
 import PropTypes from 'prop-types'
+import DateRangePicker from '../DateRangePicker'
 
 moment.locale('ru')
 
 const DatePicker = props => {
-  const { value, onChangeDate, disabled, name, readOnly } = props
+  const { value, onChangeDate, disabled, name, readOnly, position } = props
 
   const [showPicker, toggleShowPicker] = useState(false)
   const [resetIconStatus, toggleResetIconStatus] = useState(false)
@@ -290,8 +291,18 @@ const DatePicker = props => {
         />
       </div>
       {showPicker && (
-        <div className={styles.picker}>
-          <Arrow className={styles.greenArrow} fill="primary" />
+        <div
+          className={classnames({
+            [styles.picker]: true,
+            [styles.pickerUnder]: position === 'under',
+            [styles.pickerAbove]: position === 'above',
+          })}>
+          {position === 'above' && (
+            <Arrow className={styles.aboveArrow} fill="white" />
+          )}
+          {position === 'under' && (
+            <Arrow className={styles.underArrow} fill="primary" />
+          )}
           <header className={styles.pickerHeader}>
             <div
               className={styles.pickerHeaderItem}
@@ -342,6 +353,10 @@ const DatePicker = props => {
 }
 
 export default DatePicker
+
+DatePicker.defaultProps = {
+  position: 'under',
+}
 
 DatePicker.propTypes = {
   value: PropTypes.string,

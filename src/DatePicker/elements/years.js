@@ -13,7 +13,7 @@ const Years = props => {
     const notFirstAndLast = !year.switcher
 
     if (notFirstAndLast) {
-      setYear(year)
+      setYear(year.text)
     } else {
       if (isFirst(index)) {
         setYearsCanvas(prev =>

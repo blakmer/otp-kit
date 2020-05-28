@@ -9,7 +9,7 @@ const FilterText = props => {
       width="24.247"
       height="24.25"
       viewBox="0 0 24.247 24.25">
-      <rect class="a" style={{ fill: 'none' }} width="24" height="24" />
+      <rect style={{ fill: 'none' }} width="24" height="24" />
       <g transform="translate(0.25 0.25)">
         <path
           className={className}

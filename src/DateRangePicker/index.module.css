@@ -32,8 +32,15 @@
   border-radius: 1rem;
   position: absolute;
   left: 0;
-  top: 4rem;
   z-index: 1;
+}
+
+.pickerUnder {
+  top: 4rem;
+}
+
+.pickerAbove {
+  bottom: 4rem;
 }
 
 .header {
@@ -153,9 +160,9 @@
   z-index: -1;
   width: 0;
   height: 0;
-  border-top: 15px solid var(--color-bg-pastel-yellow);
-  border-left: 10px solid var(--color-bg-input);
-  border-bottom: 15px solid var(--color-bg-pastel-yellow);
+  border-top: 0.9375rem solid var(--color-bg-pastel-yellow);
+  border-left: 0.625rem solid var(--color-bg-input);
+  border-bottom: 0.9375rem solid var(--color-bg-pastel-yellow);
   left: 0;
 }
 
@@ -165,10 +172,10 @@
   z-index: -1;
   width: 0;
   height: 0;
-  border-top: 15px solid var(--color-bg-input);
-  border-left: 10px solid var(--color-bg-pastel-yellow);
-  border-bottom: 15px solid var(--color-bg-input);
-  right: -10px;
+  border-top: 0.9375rem solid var(--color-bg-input);
+  border-left: 0.625rem solid var(--color-bg-pastel-yellow);
+  border-bottom: 0.9375rem solid var(--color-bg-input);
+  right: -0.625rem;
 }
 
 .years li:hover,
@@ -340,11 +347,19 @@ li.activeItem:hover {
   width: 1rem;
 }
 
-.greenArrow {
+.underArrow {
   position: absolute;
   transform: translateX(-50%) rotate(180deg);
   height: 0.75rem;
   width: 1.5rem;
   top: -0.75rem;
+  left: 3.75rem;
+}
+
+.aboveArrow {
+  position: absolute;
+  height: 0.75rem;
+  width: 1.5rem;
+  bottom: -0.75rem;
   left: 3.75rem;
 }

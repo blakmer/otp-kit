@@ -12,7 +12,7 @@ import {
 } from './utils'
 
 const TimeRange = props => {
-  const { value, onChange, step, name } = props
+  const { value, onChange, step, name, minInterval, withBubbles } = props
 
   const [range, setRange] = useState(getStateValue(value))
 
@@ -45,7 +45,7 @@ const TimeRange = props => {
       setRange({ min: 0, max })
     } else if (max > 24) {
       setRange({ min, max: 24 })
-    } else if (max - min >= 3) {
+    } else if (max - min >= minInterval) {
       setRange({ min, max })
     }
   }
@@ -92,6 +92,10 @@ const TimeRange = props => {
     onChange(toOutside)
   }
 
+  const renderTeeth = () => {
+    return new Array(13).fill('').map((item, index) => <span key={index} />)
+  }
+
   useEffect(() => {
     if (Array.isArray(value) && value.length === 2) {
       const { startIsValid, endIsValid, startIsBeforeEnd } = timeChecks(value)
@@ -115,7 +119,7 @@ const TimeRange = props => {
           activeTrack: `${styles.track} ${styles.trackActive}`,
           sliderContainer: styles.sliderContainer,
           valueLabel: `${styles.valueLabel} ${styles.valueLabelValue}`,
-          slider: styles.slider,
+          slider: `${styles.slider} ${withBubbles ? styles.bubbled : null}`,
           track: `${styles.track} ${styles.trackBackground}`,
         }}
         formatLabel={convertStateValueToTime}
@@ -128,21 +132,7 @@ const TimeRange = props => {
         name={name}
       />
 
-      <div className={styles.teeth}>
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
+      <div className={styles.teeth}>{renderTeeth()}</div>
     </div>
   )
 }
@@ -150,6 +140,7 @@ const TimeRange = props => {
 TimeRange.defaultProps = {
   step: 60,
   value: ['00:00', '23:59'],
+  minInterval: 1,
 }
 
 TimeRange.propTypes = {
@@ -157,6 +148,8 @@ TimeRange.propTypes = {
   step: PropTypes.oneOf([60, 30, 15, 10, 5, 1]),
   name: PropTypes.string,
   onChange: PropTypes.func,
+  minInterval: PropTypes.number,
+  withBubbles: PropTypes.bool,
 }
 
 export default TimeRange

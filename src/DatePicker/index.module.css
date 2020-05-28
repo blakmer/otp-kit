@@ -30,9 +30,16 @@
   width: 16rem;
   box-shadow: 0 1rem 4rem rgba(73, 92, 136, 0.15);
   position: absolute;
-  top: 4rem;
   border-radius: 1rem;
   z-index: 1;
+}
+
+.pickerUnder {
+  top: 4rem;
+}
+
+.pickerAbove {
+  bottom: 4rem;
 }
 
 .pickerHeader {
@@ -197,12 +204,20 @@ li.activeItem:hover {
   width: 1rem;
 }
 
-.greenArrow {
+.underArrow {
   position: absolute;
   transform: translateX(-50%) rotate(180deg);
   height: 0.75rem;
   width: 1.5rem;
   top: -0.75rem;
+  left: 3.75rem;
+}
+
+.aboveArrow {
+  position: absolute;
+  height: 0.75rem;
+  width: 1.5rem;
+  bottom: -0.75rem;
   left: 3.75rem;
 }
 

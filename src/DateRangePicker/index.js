@@ -67,6 +67,7 @@ const DateRangePicker = props => {
     disabled,
     name,
     readOnly,
+    position,
     timeRangeOptions,
   } = props
 
@@ -801,9 +802,19 @@ const DateRangePicker = props => {
         />
       </div>
       {showPicker && (
-        <div className={styles.picker}>
+        <div
+          className={classnames({
+            [styles.picker]: true,
+            [styles.pickerUnder]: position === 'under',
+            [styles.pickerAbove]: position === 'above',
+          })}>
+          {position === 'above' && (
+            <Arrow className={styles.aboveArrow} fill="white" />
+          )}
+          {position === 'under' && (
+            <Arrow className={styles.underArrow} fill="primary" />
+          )}
           <header className={styles.header}>
-            <Arrow className={styles.greenArrow} fill="primary" />
             <section className={styles.headerItem}>
               <div
                 className={styles.pickerHeaderItem}
@@ -910,6 +921,7 @@ const DateRangePicker = props => {
               <TimeRange
                 value={timeRangeOptions.value}
                 step={timeRangeOptions.step}
+                withBubbles
                 onChange={value => {
                   timeRangeOptions.onChange(value)
                   setInputValue(
@@ -929,9 +941,14 @@ const DateRangePicker = props => {
 
 export default DateRangePicker
 
+DateRangePicker.defaultProps = {
+  position: 'under',
+}
+
 DateRangePicker.propTypes = {
   value: PropTypes.array,
   onChangeDate: PropTypes.func,
+  position: PropTypes.oneOf(['under', 'above']),
   disabled: PropTypes.bool,
   name: PropTypes.string,
   readOnly: PropTypes.bool,

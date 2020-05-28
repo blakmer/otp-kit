@@ -13,6 +13,7 @@ const [date, setDate] = useState(null)
   </div>
   <DateRangePicker
     value={date}
+    position='above'
     onChangeDate={value => {
       console.log('outside:', value)
       setDate(value)
@@ -26,18 +27,15 @@ const [date, setDate] = useState(null)
 ```js
 import { useState } from 'react'
 
-const startDate = '12-10-1993'
-const endDate = '24-12-2020'
-
-const [date, setDate] = useState([startDate, endDate])
+const [date, setDate] = useState(['12-10-1993', '24-12-2020'])
 const [time, setTime] = useState(['07:35', '22:20'])
 
 ;<div>
   <div style={{ marginBottom: '2rem' }}>
     <button onClick={() => {
-    setDate(['20-12-2005', '25-11-2025']) 
-    setTime(['05:30', '18:00']) 
-}}>
+        setDate(['20-12-2005', '25-11-2025']) 
+        setTime(['05:30', '18:00']) 
+    }}>
       controlled testing
     </button>
   </div>
@@ -50,8 +48,11 @@ const [time, setTime] = useState(['07:35', '22:20'])
     timeRangeOptions={{
         value: time,
         step: 30,
-        onChange: value => setTime(value)
-    }}
+        onChange: value => {
+          console.log('time:', value)
+          setTime(value)
+        }
+      }}
   />
 </div>
 ```
