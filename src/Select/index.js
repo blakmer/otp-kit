@@ -44,13 +44,11 @@ const Select = props => {
     },
   })
 
-  const inputProps = getInputProps()
-  inputProps.inputRef = inputProps.ref
-  inputProps.ref = undefined
   return (
-    <div className={classnames(styles.container, block && styles.block)}>
+    <div
+      className={classnames(styles.container, block && styles.block)}
+      {...getComboboxProps()}>
       <label
-        {...getComboboxProps()}
         {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}
         className={classnames(
           styles.labelContainer,
@@ -62,7 +60,7 @@ const Select = props => {
           readOnly
           status={status}
           block={block}
-          {...(status === STATUSES.disabled ? {} : inputProps)}
+          {...getInputProps({ refKey: 'inputRef' })}
           suffix={
             <span
               className={styles.arrowIcon}
@@ -75,27 +73,27 @@ const Select = props => {
           }
         />
       </label>
-      {isOpen && (
-        <ul
-          {...getMenuProps()}
-          className={classnames(
-            styles.menu,
-            styles[listDirection],
-            block && styles.block
-          )}>
-          {items.map((item, index) => (
-            <li
-              className={classnames(
-                highlightedIndex === index && styles.selected
-              )}
-              key={`${index}`}
-              {...getItemProps({ item, index })}>
-              {item.title}
-            </li>
-          ))}
-          {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
-        </ul>
-      )}
+
+      <ul
+        {...getMenuProps()}
+        className={classnames(
+          styles.menu,
+          !isOpen && styles.hide,
+          styles[listDirection],
+          block && styles.block
+        )}>
+        {items.map((item, index) => (
+          <li
+            className={classnames(
+              highlightedIndex === index && styles.selected
+            )}
+            key={`${index}`}
+            {...getItemProps({ item, index })}>
+            {item.title}
+          </li>
+        ))}
+        {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
+      </ul>
     </div>
   )
 }
