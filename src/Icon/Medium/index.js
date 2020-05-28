@@ -192,6 +192,8 @@ import BugSearch from './types/bug-search'
 import FileDouble from './types/file-double'
 import MenuKebab from './types/menu-kebab'
 import NoTags from './types/no-tags'
+import DownloadFile from './types/download-file'
+import FilterText from './types/filter-text'
 
 const REFERENCES = {
   edit: Edit,
@@ -383,6 +385,8 @@ const REFERENCES = {
   'file-double': FileDouble,
   'menu-kebab': MenuKebab,
   'no-tags': NoTags,
+  'filter-text': FilterText,
+  'download-file': DownloadFile,
 }
 
 const Medium = props => {

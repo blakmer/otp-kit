@@ -87,6 +87,7 @@ import Earth from './types/earth'
 import Star from './types/star'
 import Chrome from './types/chrome'
 import Firefox from './types/firefox'
+import DoubleFiles from './types/double-files'
 
 const REFERENCES = {
   edit: Edit,
@@ -173,6 +174,7 @@ const REFERENCES = {
   star: Star,
   chrome: Chrome,
   firefox: Firefox,
+  'double-files': DoubleFiles,
 }
 
 const Small = props => {

@@ -44,339 +44,343 @@ const { Container, Row, Col } = Grid
   <Row className="smallIcons">
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="edit" />
-      <div style={{wordWrap: 'break-word'}}>edit</div>
+      <div style={{ wordWrap: 'break-word' }}>edit</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="arrow-right" />
-      <div style={{wordWrap: 'break-word'}}>arrow-right</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-right</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="arrow-left" />
-      <div style={{wordWrap: 'break-word'}}>arrow-left</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-left</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="arrow-down" />
-      <div style={{wordWrap: 'break-word'}}>arrow-down</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-down</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="arrow-up" />
-      <div style={{wordWrap: 'break-word'}}>arrow-up</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-up</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="hourglass" />
-      <div style={{wordWrap: 'break-word'}}>hourglass</div>
+      <div style={{ wordWrap: 'break-word' }}>hourglass</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="hammer" />
-      <div style={{wordWrap: 'break-word'}}>hammer</div>
+      <div style={{ wordWrap: 'break-word' }}>hammer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="plus" />
-      <div style={{wordWrap: 'break-word'}}>plus</div>
+      <div style={{ wordWrap: 'break-word' }}>plus</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="minus" />
-      <div style={{wordWrap: 'break-word'}}>minus</div>
+      <div style={{ wordWrap: 'break-word' }}>minus</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="tick" />
-      <div style={{wordWrap: 'break-word'}}>tick</div>
+      <div style={{ wordWrap: 'break-word' }}>tick</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="close" />
-      <div style={{wordWrap: 'break-word'}}>close</div>
+      <div style={{ wordWrap: 'break-word' }}>close</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="info" />
-      <div style={{wordWrap: 'break-word'}}>info</div>
+      <div style={{ wordWrap: 'break-word' }}>info</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="calendar" />
-      <div style={{wordWrap: 'break-word'}}>calendar</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="refresh" />
-      <div style={{wordWrap: 'break-word'}}>refresh</div>
+      <div style={{ wordWrap: 'break-word' }}>refresh</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="house-chimney" />
-      <div style={{wordWrap: 'break-word'}}>house-chimney</div>
+      <div style={{ wordWrap: 'break-word' }}>house-chimney</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="trash" />
-      <div style={{wordWrap: 'break-word'}}>trash</div>
+      <div style={{ wordWrap: 'break-word' }}>trash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="alert-triangle" />
-      <div style={{wordWrap: 'break-word'}}>alert-triangle</div>
+      <div style={{ wordWrap: 'break-word' }}>alert-triangle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="search" />
-      <div style={{wordWrap: 'break-word'}}>search</div>
+      <div style={{ wordWrap: 'break-word' }}>search</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="bulb" />
-      <div style={{wordWrap: 'break-word'}}>bulb</div>
+      <div style={{ wordWrap: 'break-word' }}>bulb</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="tick-in-circle" />
-      <div style={{wordWrap: 'break-word'}}>tick-in-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>tick-in-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="try-again" />
-      <div style={{wordWrap: 'break-word'}}>try-again</div>
+      <div style={{ wordWrap: 'break-word' }}>try-again</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="mobile-phone" />
-      <div style={{wordWrap: 'break-word'}}>mobile-phone</div>
+      <div style={{ wordWrap: 'break-word' }}>mobile-phone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="bank" />
-      <div style={{wordWrap: 'break-word'}}>bank</div>
+      <div style={{ wordWrap: 'break-word' }}>bank</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="transactions" />
-      <div style={{wordWrap: 'break-word'}}>transactions</div>
+      <div style={{ wordWrap: 'break-word' }}>transactions</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="download" />
-      <div style={{wordWrap: 'break-word'}}>download</div>
+      <div style={{ wordWrap: 'break-word' }}>download</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="entertainment" />
-      <div style={{wordWrap: 'break-word'}}>entertainment</div>
+      <div style={{ wordWrap: 'break-word' }}>entertainment</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="shopping" />
-      <div style={{wordWrap: 'break-word'}}>shopping</div>
+      <div style={{ wordWrap: 'break-word' }}>shopping</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="restaurant" />
-      <div style={{wordWrap: 'break-word'}}>restaurant</div>
+      <div style={{ wordWrap: 'break-word' }}>restaurant</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="transport" />
-      <div style={{wordWrap: 'break-word'}}>transport</div>
+      <div style={{ wordWrap: 'break-word' }}>transport</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="telephone" />
-      <div style={{wordWrap: 'break-word'}}>telephone</div>
+      <div style={{ wordWrap: 'break-word' }}>telephone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="email" />
-      <div style={{wordWrap: 'break-word'}}>email</div>
+      <div style={{ wordWrap: 'break-word' }}>email</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="notes-paper-text" />
-      <div style={{wordWrap: 'break-word'}}>notes-paper-text</div>
+      <div style={{ wordWrap: 'break-word' }}>notes-paper-text</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="laptop" />
-      <div style={{wordWrap: 'break-word'}}>laptop</div>
+      <div style={{ wordWrap: 'break-word' }}>laptop</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="upload" />
-      <div style={{wordWrap: 'break-word'}}>upload</div>
+      <div style={{ wordWrap: 'break-word' }}>upload</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="car" />
-      <div style={{wordWrap: 'break-word'}}>car</div>
+      <div style={{ wordWrap: 'break-word' }}>car</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="money-transfer" />
-      <div style={{wordWrap: 'break-word'}}>money-transfer</div>
+      <div style={{ wordWrap: 'break-word' }}>money-transfer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="error" />
-      <div style={{wordWrap: 'break-word'}}>error</div>
+      <div style={{ wordWrap: 'break-word' }}>error</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="car-online" />
-      <div style={{wordWrap: 'break-word'}}>car-online</div>
+      <div style={{ wordWrap: 'break-word' }}>car-online</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="travel-bag" />
-      <div style={{wordWrap: 'break-word'}}>travel-bag</div>
+      <div style={{ wordWrap: 'break-word' }}>travel-bag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="smile-unhappy" />
-      <div style={{wordWrap: 'break-word'}}>smile-unhappy</div>
+      <div style={{ wordWrap: 'break-word' }}>smile-unhappy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="envelope" />
-      <div style={{wordWrap: 'break-word'}}>envelope</div>
+      <div style={{ wordWrap: 'break-word' }}>envelope</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="fixed-money" />
-      <div style={{wordWrap: 'break-word'}}>fixed-money</div>
+      <div style={{ wordWrap: 'break-word' }}>fixed-money</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="button-play" />
-      <div style={{wordWrap: 'break-word'}}>button-play</div>
+      <div style={{ wordWrap: 'break-word' }}>button-play</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="gear" />
-      <div style={{wordWrap: 'break-word'}}>gear</div>
+      <div style={{ wordWrap: 'break-word' }}>gear</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="power-off" />
-      <div style={{wordWrap: 'break-word'}}>power-off</div>
+      <div style={{ wordWrap: 'break-word' }}>power-off</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="move-back" />
-      <div style={{wordWrap: 'break-word'}}>move-back</div>
+      <div style={{ wordWrap: 'break-word' }}>move-back</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="phone" />
-      <div style={{wordWrap: 'break-word'}}>phone</div>
+      <div style={{ wordWrap: 'break-word' }}>phone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="time-clock-circle" />
-      <div style={{wordWrap: 'break-word'}}>time-clock-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>time-clock-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="piggy" />
-      <div style={{wordWrap: 'break-word'}}>piggy</div>
+      <div style={{ wordWrap: 'break-word' }}>piggy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="legal-hammer" />
-      <div style={{wordWrap: 'break-word'}}>legal-hammer</div>
+      <div style={{ wordWrap: 'break-word' }}>legal-hammer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="credit-card" />
-      <div style={{wordWrap: 'break-word'}}>credit-card</div>
+      <div style={{ wordWrap: 'break-word' }}>credit-card</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="calendar-add" />
-      <div style={{wordWrap: 'break-word'}}>calendar-add</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-add</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="flash" />
-      <div style={{wordWrap: 'break-word'}}>flash</div>
+      <div style={{ wordWrap: 'break-word' }}>flash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="lock" />
-      <div style={{wordWrap: 'break-word'}}>lock</div>
+      <div style={{ wordWrap: 'break-word' }}>lock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="unlock" />
-      <div style={{wordWrap: 'break-word'}}>unlock</div>
+      <div style={{ wordWrap: 'break-word' }}>unlock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="send-email" />
-      <div style={{wordWrap: 'break-word'}}>send-email</div>
+      <div style={{ wordWrap: 'break-word' }}>send-email</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="trip-road" />
-      <div style={{wordWrap: 'break-word'}}>trip-road</div>
+      <div style={{ wordWrap: 'break-word' }}>trip-road</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="single-neutral" />
-      <div style={{wordWrap: 'break-word'}}>single-neutral</div>
+      <div style={{ wordWrap: 'break-word' }}>single-neutral</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="family-child" />
-      <div style={{wordWrap: 'break-word'}}>family-child</div>
+      <div style={{ wordWrap: 'break-word' }}>family-child</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="family-add-new-member" />
-      <div style={{wordWrap: 'break-word'}}>family-add-new-member</div>
+      <div style={{ wordWrap: 'break-word' }}>family-add-new-member</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="hospital-first-aid" />
-      <div style={{wordWrap: 'break-word'}}>hospital-first-aid</div>
+      <div style={{ wordWrap: 'break-word' }}>hospital-first-aid</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="award-ribbon-star" />
-      <div style={{wordWrap: 'break-word'}}>award-ribbon-star</div>
+      <div style={{ wordWrap: 'break-word' }}>award-ribbon-star</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="analytics-pie" />
-      <div style={{wordWrap: 'break-word'}}>analytics-pie</div>
+      <div style={{ wordWrap: 'break-word' }}>analytics-pie</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="office-file-pdf" />
-      <div style={{wordWrap: 'break-word'}}>office-file-pdf</div>
+      <div style={{ wordWrap: 'break-word' }}>office-file-pdf</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="discount-circle" />
-      <div style={{wordWrap: 'break-word'}}>discount-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>discount-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="money-atm" />
-      <div style={{wordWrap: 'break-word'}}>money-atm</div>
+      <div style={{ wordWrap: 'break-word' }}>money-atm</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="calendar-clock" />
-      <div style={{wordWrap: 'break-word'}}>calendar-clock</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-clock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="pin-location" />
-      <div style={{wordWrap: 'break-word'}}>pin-location</div>
+      <div style={{ wordWrap: 'break-word' }}>pin-location</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="zoom-in" />
-      <div style={{wordWrap: 'break-word'}}>zoom-in</div>
+      <div style={{ wordWrap: 'break-word' }}>zoom-in</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="zoom-out" />
-      <div style={{wordWrap: 'break-word'}}>zoom-out</div>
+      <div style={{ wordWrap: 'break-word' }}>zoom-out</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="rotate-forward" />
-      <div style={{wordWrap: 'break-word'}}>rotate-forward</div>
+      <div style={{ wordWrap: 'break-word' }}>rotate-forward</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="delete" />
-      <div style={{wordWrap: 'break-word'}}>delete</div>
+      <div style={{ wordWrap: 'break-word' }}>delete</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="phone-actions-call" />
-      <div style={{wordWrap: 'break-word'}}>phone-actions-call</div>
+      <div style={{ wordWrap: 'break-word' }}>phone-actions-call</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="book" />
-      <div style={{wordWrap: 'break-word'}}>book</div>
+      <div style={{ wordWrap: 'break-word' }}>book</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="location-target" />
-      <div style={{wordWrap: 'break-word'}}>location-target</div>
+      <div style={{ wordWrap: 'break-word' }}>location-target</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="bicycle" />
-      <div style={{wordWrap: 'break-word'}}>bicycle</div>
+      <div style={{ wordWrap: 'break-word' }}>bicycle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="external-link" />
-      <div style={{wordWrap: 'break-word'}}>external-link</div>
+      <div style={{ wordWrap: 'break-word' }}>external-link</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="baby-care-trolley" />
-      <div style={{wordWrap: 'break-word'}}>baby-care-trolley</div>
+      <div style={{ wordWrap: 'break-word' }}>baby-care-trolley</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="saving-safe" />
-      <div style={{wordWrap: 'break-word'}}>saving-safe</div>
+      <div style={{ wordWrap: 'break-word' }}>saving-safe</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="list" />
-      <div style={{wordWrap: 'break-word'}}>list</div>
+      <div style={{ wordWrap: 'break-word' }}>list</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="earth" />
-      <div style={{wordWrap: 'break-word'}}>earth</div>
+      <div style={{ wordWrap: 'break-word' }}>earth</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="star" />
-      <div style={{wordWrap: 'break-word'}}>star</div>
+      <div style={{ wordWrap: 'break-word' }}>star</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="chrome" />
-      <div style={{wordWrap: 'break-word'}}>chrome</div>
+      <div style={{ wordWrap: 'break-word' }}>chrome</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Small type="firefox" />
-      <div style={{wordWrap: 'break-word'}}>firefox</div>
+      <div style={{ wordWrap: 'break-word' }}>firefox</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Small type="double-files" />
+      <div style={{ wordWrap: 'break-word' }}>double-files</div>
     </Col>
   </Row>
 </Container>
@@ -433,759 +437,769 @@ const { Container, Row, Col } = Grid
   <Row className="mediumIcons">
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="edit" />
-      <div style={{wordWrap: 'break-word'}}>edit</div>
+      <div style={{ wordWrap: 'break-word' }}>edit</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="arrow-right" />
-      <div style={{wordWrap: 'break-word'}}>arrow-right</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-right</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="arrow-left" />
-      <div style={{wordWrap: 'break-word'}}>arrow-left</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-left</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="arrow-down" />
-      <div style={{wordWrap: 'break-word'}}>arrow-down</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-down</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="arrow-up" />
-      <div style={{wordWrap: 'break-word'}}>arrow-up</div>
+      <div style={{ wordWrap: 'break-word' }}>arrow-up</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hourglass" />
-      <div style={{wordWrap: 'break-word'}}>hourglass</div>
+      <div style={{ wordWrap: 'break-word' }}>hourglass</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hammer" />
-      <div style={{wordWrap: 'break-word'}}>hammer</div>
+      <div style={{ wordWrap: 'break-word' }}>hammer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="plus" />
-      <div style={{wordWrap: 'break-word'}}>plus</div>
+      <div style={{ wordWrap: 'break-word' }}>plus</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="minus" />
-      <div style={{wordWrap: 'break-word'}}>minus</div>
+      <div style={{ wordWrap: 'break-word' }}>minus</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tick" />
-      <div style={{wordWrap: 'break-word'}}>tick</div>
+      <div style={{ wordWrap: 'break-word' }}>tick</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="close" />
-      <div style={{wordWrap: 'break-word'}}>close</div>
+      <div style={{ wordWrap: 'break-word' }}>close</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="info" />
-      <div style={{wordWrap: 'break-word'}}>info</div>
+      <div style={{ wordWrap: 'break-word' }}>info</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="calendar" />
-      <div style={{wordWrap: 'break-word'}}>calendar</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="refresh" />
-      <div style={{wordWrap: 'break-word'}}>refresh</div>
+      <div style={{ wordWrap: 'break-word' }}>refresh</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="search" />
-      <div style={{wordWrap: 'break-word'}}>search</div>
+      <div style={{ wordWrap: 'break-word' }}>search</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="alert-triangle" />
-      <div style={{wordWrap: 'break-word'}}>alert-triangle</div>
+      <div style={{ wordWrap: 'break-word' }}>alert-triangle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bulb" />
-      <div style={{wordWrap: 'break-word'}}>bulb</div>
+      <div style={{ wordWrap: 'break-word' }}>bulb</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hamburger" />
-      <div style={{wordWrap: 'break-word'}}>hamburger</div>
+      <div style={{ wordWrap: 'break-word' }}>hamburger</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="car" />
-      <div style={{wordWrap: 'break-word'}}>car</div>
+      <div style={{ wordWrap: 'break-word' }}>car</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="analytics-pie" />
-      <div style={{wordWrap: 'break-word'}}>analytics-pie</div>
+      <div style={{ wordWrap: 'break-word' }}>analytics-pie</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="alarm-bell" />
-      <div style={{wordWrap: 'break-word'}}>alarm-bell</div>
+      <div style={{ wordWrap: 'break-word' }}>alarm-bell</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="profile" />
-      <div style={{wordWrap: 'break-word'}}>profile</div>
+      <div style={{ wordWrap: 'break-word' }}>profile</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="power-off" />
-      <div style={{wordWrap: 'break-word'}}>power-off</div>
+      <div style={{ wordWrap: 'break-word' }}>power-off</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="gear" />
-      <div style={{wordWrap: 'break-word'}}>gear</div>
+      <div style={{ wordWrap: 'break-word' }}>gear</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="trash" />
-      <div style={{wordWrap: 'break-word'}}>trash</div>
+      <div style={{ wordWrap: 'break-word' }}>trash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="docs-tag-editor" />
-      <div style={{wordWrap: 'break-word'}}>docs-tag-editor</div>
+      <div style={{ wordWrap: 'break-word' }}>docs-tag-editor</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="machine-learning" />
-      <div style={{wordWrap: 'break-word'}}>machine-learning</div>
+      <div style={{ wordWrap: 'break-word' }}>machine-learning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="folder" />
-      <div style={{wordWrap: 'break-word'}}>folder</div>
+      <div style={{ wordWrap: 'break-word' }}>folder</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="photo" />
-      <div style={{wordWrap: 'break-word'}}>photo</div>
+      <div style={{ wordWrap: 'break-word' }}>photo</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tag" />
-      <div style={{wordWrap: 'break-word'}}>tag</div>
+      <div style={{ wordWrap: 'break-word' }}>tag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tag-check" />
-      <div style={{wordWrap: 'break-word'}}>tag-check</div>
+      <div style={{ wordWrap: 'break-word' }}>tag-check</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tag-alert" />
-      <div style={{wordWrap: 'break-word'}}>tag-alert</div>
+      <div style={{ wordWrap: 'break-word' }}>tag-alert</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tag-block" />
-      <div style={{wordWrap: 'break-word'}}>tag-block</div>
+      <div style={{ wordWrap: 'break-word' }}>tag-block</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="document-checked" />
-      <div style={{wordWrap: 'break-word'}}>document-checked</div>
+      <div style={{ wordWrap: 'break-word' }}>document-checked</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="document-empty" />
-      <div style={{wordWrap: 'break-word'}}>document-empty</div>
+      <div style={{ wordWrap: 'break-word' }}>document-empty</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="document-warning" />
-      <div style={{wordWrap: 'break-word'}}>document-warning</div>
+      <div style={{ wordWrap: 'break-word' }}>document-warning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="document-incorrect" />
-      <div style={{wordWrap: 'break-word'}}>document-incorrect</div>
+      <div style={{ wordWrap: 'break-word' }}>document-incorrect</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="preferences" />
-      <div style={{wordWrap: 'break-word'}}>preferences</div>
+      <div style={{ wordWrap: 'break-word' }}>preferences</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="try-again" />
-      <div style={{wordWrap: 'break-word'}}>try-again</div>
+      <div style={{ wordWrap: 'break-word' }}>try-again</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="car-online" />
-      <div style={{wordWrap: 'break-word'}}>car-online</div>
+      <div style={{ wordWrap: 'break-word' }}>car-online</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smile-unhappy" />
-      <div style={{wordWrap: 'break-word'}}>smile-unhappy</div>
+      <div style={{ wordWrap: 'break-word' }}>smile-unhappy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="move-back" />
-      <div style={{wordWrap: 'break-word'}}>move-back</div>
+      <div style={{ wordWrap: 'break-word' }}>move-back</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="email" />
-      <div style={{wordWrap: 'break-word'}}>email</div>
+      <div style={{ wordWrap: 'break-word' }}>email</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="phone" />
-      <div style={{wordWrap: 'break-word'}}>phone</div>
+      <div style={{ wordWrap: 'break-word' }}>phone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="time-clock-circle" />
-      <div style={{wordWrap: 'break-word'}}>time-clock-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>time-clock-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="upload" />
-      <div style={{wordWrap: 'break-word'}}>upload</div>
+      <div style={{ wordWrap: 'break-word' }}>upload</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="credit-card" />
-      <div style={{wordWrap: 'break-word'}}>credit-card</div>
+      <div style={{ wordWrap: 'break-word' }}>credit-card</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="calendar-black" />
-      <div style={{wordWrap: 'break-word'}}>calendar-black</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-black</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="calendar-add" />
-      <div style={{wordWrap: 'break-word'}}>calendar-add</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-add</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bank" />
-      <div style={{wordWrap: 'break-word'}}>bank</div>
+      <div style={{ wordWrap: 'break-word' }}>bank</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="transactions" />
-      <div style={{wordWrap: 'break-word'}}>transactions</div>
+      <div style={{ wordWrap: 'break-word' }}>transactions</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="download" />
-      <div style={{wordWrap: 'break-word'}}>download</div>
+      <div style={{ wordWrap: 'break-word' }}>download</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="entertainment" />
-      <div style={{wordWrap: 'break-word'}}>entertainment</div>
+      <div style={{ wordWrap: 'break-word' }}>entertainment</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="shopping" />
-      <div style={{wordWrap: 'break-word'}}>shopping</div>
+      <div style={{ wordWrap: 'break-word' }}>shopping</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="restaurant" />
-      <div style={{wordWrap: 'break-word'}}>restaurant</div>
+      <div style={{ wordWrap: 'break-word' }}>restaurant</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="transport" />
-      <div style={{wordWrap: 'break-word'}}>transport</div>
+      <div style={{ wordWrap: 'break-word' }}>transport</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="flash" />
-      <div style={{wordWrap: 'break-word'}}>flash</div>
+      <div style={{ wordWrap: 'break-word' }}>flash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="lock" />
-      <div style={{wordWrap: 'break-word'}}>lock</div>
+      <div style={{ wordWrap: 'break-word' }}>lock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="unlock" />
-      <div style={{wordWrap: 'break-word'}}>unlock</div>
+      <div style={{ wordWrap: 'break-word' }}>unlock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="send-email" />
-      <div style={{wordWrap: 'break-word'}}>send-email</div>
+      <div style={{ wordWrap: 'break-word' }}>send-email</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="location-target" />
-      <div style={{wordWrap: 'break-word'}}>location-target</div>
+      <div style={{ wordWrap: 'break-word' }}>location-target</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="single-neutral" />
-      <div style={{wordWrap: 'break-word'}}>single-neutral</div>
+      <div style={{ wordWrap: 'break-word' }}>single-neutral</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="family-child" />
-      <div style={{wordWrap: 'break-word'}}>family-child</div>
+      <div style={{ wordWrap: 'break-word' }}>family-child</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="family-add-new-member" />
-      <div style={{wordWrap: 'break-word'}}>family-add-new-member</div>
+      <div style={{ wordWrap: 'break-word' }}>family-add-new-member</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hospital-first-aid" />
-      <div style={{wordWrap: 'break-word'}}>hospital-first-aid</div>
+      <div style={{ wordWrap: 'break-word' }}>hospital-first-aid</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="award-ribbon-star" />
-      <div style={{wordWrap: 'break-word'}}>award-ribbon-star</div>
+      <div style={{ wordWrap: 'break-word' }}>award-ribbon-star</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="button-play" />
-      <div style={{wordWrap: 'break-word'}}>button-play</div>
+      <div style={{ wordWrap: 'break-word' }}>button-play</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="office-file-pdf" />
-      <div style={{wordWrap: 'break-word'}}>office-file-pdf</div>
+      <div style={{ wordWrap: 'break-word' }}>office-file-pdf</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="discount-circle" />
-      <div style={{wordWrap: 'break-word'}}>discount-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>discount-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="money-atm" />
-      <div style={{wordWrap: 'break-word'}}>money-atm</div>
+      <div style={{ wordWrap: 'break-word' }}>money-atm</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="house-chimney" />
-      <div style={{wordWrap: 'break-word'}}>house-chimney</div>
+      <div style={{ wordWrap: 'break-word' }}>house-chimney</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="calendar-clock" />
-      <div style={{wordWrap: 'break-word'}}>calendar-clock</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-clock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="pin-location" />
-      <div style={{wordWrap: 'break-word'}}>pin-location</div>
+      <div style={{ wordWrap: 'break-word' }}>pin-location</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="zoom-in" />
-      <div style={{wordWrap: 'break-word'}}>zoom-in</div>
+      <div style={{ wordWrap: 'break-word' }}>zoom-in</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="zoom-out" />
-      <div style={{wordWrap: 'break-word'}}>zoom-out</div>
+      <div style={{ wordWrap: 'break-word' }}>zoom-out</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="reflect-right" />
-      <div style={{wordWrap: 'break-word'}}>reflect-right</div>
+      <div style={{ wordWrap: 'break-word' }}>reflect-right</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="rotate-forward" />
-      <div style={{wordWrap: 'break-word'}}>rotate-forward</div>
+      <div style={{ wordWrap: 'break-word' }}>rotate-forward</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="phone-actions-call" />
-      <div style={{wordWrap: 'break-word'}}>phone-actions-call</div>
+      <div style={{ wordWrap: 'break-word' }}>phone-actions-call</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="book" />
-      <div style={{wordWrap: 'break-word'}}>book</div>
+      <div style={{ wordWrap: 'break-word' }}>book</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="trip-road" />
-      <div style={{wordWrap: 'break-word'}}>trip-road</div>
+      <div style={{ wordWrap: 'break-word' }}>trip-road</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bicycle" />
-      <div style={{wordWrap: 'break-word'}}>bicycle</div>
+      <div style={{ wordWrap: 'break-word' }}>bicycle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="style-three-pin-parking" />
-      <div style={{wordWrap: 'break-word'}}>style-three-pin-parking</div>
+      <div style={{ wordWrap: 'break-word' }}>style-three-pin-parking</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="baby-care-trolley" />
-      <div style={{wordWrap: 'break-word'}}>baby-care-trolley</div>
+      <div style={{ wordWrap: 'break-word' }}>baby-care-trolley</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="saving-safe" />
-      <div style={{wordWrap: 'break-word'}}>saving-safe</div>
+      <div style={{ wordWrap: 'break-word' }}>saving-safe</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="wifi" />
-      <div style={{wordWrap: 'break-word'}}>wifi</div>
+      <div style={{ wordWrap: 'break-word' }}>wifi</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="disability-wheelchair" />
-      <div style={{wordWrap: 'break-word'}}>disability-wheelchair</div>
+      <div style={{ wordWrap: 'break-word' }}>disability-wheelchair</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="earth" />
-      <div style={{wordWrap: 'break-word'}}>earth</div>
+      <div style={{ wordWrap: 'break-word' }}>earth</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="clock" />
-      <div style={{wordWrap: 'break-word'}}>clock</div>
+      <div style={{ wordWrap: 'break-word' }}>clock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="banking-account" />
-      <div style={{wordWrap: 'break-word'}}>banking-account</div>
+      <div style={{ wordWrap: 'break-word' }}>banking-account</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hierarchy" />
-      <div style={{wordWrap: 'break-word'}}>hierarchy</div>
+      <div style={{ wordWrap: 'break-word' }}>hierarchy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bank-customer" />
-      <div style={{wordWrap: 'break-word'}}>bank-customer</div>
+      <div style={{ wordWrap: 'break-word' }}>bank-customer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="transfer-user" />
-      <div style={{wordWrap: 'break-word'}}>transfer-user</div>
+      <div style={{ wordWrap: 'break-word' }}>transfer-user</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="computer" />
-      <div style={{wordWrap: 'break-word'}}>computer</div>
+      <div style={{ wordWrap: 'break-word' }}>computer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="news" />
-      <div style={{wordWrap: 'break-word'}}>news</div>
+      <div style={{ wordWrap: 'break-word' }}>news</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="phonebook" />
-      <div style={{wordWrap: 'break-word'}}>phonebook</div>
+      <div style={{ wordWrap: 'break-word' }}>phonebook</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="legal-scale" />
-      <div style={{wordWrap: 'break-word'}}>legal-scale</div>
+      <div style={{ wordWrap: 'break-word' }}>legal-scale</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="text-options" />
-      <div style={{wordWrap: 'break-word'}}>text-options</div>
+      <div style={{ wordWrap: 'break-word' }}>text-options</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="paragraph" />
-      <div style={{wordWrap: 'break-word'}}>paragraph</div>
+      <div style={{ wordWrap: 'break-word' }}>paragraph</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="profil" />
-      <div style={{wordWrap: 'break-word'}}>profil</div>
+      <div style={{ wordWrap: 'break-word' }}>profil</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="document" />
-      <div style={{wordWrap: 'break-word'}}>document</div>
+      <div style={{ wordWrap: 'break-word' }}>document</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="calendar-warning" />
-      <div style={{wordWrap: 'break-word'}}>calendar-warning</div>
+      <div style={{ wordWrap: 'break-word' }}>calendar-warning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="credit-card-lock" />
-      <div style={{wordWrap: 'break-word'}}>credit-card-lock</div>
+      <div style={{ wordWrap: 'break-word' }}>credit-card-lock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="credit-card-remove" />
-      <div style={{wordWrap: 'break-word'}}>credit-card-remove</div>
+      <div style={{ wordWrap: 'break-word' }}>credit-card-remove</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="house-nature" />
-      <div style={{wordWrap: 'break-word'}}>house-nature</div>
+      <div style={{ wordWrap: 'break-word' }}>house-nature</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="scooter" />
-      <div style={{wordWrap: 'break-word'}}>scooter</div>
+      <div style={{ wordWrap: 'break-word' }}>scooter</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="qr-code" />
-      <div style={{wordWrap: 'break-word'}}>qr-code</div>
+      <div style={{ wordWrap: 'break-word' }}>qr-code</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="touch-id" />
-      <div style={{wordWrap: 'break-word'}}>touch-id</div>
+      <div style={{ wordWrap: 'break-word' }}>touch-id</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="party-confetti" />
-      <div style={{wordWrap: 'break-word'}}>party-confetti</div>
+      <div style={{ wordWrap: 'break-word' }}>party-confetti</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="earth-globe" />
-      <div style={{wordWrap: 'break-word'}}>earth-globe</div>
+      <div style={{ wordWrap: 'break-word' }}>earth-globe</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="credit-card-payment" />
-      <div style={{wordWrap: 'break-word'}}>credit-card-payment</div>
+      <div style={{ wordWrap: 'break-word' }}>credit-card-payment</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="trailer" />
-      <div style={{wordWrap: 'break-word'}}>trailer</div>
+      <div style={{ wordWrap: 'break-word' }}>trailer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bus" />
-      <div style={{wordWrap: 'break-word'}}>bus</div>
+      <div style={{ wordWrap: 'break-word' }}>bus</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="earth-lock" />
-      <div style={{wordWrap: 'break-word'}}>earth-lock</div>
+      <div style={{ wordWrap: 'break-word' }}>earth-lock</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="left-right-arrow" />
-      <div style={{wordWrap: 'break-word'}}>left-right-arrow</div>
+      <div style={{ wordWrap: 'break-word' }}>left-right-arrow</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="list" />
-      <div style={{wordWrap: 'break-word'}}>list</div>
+      <div style={{ wordWrap: 'break-word' }}>list</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="timeline" />
-      <div style={{wordWrap: 'break-word'}}>timeline</div>
+      <div style={{ wordWrap: 'break-word' }}>timeline</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="login" />
-      <div style={{wordWrap: 'break-word'}}>login</div>
+      <div style={{ wordWrap: 'break-word' }}>login</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="currency" />
-      <div style={{wordWrap: 'break-word'}}>currency</div>
+      <div style={{ wordWrap: 'break-word' }}>currency</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="edit-user" />
-      <div style={{wordWrap: 'break-word'}}>edit-user</div>
+      <div style={{ wordWrap: 'break-word' }}>edit-user</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="vignette" />
-      <div style={{wordWrap: 'break-word'}}>vignette</div>
+      <div style={{ wordWrap: 'break-word' }}>vignette</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="health" />
-      <div style={{wordWrap: 'break-word'}}>health</div>
+      <div style={{ wordWrap: 'break-word' }}>health</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="legal-information" />
-      <div style={{wordWrap: 'break-word'}}>legal-information</div>
+      <div style={{ wordWrap: 'break-word' }}>legal-information</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="chat" />
-      <div style={{wordWrap: 'break-word'}}>chat</div>
+      <div style={{ wordWrap: 'break-word' }}>chat</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="toys" />
-      <div style={{wordWrap: 'break-word'}}>toys</div>
+      <div style={{ wordWrap: 'break-word' }}>toys</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hard-of-hearing" />
-      <div style={{wordWrap: 'break-word'}}>hard-of-hearing</div>
+      <div style={{ wordWrap: 'break-word' }}>hard-of-hearing</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="view" />
-      <div style={{wordWrap: 'break-word'}}>view</div>
+      <div style={{ wordWrap: 'break-word' }}>view</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="view-off" />
-      <div style={{wordWrap: 'break-word'}}>view-off</div>
+      <div style={{ wordWrap: 'break-word' }}>view-off</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="card-online-limit" />
-      <div style={{wordWrap: 'break-word'}}>card-online-limit</div>
+      <div style={{ wordWrap: 'break-word' }}>card-online-limit</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="edit-profile" />
-      <div style={{wordWrap: 'break-word'}}>edit-profile</div>
+      <div style={{ wordWrap: 'break-word' }}>edit-profile</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="add-partner" />
-      <div style={{wordWrap: 'break-word'}}>add-partner</div>
+      <div style={{ wordWrap: 'break-word' }}>add-partner</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="search-partner" />
-      <div style={{wordWrap: 'break-word'}}>search-partner</div>
+      <div style={{ wordWrap: 'break-word' }}>search-partner</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="queuing-long" />
-      <div style={{wordWrap: 'break-word'}}>queuing-long</div>
+      <div style={{ wordWrap: 'break-word' }}>queuing-long</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="print" />
-      <div style={{wordWrap: 'break-word'}}>print</div>
+      <div style={{ wordWrap: 'break-word' }}>print</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="office-file-iso" />
-      <div style={{wordWrap: 'break-word'}}>office-file-iso</div>
+      <div style={{ wordWrap: 'break-word' }}>office-file-iso</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="office-file-csv" />
-      <div style={{wordWrap: 'break-word'}}>office-file-csv</div>
+      <div style={{ wordWrap: 'break-word' }}>office-file-csv</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="office-file-xls" />
-      <div style={{wordWrap: 'break-word'}}>office-file-xls</div>
+      <div style={{ wordWrap: 'break-word' }}>office-file-xls</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="filter" />
-      <div style={{wordWrap: 'break-word'}}>filter</div>
+      <div style={{ wordWrap: 'break-word' }}>filter</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="no-filter" />
-      <div style={{wordWrap: 'break-word'}}>no-filter</div>
+      <div style={{ wordWrap: 'break-word' }}>no-filter</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="buildings" />
-      <div style={{wordWrap: 'break-word'}}>buildings</div>
+      <div style={{ wordWrap: 'break-word' }}>buildings</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="shirt-plain" />
-      <div style={{wordWrap: 'break-word'}}>shirt-plain</div>
+      <div style={{ wordWrap: 'break-word' }}>shirt-plain</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="phone-code" />
-      <div style={{wordWrap: 'break-word'}}>phone-code</div>
+      <div style={{ wordWrap: 'break-word' }}>phone-code</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="phone-noti" />
-      <div style={{wordWrap: 'break-word'}}>phone-noti</div>
+      <div style={{ wordWrap: 'break-word' }}>phone-noti</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="chair" />
-      <div style={{wordWrap: 'break-word'}}>chair</div>
+      <div style={{ wordWrap: 'break-word' }}>chair</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="announcement" />
-      <div style={{wordWrap: 'break-word'}}>announcement</div>
+      <div style={{ wordWrap: 'break-word' }}>announcement</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="wench" />
-      <div style={{wordWrap: 'break-word'}}>wench</div>
+      <div style={{ wordWrap: 'break-word' }}>wench</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="business" />
-      <div style={{wordWrap: 'break-word'}}>business</div>
+      <div style={{ wordWrap: 'break-word' }}>business</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="shield" />
-      <div style={{wordWrap: 'break-word'}}>shield</div>
+      <div style={{ wordWrap: 'break-word' }}>shield</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="money-transfer-between-accounts" />
-      <div style={{wordWrap: 'break-word'}}>money-transfer-between-accounts</div>
+      <div style={{ wordWrap: 'break-word' }}>
+        money-transfer-between-accounts
+      </div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smiley-very-happy" />
-      <div style={{wordWrap: 'break-word'}}>smiley-very-happy</div>
+      <div style={{ wordWrap: 'break-word' }}>smiley-very-happy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smiley-happy" />
-      <div style={{wordWrap: 'break-word'}}>smiley-happy</div>
+      <div style={{ wordWrap: 'break-word' }}>smiley-happy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smiley-indifferent" />
-      <div style={{wordWrap: 'break-word'}}>smiley-indifferent</div>
+      <div style={{ wordWrap: 'break-word' }}>smiley-indifferent</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smiley-unhappy" />
-      <div style={{wordWrap: 'break-word'}}>smiley-unhappy</div>
+      <div style={{ wordWrap: 'break-word' }}>smiley-unhappy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="smiley-sad" />
-      <div style={{wordWrap: 'break-word'}}>smiley-sad</div>
+      <div style={{ wordWrap: 'break-word' }}>smiley-sad</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="room-service-give-plate" />
-      <div style={{wordWrap: 'break-word'}}>room-service-give-plate</div>
+      <div style={{ wordWrap: 'break-word' }}>room-service-give-plate</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tennis-player" />
-      <div style={{wordWrap: 'break-word'}}>tennis-player</div>
+      <div style={{ wordWrap: 'break-word' }}>tennis-player</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="hotel-bedroom" />
-      <div style={{wordWrap: 'break-word'}}>hotel-bedroom</div>
+      <div style={{ wordWrap: 'break-word' }}>hotel-bedroom</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="map-search" />
-      <div style={{wordWrap: 'break-word'}}>map-search</div>
+      <div style={{ wordWrap: 'break-word' }}>map-search</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tick-in-circle" />
-      <div style={{wordWrap: 'break-word'}}>tick-in-circle</div>
+      <div style={{ wordWrap: 'break-word' }}>tick-in-circle</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="mobile-phone" />
-      <div style={{wordWrap: 'break-word'}}>mobile-phone</div>
+      <div style={{ wordWrap: 'break-word' }}>mobile-phone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="telefone" />
-      <div style={{wordWrap: 'break-word'}}>telefone</div>
+      <div style={{ wordWrap: 'break-word' }}>telefone</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bill" />
-      <div style={{wordWrap: 'break-word'}}>bill</div>
+      <div style={{ wordWrap: 'break-word' }}>bill</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="laptop" />
-      <div style={{wordWrap: 'break-word'}}>laptop</div>
+      <div style={{ wordWrap: 'break-word' }}>laptop</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="money-transfer" />
-      <div style={{wordWrap: 'break-word'}}>money-transfer</div>
+      <div style={{ wordWrap: 'break-word' }}>money-transfer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="error-state" />
-      <div style={{wordWrap: 'break-word'}}>error-state</div>
+      <div style={{ wordWrap: 'break-word' }}>error-state</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="travel-bag" />
-      <div style={{wordWrap: 'break-word'}}>travel-bag</div>
+      <div style={{ wordWrap: 'break-word' }}>travel-bag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="envelope" />
-      <div style={{wordWrap: 'break-word'}}>envelope</div>
+      <div style={{ wordWrap: 'break-word' }}>envelope</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="fixed-money" />
-      <div style={{wordWrap: 'break-word'}}>fixed-money</div>
+      <div style={{ wordWrap: 'break-word' }}>fixed-money</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="piggy" />
-      <div style={{wordWrap: 'break-word'}}>piggy</div>
+      <div style={{ wordWrap: 'break-word' }}>piggy</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="legal-hammer" />
-      <div style={{wordWrap: 'break-word'}}>legal-hammer</div>
+      <div style={{ wordWrap: 'break-word' }}>legal-hammer</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="repeat" />
-      <div style={{wordWrap: 'break-word'}}>repeat</div>
+      <div style={{ wordWrap: 'break-word' }}>repeat</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="star" />
-      <div style={{wordWrap: 'break-word'}}>star</div>
+      <div style={{ wordWrap: 'break-word' }}>star</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="feed" />
-      <div style={{wordWrap: 'break-word'}}>feed</div>
+      <div style={{ wordWrap: 'break-word' }}>feed</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="cheque" />
-      <div style={{wordWrap: 'break-word'}}>cheque</div>
+      <div style={{ wordWrap: 'break-word' }}>cheque</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="csoportos-beszedes" />
-      <div style={{wordWrap: 'break-word'}}>csoportos-beszedes</div>
+      <div style={{ wordWrap: 'break-word' }}>csoportos-beszedes</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="kolcson" />
-      <div style={{wordWrap: 'break-word'}}>kolcson</div>
+      <div style={{ wordWrap: 'break-word' }}>kolcson</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="vignette-second" />
-      <div style={{wordWrap: 'break-word'}}>vignette-second</div>
+      <div style={{ wordWrap: 'break-word' }}>vignette-second</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tv" />
-      <div style={{wordWrap: 'break-word'}}>tv</div>
+      <div style={{ wordWrap: 'break-word' }}>tv</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tablet" />
-      <div style={{wordWrap: 'break-word'}}>tablet</div>
+      <div style={{ wordWrap: 'break-word' }}>tablet</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="egyeb" />
-      <div style={{wordWrap: 'break-word'}}>egyeb</div>
+      <div style={{ wordWrap: 'break-word' }}>egyeb</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="ai-brain" />
-      <div style={{wordWrap: 'break-word'}}>ai-brain</div>
+      <div style={{ wordWrap: 'break-word' }}>ai-brain</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="glass-lab" />
-      <div style={{wordWrap: 'break-word'}}>glass-lab</div>
+      <div style={{ wordWrap: 'break-word' }}>glass-lab</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="empty-box" />
-      <div style={{wordWrap: 'break-word'}}>empty-box</div>
+      <div style={{ wordWrap: 'break-word' }}>empty-box</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="tags" />
-      <div style={{wordWrap: 'break-word'}}>tags</div>
+      <div style={{ wordWrap: 'break-word' }}>tags</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="play" />
-      <div style={{wordWrap: 'break-word'}}>play</div>
+      <div style={{ wordWrap: 'break-word' }}>play</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="pause" />
-      <div style={{wordWrap: 'break-word'}}>pause</div>
+      <div style={{ wordWrap: 'break-word' }}>pause</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="bug-search" />
-      <div style={{wordWrap: 'break-word'}}>bug-search</div>
+      <div style={{ wordWrap: 'break-word' }}>bug-search</div>
     </Col>
-     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="file-double" />
-      <div style={{wordWrap: 'break-word'}}>file-double</div>
+      <div style={{ wordWrap: 'break-word' }}>file-double</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="menu-kebab" />
-      <div style={{wordWrap: 'break-word'}}>menu-kebab</div>
+      <div style={{ wordWrap: 'break-word' }}>menu-kebab</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="no-tags" />
-      <div style={{wordWrap: 'break-word'}}>no-tags</div>
+      <div style={{ wordWrap: 'break-word' }}>no-tags</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="download-file" />
+      <div style={{ wordWrap: 'break-word' }}>download-file</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="filter-text" />
+      <div style={{ wordWrap: 'break-word' }}>filter-text</div>
     </Col>
   </Row>
 </Container>
@@ -1202,59 +1216,59 @@ const { Container, Row, Col } = Grid
   <Row>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="project-tag" fill="primary" />
-      <div style={{wordWrap: 'break-word'}}>project-tag</div>
+      <div style={{ wordWrap: 'break-word' }}>project-tag</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="new-folder" />
-      <div style={{wordWrap: 'break-word'}}>new-folder</div>
+      <div style={{ wordWrap: 'break-word' }}>new-folder</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="list-cards" fill="blue" />
-      <div style={{wordWrap: 'break-word'}}>list-cards</div>
+      <div style={{ wordWrap: 'break-word' }}>list-cards</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="check" fill="primary" />
-      <div style={{wordWrap: 'break-word'}}>check</div>
+      <div style={{ wordWrap: 'break-word' }}>check</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="empty-state-machine-learning" fill="error" />
-      <div style={{wordWrap: 'break-word'}}>empty-state-machine-learning</div>
+      <div style={{ wordWrap: 'break-word' }}>empty-state-machine-learning</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="project-to-archive" />
-      <div style={{wordWrap: 'break-word'}}>project-to-archive</div>
+      <div style={{ wordWrap: 'break-word' }}>project-to-archive</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="basic-preferences" fill="error" />
-      <div style={{wordWrap: 'break-word'}}>basic-preferences</div>
+      <div style={{ wordWrap: 'break-word' }}>basic-preferences</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="image-upload" fill="blue" />
-      <div style={{wordWrap: 'break-word'}}>image-upload</div>
+      <div style={{ wordWrap: 'break-word' }}>image-upload</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="empty-state-feather" fill="blue" />
-      <div style={{wordWrap: 'break-word'}}>empty-state-feather</div>
+      <div style={{ wordWrap: 'break-word' }}>empty-state-feather</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="trash" />
-      <div style={{wordWrap: 'break-word'}}>trash</div>
+      <div style={{ wordWrap: 'break-word' }}>trash</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="error" fill="error" />
-      <div style={{wordWrap: 'break-word'}}>error</div>
+      <div style={{ wordWrap: 'break-word' }}>error</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="image-sms" fill="primary" />
-      <div style={{wordWrap: 'break-word'}}>image-sms</div>
+      <div style={{ wordWrap: 'break-word' }}>image-sms</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="broken-robot" />
-      <div style={{wordWrap: 'break-word'}}>broken-robot</div>
+      <div style={{ wordWrap: 'break-word' }}>broken-robot</div>
     </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="terminal-book" fill="primary" />
-      <div style={{wordWrap: 'break-word'}}>terminal-book</div>
+      <div style={{ wordWrap: 'break-word' }}>terminal-book</div>
     </Col>
   </Row>
 </Container>
