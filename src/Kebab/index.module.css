@@ -1,5 +1,5 @@
 .kebab {
-  box-shadow: 0px 4px 8px #495C8826
+  box-shadow: 0px 4px 8px #495c8826;
 }
 
 .menu {
@@ -18,49 +18,47 @@
   z-index: 999;
 }
 
-  .container {
-    position: relative;
-    display: inline-block;
-    width: 14rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .labelContainer:focus-within {
-    z-index: 999;
-  }
-  
-  .labelContainer {
-    outline: none;
-    margin: 0;
-  }
+.container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
 
-  .kebab icon {
-    cursor: pointer;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.5rem;
-    outline: none;
-    pointer-events: none;
-  }
-  
-  .menu.bottom {
-    top: 110%;
-  }
-  
-  .menu.top {
-    bottom: 110%;
-  }
-  
-  .menu > li {
-    border-radius: 1.5rem;
-    cursor: pointer;
-  }
+.labelContainer:focus-within {
+  z-index: 999;
+}
 
-  .menu > li.emptyList {
-    color: var(--color-text-disabled);
-  }
-  
-  .labelContainer:focus-within .label.labelUp {
-    color: var(--color-primary);
-  }
+.labelContainer {
+  outline: none;
+  margin: 0;
+}
 
+.kebab icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  outline: none;
+  pointer-events: none;
+}
+
+.menu.bottom {
+  top: 110%;
+}
+
+.menu.top {
+  bottom: 110%;
+}
+
+.menu > li {
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.menu > li.emptyList {
+  color: var(--color-text-disabled);
+}
+
+.labelContainer:focus-within .label.labelUp {
+  color: var(--color-primary);
+}
