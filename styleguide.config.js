@@ -77,6 +77,8 @@ module.exports = {
         'src/Button/index.js',
         'src/Checkbox/index.js',
         'src/DatePicker/index.js',
+        'src/TimeRange/index.js',
+        'src/DateRangePicker/index.js',
         'src/Dropdown/index.js',
         'src/Input/index.js',
         'src/Link/index.js',

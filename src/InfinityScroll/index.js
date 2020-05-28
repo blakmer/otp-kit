@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import InfiniteScroll from 'react-infinite-scroll-component'
-
 import styles from './index.module.css'
 
 const InfinityScroll = props => {

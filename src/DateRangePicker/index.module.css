@@ -1,0 +1,350 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.field {
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  outline: none;
+  border-radius: 1.5rem;
+  font-family: var(--font-regular);
+  font-size: 1rem;
+  min-width: 15.5rem;
+  height: 3rem;
+  color: var(--color-text-primary);
+  padding: 0.6875rem 2.6rem 0.8125rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.picker {
+  box-shadow: 0 1rem 4rem rgba(73, 92, 136, 0.15);
+  background-color: var(--color-bg-input);
+  width: 33rem;
+  border-radius: 1rem;
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+}
+
+.headerItem {
+  display: flex;
+  width: 16.5rem;
+}
+
+.headerDivider {
+  width: 1px;
+  background-color: var(--color-primary-hover);
+}
+
+.calendars {
+  display: inline-flex;
+}
+
+.pickerHeaderItem {
+  padding: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.pickerHeaderItem:nth-child(odd) {
+  width: 30%;
+}
+
+.pickerHeaderItem:nth-child(2) {
+  width: 40%;
+}
+
+.pickerHeaderItem:nth-child(2) span {
+  border-left: 1px solid var(--color-primary-hover);
+  border-right: 1px solid var(--color-primary-hover);
+  display: block;
+}
+
+.pickerItem {
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: var(--color-bg-input);
+  flex-basis: 50%;
+  height: 12rem;
+}
+
+.pickerItem:first-of-type {
+  border-radius: 0 0 0 1rem;
+  position: relative;
+}
+
+.pickerItem:first-of-type:after {
+  content: "";
+  width: 1px;
+  height: 80%;
+  background-color: var(--color-bg-grey-2);
+  position: absolute;
+  right: -1px;
+  top: 0.9375rem;
+}
+
+.pickerItem:last-of-type {
+  border-radius: 0 0 1rem 0;
+}
+
+.years,
+.months {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.years li,
+.months li {
+  width: 4.5625rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: background-color 0.4s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.years li:last-child,
+.years li:nth-child(11),
+.years li:nth-child(10),
+.months li:last-child,
+.months li:nth-child(11),
+.months li:nth-child(10) {
+  margin-bottom: 0;
+}
+
+.pickerItem:first-of-type .months li.yellow:not(:last-of-type),
+.pickerItem:last-of-type .months li.yellow:not(:first-of-type),
+.pickerItem:first-of-type .months li.yellow:last-of-type,
+.pickerItem:last-of-type .months li.yellow:first-of-type {
+  background-color: var(--color-bg-pastel-yellow);
+  border-radius: unset;
+}
+
+.pickerItem:last-of-type .months li.yellow:first-of-type:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 15px solid var(--color-bg-pastel-yellow);
+  border-left: 10px solid var(--color-bg-input);
+  border-bottom: 15px solid var(--color-bg-pastel-yellow);
+  left: 0;
+}
+
+.pickerItem:first-of-type .months li.yellow:last-of-type:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 15px solid var(--color-bg-input);
+  border-left: 10px solid var(--color-bg-pastel-yellow);
+  border-bottom: 15px solid var(--color-bg-input);
+  right: -10px;
+}
+
+.years li:hover,
+.months li:hover {
+  background-color: var(--color-bg-grey-2);
+}
+
+.switcher {
+  color: var(--color-text-secondary);
+  stroke: var(--color-text-secondary);
+}
+
+.years .switcher:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.years .switcher svg * {
+  stroke: var(--color-text-secondary);
+}
+
+.years .switcher:hover svg * {
+  stroke: var(--color-primary);
+}
+
+.years .disabled svg * {
+  stroke: var(--color-text-disabled);
+}
+
+.iconFirst {
+  position: absolute;
+  left: -0.5rem;
+}
+
+.iconLast {
+  position: absolute;
+  right: -0.5rem;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background-color 0.4s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.pickerItem:first-of-type .days .day.yellow:not(:last-of-type),
+.pickerItem:last-of-type .days .day.yellow:not(:first-of-type) {
+  background-color: var(--color-bg-pastel-yellow);
+  border-radius: unset;
+}
+
+.pickerItem:first-of-type .days .day.yellow:last-of-type,
+.pickerItem:last-of-type .days .day.yellow:first-of-type {
+  background-color: var(--color-bg-pastel-yellow);
+  border-radius: unset;
+}
+
+.pickerItem:last-of-type .days .day.yellow:first-of-type:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 0.9375rem solid var(--color-bg-pastel-yellow);
+  border-left: 0.625rem solid var(--color-bg-input);
+  border-bottom: 0.9375rem solid var(--color-bg-pastel-yellow);
+  left: 0;
+}
+
+.pickerItem:first-of-type .days .day.yellow:last-of-type:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-top: 0.9375rem solid var(--color-bg-input);
+  border-left: 0.625rem solid var(--color-bg-pastel-yellow);
+  border-bottom: 0.9375rem solid var(--color-bg-input);
+  right: -0.625rem;
+}
+
+.day.anotherMonthDay {
+  color: transparent !important;
+  background-color: transparent;
+  cursor: default;
+}
+
+.weekend {
+  color: var(--color-error);
+}
+
+.weekendDisabled {
+  color: var(--color-hero-bg-pastel-red) !important;
+}
+
+.days li:hover {
+  background-color: var(--color-bg-grey-2);
+}
+
+.days .anotherMonthDay:hover {
+  background-color: transparent;
+}
+
+.activeItem {
+  background-color: var(--color-chart-yellow);
+}
+
+li.activeItem:hover {
+  background-color: var(--color-chart-yellow);
+}
+
+.week {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: -0.5rem 0 0 0;
+}
+
+.week li {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.headerItemDisabled {
+  opacity: 0.5;
+}
+
+.disabled {
+  color: var(--color-text-disabled);
+  pointer-events: none;
+}
+
+.disabled:hover {
+  background-color: transparent !important;
+}
+
+.options {
+  margin: -1rem 1rem 2rem 1rem;
+}
+
+.tabArrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  height: 0.375rem;
+  width: 1rem;
+}
+
+.greenArrow {
+  position: absolute;
+  transform: translateX(-50%) rotate(180deg);
+  height: 0.75rem;
+  width: 1.5rem;
+  top: -0.75rem;
+  left: 3.75rem;
+}
