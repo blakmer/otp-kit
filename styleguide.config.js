@@ -111,7 +111,6 @@ module.exports = {
         'src/StatePage/index.js',
         'src/Tabs/index.js',
         'src/List/index.js',
-        'src/InfinityScroll/index.js',
         'src/ActionInput/index.js',
         'src/Kebab/index.js',
         'src/FormItem/index.js',
@@ -123,7 +122,6 @@ module.exports = {
         'src/PageNotFound/index.js',
         'src/NavPanel/index.js',
         'src/Layout/index.js',
-        'src/LogViewer/index.js',
       ],
     },
     {
