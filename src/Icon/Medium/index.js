@@ -194,6 +194,7 @@ import MenuKebab from './types/menu-kebab'
 import NoTags from './types/no-tags'
 import DownloadFile from './types/download-file'
 import FilterText from './types/filter-text'
+import Code from './types/code'
 
 const REFERENCES = {
   edit: Edit,
@@ -387,6 +388,7 @@ const REFERENCES = {
   'no-tags': NoTags,
   'filter-text': FilterText,
   'download-file': DownloadFile,
+  code: Code,
 }
 
 const Medium = props => {

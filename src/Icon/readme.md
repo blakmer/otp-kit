@@ -1201,6 +1201,10 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="filter-text" />
       <div style={{ wordWrap: 'break-word' }}>filter-text</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="code" />
+      <div style={{ wordWrap: 'break-word' }}>code</div>
+    </Col>
   </Row>
 </Container>
 ```
