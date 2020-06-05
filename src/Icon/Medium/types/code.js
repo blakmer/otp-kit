@@ -9,7 +9,7 @@ const Code = props => {
       width="24.25"
       height="24.25"
       viewBox="0 0 24.25 24.25">
-      <rect class="a" style={{ fill: 'none' }} width="24" height="24" />
+      <rect style={{ fill: 'none' }} width="24" height="24" />
       <g transform="translate(0.25 0.25)">
         <path
           className={className}
