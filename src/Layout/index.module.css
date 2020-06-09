@@ -1,13 +1,14 @@
 .section {
-  background-color: #6e7482;
-  width: 100vw;
+  background-color: #333740;
+  width: 100%;
   min-height: 100vh;
   display: flex;
 }
 
 .navbar {
   width: 5rem;
-  padding: 32px 0 12px 8px;
+  box-sizing: border-box;
+  padding: 23px 8px 12px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +30,7 @@
 }
 
 .navbar .menu .menuItem {
-  height: 72px;
+  height: 48px;
   width: 100%;
   display: block;
   display: flex;
@@ -39,29 +40,8 @@
 }
 
 .navbar .menu .menuItem.activeItem {
-  background: #eff2f9;
-  border-radius: 40px 0px 0px 40px;
-  position: relative;
-}
-
-.navbar .menu .menuItem.activeItem::before {
-  content: '';
-  background: radial-gradient(at 0px 0px, #6e7482 70%, #eff2f9 71%);
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-}
-
-.navbar .menu .menuItem.activeItem::after {
-  content: '';
-  background: radial-gradient(at 0px 16px, #6e7482 70%, #eff2f9 71%);
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 100%;
-  right: 0;
+  background: #1f2226;
+  border-radius: 32px;
 }
 
 .navbar .config {
@@ -72,9 +52,10 @@
 }
 
 .content {
-  width: calc(100vw - 5rem);
+  width: calc(100% - 5rem);
   background: #eff2f9;
   border-radius: 2.5rem 0 0 2.5rem;
+  box-sizing: border-box;
   padding: 2rem 2rem 2rem 2.5rem;
   display: flex;
   flex-direction: column;

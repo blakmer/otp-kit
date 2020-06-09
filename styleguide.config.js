@@ -86,6 +86,7 @@ module.exports = {
         'src/RadioGroup/index.js',
         'src/RoundButton/index.js',
         'src/Select/index.js',
+        'src/Multiselect/index.js',
         'src/Slider/index.js',
         'src/Stepper/index.js',
         'src/Tag/index.js',

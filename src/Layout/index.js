@@ -9,7 +9,7 @@ const Layout = props => {
   const { items, children, header, onChange, active } = props
 
   const eqPath = (path1, path2) => {
-    const regexp = new RegExp(`\\${path1}`)
+    const regexp = new RegExp(`${path1}`)
     return regexp.test(path2)
   }
 
@@ -17,7 +17,7 @@ const Layout = props => {
     <section className={styles.section}>
       <nav className={styles.navbar}>
         <section className={styles.hamburger}>
-          <Logo mini fill="white" />
+          <Logo mini />
         </section>
         <section className={styles.menu}>
           {items.map(i => (
