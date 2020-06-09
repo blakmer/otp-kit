@@ -1,16 +1,37 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-
+import Input from '../Input'
+import Typography from '../Typography'
 import Icon from '../Icon'
 
 import styles from './index.module.css'
 
 const NavPanel = props => {
-  const { header, actions } = props
+  const { header, actions, onSearch, onHelp } = props
   return (
     <div className={styles.navbar}>
       <span>{header}</span>
-      <span>
+      <span className={styles.actionContainer}>
+        {typeof onHelp === 'function' && (
+          <span className={styles.helper}>
+            <Icon.Medium type="info" fill="chart-blue" />
+            <Typography.Text fill="chart-blue">Помощь</Typography.Text>
+          </span>
+        )}
+        {typeof onSearch === 'function' && (
+          <span className={styles.searchContainer}>
+            <Input
+              onChange={onSearch}
+              suffix={
+                <Icon.Medium
+                  className={styles.searchIcon}
+                  fill="primary"
+                  type="search"
+                />
+              }
+            />
+          </span>
+        )}
         {actions.map((i, k) => (
           <span key={k} onClick={i.action} className={styles.actionIcon}>
             <Icon.Medium fill="primary" type={i.icon} />
@@ -26,6 +47,8 @@ NavPanel.propTypes = {
   actions: PropTypes.arrayOf(
     PropTypes.shape({ icon: PropTypes.string, action: PropTypes.func })
   ),
+  onSearch: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+  onHelp: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
 }
 
 NavPanel.defaultProps = {
