@@ -13,7 +13,7 @@ const NavPanel = props => {
       <span>{header}</span>
       <span className={styles.actionContainer}>
         {typeof onHelp === 'function' && (
-          <span className={styles.helper}>
+          <span className={styles.helper} onClick={onHelp}>
             <Icon.Medium type="info" fill="chart-blue" />
             <Typography.Text fill="chart-blue">Помощь</Typography.Text>
           </span>
