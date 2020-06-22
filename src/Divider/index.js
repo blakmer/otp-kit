@@ -48,7 +48,8 @@ const Divider = props => {
         className={classnames(
           styles.divider,
           styles.vertical,
-          classes[`${fill}-border-before`]
+          classes[`${fill}-border-before`],
+          className
         )}
         style={style}
       />
