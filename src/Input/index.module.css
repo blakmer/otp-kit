@@ -67,6 +67,7 @@ input.withPrefix {
 .input:disabled {
   background: var(--color-bg-input-disabled);
   color: var(--color-text-disabled);
+  padding: 0.875rem 1.5rem;
 }
 
 .input.error:focus {
