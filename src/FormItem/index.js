@@ -5,10 +5,12 @@ import Typography from '../Typography'
 import styles from './index.module.css'
 
 const FormItem = props => {
-  const { label, className, block, description, children, count } = props
+  const { label, className, description, children, count, flat } = props
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
   const isSimple = children ? !children.length : false
+
+  const nonFluidComponents = ['Select', 'Multiselect', 'DropdownInput']
 
   useEffect(() => {
     const el =
@@ -29,7 +31,7 @@ const FormItem = props => {
   if (
     !focus &&
     (isSimple
-      ? children.type.name === 'Select' ||
+      ? nonFluidComponents.filter(e => e === children.type.name).length ||
         children.props.value ||
         children.props.defaultValue
       : true)
@@ -43,6 +45,7 @@ const FormItem = props => {
       className={classnames(
         styles.wrapper,
         isSimple ? !!children.props.block && styles.block : null,
+        flat && styles.flat,
         className
       )}>
       <div className={classnames(styles.child)}>
@@ -50,8 +53,9 @@ const FormItem = props => {
           <span
             className={classnames(
               styles.label,
+              flat ? styles.flat : styles.fluid,
               styles[isSimple ? children.props.status : null],
-              focus && styles.focused
+              !flat && focus && styles.focused
             )}>
             {label}
           </span>
@@ -71,7 +75,8 @@ const FormItem = props => {
         <Typography.Text
           className={classnames(
             styles.description,
-            styles[isSimple ? children.props.status : null]
+            styles[isSimple ? children.props.status : null],
+            flat && styles.flat
           )}>
           {description}
         </Typography.Text>
@@ -81,12 +86,16 @@ const FormItem = props => {
 }
 
 FormItem.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.node,
   className: PropTypes.string,
-  block: PropTypes.bool,
   description: PropTypes.string,
   children: PropTypes.element.isRequired,
   count: PropTypes.number,
+  flat: PropTypes.bool,
+}
+
+FormItem.defaultProps = {
+  flat: false,
 }
 
 export default FormItem

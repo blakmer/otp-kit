@@ -3,8 +3,14 @@
   width: max-content;
   margin: 10px 0;
 }
+
+.wrapper.flat {
+  padding-top: 1rem;
+}
+
 .child {
   position: relative;
+  margin: 0;
 }
 
 .child > * {
@@ -16,17 +22,27 @@
   color: var(--color-text-secondary);
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
   position: absolute;
-  top: 0.75rem;
-  left: 1.5rem;
   transition: 0.25s;
   pointer-events: none;
   z-index: 1;
 }
 
-.wrapper:focus-within .label,
+.fluid {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  top: 0.75rem;
+  left: 1.5rem;
+}
+
+.flat {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  top: -1.4rem;
+  left: 1.1rem;
+}
+
+.wrapper:focus-within .fluid,
 .focused {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -94,4 +110,8 @@ label.disabled,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.description.flat {
+  padding-left: 1rem;
 }
