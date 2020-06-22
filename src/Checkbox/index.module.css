@@ -63,6 +63,13 @@
     0.25rem -0.5rem 0 var(--color-text-disabled);
 }
 
+.checkbox.indeterminate + .label:before {
+  content: '—';
+  display: flex;
+  justify-content: center;
+  color: var(--color-text-inverse);
+}
+
 .checkmark {
   color: var(--color-text-primary);
 }

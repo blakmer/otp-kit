@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { useCombobox } from 'downshift'
+import { useCombobox, useMultipleSelection } from 'downshift'
+import ArrowUp from '../util/arrow-up'
+import ArrowDown from '../util/arrow-down'
 import Icon from '../Icon'
-import Input from '../Input'
 import styles from './index.module.css'
 
 const STATUSES = {
@@ -16,15 +17,28 @@ const STATUSES = {
 const Multiselect = props => {
   const {
     items,
-    defaultValue,
-    value,
-    onChange,
+    initialSelected,
+    selected,
     emptyText,
+    onChange,
+    onItemSelect,
+    onRemoveClick,
     status,
     block,
-    placeholder,
     listDirection,
   } = props
+
+  const {
+    getSelectedItemProps,
+    getDropdownProps,
+    addSelectedItem,
+    removeSelectedItem,
+    selectedItems,
+  } = useMultipleSelection({
+    initialSelectedItems: initialSelected,
+    onSelectedItemsChange: onChange,
+    ...(selected && { selectedItems: selected }),
+  })
 
   const {
     isOpen,
@@ -32,66 +46,83 @@ const Multiselect = props => {
     getMenuProps,
     getInputProps,
     getComboboxProps,
-    highlightedIndex,
     getItemProps,
   } = useCombobox({
     items: items,
-    initialSelectedItem: defaultValue,
-    ...(value && { inputValue: value.title }),
-    itemToString: i => i.title,
-    onSelectedItemChange: ({ selectedItem }) => {
-      onChange(selectedItem)
-    },
   })
+
+  const renderItem = (item, index) => {
+    const itemProps = getItemProps({ item, index })
+    const isSelected = selectedItems.filter(e => e.value === item.value).length
+    return (
+      <li
+        className={classnames(isSelected && styles.selected)}
+        key={`${index}`}
+        {...itemProps}
+        onClick={() => {
+          selected
+            ? onItemSelect(item, isSelected)
+            : isSelected
+            ? removeSelectedItem(item)
+            : addSelectedItem(item)
+        }}>
+        {item.title}
+      </li>
+    )
+  }
 
   return (
     <div
       className={classnames(styles.container, block && styles.block)}
       {...getComboboxProps()}>
-      <label
-        {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}
+      <div
         className={classnames(
           styles.labelContainer,
+          block && styles.block,
           styles[STATUSES[status]],
-          block && styles.block
-        )}>
-        <Input
-          placeholder={placeholder}
-          readOnly
-          status={status}
-          block={block}
-          {...getInputProps({ refKey: 'inputRef' })}
-          suffix={
+          isOpen && styles.opened
+        )}
+        {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
+        <div className={styles.selectedItems}>
+          {selectedItems.map((selectedItem, index) => (
             <span
-              className={styles.arrowIcon}
-              {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
+              className={styles.selectedItem}
+              key={`selected-item-${index}`}
+              {...getSelectedItemProps({ selectedItem, index })}
+              onClick={e => {
+                e.stopPropagation()
+              }}>
+              <span className={styles.title}>{selectedItem.title}</span>
               <Icon.Small
-                type={isOpen ? 'arrow-up' : 'arrow-down'}
-                fill="primary"
+                className={styles.close}
+                type="close"
+                fill="text-inverse"
+                onClick={() => {
+                  selected
+                    ? onRemoveClick(selectedItem)
+                    : removeSelectedItem(selectedItem)
+                }}
               />
             </span>
-          }
+          ))}
+        </div>
+        <input
+          {...getInputProps(getDropdownProps({ preventKeyAction: isOpen }))}
         />
-      </label>
-
+        <span className={styles.arrowIcon}>
+          {isOpen ? <ArrowUp fill="primary" /> : <ArrowDown fill="primary" />}
+        </span>
+      </div>
       <ul
         {...getMenuProps()}
         className={classnames(
           styles.menu,
           !isOpen && styles.hide,
+          styles[STATUSES[status]],
           styles[listDirection],
           block && styles.block
         )}>
-        {items.map((item, index) => (
-          <li
-            className={classnames(
-              highlightedIndex === index && styles.selected
-            )}
-            key={`${index}`}
-            {...getItemProps({ item, index })}>
-            {item.title}
-          </li>
-        ))}
+        {items.map((item, index) => renderItem(item, index))}
         {!items.length && <li className={styles.emptyList}>{emptyText}</li>}
       </ul>
     </div>
@@ -105,22 +136,35 @@ Multiselect.propTypes = {
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
-  defaultValue: PropTypes.shape({
-    title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }),
-  onChange: PropTypes.func,
+  initialSelected: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })
+  ),
+  selected: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    })
+  ),
   emptyText: PropTypes.string,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
+  onChange: PropTypes.func,
+  onRemoveClick: PropTypes.func,
+  onItemSelect: PropTypes.func,
   listDirection: PropTypes.oneOf(['bottom', 'top']),
-  placeholder: PropTypes.string,
+  block: PropTypes.bool,
 }
 
 Multiselect.defaultProps = {
   items: [],
+  initialSelected: [],
   emptyText: 'Пусто',
   status: STATUSES.default,
   onChange: value => {},
+  onRemoveClick: item => {},
+  onItemSelect: item => {},
   listDirection: 'bottom',
 }
 
