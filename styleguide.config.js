@@ -114,6 +114,7 @@ module.exports = {
         'src/Tabs/index.js',
         'src/List/index.js',
         'src/ActionInput/index.js',
+        'src/DropdownInput/index.js',
         'src/Kebab/index.js',
         'src/FormItem/index.js',
       ],
