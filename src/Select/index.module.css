@@ -44,8 +44,8 @@
 .arrowIcon {
   cursor: pointer;
   position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
+  top: 1rem;
+  right: 1rem;
   outline: none;
   pointer-events: none;
 }

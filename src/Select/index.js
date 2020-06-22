@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox } from 'downshift'
-import Icon from '../Icon'
+import ArrowUp from '../util/arrow-up'
+import ArrowDown from '../util/arrow-down'
 import Input from '../Input'
 import styles from './index.module.css'
 
@@ -65,10 +66,11 @@ const Select = props => {
             <span
               className={styles.arrowIcon}
               {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
-              <Icon.Small
-                type={isOpen ? 'arrow-up' : 'arrow-down'}
-                fill="primary"
-              />
+              {isOpen ? (
+                <ArrowUp fill="primary" />
+              ) : (
+                <ArrowDown fill="primary" />
+              )}
             </span>
           }
         />
