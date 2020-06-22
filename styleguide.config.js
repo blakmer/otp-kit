@@ -99,6 +99,7 @@ module.exports = {
         'src/Locker/index.js',
         'src/Divider/index.js',
         'src/PlayPauseButton/index.js',
+        'src/Spinner/index.js',
       ],
     },
     {

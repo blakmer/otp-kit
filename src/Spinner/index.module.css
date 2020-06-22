@@ -1,0 +1,65 @@
+.center {
+  transform-origin: 175px 175px 0;
+}
+
+.orbit {
+  animation: orbit-move infinite linear 1s;
+}
+
+.outsideLine {
+  animation: outside infinite linear 2s;
+}
+
+@keyframes orbit-move {
+  0% {}
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes outside {
+  0% {
+    stroke-dashoffset: 202;
+    opacity: 1;
+  }
+  12.5% {
+    stroke-dashoffset: 397;
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  25% {
+    stroke-dashoffset: 510;
+    transform: rotate(315deg);
+    opacity: 1;
+  }
+  37.5% {
+    stroke-dashoffset: 700;
+    transform: rotate(491deg);
+    opacity: .5;
+  }
+  50% {
+    stroke-dashoffset: 811;
+    transform: rotate(625deg);
+    opacity: .0;
+  }
+  62.5% {
+    stroke-dashoffset: 811;
+    transform: rotate(718deg);
+    opacity: .0;
+  }
+  75% {
+    stroke-dashoffset: 607;
+    transform: rotate(718deg);
+    opacity: .5;
+  }
+  87.5% {
+    stroke-dashoffset: 397;
+    transform: rotate(718deg);
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 202;
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+}
