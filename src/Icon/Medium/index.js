@@ -195,6 +195,46 @@ import NoTags from './types/no-tags'
 import DownloadFile from './types/download-file'
 import FilterText from './types/filter-text'
 import Code from './types/code'
+import AddCircle from './types/add-circle'
+import ArrowDownBig from './types/arrow-down-big'
+import ArrowLeftBig from './types/arrow-left-big'
+import ArrowRightBig from './types/arrow-right-big'
+import ArrowUpBig from './types/arrow-up-big'
+import ArrowRightBold from './types/arrow-right-bold'
+import Briefcase from './types/briefcase'
+import Building from './types/building'
+import Car2 from './types/car-2'
+import CompanyInfo from './types/company-info'
+import ContractApprove from './types/contract-approve'
+import FileAward from './types/file-award'
+import FileDoc from './types/file-doc'
+import FilePpt from './types/file-ppt'
+import FileRar from './types/file-rar'
+import FileRtf from './types/file-rtf'
+import FileTextCash from './types/file-text-cash'
+import FileTxt from './types/file-txt'
+import FileUpload from './types/file-upload'
+import FileZip from './types/file-zip'
+import Giraffe from './types/giraffe'
+import HandShake from './types/hand-shake'
+import HumanHierarchy from './types/human-hierarchy'
+import KeyboardArrowRight from './types/keyboard-arrow-right'
+import ModuleThree from './types/module-three'
+import Paste from './types/paste'
+import Pin from './types/pin'
+import Print2 from './types/print-2'
+import ProgrammingCode from './types/programming-code'
+import Redo from './types/redo'
+import Scissors from './types/scissors'
+import ServerPhoneExchange from './types/server-phone-exchange'
+import Shop from './types/shop'
+import SubtractCircle from './types/subtract-circle'
+import TagAuto from './types/tag-auto'
+import TagShoppingNew from './types/tag-shopping-new'
+import Undo from './types/undo'
+import UploadFile from './types/upload-file'
+import VintageCar from './types/vintage-car'
+import Xml from './types/xml'
 
 const REFERENCES = {
   edit: Edit,
@@ -389,6 +429,46 @@ const REFERENCES = {
   'filter-text': FilterText,
   'download-file': DownloadFile,
   code: Code,
+  'add-circle': AddCircle,
+  'arrow-down-big': ArrowDownBig,
+  'arrow-left-big': ArrowLeftBig,
+  'arrow-right-big': ArrowRightBig,
+  'arrow-up-big': ArrowUpBig,
+  'arrow-right-bold': ArrowRightBold,
+  briefcase: Briefcase,
+  building: Building,
+  'car-2': Car2,
+  'company-info': CompanyInfo,
+  'contract-approve': ContractApprove,
+  'file-award': FileAward,
+  'file-doc': FileDoc,
+  'file-ppt': FilePpt,
+  'file-rar': FileRar,
+  'file-rtf': FileRtf,
+  'file-text-cash': FileTextCash,
+  'file-txt': FileTxt,
+  'file-upload': FileUpload,
+  'file-zip': FileZip,
+  giraffe: Giraffe,
+  'hand-shake': HandShake,
+  'human-hierarchy': HumanHierarchy,
+  'keyboard-arrow-right': KeyboardArrowRight,
+  'module-three': ModuleThree,
+  paste: Paste,
+  pin: Pin,
+  'print-2': Print2,
+  'programming-code': ProgrammingCode,
+  redo: Redo,
+  scissors: Scissors,
+  'server-phone-exchange': ServerPhoneExchange,
+  shop: Shop,
+  'subtract-circle': SubtractCircle,
+  'tag-auto': TagAuto,
+  'tag-shopping-new': TagShoppingNew,
+  undo: Undo,
+  'upload-file': UploadFile,
+  'vintage-car': VintageCar,
+  xml: Xml,
 }
 
 const Medium = props => {

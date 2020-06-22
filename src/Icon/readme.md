@@ -1201,9 +1201,169 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="filter-text" />
       <div style={{ wordWrap: 'break-word' }}>filter-text</div>
     </Col>
-    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+     <Col style={{ textAlign: 'center' }} sm={2} md={1}>
       <Icon.Medium type="code" />
       <div style={{ wordWrap: 'break-word' }}>code</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="arrow-left-big" />
+      <div style={{ wordWrap: 'break-word' }}>arrow-left-big</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="arrow-right-big" />
+      <div style={{ wordWrap: 'break-word' }}>arrow-right-big</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="arrow-up-big" />
+      <div style={{ wordWrap: 'break-word' }}>arrow-up-big</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="arrow-down-big" />
+      <div style={{ wordWrap: 'break-word' }}>arrow-down-big</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="arrow-right-bold" />
+      <div style={{ wordWrap: 'break-word' }}>arrow-right-bold</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="undo" />
+      <div style={{ wordWrap: 'break-word' }}>undo</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="redo" />
+      <div style={{ wordWrap: 'break-word' }}>redo</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="keyboard-arrow-right" />
+      <div style={{ wordWrap: 'break-word' }}>keyboard-arrow-right</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="briefcase" />
+      <div style={{ wordWrap: 'break-word' }}>briefcase</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="building" />
+      <div style={{ wordWrap: 'break-word' }}>building</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="car-2" />
+      <div style={{ wordWrap: 'break-word' }}>car-2</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="vintage-car" />
+      <div style={{ wordWrap: 'break-word' }}>vintage-car</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="company-info" />
+      <div style={{ wordWrap: 'break-word' }}>company-info</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="contract-approve" />
+      <div style={{ wordWrap: 'break-word' }}>contract-approve</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-award" />
+      <div style={{ wordWrap: 'break-word' }}>file-award</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-doc" />
+      <div style={{ wordWrap: 'break-word' }}>file-doc</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-ppt" />
+      <div style={{ wordWrap: 'break-word' }}>file-ppt</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-rar" />
+      <div style={{ wordWrap: 'break-word' }}>file-rar</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-rtf" />
+      <div style={{ wordWrap: 'break-word' }}>file-rtf</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-text-cash" />
+      <div style={{ wordWrap: 'break-word' }}>file-text-cash</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-txt" />
+      <div style={{ wordWrap: 'break-word' }}>file-txt</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-upload" />
+      <div style={{ wordWrap: 'break-word' }}>file-upload</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="file-zip" />
+      <div style={{ wordWrap: 'break-word' }}>file-zip</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="giraffe" />
+      <div style={{ wordWrap: 'break-word' }}>giraffe</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="hand-shake" />
+      <div style={{ wordWrap: 'break-word' }}>hand-shake</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="human-hierarchy" />
+      <div style={{ wordWrap: 'break-word' }}>human-hierarchy</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="module-three" />
+      <div style={{ wordWrap: 'break-word' }}>module-three</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="paste" />
+      <div style={{ wordWrap: 'break-word' }}>paste</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="pin" />
+      <div style={{ wordWrap: 'break-word' }}>pin</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="print-2" />
+      <div style={{ wordWrap: 'break-word' }}>print-2</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="programming-code" />
+      <div style={{ wordWrap: 'break-word' }}>programming-code</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="scissors" />
+      <div style={{ wordWrap: 'break-word' }}>scissors</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="server-phone-exchange" />
+      <div style={{ wordWrap: 'break-word' }}>server-phone-exchange</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="shop" />
+      <div style={{ wordWrap: 'break-word' }}>shop</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="add-circle" />
+      <div style={{ wordWrap: 'break-word' }}>add-circle</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="subtract-circle" />
+      <div style={{ wordWrap: 'break-word' }}>subtract-circle</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="tag-auto" />
+      <div style={{ wordWrap: 'break-word' }}>tag-auto</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="tag-shopping-new" />
+      <div style={{ wordWrap: 'break-word' }}>tag-shopping-new</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="upload-file" />
+      <div style={{ wordWrap: 'break-word' }}>upload-file</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="xml" />
+      <div style={{ wordWrap: 'break-word' }}>xml</div>
     </Col>
   </Row>
 </Container>
@@ -1273,6 +1433,38 @@ const { Container, Row, Col } = Grid
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="terminal-book" fill="primary" />
       <div style={{ wordWrap: 'break-word' }}>terminal-book</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="arrived-letter" fill="blue" />
+      <div style={{ wordWrap: 'break-word' }}>arrived-letter</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="folder" fill="primary" />
+      <div style={{ wordWrap: 'break-word' }}>folder</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="group" fill="primary" />
+      <div style={{ wordWrap: 'break-word' }}>group</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="handshake" fill="primary" />
+      <div style={{ wordWrap: 'break-word' }}>handshake</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="instant-loan" />
+      <div style={{ wordWrap: 'break-word' }}>instant-loan</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="machine-learning-tags" fill="primary" />
+      <div style={{ wordWrap: 'break-word' }}>machine-learning-tags</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="photo" fill="error" />
+      <div style={{ wordWrap: 'break-word' }}>photo</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="store" fill="primary" />
+      <div style={{ wordWrap: 'break-word' }}>store</div>
     </Col>
   </Row>
 </Container>

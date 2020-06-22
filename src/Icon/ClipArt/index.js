@@ -16,6 +16,14 @@ import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
 import BrokenRobot from './types/broken-robot'
 import TerminalBook from './types/terminal-book'
+import ArrivedLetter from './types/arrived-letter'
+import Folder from './types/folder'
+import Group from './types/group'
+import HandShake from './types/handshake'
+import InstantLoan from './types/instant-loan'
+import MachineLearningTags from './types/machine-learning-tags'
+import Photo from './types/photo'
+import Store from './types/store'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -32,6 +40,14 @@ const REFERENCES = {
   'image-sms': ImageSms,
   'broken-robot': BrokenRobot,
   'terminal-book': TerminalBook,
+  'arrived-letter': ArrivedLetter,
+  folder: Folder,
+  group: Group,
+  handshake: HandShake,
+  'instant-loan': InstantLoan,
+  'machine-learning-tags': MachineLearningTags,
+  photo: Photo,
+  store: Store,
 }
 
 const ClipArt = props => {
