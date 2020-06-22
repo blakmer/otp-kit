@@ -3,7 +3,7 @@ const mt = 10
 
 ;<div>
   <div style={{marginTop: mt}}>
-    <Checkbox defaultChecked id="first">
+    <Checkbox id="first" defaultChecked>
       Checkbox
     </Checkbox>
   </div>
@@ -28,4 +28,16 @@ const mt = 10
     </Checkbox>
   </div>
 </div>
+```
+
+```js
+import React, { useState } from 'react'
+const [checked, setChecked] = useState(undefined)
+;<Checkbox id="A" 
+indeterminate={(checked===undefined)}
+checked={checked}
+onChange={()=>{setChecked(!checked)}}
+>
+  Indeterminate Checkbox
+</Checkbox>
 ```

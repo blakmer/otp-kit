@@ -9,6 +9,7 @@ const Checkbox = props => {
     defaultChecked,
     fill,
     disabled,
+    indeterminate,
     id,
     name,
     required,
@@ -26,7 +27,7 @@ const Checkbox = props => {
   const [check, setCheck] = useState(defaultChecked || false)
 
   useEffect(() => {
-    if (!defaultChecked) {
+    if (!defaultChecked && !indeterminate) {
       setCheck(checked)
     }
   }, [checked])
@@ -46,13 +47,16 @@ const Checkbox = props => {
         name={name}
         required={required}
         tabIndex={tabIndex}
-        checked={checked}
+        checked={!indeterminate && checked}
         onBlur={onBlur}
         onChange={handleChange}
         onFocus={onFocus}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        className={classnames(styles.checkbox)}
+        className={classnames(
+          styles.checkbox,
+          indeterminate && styles.indeterminate
+        )}
         id={id}
         type="checkbox"
       />
@@ -61,7 +65,7 @@ const Checkbox = props => {
           styles.label,
           styles.checkmark,
           disabled && classes[`bg-input-disabled-bg-before`],
-          check && classes[`${fill}-bg-before`]
+          (check || indeterminate) && classes[`${fill}-bg-before`]
         )}>
         {children}
       </span>
