@@ -81,6 +81,7 @@ module.exports = {
         'src/DateRangePicker/index.js',
         'src/Dropdown/index.js',
         'src/Input/index.js',
+        'src/InputNumber/index.js',
         'src/Link/index.js',
         'src/Pagination/index.js',
         'src/RadioGroup/index.js',
