@@ -2,7 +2,6 @@ FormItem
 
 ###### With Input
 ```js
-import React, {useState} from 'react'
 import Grid from '../Grid'
 import Input from '../Input'
 import Divider from '../Divider'
@@ -68,7 +67,6 @@ const handleChange = e => {
 
 ###### With Select
 ```js
-import React, {useState} from 'react'
 import Select from '../Select'
 import Grid from '../Grid'
 const { Container, Row, Col } = Grid
@@ -114,6 +112,35 @@ const { Container, Row, Col } = Grid
                 label="numbers"
                 onChange={val => console.log(val)}
             />
+        </FormItem>
+    </Col>
+  </Row>
+</Container>
+```
+
+###### Flat FormItem With Input
+```js
+import Grid from '../Grid'
+import Input from '../Input'
+import Divider from '../Divider'
+import Star from '../util/star'
+const { Container, Row, Col } = Grid
+
+;<Container>
+  <Row>
+    <Col md={4}>
+        <FormItem description="Default description" flat label={<span>Label input field with star <Star/> </span>}>
+            <Input onChange={e=>{console.log(e.target.value)}}/>   
+        </FormItem>
+    </Col>
+    <Col md={4}>
+        <FormItem description="Warning description" flat label="Warning label">
+            <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
+        </FormItem>
+    </Col>
+    <Col md={4}>
+        <FormItem description="Error description" flat label="Error label">
+            <Input status="error" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
   </Row>
