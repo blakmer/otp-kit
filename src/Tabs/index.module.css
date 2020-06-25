@@ -3,6 +3,11 @@
   flex-direction: row;
   border-radius: 2.5rem;
   padding: 0.25rem;
+  justify-content: center;
+}
+
+.tabContainer.block {
+  width: 100%;
 }
 
 .tabContainer.inner {
@@ -18,10 +23,12 @@
 
 .tabContainer.default .tab {
   height: 2.5rem;
+  flex:1;
 }
 
 .tabContainer.small .tab {
   height: 2rem;
+  flex:1;
 }
 
 .tab {
