@@ -1,0 +1,29 @@
+.element {
+  background: var(--color-bg-grey-3);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.element .title {
+  background: var(--color-bg-grey-2);
+  font-family: var(--font-bold);
+  border-radius: 2rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.element .title * {
+  pointer-events: none;
+}
+
+.element .title .content {
+  flex: 1
+}
+
+.element .body {
+  padding: 1rem;
+}

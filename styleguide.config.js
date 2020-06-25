@@ -106,6 +106,7 @@ module.exports = {
     {
       name: 'Moleculs',
       components: [
+        'src/Accordion/index.js',
         'src/Cards/index.js',
         'src/ColorSelection/index.js',
         'src/Filters/index.js',
