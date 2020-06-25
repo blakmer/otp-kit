@@ -68,7 +68,7 @@ spec:
 kind: IngressRoute
 apiVersion: traefik.containo.us/v1alpha1
 metadata:
-  name: ui-kit
+  name: ui-kit-secured
   namespace: tools
 spec:
   entryPoints:
