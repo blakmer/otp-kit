@@ -16,6 +16,8 @@ const STATUSES = {
 
 const Select = props => {
   const {
+    className,
+    style,
     items,
     defaultValue,
     value,
@@ -47,7 +49,8 @@ const Select = props => {
 
   return (
     <div
-      className={classnames(styles.container, block && styles.block)}
+      className={classnames(styles.container, block && styles.block, className)}
+      style={style}
       {...getComboboxProps()}>
       <label
         {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}
@@ -101,6 +104,8 @@ const Select = props => {
 }
 
 Select.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

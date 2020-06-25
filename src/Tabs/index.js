@@ -9,15 +9,27 @@ const LEVELS = { inner: 'inner', outer: 'outer', buttons: 'buttons' }
 const SIZES = { default: 'default', small: 'small' }
 
 const Tabs = props => {
-  const { data, onChange, defaultActive, level, size } = props
+  const {
+    data,
+    onChange,
+    defaultActive,
+    level,
+    size,
+    block,
+    className,
+    style,
+  } = props
   const [val, setVal] = useState(defaultActive)
   return (
     <div
       className={classnames(
         styles.tabContainer,
         styles[LEVELS[level]],
-        styles[SIZES[size]]
-      )}>
+        styles[SIZES[size]],
+        block && styles.block,
+        className
+      )}
+      style={style}>
       {data.map((i, j) => (
         <div
           key={j}
@@ -46,6 +58,8 @@ Tabs.propTypes = {
   defaultActive: propTypes.number,
   level: propTypes.oneOf(Object.values(LEVELS)),
   size: propTypes.oneOf(Object.values(SIZES)),
+  className: propTypes.string,
+  style: propTypes.object,
 }
 
 Tabs.defaultProps = {

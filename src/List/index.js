@@ -3,18 +3,22 @@ import styles from './index.module.css'
 import Grid from '../Grid'
 import Pagination from '../Pagination'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 const { Container, Row, Col } = Grid
 
 const List = props => {
-  const { columns, data, pagination, headers } = props
+  const { className, style, columns, data, pagination, headers } = props
 
   const renderHeaders = columns.map((column, idx) => (
     <Col
-      className={styles.headerCol}
-      style={{
-        justifyContent: column.align === 'right' ? 'flex-end' : 'flex-start',
-      }}
+      className={classnames(styles.headerCol, className)}
+      style={
+        ({
+          justifyContent: column.align === 'right' ? 'flex-end' : 'flex-start',
+        },
+        { ...style })
+      }
       key={idx}
       offset={{ ...column.offset }}
       {...column.size}>
@@ -68,6 +72,8 @@ const List = props => {
 }
 
 List.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   pagination: PropTypes.shape({
     total: PropTypes.number.isRequired,
     current: PropTypes.number.isRequired,

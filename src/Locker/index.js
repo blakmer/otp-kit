@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 
 const Locker = props => {
-  const { active, onChange } = props
+  const { className, style, active, onChange } = props
 
   return (
     <button
-      className={classnames(styles.lockerContainer)}
+      className={classnames(styles.lockerContainer, className)}
+      style={style}
       onClick={() => onChange(!active)}>
       <svg width="28" height="24" viewBox="0 0 28 24">
         <g transform="translate(1)">
@@ -53,6 +54,8 @@ const Locker = props => {
 }
 
 Locker.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   active: PropTypes.bool,
   onChange: PropTypes.func,
 }

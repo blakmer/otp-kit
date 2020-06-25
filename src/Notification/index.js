@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect, useRef } from 'react'
 import classnames from 'classnames'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Typography from '../Typography'
 import Grid from '../Grid'
 import Icon from '../Icon'
@@ -10,7 +10,7 @@ import styles from './index.module.css'
 const { Container, Row, Col } = Grid
 
 const Notification = props => {
-  const { type, message, popup } = props
+  const { className, style, type, message, popup } = props
   const element = useRef(null)
   useEffect(() => {
     if (popup) {
@@ -30,7 +30,10 @@ const Notification = props => {
   }
 
   return (
-    <div ref={element} className={styles.notificationWrapped}>
+    <div
+      ref={element}
+      className={classnames(styles.notificationWrapped, className)}
+      style={style}>
       <Row justify="center">
         <Col md={popup ? 12 : 8}>
           <div
@@ -57,7 +60,7 @@ const Notification = props => {
 }
 
 const NotificationProvider = props => {
-  const { children } = props
+  const { className, style, children } = props
   const [messages, setMessages] = useState([])
 
   const showNotification = {
@@ -74,7 +77,7 @@ const NotificationProvider = props => {
       <div className={classnames(styles.notificationProvider)}>
         <Container fluid>
           {messages.map((i, j) => (
-            <Notification {...i} key={j} />
+            <Notification {...i} key={j} className={className} style={style} />
           ))}
         </Container>
       </div>
@@ -85,7 +88,9 @@ const NotificationProvider = props => {
 }
 
 NotificationProvider.propTypes = {
-  children: propTypes.func.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.func.isRequired,
 }
 
 export default NotificationProvider

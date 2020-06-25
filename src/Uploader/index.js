@@ -15,7 +15,7 @@ const STATUSES = {
 }
 
 const Uploader = props => {
-  const { status, onChange, progress } = props
+  const { className, style, status, onChange, progress } = props
   const [hover, setHover] = useState(false)
 
   const handleChange = e => {
@@ -127,7 +127,12 @@ const Uploader = props => {
     <label
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className={classnames(styles.uploader, styles[STATUSES[status]])}
+      className={classnames(
+        styles.uploader,
+        styles[STATUSES[status]],
+        className
+      )}
+      style={style}
       onDrop={e => handleDrop(e)}
       onDragOver={e => e.preventDefault()}>
       {innerContent[STATUSES[status]]}
@@ -136,6 +141,8 @@ const Uploader = props => {
 }
 
 Uploader.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   status: PropTypes.oneOf(Object.keys(STATUSES)),
   /** ({status, [files]}) => {} */
   onChange: PropTypes.func.isRequired,

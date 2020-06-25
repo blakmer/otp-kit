@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import Input from '../Input'
 import Typography from '../Typography'
 import Icon from '../Icon'
+import classnames from 'classnames'
 
 import styles from './index.module.css'
 
 const NavPanel = props => {
-  const { header, actions, onSearch, onHelp } = props
+  const { className, style, header, actions, onSearch, onHelp } = props
   return (
-    <div className={styles.navbar}>
+    <div className={classnames(styles.navbar, className)} style={style}>
       <span>{header}</span>
       <span className={styles.actionContainer}>
         {typeof onHelp === 'function' && (
@@ -43,6 +44,8 @@ const NavPanel = props => {
 }
 
 NavPanel.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   header: PropTypes.node,
   actions: PropTypes.arrayOf(
     PropTypes.shape({ icon: PropTypes.string, action: PropTypes.func })

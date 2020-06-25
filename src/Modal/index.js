@@ -13,6 +13,8 @@ import styles from './index.module.css'
 
 const Modal = props => {
   const {
+    className,
+    style,
     size,
     closable,
     header,
@@ -37,8 +39,8 @@ const Modal = props => {
   }
 
   return open ? (
-    <section className={classnames(styles.modalCanvas)}>
-      <Container fluid>
+    <section className={classnames(styles.modalCanvas, className)}>
+      <Container fluid style={style}>
         <Row
           justify="center"
           align="center"
@@ -89,6 +91,8 @@ const Modal = props => {
 }
 
 Modal.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   size: PropTypes.shape({
     xs: PropTypes.number,
     sm: PropTypes.number,

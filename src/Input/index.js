@@ -40,6 +40,7 @@ const Input = props => {
     onBlur,
     onChange,
     className,
+    style,
     mask,
     maskChar,
     block,
@@ -85,6 +86,7 @@ const Input = props => {
           styles[status],
           className
         )}
+        style={style}
         readOnly={readOnly}
         {...otherProps}
       />
@@ -105,6 +107,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   className: PropTypes.string,
+  style: PropTypes.object,
   maskChar: PropTypes.string,
   mask: PropTypes.string,
   block: PropTypes.bool,
