@@ -13,10 +13,12 @@ compile:
   script:
     - npm set registry='http://npm.lending.isb/'
     - npm install --progress=false
+    - npm run compile
     - npm run static
     - node -p "require('./package.json').version" > version.txt
   artifacts:
     paths:
+      - lib/
       - styleguide/
       - version.txt
     expire_in: 1 day
@@ -24,8 +26,9 @@ compile:
 build:
   stage: build
   script:
-    - npm publish
     - export PROJECT_VERSION=$(head -1 version.txt)
+    - [ "$PROJECT_VERSION" != "$CI_COMMIT_TAG" ] && exit 1
+    - npm publish
     - docker image build -t docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA .
     - docker push docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA
   only:
@@ -41,6 +44,6 @@ deploy:
     - |
       kubectl set image deployment/ui-kit \
               ui-kit=docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA \
-              --kubeconfig $KUBE_CONFIG --namespace=lending
+              --kubeconfig $KUBE_CONFIG --namespace=tools
   only:
     - tags
