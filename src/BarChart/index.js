@@ -19,7 +19,7 @@ const getStrokeColor = percent => {
 }
 
 const BarChart = props => {
-  const { data, colorMap, height } = props
+  const { className, style, data, colorMap, height } = props
   const values = data.map(i => i.value)
   const maxValue = Math.max.apply(Math, values)
   const countBars = data.length
@@ -28,7 +28,7 @@ const BarChart = props => {
   const percent = maxValue / 100
 
   return (
-    <svg width={'100%'} height={height}>
+    <svg width={'100%'} height={height} className={className} style={style}>
       {data.map(({ value, title }, k) => {
         const bar = {
           y1: height - 24 - (value / percent) * canvasPercent,
@@ -97,6 +97,8 @@ const BarChart = props => {
 }
 
 BarChart.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   data: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, value: PropTypes.number })
   ),

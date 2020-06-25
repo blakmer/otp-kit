@@ -85,8 +85,11 @@ const Logo = props => {
   )
 }
 Logo.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   mini: PropTypes.bool,
   fill: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Logo

@@ -16,6 +16,8 @@ const STATUSES = {
 
 const Multiselect = props => {
   const {
+    className,
+    style,
     items,
     initialSelected,
     selected,
@@ -73,8 +75,9 @@ const Multiselect = props => {
 
   return (
     <div
-      className={classnames(styles.container, block && styles.block)}
-      {...getComboboxProps()}>
+      className={classnames(styles.container, block && styles.block, className)}
+      {...getComboboxProps()}
+      style={style}>
       <div
         className={classnames(
           styles.labelContainer,
@@ -130,6 +133,8 @@ const Multiselect = props => {
 }
 
 Multiselect.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

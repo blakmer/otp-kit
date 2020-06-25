@@ -14,7 +14,7 @@ const getStrokeColor = progress => {
 }
 
 const RoundProgress = props => {
-  const { progress } = props
+  const { className, style, progress } = props
   if (progress < 0 || progress > 100) {
     console.warn('Props: progress must be a number between 0 and 100.')
     return null
@@ -23,7 +23,12 @@ const RoundProgress = props => {
   const transition = `stroke-dashoffset 0.3s ease-out`
 
   return (
-    <svg width={38} height={38} viewBox="-25 -25 400 400">
+    <svg
+      className={className}
+      style={style}
+      width={38}
+      height={38}
+      viewBox="-25 -25 400 400">
       <circle
         className={classes['bg-grey-1-stroke']}
         cx="175"
@@ -74,6 +79,8 @@ const RoundProgress = props => {
 }
 
 RoundProgress.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   progress: PropTypes.number,
 }
 

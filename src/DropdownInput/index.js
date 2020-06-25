@@ -140,6 +140,7 @@ DropdownInput.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   className: PropTypes.string,
+  style: PropTypes.object,
   maskChar: PropTypes.string,
   mask: PropTypes.string,
   block: PropTypes.bool,

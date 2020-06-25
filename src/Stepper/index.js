@@ -6,7 +6,14 @@ import { Visible, Hidden } from 'react-grid-system'
 import styles from './index.module.css'
 
 const Stepper = props => {
-  const { steps, currentStep, onChange, closeNextStepPerClick } = props
+  const {
+    className,
+    style,
+    steps,
+    currentStep,
+    onChange,
+    closeNextStepPerClick,
+  } = props
 
   const handleChange = step => {
     let accept = true
@@ -17,7 +24,9 @@ const Stepper = props => {
   }
 
   return (
-    <section className={styles.pubStepContainer}>
+    <section
+      className={classnames(styles.pubStepContainer, className)}
+      style={style}>
       <div className={styles.stepContainer}>
         {steps.map((i, k) => (
           <div
@@ -57,6 +66,8 @@ const Stepper = props => {
 }
 
 Stepper.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   steps: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

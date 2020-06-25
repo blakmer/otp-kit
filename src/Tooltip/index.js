@@ -6,7 +6,7 @@ import styles from './index.module.css'
 import classes from '../classes.module.css'
 
 const Tooltip = props => {
-  const { children, content, position, fill } = props
+  const { className, style, children, content, position, fill } = props
   const [pos, setPos] = useState('topCenter')
   const getAutoPosition = el => {
     const { innerHeight, innerWidth } = window
@@ -28,7 +28,8 @@ const Tooltip = props => {
 
   return (
     <span
-      className={styles.contentContainer}
+      className={classnames(styles.contentContainer, className)}
+      style={style}
       onMouseEnter={({ target }) => {
         setPos(getAutoPosition(target))
       }}>
@@ -59,6 +60,8 @@ const Tooltip = props => {
 }
 
 Tooltip.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   fill: PropTypes.string,

@@ -22,6 +22,7 @@ const Checkbox = props => {
     onMouseLeave,
     children,
     className,
+    style,
   } = props
 
   const [check, setCheck] = useState(defaultChecked || false)
@@ -57,6 +58,7 @@ const Checkbox = props => {
           styles.checkbox,
           indeterminate && styles.indeterminate
         )}
+        style={style}
         id={id}
         type="checkbox"
       />
@@ -88,6 +90,8 @@ Checkbox.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   children: PropTypes.node,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 Checkbox.defaultProps = {

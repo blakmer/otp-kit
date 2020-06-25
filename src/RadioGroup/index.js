@@ -4,14 +4,16 @@ import styles from './index.module.css'
 import classnames from 'classnames'
 
 const RadioGroup = props => {
-  const { name, data, direction, onChange } = props
+  const { className, style, name, data, direction, onChange } = props
 
   return (
     <div
       className={classnames({
         [styles.groupRow]: direction === 'row',
         [styles.groupColumn]: direction === 'column',
-      })}>
+        className,
+      })}
+      style={style}>
       {data.map(
         ({
           label,
@@ -68,6 +70,8 @@ const RadioGroup = props => {
 }
 
 RadioGroup.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   direction: PropTypes.string,
   name: PropTypes.string.isRequired,
   /** Колбэк, который срабатывает при смене активного дочернего элемента. Принимает на вход event: Event */

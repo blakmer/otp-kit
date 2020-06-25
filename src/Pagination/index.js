@@ -9,7 +9,7 @@ const RANGE_SIZE = 10
 const { Visible, Hidden } = Grid
 
 const Pagination = props => {
-  const { total, current, onPageChanged, className } = props
+  const { total, current, onPageChanged, className, style } = props
 
   /**
    * @getRange - массив типа [мин значение, макс значение, разрыв слева, разрыв справа]
@@ -79,7 +79,7 @@ const Pagination = props => {
   }
 
   return (
-    <div className={classnames(styles.wrapper, className)}>
+    <div className={classnames(styles.wrapper, className)} style={style}>
       <RoundButton
         key="prev"
         icon="arrow-left"
@@ -151,6 +151,7 @@ Pagination.propTypes = {
   total: PropTypes.number.isRequired,
   onPageChanged: PropTypes.func,
   className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 Pagination.defaultProps = {
