@@ -1,8 +1,8 @@
 stages:
   - compile
-  - publish
   - build
   - deploy
+  - publish
 
 cache:
   paths:
@@ -24,20 +24,11 @@ compile:
       - version.txt
     expire_in: 1 day
 
-publish:
-  image: node
-  stage: publish
-  script:
-    - export PROJECT_VERSION=$(head -1 version.txt)
-    - if [ "$PROJECT_VERSION" != "$CI_COMMIT_TAG" ] ; then exit 1; fi
-    - npm publish
-  only:
-    - tags
-
 build:
   stage: build
   script:
     - export PROJECT_VERSION=$(head -1 version.txt)
+    - if [ "$PROJECT_VERSION" != "$CI_COMMIT_TAG" ] ; then exit 1; fi
     - docker image build -t docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA .
     - docker push docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA
   only:
@@ -54,5 +45,15 @@ deploy:
       kubectl set image deployment/ui-kit \
               ui-kit=docker.lending/ui-kit:$PROJECT_VERSION-$CI_COMMIT_SHORT_SHA \
               --kubeconfig $KUBE_CONFIG --namespace=tools
+  only:
+    - tags
+
+publish:
+  image: node
+  stage: publish
+  script:
+    - export PROJECT_VERSION=$(head -1 version.txt)
+    - if [ "$PROJECT_VERSION" != "$CI_COMMIT_TAG" ] ; then exit 1; fi
+    - npm publish
   only:
     - tags
