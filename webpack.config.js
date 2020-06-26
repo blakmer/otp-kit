@@ -5,7 +5,6 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        exclude: '/src/docs.css',
         use: [
           {
             loader: 'style-loader',

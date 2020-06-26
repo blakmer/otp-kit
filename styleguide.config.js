@@ -1,5 +1,5 @@
 module.exports = {
-  require: ['./src/style.css', './src/themes/light.css'],
+  require: ['./src/style.css', './src/themes/light.css', './setup.js'],
   webpackConfig: require('./webpack.config.js'),
   usageMode: 'expand',
   exampleMode: 'collapse',
