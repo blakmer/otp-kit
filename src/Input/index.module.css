@@ -52,6 +52,17 @@ input.withPrefix {
 .input:focus,
 .input:not([disabled]):hover {
   border: 2px solid var(--color-primary);
+  padding: calc(0.875rem-1px) calc(1.5rem-1px)
+}
+
+.input.withPrefix:focus,
+.input.withPrefix:not([disabled]):hover {
+  padding-left: calc(3rem-1px);
+}
+
+.input.withSuffix:focus,
+.input.withSuffix:not([disabled]):hover  {
+  padding-right: calc(3rem-1px);
 }
 
 .input.error:focus,
