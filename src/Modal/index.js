@@ -93,6 +93,7 @@ const Modal = props => {
 Modal.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Размер модального окна */
   size: PropTypes.shape({
     xs: PropTypes.number,
     sm: PropTypes.number,
@@ -100,13 +101,19 @@ Modal.propTypes = {
     lg: PropTypes.number,
     xl: PropTypes.number,
   }),
+  /** Отображение кнопки закрыть */
   closable: PropTypes.bool,
   header: PropTypes.node,
   body: PropTypes.node,
+  /** Конфигурация кнопки Ок */
   okConfig: PropTypes.object,
+  /** Конфигурация кнопки Отмена */
   cancelConfig: PropTypes.object,
+  /** Действие при открытии модального окна */
   onOpen: PropTypes.func,
+  /** Действие при закрытии модального окна */
   onClose: PropTypes.func,
+  /** Управление отображением модального окна */
   isOpen: PropTypes.bool,
 }
 

@@ -36,9 +36,13 @@ PageNotFound.defaultProps = {
 PageNotFound.propTypes = {
   className: propTypes.string,
   style: propTypes.object,
+  /** Действие при клике на кнопку */
   onClick: propTypes.func,
+  /** Окрашивание кнопки в цвет из списка цветов */
   fill: propTypes.string,
+  /** Текст ссылки для ухода со страницы */
   linkText: propTypes.string,
+  /** Окрашивание иконки в цвет из списка цветов */
   iconFill: propTypes.string,
 }
 

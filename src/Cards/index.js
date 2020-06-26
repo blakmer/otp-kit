@@ -33,9 +33,11 @@ const Cards = props => {
 }
 
 Cards.propTypes = {
+  /** Ссылка на изображение */
   img: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Отображение тени */
   shadow: PropTypes.bool,
   header: PropTypes.node,
   body: PropTypes.node,

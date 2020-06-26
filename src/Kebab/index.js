@@ -26,8 +26,11 @@ const Kebab = props => {
 }
 
 Kebab.propTypes = {
+  /** Элементы всплывающего меню */
   items: PropTypes.arrayOf(PropTypes.node),
+  /** Текст, отображаемый при отсутствии элементов во всплывающем меню */
   emptyText: PropTypes.string,
+  /** Направление всплывающего меню */
   listDirection: PropTypes.oneOf(['bottomCenter', 'topCenter']),
 }
 
