@@ -48,21 +48,16 @@ module.exports = {
       content: 'docs/introduction.md',
     },
     {
-      name: 'Documentation',
-      sections: [
-        {
-          name: 'Installation',
-          content: 'docs/installation.md',
-        },
-        {
-          name: 'Development',
-          content: 'docs/development.md',
-        },
-        {
-          name: 'Colors',
-          content: 'docs/colors.md',
-        },
-      ],
+      name: 'Installation',
+      content: 'docs/installation.md',
+    },
+    {
+      name: 'Changelog',
+      content: 'docs/development.md',
+    },
+    {
+      name: 'Colors',
+      content: 'docs/colors.md',
     },
     {
       name: 'Base',
