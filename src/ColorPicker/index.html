@@ -1,0 +1,158 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link href="css/style.css" rel="stylesheet" />
+  <body>
+    <div id="root">
+      <div id="light">Light themes</div>
+      <div id="dark">Dark themes</div>
+    </div>
+    <script>
+      const light = document.getElementById('light')
+      const dark = document.getElementById('dark')
+
+      const light_colors = [
+        ['--color-primary', ' #52ae30'],
+        ['--color-primary-hover', ' #74bf1e'],
+        ['--color-highlighted', ' #ff6600'],
+        ['--color-highlighted-hover', ' #ff802b'],
+        ['--color-blue', ' #1b82e3'],
+        ['--color-blue-hover', ' #3e9ef7'],
+        ['--color-error', ' #ff435a'],
+        ['--color-error-hover', ' #ff5c6f'],
+        ['--color-alert', ' #ffcc00'],
+        ['--color-white', ' #ffffff'],
+        ['--color-black', ' #000000'],
+        ['--color-bg-grey-1', ' #d3d9e6'],
+        ['--color-bg-grey-2', ' #e2e6f0'],
+        ['--color-bg-grey-3', ' #eff2f9'],
+        ['--color-bg-grey-4', ' #f7f9ff'],
+        ['--color-bg-input', ' #ffffff'],
+        ['--color-bg-input-disabled', ' #f1f1f1'],
+        ['--color-border', ' #8e939f'],
+        ['--color-shadow', ' rgba(73, 92, 136, 0.15)'],
+        ['--color-modal-overlay', ' #1b1f2750'],
+        ['--color-text-primary', ' #1b1f27'],
+        ['--color-text-secondary', ' #6e7482'],
+        ['--color-text-disabled', ' #ababab'],
+        ['--color-text-inverse', ' #e6eaf2'],
+        ['--color-chart-blue', ' #1b82e3'],
+        ['--color-chart-yellow', ' #ffcc00'],
+        ['--color-chart-purple', ' #650c90'],
+        ['--color-chart-violet', ' #ab47bc'],
+        ['--color-chart-coral', ' #1bbc9b'],
+        ['--color-chart-green', ' #52ae30'],
+        ['--color-bg-pastel-yellow', ' #fff8db'],
+        ['--color-bg-pastel-orange', ' #ffefd6'],
+        ['--color-bg-pastel-red', ' #ffe0e3'],
+        ['--color-bg-pastel-blue', ' #dbf4fa'],
+        ['--color-bg-pastel-green', ' #def7ea'],
+        ['--color-hero-bg-pastel-ocher', ' #e9c597'],
+        ['--color-hero-bg-pastel-yellow', ' #ffe680'],
+        ['--color-hero-bg-pastel-orange', ' #f6ae8b'],
+        ['--color-hero-bg-pastel-red', ' #dbb4c1'],
+        ['--color-hero-bg-pastel-purple', ' #d1bcdc'],
+        ['--color-hero-bg-pastel-violet', ' #cf98d9'],
+        ['--color-hero-bg-pastel-blue', ' #a3cbe6'],
+        ['--color-hero-bg-pastel-green', ' #a8ccab'],
+        ['--color-hero-bg-pastel-lime', ' #aad17d'],
+        ['--color-hero-bg-pastel-coral', ' #84bdb1'],
+        ['--color-notification-success', ' #298d37'],
+        ['--color-notification-error', ' #ff435a'],
+        ['--color-text-terminal-primary', ' #e6eaf2'],
+        ['--color-text-terminal-secondary', ' #a1a7b3'],
+        ['--color-bg-terminal-4', ' #1f2226'],
+        ['--color-bg-terminal-2', ' #333740'],
+        ['--color-bg-terminal-1', ' #474d59'],
+        ['--color-logo-1', ' #006648'],
+        ['--color-logo-2', ' #52ae30'],
+      ]
+      const dark_colors = [
+        ['--color-primary', ' #52ae30'],
+        ['--color-primary-hover', ' #74bf1e'],
+        ['--color-highlighted', ' #ff6600'],
+        ['--color-highlighted-hover', ' #ff802b'],
+        ['--color-blue', ' #1b82e3'],
+        ['--color-blue-hover', ' #3e9ef7'],
+        ['--color-error', ' #ff435a'],
+        ['--color-error-hover', ' #ff5c6f'],
+        ['--color-alert', ' #ffcc00'],
+        ['--color-white', ' #ffffff'],
+        ['--color-black', ' #000000'],
+        ['--color-bg-grey-1', ' #474d59'],
+        ['--color-bg-grey-2', ' #333740'],
+        ['--color-bg-grey-3', ' #292c33'],
+        ['--color-bg-grey-4', ' #1f2226'],
+        ['--color-bg-input', ' #292c33'],
+        ['--color-bg-input-disabled', ' #393b4040'],
+        ['--color-border', ' #737780'],
+        ['--color-shadow', ' none'],
+        ['--color-modal-overlay', ' #1b1f2750'],
+        ['--color-text-primary', ' #e6eaf2'],
+        ['--color-text-secondary', ' #a1a7b3'],
+        ['--color-text-disabled', ' #676b73'],
+        ['--color-text-inverse', ' #1b1f27'],
+        ['--color-chart-blue', ' #1b82e3'],
+        ['--color-chart-yellow', ' #ffcc00'],
+        ['--color-chart-purple', ' #650c90'],
+        ['--color-chart-violet', ' #ab47bc'],
+        ['--color-chart-coral', ' #1bbc9b'],
+        ['--color-chart-green', ' #52ae30'],
+        ['--color-bg-pastel-yellow', ' #fff8db'],
+        ['--color-bg-pastel-orange', ' #ffefd6'],
+        ['--color-bg-pastel-red', ' #ffe0e3'],
+        ['--color-bg-pastel-blue', ' #dbf4fa'],
+        ['--color-bg-pastel-green', ' #def7ea'],
+        ['--color-hero-bg-pastel-ocher', ' #e9c597'],
+        ['--color-hero-bg-pastel-yellow', ' #ffe680'],
+        ['--color-hero-bg-pastel-orange', ' #f6ae8b'],
+        ['--color-hero-bg-pastel-red', ' #dbb4c1'],
+        ['--color-hero-bg-pastel-purple', ' #d1bcdc'],
+        ['--color-hero-bg-pastel-violet', ' #cf98d9'],
+        ['--color-hero-bg-pastel-blue', ' #a3cbe6'],
+        ['--color-hero-bg-pastel-green', ' #a8ccab'],
+        ['--color-hero-bg-pastel-lime', ' #aad17d'],
+        ['--color-hero-bg-pastel-coral', ' #84bdb1'],
+        ['--color-notification-success', ' #298d37'],
+        ['--color-notification-error', ' #ff435a'],
+        ['--color-text-terminal-primary', ' #e6eaf2'],
+        ['--color-text-terminal-secondary', ' #a1a7b3'],
+        ['--color-bg-terminal-4', ' #1f2226'],
+        ['--color-bg-terminal-2', ' #333740'],
+        ['--color-bg-terminal-1', ' #474d59'],
+        ['--color-logo-1', ' #006648'],
+        ['--color-logo-2', ' #52ae30'],
+      ]
+
+      function copyToClipboard(text) {
+        var copytext = document.createElement('input')
+        copytext.value = text
+        document.body.appendChild(copytext)
+        copytext.select()
+        document.execCommand('copy')
+        document.body.removeChild(copytext)
+      }
+
+      function render(node, colors) {
+        colors.forEach(([name, color]) => {
+          const box = document.createElement('div')
+          box.classList.add('box')
+          box.style.backgroundColor = color
+          box.innerHTML = 'name:' + ' ' + name + ' ' + 'color:' + ' ' + color
+          box.addEventListener('click', () => {
+            copyToClipboard(name)
+          })
+
+          node.appendChild(box)
+        })
+      }
+
+      render(light, light_colors)
+      render(dark, dark_colors)
+    </script>
+  </body>
+</html>
