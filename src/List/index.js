@@ -3,7 +3,6 @@ import styles from './index.module.css'
 import Grid from '../Grid'
 import Pagination from '../Pagination'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 
 const { Container, Row, Col } = Grid
 
@@ -12,13 +11,10 @@ const List = props => {
 
   const renderHeaders = columns.map((column, idx) => (
     <Col
-      className={classnames(styles.headerCol, className)}
-      style={
-        ({
-          justifyContent: column.align === 'right' ? 'flex-end' : 'flex-start',
-        },
-        { ...style })
-      }
+      className={styles.headerCol}
+      style={{
+        justifyContent: column.align === 'right' ? 'flex-end' : 'flex-start',
+      }}
       key={idx}
       offset={{ ...column.offset }}
       {...column.size}>
@@ -55,7 +51,7 @@ const List = props => {
   ))
 
   return (
-    <Container>
+    <Container className={className} style={style}>
       {headers && (
         <header className={styles.header}>
           <Row>{renderHeaders}</Row>

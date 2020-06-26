@@ -32,8 +32,6 @@ const [color, setColor] = useState('')
     }
     topContent={
       <Input
-        label="Контент топ"
-        defaultValue="снизу лишнее пространство, нуна фиксануть инпут"
         block
       />
     }

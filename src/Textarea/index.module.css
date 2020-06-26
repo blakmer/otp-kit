@@ -25,6 +25,7 @@
 .textarea:focus,
 .textarea:not([disabled]):hover {
   border: 2px solid var(--color-primary);
+  padding: calc(0.875rem-1px) calc(1.5rem-1px);
 }
 
 .textarea.error:focus,
