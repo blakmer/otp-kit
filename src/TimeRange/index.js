@@ -144,11 +144,15 @@ TimeRange.defaultProps = {
 }
 
 TimeRange.propTypes = {
+  /** Задаваемое значение */
   value: PropTypes.array,
+  /** Шаг */
   step: PropTypes.oneOf([60, 30, 15, 10, 5, 1]),
   name: PropTypes.string,
   onChange: PropTypes.func,
+  /** Минимальный интервал */
   minInterval: PropTypes.number,
+  /** Отображение стрелок вокруг курсоров */
   withBubbles: PropTypes.bool,
 }
 

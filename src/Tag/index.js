@@ -52,11 +52,16 @@ const Tag = props => {
 Tag.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Окрашивание элемента в произвольный цвет */
   fillHex: PropTypes.string,
+  /** Callback, вызываемый при удалении элемента */
   onRemove: PropTypes.func,
+  /** Окрашивание элемента в цвет из списка цветов */
   fill: PropTypes.string,
   disabled: PropTypes.bool,
+  /** Заголовок элемента */
   title: PropTypes.string,
+  /** Делает элемент прозрачным */
   secondary: PropTypes.bool,
 }
 

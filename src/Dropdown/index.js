@@ -76,11 +76,16 @@ const Dropdown = props => {
 }
 
 Dropdown.propTypes = {
+  /** Элементы всплывающего меню */
   items: PropTypes.arrayOf(PropTypes.node),
+  /** Значение по умолчанию */
   defaultValue: PropTypes.node,
+  /** Callback, вызываемый при открытии всплывающего меню */
   onAction: PropTypes.func,
   onChange: PropTypes.func,
+  /** Текст, отображаемый при отсутствии элементов во всплывающем меню */
   emptyText: PropTypes.string,
+  /** Направление всплывающего меню */
   listDirection: PropTypes.oneOf([
     'topLeft',
     'topCenter',
@@ -89,9 +94,11 @@ Dropdown.propTypes = {
     'bottomCenter',
     'bottomRight',
   ]),
+  /** Отображение стрелки у всплывающего меню */
   showArrow: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Дочерний элемент */
   children: PropTypes.node,
 }
 

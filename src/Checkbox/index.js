@@ -76,19 +76,25 @@ const Checkbox = props => {
 }
 
 Checkbox.propTypes = {
+  /** Значение по умолчанию */
   defaultChecked: PropTypes.bool,
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
+  /** Значение для валидации */
   required: PropTypes.bool,
+  /** Навигация с клавиатуры */
   tabIndex: PropTypes.number,
+  /** Установление значения */
   checked: PropTypes.bool,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
+  /** Дочерний элемент */
   children: PropTypes.node,
   className: PropTypes.string,
   style: PropTypes.object,
