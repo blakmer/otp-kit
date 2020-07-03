@@ -1365,6 +1365,10 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="xml" />
       <div style={{ wordWrap: 'break-word' }}>xml</div>
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+      <Icon.Medium type="document-hand" />
+      <div style={{ wordWrap: 'break-word' }}>document-hand</div>
+    </Col>
   </Row>
 </Container>
 ```
