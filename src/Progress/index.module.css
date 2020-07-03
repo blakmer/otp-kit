@@ -32,11 +32,15 @@ progress::-moz-progress-bar {
   background-color: var(--color-primary);
 }
 
-label {
+.progress > label {
   margin-left: 0.5rem;
   font-family: var(--font-semi-bold);
 }
 
 .complete {
   color: var(--color-primary);
+}
+
+.block {
+  width: 100%;
 }
