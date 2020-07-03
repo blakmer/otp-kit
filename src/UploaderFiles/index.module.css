@@ -1,0 +1,96 @@
+.uploaderContainer {
+  display: flex;
+}
+
+.rightText {
+  display: inline-flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.uploadIcon {
+  padding: .3rem 0;
+}
+
+.defaultUploader {
+  background: var(--color-primary);
+  border-radius: 1.5rem;
+  height: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  font-family: var(--font-semi-bold);
+  width: 180px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+  
+.defaultUploader:hover {
+  background: var(--color-primary-hover);
+}
+  
+.dropzone {
+  border: dashed 2px var(--color-text-secondary);
+  border-radius: 2rem;
+  padding: 0 2rem;
+  height: 4.5rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dropzone.hover {
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-bg-pastel-green);
+}
+
+.fileList {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.fileList.block {
+  width: 100%;
+}
+
+.fileList .item {
+  width: 100%;
+  border-radius: 2rem;
+  margin: .25rem 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.fileList .filename {
+  font-family: var(--font-semi-bold);
+}
+
+.fileList .item:hover {
+  background: var(--color-bg-grey-3);
+}
+
+.fileList .content {
+  display: inline-flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.fileList .prefix {
+  padding-left: 1rem;
+  padding-right: .5rem;
+}
+
+.fileList .suffix {
+  padding-right: 1rem;
+  padding-left: .5rem;
+  cursor: pointer;
+}

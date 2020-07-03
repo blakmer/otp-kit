@@ -95,6 +95,7 @@ module.exports = {
         'src/Tooltip/index.js',
         'src/Progress/index.js',
         'src/Uploader/index.js',
+        'src/UploaderFiles/index.js',
         'src/RoundProgress/index.js',
         'src/Locker/index.js',
         'src/Divider/index.js',
