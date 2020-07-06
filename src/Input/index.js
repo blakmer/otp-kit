@@ -96,26 +96,40 @@ const Input = props => {
 }
 
 Input.propTypes = {
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.values(STATUSES)),
   type: PropTypes.string,
+  /** Автозаполнение */
   autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   autoFocus: PropTypes.bool,
+  /** Значение по умолчанию */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   id: PropTypes.string,
   name: PropTypes.string,
+  /** Навигация с клавиатуры */
   tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Установление значения */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Callback, вызываемый при изменении значения */
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Посимвольная фильтрация */
   maskChar: PropTypes.string,
+  /** Фильтрация значния по маске */
   mask: PropTypes.string,
+  /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
+  /** Запрет ручного ввода данных */
   readOnly: PropTypes.bool,
+  /** Добавление элементов в правой части компонента */
   suffix: PropTypes.node,
+  /** Добавление элементов в левой части компонента */
   prefix: PropTypes.node,
   placeholder: PropTypes.string,
+  /** Ссылка на элемент */
   inputRef: PropTypes.any,
+  /** Преобразование к вводу валюты */
   currency: PropTypes.bool,
 }
 

@@ -99,9 +99,11 @@ const BarChart = props => {
 BarChart.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Перечень колонок */
   data: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, value: PropTypes.number })
   ),
+  /** Палитра цветов при определенных значениях */
   colorMap: PropTypes.shape({
     0: PropTypes.string,
     1: PropTypes.string,
@@ -109,7 +111,7 @@ BarChart.propTypes = {
     50: PropTypes.string,
     100: PropTypes.string,
   }),
-  /** Hegiht of canvas (px) */
+  /** Высота canvas (px) */
   height: PropTypes.number,
 }
 

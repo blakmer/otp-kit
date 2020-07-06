@@ -106,19 +106,24 @@ const Select = props => {
 Select.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Элементы всплывающго меню */
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
+  /** Элемент из списка, выбранный по умолчанию */
   defaultValue: PropTypes.shape({
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }),
   onChange: PropTypes.func,
+  /** Текст, отображаемый при отсутствии элементов во всплывающем меню */
   emptyText: PropTypes.string,
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.keys(STATUSES)),
+  /** Направление всплывающего меню */
   listDirection: PropTypes.oneOf(['bottom', 'top']),
   placeholder: PropTypes.string,
 }

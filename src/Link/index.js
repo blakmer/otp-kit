@@ -23,11 +23,15 @@ const Link = props => {
 
 Link.propTypes = {
   className: PropTypes.string,
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
   style: PropTypes.object,
   onClick: PropTypes.func,
+  /** Дочерний элемент */
   children: PropTypes.node,
+  /** Добавление иконки в правой части */
   suffix: PropTypes.string,
+  /** Добавление иконки в левой части */
   prefix: PropTypes.string,
 }
 

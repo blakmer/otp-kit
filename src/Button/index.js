@@ -96,15 +96,25 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   htmlType: PropTypes.string,
+  /** Дочерний элемент внутри кнопки */
   children: PropTypes.node,
+  /** Изменение размера кнопки */
   size: PropTypes.oneOf(['small', 'medium']),
+  /** Отвечает за добавление тени вокруг кнопки */
   floating: PropTypes.bool,
+  /** Делает кнопку прозрачной с границей вокруг */
   ghost: PropTypes.bool,
+  /** Добавление иконки в правой части кнопки */
   suffix: PropTypes.string,
+  /** Добавление иконки в левой части кнопки */
   prefix: PropTypes.string,
+  /** Окрашивание кнопки в цвет из списка цветов */
   fill: PropTypes.string,
+  /** Окрашивание иконки слева в цвет из списка цветов */
   prefixFill: PropTypes.string,
+  /** Окрашивание иконки справа в цвет из списка цветов */
   suffixFill: PropTypes.string,
+  /** Расположение кнопки во всю ширину относительно родителя */
   block: PropTypes.bool,
 }
 

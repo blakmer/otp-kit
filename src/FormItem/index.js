@@ -86,11 +86,15 @@ const FormItem = props => {
 }
 
 FormItem.propTypes = {
+  /** Заголовок элемента */
   label: PropTypes.node,
   className: PropTypes.string,
   description: PropTypes.string,
+  /** Дочерний элемент */
   children: PropTypes.element.isRequired,
+  /** Отображение количества символов */
   count: PropTypes.number,
+  /** Преобразование к плоской структуре */
   flat: PropTypes.bool,
 }
 

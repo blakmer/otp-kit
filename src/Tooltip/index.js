@@ -62,9 +62,13 @@ const Tooltip = props => {
 Tooltip.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Дочерний элемент */
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  /** Элементы во всплывающем меню */
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
+  /** Направление всплывающего меню */
   position: PropTypes.oneOf([
     'auto',
     'topLeft',

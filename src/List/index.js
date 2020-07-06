@@ -70,16 +70,25 @@ const List = props => {
 List.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Отображение компонента Pagination */
   pagination: PropTypes.shape({
+    /** Общее число страниц */
     total: PropTypes.number.isRequired,
+    /** Текущая страница */
     current: PropTypes.number.isRequired,
+    /** Действие при изменении страницы */
     onPageChanged: PropTypes.func.isRequired,
   }),
+  /** Перечень колонок */
   columns: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Функция для отрисовки данных внутри колонки */
       render: PropTypes.func,
+      /** Сопоставление данных строки с названием колонки */
       dataIndex: PropTypes.string,
+      /** Заголовок колонки */
       title: PropTypes.string,
+      /** Размер колонки */
       size: PropTypes.shape({
         xs: PropTypes.number,
         sm: PropTypes.number,
@@ -87,6 +96,7 @@ List.propTypes = {
         lg: PropTypes.number,
         xl: PropTypes.number,
       }),
+      /** Отступ от колонки */
       offset: PropTypes.shape({
         xs: PropTypes.number,
         sm: PropTypes.number,
@@ -96,7 +106,10 @@ List.propTypes = {
       }),
     })
   ),
+  /** Перечень строк */
   data: PropTypes.arrayOf(PropTypes.object),
+  /** Отображение заголовков */
+  headers: PropTypes.bool,
 }
 
 List.defaultProps = {

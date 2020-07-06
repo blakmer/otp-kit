@@ -72,16 +72,21 @@ const RadioGroup = props => {
 RadioGroup.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Направление расположеия элементов внутри */
   direction: PropTypes.string,
   name: PropTypes.string.isRequired,
-  /** Колбэк, который срабатывает при смене активного дочернего элемента. Принимает на вход event: Event */
+  /** Callback, который срабатывает при смене активного дочернего элемента. Принимает на вход event: Event */
   onChange: PropTypes.func,
+  /** Массив элементов RadioButton */
   data: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
+      /** Установка значения */
       value: PropTypes.string.isRequired,
+      /** Установка значения по умолчанию */
       defaultChecked: PropTypes.bool,
       disabled: PropTypes.bool,
+      /** Ссылка на элемент */
       ref: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
       onBlur: PropTypes.func,
       onFocus: PropTypes.func,

@@ -116,7 +116,9 @@ const DropdownInput = props => {
 }
 
 DropdownInput.propTypes = {
+  /** Текст, отображаемый при отсутствии элементов во всплывающем меню */
   dropdownEmptyText: PropTypes.string,
+  /** Направление всплывающего меню */
   dropdownListDirection: PropTypes.oneOf([
     'topLeft',
     'topCenter',
@@ -125,30 +127,45 @@ DropdownInput.propTypes = {
     'bottomCenter',
     'bottomRight',
   ]),
+  /** Элементы всплывающего меню */
   dropdownItems: PropTypes.arrayOf(PropTypes.node),
+  /** Значение для всплывающего меню */
   dropdownValue: PropTypes.node,
   onDropdownChange: PropTypes.func,
+  /** Callback, вызываемый при открытии всплывающего меню */
   onDropdownAction: PropTypes.func,
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.values(STATUSES)),
   type: PropTypes.string,
+  /** Автозаполнение */
   autoComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   autoFocus: PropTypes.bool,
+  /** Значение Input по умолчанию */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   id: PropTypes.string,
   name: PropTypes.string,
+  /** Навигация с клавиатуры */
   tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Установление значения для Input */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Callback, вызываемый при изменении значения в Input */
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Посимвольная фильтрация */
   maskChar: PropTypes.string,
+  /** Фильтрация значния по маске */
   mask: PropTypes.string,
+  /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
+  /** Запрет ручного ввода данных */
   readOnly: PropTypes.bool,
+  /** Добавление элементов в правой части компонента */
   suffix: PropTypes.node,
-  prefix: PropTypes.node,
   placeholder: PropTypes.string,
+  /** Ссылка на элемент */
   inputRef: PropTypes.any,
+  /** Преобразование к вводу валюты */
   currency: PropTypes.bool,
 }
 

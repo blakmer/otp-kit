@@ -63,20 +63,30 @@ Accordion.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   onChange: PropTypes.func,
+  /** Элементы аккордеона */
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Заголовок */
       title: PropTypes.shape({
+        /** Левая часть заголовка */
         prefix: PropTypes.node,
+        /** Контент заголовка */
         content: PropTypes.node,
+        /** Правая часть заголовка */
         suffix: PropTypes.node,
+        /** Стили заголовка */
         style: PropTypes.object,
       }).isRequired,
+      /** Выплывающая часть */
       body: PropTypes.shape({
+        /** Контент выплывающей части */
         content: PropTypes.node,
+        /** Стили выплывающей части */
         style: PropTypes.object,
       }).isRequired,
     })
   ),
+  /** Открытый элемент */
   activeItem: PropTypes.shape({
     title: PropTypes.shape({
       prefix: PropTypes.node,
@@ -89,6 +99,7 @@ Accordion.propTypes = {
       style: PropTypes.object,
     }).isRequired,
   }),
+  /** Открытый элемент по умолчанию */
   defaultActiveItem: PropTypes.shape({
     title: PropTypes.shape({
       prefix: PropTypes.node,

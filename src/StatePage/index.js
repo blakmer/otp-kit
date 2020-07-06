@@ -43,11 +43,15 @@ const StatePage = props => {
 }
 
 StatePage.propTypes = {
+  /** Состояние элемента */
   type: PropTypes.oneOf(Object.keys(IMAGES_TYPES)),
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Заголовок */
   header: PropTypes.node,
+  /** Описание */
   description: PropTypes.node,
+  /** Добавление элементов снизу */
   actions: PropTypes.node,
 }
 

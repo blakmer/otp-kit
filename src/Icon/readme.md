@@ -1365,9 +1365,11 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="xml" />
       <div style={{ wordWrap: 'break-word' }}>xml</div>
     </Col>
-    <Col style={{ textAlign: 'center' }} sm={2} md={1}>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}> 
       <Icon.Medium type="document-hand" />
-      <div style={{ wordWrap: 'break-word' }}>document-hand</div>
+      <div style={{ wordWrap: 'break-word' }}>document-hand</div> 
+      <Icon.Medium type="dashboard-tiles" />
+      <div style={{ wordWrap: 'break-word' }}>dashboard-tiles</div> 
     </Col>
   </Row>
 </Container>
@@ -1469,6 +1471,26 @@ const { Container, Row, Col } = Grid
     <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
       <Icon.ClipArt type="store" fill="primary" />
       <div style={{ wordWrap: 'break-word' }}>store</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="car" fill="error" />
+      <div style={{ wordWrap: 'break-word' }}>car</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="sms" fill="blue" />
+      <div style={{ wordWrap: 'break-word' }}>sms</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="giraffe" fill="error" />
+      <div style={{ wordWrap: 'break-word' }}>giraffe</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="log-viewer"/>
+      <div style={{ wordWrap: 'break-word' }}>log-viewer</div>
+    </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1.5}>
+      <Icon.ClipArt type="ui-components" fill="blue" />
+      <div style={{ wordWrap: 'break-word' }}>ui-components</div>
     </Col>
   </Row>
 </Container>

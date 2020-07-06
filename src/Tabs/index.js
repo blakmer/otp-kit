@@ -46,6 +46,7 @@ const Tabs = props => {
 }
 
 Tabs.propTypes = {
+  /** Элементы вкладок */
   data: propTypes.arrayOf(
     propTypes.shape({
       title: propTypes.string,
@@ -55,8 +56,11 @@ Tabs.propTypes = {
   ),
   /** (value, key) => {} */
   onChange: propTypes.func,
+  /** Активная вкладка по умолчанию */
   defaultActive: propTypes.number,
+  /** Вид элемента */
   level: propTypes.oneOf(Object.values(LEVELS)),
+  /** Размер вкладок */
   size: propTypes.oneOf(Object.values(SIZES)),
   className: propTypes.string,
   style: propTypes.object,

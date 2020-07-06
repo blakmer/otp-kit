@@ -56,6 +56,7 @@ const Locker = props => {
 Locker.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Блок/Разблок */
   active: PropTypes.bool,
   onChange: PropTypes.func,
 }

@@ -61,12 +61,18 @@ const Divider = props => {
 
 Divider.propTypes = {
   className: PropTypes.string,
+  /** Отображение дочернего элемента относительно разделителя */
   orientation: PropTypes.oneOf(Object.keys(ORIENTATIONS)),
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
   style: PropTypes.object,
+  /** Добавление прерывистых линий */
   dashed: PropTypes.bool,
+  /** Направление линии */
   type: PropTypes.oneOf(['horisontal', 'vertical']),
+  /** Дочерний элемент */
   children: PropTypes.node,
+  /** Окрашивание дочернего элемента в цвет из списка цветов */
   childFill: PropTypes.string,
 }
 

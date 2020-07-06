@@ -234,8 +234,9 @@ import TagShoppingNew from './types/tag-shopping-new'
 import Undo from './types/undo'
 import UploadFile from './types/upload-file'
 import VintageCar from './types/vintage-car'
-import Xml from './types/xml'
-import DocumentHand from './types/document-hand'
+import Xml from './types/xml' 
+import DocumentHand from './types/document-hand' 
+import DashboardTiles from './types/dashboard-tiles' 
 
 const REFERENCES = {
   edit: Edit,
@@ -469,8 +470,9 @@ const REFERENCES = {
   undo: Undo,
   'upload-file': UploadFile,
   'vintage-car': VintageCar,
-  xml: Xml,
-  'document-hand': DocumentHand,
+  xml: Xml, 
+  'document-hand': DocumentHand, 
+  'dashboard-tiles': DashboardTiles, 
 }
 
 const Medium = props => {

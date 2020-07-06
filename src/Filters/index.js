@@ -44,6 +44,7 @@ Filters.propTypes = {
   topContent: PropTypes.node,
   midContent: PropTypes.node,
   bottomContent: PropTypes.node,
+  /** Управление открытием элемента */
   show: PropTypes.bool,
   /** Если true, то Filters можно будет закрыть нажатием по прозрачному оверлэю, который покрывает весь остальной контент, пока открыт Filters. Также запрещается прокрутка body, пока Filters открыт. */
   overlay: PropTypes.bool,
@@ -52,10 +53,6 @@ Filters.propTypes = {
 }
 
 Filters.defaultProps = {
-  // header: <p>Шапка</p>,
-  // topContent: <p>Верхний контент</p>,
-  // midContent: <p>Средний контент</p>,
-  // bottomContent: <p>Нижний контент</p>,
   show: false,
   overlay: false,
 }
