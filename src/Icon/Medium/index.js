@@ -235,6 +235,7 @@ import Undo from './types/undo'
 import UploadFile from './types/upload-file'
 import VintageCar from './types/vintage-car'
 import Xml from './types/xml'
+import DashboardTiles from './types/dashboard-tiles'
 
 const REFERENCES = {
   edit: Edit,
@@ -469,6 +470,7 @@ const REFERENCES = {
   'upload-file': UploadFile,
   'vintage-car': VintageCar,
   xml: Xml,
+  'dashboard-tiles': DashboardTiles,
 }
 
 const Medium = props => {
