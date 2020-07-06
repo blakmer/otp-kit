@@ -46,7 +46,9 @@ const Spinner = props => {
 Spinner.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
+  /** Изменение размера спиннера */
   size: PropTypes.oneOf(Object.keys(SIZES)),
   onClick: PropTypes.func,
 }

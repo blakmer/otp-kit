@@ -73,12 +73,17 @@ const Toggler = props => {
 Toggler.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Значение по умолчанию */
   defaultChecked: PropTypes.bool,
+  /** Установление значения */
   checked: PropTypes.bool,
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
   disabled: PropTypes.bool,
   name: PropTypes.string,
+  /** Значение для валидации */
   required: PropTypes.bool,
+  /** Навигация с клавиатуры */
   tabIndex: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,

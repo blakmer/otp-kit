@@ -24,7 +24,9 @@ const Progress = props => {
 Progress.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Установка значения */
   value: PropTypes.number,
+  /** Максимальное значение */
   max: PropTypes.number,
 }
 

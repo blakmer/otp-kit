@@ -135,30 +135,39 @@ const Multiselect = props => {
 Multiselect.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Элементы всплывающго меню */
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
+  /** Элементы из списка, выбранные по умолчанию */
   initialSelected: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
+  /** Выбор элементов из списка */
   selected: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
+  /** Текст, отображаемый при отсутствии элементов во всплывающем меню */
   emptyText: PropTypes.string,
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.keys(STATUSES)),
   onChange: PropTypes.func,
+  /** Callback, вызываемый при удалении выбранного значения */
   onRemoveClick: PropTypes.func,
+  /** Callback, вызываемый при выборе значения из списка */
   onItemSelect: PropTypes.func,
+  /** Направление всплывающего меню */
   listDirection: PropTypes.oneOf(['bottom', 'top']),
+  /** Расположение во всю ширину относительно родителя */
   block: PropTypes.bool,
 }
 

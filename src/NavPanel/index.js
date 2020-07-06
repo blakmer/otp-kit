@@ -47,10 +47,13 @@ NavPanel.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   header: PropTypes.node,
+  /** Перечень элементов справа */
   actions: PropTypes.arrayOf(
     PropTypes.shape({ icon: PropTypes.string, action: PropTypes.func })
   ),
+  /** Действие при вводе текста в поиск */
   onSearch: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+  /** Действие при нажатии на кнопку "Помощь" */
   onHelp: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
 }
 

@@ -14,8 +14,10 @@ const Badge = props => {
 }
 
 Badge.propTypes = {
+  /** Дочерний элемент */
   children: PropTypes.node,
-  badge: PropTypes.number,
+  /** Числовое значение */
+  count: PropTypes.number,
   className: PropTypes.string,
   style: PropTypes.object,
 }

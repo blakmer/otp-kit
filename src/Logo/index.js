@@ -87,7 +87,9 @@ const Logo = props => {
 Logo.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Минимизация логотипа */
   mini: PropTypes.bool,
+  /** Окрашивание логотипа в цвет из списка цветов */
   fill: PropTypes.string,
   onClick: PropTypes.func,
 }

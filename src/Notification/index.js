@@ -90,6 +90,7 @@ const NotificationProvider = props => {
 NotificationProvider.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Дочерний элемент внутри оповещения */
   children: PropTypes.func.isRequired,
 }
 

@@ -69,23 +69,36 @@ const Textarea = props => {
 Textarea.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.keys(STATUSES)),
+  /** Установление значения */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Значение по умолчанию */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Фокус на элемент по клавише */
   accessKey: PropTypes.string,
   autoFocus: PropTypes.bool,
+  /** Изменение ширины элемента */
   cols: PropTypes.number,
   form: PropTypes.string,
+  /** Максимальное число символов */
   maxLength: PropTypes.number,
   name: PropTypes.string,
+  /** Запрет ручного ввода данных */
   readOnly: PropTypes.bool,
   id: PropTypes.string,
+  /** Изменение высоты элемента */
   rows: PropTypes.number,
+  /** Навигация с клавиатуры */
   tabIndex: PropTypes.number,
+  /** Перенос текста */
   wrap: PropTypes.oneOf(['soft', 'hard', 'off']),
   onChange: PropTypes.func,
+  /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
+  /** Минимальная высота элемента */
   minRows: PropTypes.number,
+  /** Максимальная высота элемента */
   maxRows: PropTypes.number,
 }
 

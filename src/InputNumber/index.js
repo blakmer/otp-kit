@@ -100,17 +100,24 @@ const InputNumber = props => {
 }
 
 InputNumber.propTypes = {
+  /** Состояние элемента */
   status: PropTypes.oneOf(Object.values(STATUSES)),
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Настройка стрелок элемента */
   arrowsConfig: PropTypes.shape({
     upClick: PropTypes.func,
     downClick: PropTypes.func,
   }),
+  /** Минимальное значение */
   min: PropTypes.number,
+  /** Максимальное значение */
   max: PropTypes.number,
+  /** Шаг при клике на стрелку */
   step: PropTypes.number,
+  /** Установка значения */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** Установка значения по умолчанию */
   defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 

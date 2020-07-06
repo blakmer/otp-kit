@@ -74,9 +74,14 @@ RoundButton.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
   htmlType: PropTypes.string,
+  /** Анимация при клике */
   animation: PropTypes.oneOf(['ripple', 'pulse', 'none']),
-  inverse: PropTypes.bool,
+  /** Окрашивание в цвет из списка цветов */
+  fill: PropTypes.string,
+  /** Добавление иконки внутрь кнопки */
   icon: PropTypes.string,
+  /** Окрашивание иконки в цвет из списка цветов */
+  iconFill: PropTypes.string,
 }
 
 export default RoundButton

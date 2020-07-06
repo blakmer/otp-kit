@@ -147,8 +147,11 @@ const Pagination = props => {
 }
 
 Pagination.propTypes = {
+  /** Текущая страница */
   current: PropTypes.number,
+  /** Общее число страниц */
   total: PropTypes.number.isRequired,
+  /** Callback, вызываемый при изменении номера страницы */
   onPageChanged: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,

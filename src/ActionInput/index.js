@@ -40,13 +40,18 @@ const ActionInput = props => {
 }
 
 ActionInput.propTypes = {
+  /** Установление значения */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  /** Значение по умолчанию */
   defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onChange: PropTypes.func,
+  /** Отрисовка переченя элементов справа */
   actions: PropTypes.func,
   style: PropTypes.object,
   className: PropTypes.string,
+  /** Расположение во всю ширину относительно родителя */
   block: PropTypes.bool,
+  /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
   disabled: PropTypes.bool,
 }

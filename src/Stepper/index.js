@@ -68,14 +68,19 @@ const Stepper = props => {
 Stepper.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Список шагов */
   steps: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Заголовок шага */
       title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      /** Описание шага */
       description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     })
   ),
+  /** Установка шага */
   currentStep: PropTypes.number,
   onChange: PropTypes.func,
+  /** Запрет перехода на следующий шаг при клике на него */
   closeNextStepPerClick: PropTypes.bool,
 }
 

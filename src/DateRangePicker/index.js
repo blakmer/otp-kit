@@ -946,14 +946,21 @@ DateRangePicker.defaultProps = {
 }
 
 DateRangePicker.propTypes = {
+  /** Задаваемое значение */
   value: PropTypes.array,
+  /** Callback, вызываемый при изменении даты */
   onChangeDate: PropTypes.func,
+  /** Направление открывающегося списка */
   position: PropTypes.oneOf(['under', 'above']),
   disabled: PropTypes.bool,
   name: PropTypes.string,
+  /** Запрет ручного ввода данных */
   readOnly: PropTypes.bool,
+  /** Свойства почасового ввода данных */
   timeRangeOptions: PropTypes.shape({
+    /** Задаваемое значение */
     value: PropTypes.array,
+    /** Шаг (60, 30, 15, 10, 5, 1) */
     step: PropTypes.oneOf([60, 30, 15, 10, 5, 1]),
     onChange: PropTypes.func,
   }),

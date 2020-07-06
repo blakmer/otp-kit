@@ -359,9 +359,14 @@ DatePicker.defaultProps = {
 }
 
 DatePicker.propTypes = {
+  /** Задаваемое значение */
   value: PropTypes.string,
+  /** Callback, вызываемый при изменении даты */
   onChangeDate: PropTypes.func,
   disabled: PropTypes.bool,
   name: PropTypes.string,
+  /** Запрет ручного ввода данных */
   readOnly: PropTypes.bool,
+  /** Направление открывающегося списка */
+  position: PropTypes.oneOf(['under', 'above']),
 }

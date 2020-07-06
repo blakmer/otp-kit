@@ -52,12 +52,14 @@ const Layout = props => {
 }
 
 Layout.propTypes = {
+  /** Перечень элементов */
   items: PropTypes.arrayOf(
     PropTypes.shape({ key: PropTypes.string, icon: PropTypes.string })
   ),
   children: PropTypes.node,
   header: PropTypes.node,
   onChange: PropTypes.func,
+  /** Активный элемент */
   active: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
