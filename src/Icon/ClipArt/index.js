@@ -15,6 +15,11 @@ import Trash from './types/trash'
 import ErrorState from './types/error'
 import ImageSms from './types/image-sms'
 import BrokenRobot from './types/broken-robot'
+import Car from './types/car'
+import Sms from './types/sms'
+import Giraffe from './types/giraffe'
+import LogViewer from './types/log-viewer'
+import UiComponents from './types/ui-components'
 import TerminalBook from './types/terminal-book'
 import ArrivedLetter from './types/arrived-letter'
 import Folder from './types/folder'
@@ -44,6 +49,11 @@ const REFERENCES = {
   folder: Folder,
   group: Group,
   handshake: HandShake,
+  car: Car,
+  sms: Sms,
+  giraffe: Giraffe,
+  'ui-components': UiComponents,
+  'log-viewer': LogViewer,
   'instant-loan': InstantLoan,
   'machine-learning-tags': MachineLearningTags,
   photo: Photo,
