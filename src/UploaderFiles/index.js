@@ -13,23 +13,40 @@ const toMB = val => {
 }
 
 const UploaderFiles = props => {
-  const { className, style, type, accept, multiple, onChange } = props
+  const {
+    className,
+    style,
+    type,
+    accept,
+    multiple,
+    onChange,
+    maxFileSize,
+  } = props
 
   const [hover, setHover] = useState(false)
 
-  const handleChange = (e, showNotification, isDrop) => {
-    const files = isDrop ? e.dataTransfer.files : e.target.files
+  const handleCheckErrors = (maxFileSize, files, showNotification) => {
     const errors = []
     for (let i in files) {
-      if (toMB(files[i].size) >= 5) {
+      if (toMB(files[i].size) >= maxFileSize) {
         errors.push(
-          `Файл ${files[i].name} больше 5 МБ. Его прикрепление невозможно`
+          `Файл ${files[i].name} больше ${maxFileSize} МБ. Его прикрепление невозможно`
         )
       }
     }
     if (errors.length > 0) {
       errors.forEach(i => showNotification.error(i))
-    } else {
+    }
+    return errors.length > 0
+  }
+
+  const handleChange = (e, showNotification, isDrop) => {
+    const files = isDrop ? e.dataTransfer.files : e.target.files
+    let checkErrors = false
+    if (maxFileSize) {
+      checkErrors = handleCheckErrors(maxFileSize, files, showNotification)
+    }
+    if (!checkErrors) {
       onChange && onChange(files)
     }
     e.target.value = ''

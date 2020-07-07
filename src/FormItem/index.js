@@ -5,7 +5,7 @@ import Typography from '../Typography'
 import styles from './index.module.css'
 
 const FormItem = props => {
-  const { label, className, description, children, count, flat } = props
+  const { label, className, description, children, count, flat, style } = props
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
   const isSimple = children ? !children.length : false
@@ -47,7 +47,8 @@ const FormItem = props => {
         isSimple ? !!children.props.block && styles.block : null,
         flat && styles.flat,
         className
-      )}>
+      )}
+      style={style}>
       <div className={classnames(styles.child)}>
         {label && (
           <span
@@ -89,6 +90,7 @@ FormItem.propTypes = {
   /** Заголовок элемента */
   label: PropTypes.node,
   className: PropTypes.string,
+  style: PropTypes.object,
   description: PropTypes.string,
   /** Дочерний элемент */
   children: PropTypes.element.isRequired,
