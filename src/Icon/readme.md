@@ -1368,6 +1368,8 @@ const { Container, Row, Col } = Grid
     <Col style={{ textAlign: 'center' }} sm={2} md={1}> 
       <Icon.Medium type="document-hand" />
       <div style={{ wordWrap: 'break-word' }}>document-hand</div> 
+      </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}> 
       <Icon.Medium type="dashboard-tiles" />
       <div style={{ wordWrap: 'break-word' }}>dashboard-tiles</div> 
     </Col>
