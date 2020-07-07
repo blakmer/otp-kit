@@ -80,7 +80,7 @@ RadioGroup.propTypes = {
   /** Массив элементов RadioButton */
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string.isRequired,
+      label: PropTypes.node.isRequired,
       /** Установка значения */
       value: PropTypes.string.isRequired,
       /** Установка значения по умолчанию */
