@@ -15,7 +15,7 @@ const AccordionElement = props => {
         <span className={styles.content}>{title.content}</span>
         {title.suffix}
       </div>
-      {active && <div className={styles.body}>{body.content}</div>}
+      {body && active && <div className={styles.body}>{body.content}</div>}
     </div>
   )
 }
@@ -26,24 +26,27 @@ const Accordion = props => {
     style,
     items,
     onChange,
-    activeItem,
-    defaultActiveItem,
+    activeItems,
+    defaultActiveItems,
   } = props
 
-  const [act, setAct] = useState(defaultActiveItem)
+  const [act, setAct] = useState(defaultActiveItems || [])
   const handleChange = (index, active) => {
-    active ? setAct(undefined) : setAct(items[index])
-    onChange && onChange(index, items[index])
+    active
+      ? setAct(
+          act.filter((e, i) => {
+            return e !== index
+          })
+        )
+      : setAct([...act, index])
   }
 
   return (
     <div className={className} style={style}>
       {items.map((item, index) => {
-        const active = activeItem
-          ? item === activeItem
-          : act
-          ? item === act
-          : false
+        const active = activeItems
+          ? activeItems.indexOf(index) >= 0
+          : act.indexOf(index) >= 0
         return (
           <AccordionElement
             key={`element ${index}`}
@@ -51,7 +54,7 @@ const Accordion = props => {
             title={item.title}
             body={item.body}
             active={active}
-            onClick={activeItem ? onChange : handleChange}
+            onClick={activeItems ? onChange : handleChange}
           />
         )
       })}
@@ -100,7 +103,7 @@ Accordion.propTypes = {
     }).isRequired,
   }),
   /** Открытый элемент по умолчанию */
-  defaultActiveItem: PropTypes.shape({
+  defaultActiveItems: PropTypes.shape({
     title: PropTypes.shape({
       prefix: PropTypes.node,
       content: PropTypes.node,
