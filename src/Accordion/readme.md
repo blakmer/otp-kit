@@ -54,8 +54,7 @@ import Icon from '../Icon'
 import Toggler from '../Toggler'
 import Input from '../Input'
 
-const [active, setActive] = useState(0)
-
+const [active, setActive] = useState([])
 
 const items = [
   {
@@ -91,18 +90,24 @@ const items = [
   },
 ]
 
-const handleChange = idx => {
-  idx!==active ? setActive(idx) : setActive(undefined)
+const handleChange = (idx, act) => {
+act ? 
+  setActive(
+          active.filter((e, i) => {
+            return e !== idx
+          })
+        )
+      : setActive([...active, idx])
 }
 
 ;<React.Fragment>
   <Accordion
     onChange={handleChange}
     items={items.map((item, index) => {
-      item.title.suffix = <Toggler checked={active===index} />
+      item.title.suffix = <Toggler checked={active.indexOf(index) >= 0} />
       return item
     })}
-    activeItem={items[active]}
+    activeItems={active}
   />
 </React.Fragment>
 ```
