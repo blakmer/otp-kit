@@ -3,7 +3,6 @@ import classnames from 'classnames'
 import styles from './index.module.css'
 import Icon from '../Icon'
 import propTypes from 'prop-types'
-
 import IconDoc from '../IconDoc'
 
 const toMB = val => {
@@ -56,7 +55,7 @@ const FileList = props => {
 FileList.propTypes = {
   className: propTypes.string,
   style: propTypes.object,
-  files: propTypes.arrayOf(propTypes.shape(File)),
+  files: propTypes.array,
 }
 
 FileList.defaultProps = {
