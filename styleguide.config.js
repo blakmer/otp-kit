@@ -71,6 +71,7 @@ module.exports = {
     {
       name: 'Atomic',
       components: [
+        'src/IconDoc/index.js',
         'src/Badge/index.js',
         'src/Breadcrumb/index.js',
         'src/Button/index.js',

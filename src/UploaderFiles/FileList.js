@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 import styles from './index.module.css'
-import GetFillFromExt from './fills-from-ext'
 import Icon from '../Icon'
 import propTypes from 'prop-types'
 
-import FileExt from '../util/file-ext'
+import IconDoc from '../IconDoc'
 
 const toMB = val => {
   return (val / 1024 / 1024).toFixed(2)
@@ -34,9 +33,7 @@ const FileList = props => {
             onMouseLeave={() => {
               setHover(undefined)
             }}>
-            <FileExt className={styles.prefix} fill={GetFillFromExt(extension)}>
-              {extension}
-            </FileExt>
+            <IconDoc className={styles.prefix}>{extension}</IconDoc>
             <div className={styles.content}>
               <span className={styles.filename}>{item.name}</span>
               <span>{toMB(item.size)} МБ</span>

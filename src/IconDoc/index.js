@@ -2,15 +2,16 @@ import React from 'react'
 import classnames from 'classnames'
 import classes from '../classes.module.css'
 import propTypes from 'prop-types'
+import GetFillFromExt from './fills-from-ext'
 
-const FileExt = props => {
+const IconDoc = props => {
   const { className, style, fill, children } = props
-
+  const color = fill || GetFillFromExt(children)
   return (
     <svg
       className={classnames(
-        classes[`${fill}-stroke`],
-        classes[`${fill}-fill`],
+        classes[`${color}-stroke`],
+        classes[`${color}-fill`],
         className
       )}
       style={style}
@@ -19,7 +20,7 @@ const FileExt = props => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <text textAnchor="middle" x="12" y="16" style={{ fontSize: '9px' }}>
+      <text textAnchor="middle" x="12" y="16" style={{ fontSize: '8px' }}>
         {children}
       </text>
       <path
@@ -40,15 +41,11 @@ const FileExt = props => {
   )
 }
 
-FileExt.propTypes = {
+IconDoc.propTypes = {
   className: propTypes.string,
   style: propTypes.object,
   fill: propTypes.string,
   children: propTypes.node,
 }
 
-FileExt.defaultProps = {
-  fill: 'text-primary',
-}
-
-export default FileExt
+export default IconDoc
