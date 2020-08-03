@@ -6,7 +6,7 @@
 #### Default with FileList
 ```js
 import React, {useState} from 'react'
-import FileList from './FileList'
+import FileList from '../FileList'
 
 const [files,setFiles] = useState([])
 ;<div>

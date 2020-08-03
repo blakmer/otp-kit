@@ -478,12 +478,12 @@ const REFERENCES = {
 }
 
 const Medium = props => {
-  const { type, fill, className, onClick } = props
+  const { type, fill, className, onClick, noGap } = props
   const SVG = REFERENCES[type]
 
   return SVG ? (
     <span
-      className={classnames(styles.medium, styles.wrapper, className)}
+      className={classnames(!noGap && styles.medium, styles.wrapper, className)}
       onClick={onClick}>
       {
         <SVG
@@ -502,6 +502,7 @@ Medium.propTypes = {
   fill: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
+  noGap: PropTypes.bool,
 }
 
 Medium.defaultProps = {

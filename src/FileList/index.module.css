@@ -1,0 +1,44 @@
+
+.fileList {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 500px;
+  }
+  
+  .fileList.block {
+    width: 100%;
+  }
+  
+  .fileList .item {
+    width: 100%;
+    border-radius: 2rem;
+    margin: .25rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .fileList .filename {
+    font-family: var(--font-semi-bold);
+  }
+  
+  .fileList .item:hover {
+    background: var(--color-bg-grey-3);
+  }
+  
+  .fileList .content {
+    display: inline-flex;
+    flex-direction: column;
+    flex:1;
+  }
+  
+  .fileList .prefix {
+    padding-left: 1rem;
+    padding-right: .5rem;
+  }
+  
+  .fileList .suffix {
+    padding-right: 1rem;
+    padding-left: .5rem;
+    cursor: pointer;
+  }

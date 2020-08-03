@@ -178,12 +178,12 @@ const REFERENCES = {
 }
 
 const Small = props => {
-  const { type, fill, className, onClick } = props
+  const { type, fill, className, onClick, noGap } = props
   const SVG = REFERENCES[type]
 
   return SVG ? (
     <span
-      className={classnames(styles.small, styles.wrapper, className)}
+      className={classnames(!noGap && styles.small, styles.wrapper, className)}
       onClick={onClick}>
       {
         <SVG
@@ -202,6 +202,7 @@ Small.propTypes = {
   type: PropTypes.string.isRequired,
   className: PropTypes.string,
   onClick: PropTypes.func,
+  noGap: PropTypes.bool,
 }
 
 Small.defaultProps = {
