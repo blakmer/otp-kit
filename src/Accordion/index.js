@@ -2,20 +2,23 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
+import classes from '../classes.module.css'
 
 const AccordionElement = props => {
-  const { index, title, body, active, onClick } = props
+  const { index, title, body, active, onClick, titleBg, contentBg } = props
   return (
-    <div className={classnames(styles.element)}>
+    <div className={classnames(styles.element, classes[`${contentBg}-bg`])}>
       <div
-        className={styles.title}
+        className={classnames(styles.title, classes[`${titleBg}-bg`])}
         style={title.style}
         onClick={() => onClick(index, active)}>
         {title.prefix}
         <span className={styles.content}>{title.content}</span>
         {title.suffix}
       </div>
-      {body && active && <div className={styles.body}>{body.content}</div>}
+      {body && active && (
+        <div className={classnames(styles.body)}>{body.content}</div>
+      )}
     </div>
   )
 }
@@ -28,6 +31,8 @@ const Accordion = props => {
     onChange,
     activeItems,
     defaultActiveItems,
+    titleBg,
+    contentBg,
   } = props
 
   const [act, setAct] = useState(defaultActiveItems || [])
@@ -51,6 +56,8 @@ const Accordion = props => {
           <AccordionElement
             key={`element ${index}`}
             index={index}
+            titleBg={titleBg}
+            contentBg={contentBg}
             title={item.title}
             body={item.body}
             active={active}
@@ -66,6 +73,10 @@ Accordion.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   onChange: PropTypes.func,
+  /** Окрашивание заголовка в цвет из списка цветов */
+  titleBg: PropTypes.string,
+  /** Окрашивание контента в цвет из списка цветов */
+  contentBg: PropTypes.string,
   /** Элементы аккордеона */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -120,5 +131,7 @@ Accordion.propTypes = {
 Accordion.defaultProps = {
   onChange: i => {},
   items: [],
+  titleBg: 'bg-grey-2',
+  contentBg: 'bg-grey-3',
 }
 export default Accordion

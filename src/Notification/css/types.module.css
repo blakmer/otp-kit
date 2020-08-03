@@ -1,0 +1,55 @@
+
+
+@keyframes bounceInDown {
+	0%,
+	90%,
+	to {
+		animation-timing-function: cubic-bezier(.215, .61, .400, 1)
+	}
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -3000px, 0) scaleY(3)
+	}
+	90% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0)
+	}
+
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1
+	}
+	to {
+		opacity: 0
+	}
+}
+
+.animate__bounceInDown {
+  animation-duration: .5s;
+  animation-name: bounceInDown;
+  animation-iteration-count: 1;
+}
+
+.animate__fadeOut {
+  animation-duration: .5s;
+  animation-name: fadeOut;
+  animation-iteration-count: 1;
+}
+
+.notificationDefault {
+  background-color: var(--color-notification-success);
+}
+
+.notificationWarning {
+  background-color: var(--color-alert);
+}
+
+.notificationSuccess  {
+  background-color: var(--color-notification-success);
+}
+
+.notificationError {
+  background-color: var(--color-notification-error);
+}
