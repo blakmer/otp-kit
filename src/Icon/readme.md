@@ -1373,6 +1373,10 @@ const { Container, Row, Col } = Grid
       <Icon.Medium type="dashboard-tiles" />
       <div style={{ wordWrap: 'break-word' }}>dashboard-tiles</div> 
     </Col>
+    <Col style={{ textAlign: 'center' }} sm={2} md={1}> 
+      <Icon.Medium type="delete" />
+      <div style={{ wordWrap: 'break-word' }}>delete</div> 
+    </Col>
   </Row>
 </Container>
 ```
