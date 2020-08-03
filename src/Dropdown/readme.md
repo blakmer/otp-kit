@@ -27,3 +27,14 @@ const states = [
   </Row>
 </Container>
 ```
+
+
+##### With children function
+
+```js
+;<Dropdown
+  onChange={e => console.log(e)}
+  items={['Pikachu', 'Charmander', 'Psyduck']}
+  children={isOpen=><div>Pokemons {isOpen ? 'opened' : 'closed'}</div>}
+  />
+```

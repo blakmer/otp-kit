@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useSelect } from 'downshift'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
@@ -29,6 +29,7 @@ const Dropdown = props => {
     items,
     selectedItem: defaultValue,
     onSelectedItemChange: ({ selectedItem }) => {
+      getToggleButtonProps().onClick({})
       if (onChange) onChange(selectedItem)
     },
     onIsOpenChange: onAction,
@@ -36,7 +37,7 @@ const Dropdown = props => {
 
   return (
     <span className={styles.dropdown} {...getToggleButtonProps()}>
-      {children}
+      {typeof children === 'function' ? children(isOpen) : children}
 
       <div className={classnames(!isOpen && styles.hide)}>
         {showArrow && (
@@ -99,7 +100,7 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   /** Дочерний элемент */
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 }
 
 Dropdown.defaultProps = {

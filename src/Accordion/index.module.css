@@ -1,12 +1,11 @@
 .element {
-  background: var(--color-bg-grey-3);
+
   border-radius: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
 .element .title {
-  background: var(--color-bg-grey-2);
   font-family: var(--font-bold);
   border-radius: 2rem;
   height: 3.5rem;

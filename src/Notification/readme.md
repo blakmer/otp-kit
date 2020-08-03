@@ -1,37 +1,54 @@
-Notify
+#### Notification
 
 ```js
-<NotificationProvider>
-  {showNotification => (
-    <div>
-      <button
-        onClick={() =>
-          showNotification.success(
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum, vitae. Animi dolore dolores ea, eos et exercitationem fugiat id impedit incidunt inventore ipsa magni, neque nihil quod rem ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum, vitae. Animi dolore dolores ea, eos et exercitationem fugiat id impedit incidunt inventore ipsa magni, neque nihil quod rem ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum, vitae. Animi dolore dolores ea, eos et exercitationem fugiat id impedit incidunt inventore ipsa magni, neque nihil quod rem ut?'
-          )
-        }>
-        Example 1
-      </button>
-      <button onClick={() => showNotification.error('It`s error message')}>
-        Example 2
-      </button>
-      <button
-        onClick={() =>
-          showNotification.success(
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum, vitae. Animi dolore dolores ea, eos et exercitationem fugiat id impedit incidunt inventore ipsa magni, neque nihil quod rem ut?'
-          )
-        }>
-        Example 3
-      </button>
-      <button
-        onClick={() =>
-          showNotification.success(
-            'Popup menu!', true
-          )
-        }>
-        Popup
-      </button>
-    </div>
-  )}
-</NotificationProvider>
+import React, { Fragment } from 'react'
+import Button from '../Button'
+import NotificationContainer, { store } from './'
+
+  const handleClick = (type, position) => {
+    store.addNotification({
+    message: "Nisi exercitation occaecat cillum nulla excepteur incididunt cillum consectetur ea ea do. Tempor laborum laboris amet et consectetur aliquip excepteur dolor sint Sunt magna quis non ut nulla aute.",
+    type: type,
+    insert: "top",
+    container: position,
+    dismiss: {
+      duration: 4000,
+      onScreen: false,
+      showIcon: true,
+    }
+    })}
+
+; <Fragment>
+    <NotificationContainer/>
+    <Button 
+      fill="primary"
+      onClick={() => handleClick("success", "top-center")}
+      ghost
+      >
+    Success
+    </Button>
+    <Button 
+      fill="error"
+      onClick={() => handleClick("error", "top-center")}
+      ghost
+      >
+    Error
+    </Button>
+    <Button 
+      fill="primary"
+      onClick={() => handleClick("error", "top-right")}
+      ghost
+      >
+    Top right
+    </Button>
+    <Button 
+      fill="primary"
+      onClick={() => handleClick("error", "top-left")}
+      ghost
+      >
+    Top left
+    </Button>
+  </Fragment>
+  
+
 ```

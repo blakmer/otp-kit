@@ -237,6 +237,7 @@ import VintageCar from './types/vintage-car'
 import Xml from './types/xml'
 import DocumentHand from './types/document-hand'
 import DashboardTiles from './types/dashboard-tiles'
+import Delete from './types/delete'
 
 const REFERENCES = {
   edit: Edit,
@@ -473,6 +474,7 @@ const REFERENCES = {
   xml: Xml,
   'document-hand': DocumentHand,
   'dashboard-tiles': DashboardTiles,
+  delete: Delete,
 }
 
 const Medium = props => {
