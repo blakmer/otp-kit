@@ -63,6 +63,7 @@ module.exports = {
       name: 'Base',
       components: [
         'src/Grid/index.js',
+        'src/Block/index.js',
         'src/Typography/index.js',
         'src/Icon/index.js',
         'src/Logo/index.js',
