@@ -24,6 +24,14 @@ const Col = props => (
   <ParentCol {...props} style={{ ...props.style, position: 'static' }} />
 )
 
+const withScreenProvider = Component => props => {
+  return (
+    <ScreenClassRender
+      render={screenClass => <Component {...props} screenClass={screenClass} />}
+    />
+  )
+}
+
 export default {
   Container,
   Row,
@@ -33,4 +41,5 @@ export default {
   ScreenClassRender,
   useScreenClass,
   ScreenClassProvider,
+  withScreenProvider,
 }
