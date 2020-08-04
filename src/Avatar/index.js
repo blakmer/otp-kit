@@ -1,10 +1,4 @@
-import React, {
-  Fragment,
-  useState,
-  useEffect,
-  useCallback,
-  useRef,
-} from 'react'
+import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
@@ -31,8 +25,6 @@ const Avatar = props => {
 
   const [hovered, setHovered] = useState(false)
 
-  const element = useRef(null)
-
   const leave = () => {
     setHovered(false)
   }
@@ -45,15 +37,6 @@ const Avatar = props => {
     onChange()
   }
 
-  useEffect(() => {
-    element.current.addEventListener('mouseenter', enter)
-    element.current.addEventListener('mouseleave', leave)
-    return () => {
-      element.current.removeEventListener('mouseenter', enter)
-      element.current.removeEventListener('mouseleave', leave)
-    }
-  }, [element])
-
   const generateAvatar = name => {
     const splitStr = name
       .replace(/[^a-zA-ZА-Яа-яЁё]/gi, '')
@@ -63,7 +46,7 @@ const Avatar = props => {
       : `${splitStr[0]}${splitStr[splitStr.length - 1]}`
   }
 
-  const renderContent = useCallback(() => {
+  const renderContent = () => {
     if (genAvatarPath) {
       return (
         <Typography.Text
@@ -88,11 +71,12 @@ const Avatar = props => {
         </div>
       )
     }
-  }, [genAvatarPath, iconName, src])
+  }
 
   return (
     <div
-      ref={element}
+      onMouseEnter={enter}
+      onMouseLeave={leave}
       style={style}
       className={classnames(
         styles.avatar,
