@@ -115,6 +115,7 @@ module.exports = {
         'src/Filters/index.js',
         'src/Modal/index.js',
         'src/Notification/index.js',
+        'src/SearchInput/index.js',
         'src/StatePage/index.js',
         'src/Tabs/index.js',
         'src/List/index.js',

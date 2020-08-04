@@ -1,0 +1,52 @@
+.searchInputContainer {
+    display: inline-flex;
+    align-items: center;
+}
+
+.searchInputContainer.block {
+    width: 100%;
+}
+
+.searchInputContainer.hidden > label {
+    flex: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.searchInputContainer.hidden > label * {
+    display: none;
+}
+
+.searchInputContainer.visible > label {
+    flex: 1;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.searchInputContainer.animationleft {
+    justify-content: flex-start;
+}
+
+.searchInputContainer.animationcenter {
+    justify-content: center;
+}
+
+.searchInputContainer.animationright {
+    justify-content: flex-end;
+}
+
+.searchIcon {
+    cursor: pointer;
+}
+
+.searchIcon.inside {
+    margin: .55rem .5rem .75rem;
+}
+
+.searchIcon.outside {
+    margin: .55rem .75rem .85rem;
+}
+
+.searchIcon.centered {
+    margin: .75rem .75rem;
+}
