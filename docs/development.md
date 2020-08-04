@@ -357,3 +357,4 @@
 ##### Добавлено
 
 - Добавлен HOK withScreenProvider
+- Добавлен компонент InputSearch

@@ -121,7 +121,7 @@ SearchInput.propTypes = {
   block: propTypes.bool,
   /** Внешний вид перехода элемента из компактного режима в обычный */
   animation: propTypes.oneOf(Object.values(ANIMATIONS)),
-  placeholder: propTypes.text,
+  placeholder: propTypes.string,
   /** Установление значения */
   value: propTypes.oneOfType([propTypes.string, propTypes.number]),
   /** Значение по умолчанию */
