@@ -12,6 +12,7 @@ import styles from './css/notification.module.css'
 import Grid from '../Grid'
 import Icon from '../Icon'
 import Typography from '../Typography'
+import classnames from 'classnames'
 
 const { Row, Col } = Grid
 const ICON_TYPES = {
@@ -92,7 +93,7 @@ class Notification extends React.Component {
     this.setState(
       ({ parentStyle: { width } }) => ({
         parentStyle: {
-          width,
+          marginTop: '1rem',
           height: `${scrollHeight}px`,
           transition: willSlide
             ? getTransition(notification.slidingEnter, 'height')
@@ -363,21 +364,23 @@ class Notification extends React.Component {
     } = this.state
 
     return (
-      <Row justify={CONTAINER_TYPE[container]} style={{ margin: '16px' }}>
-        <Col md={4}>
-          <div
-            ref={this.rootElementRef}
-            className={styles.notificationParent}
-            style={parentStyle}
-            onAnimationEnd={onAnimationEnd}
-            onTransitionEnd={onTransitionEnd}
-            onTouchStart={touchEnabled ? this.onTouchStart : null}
-            onTouchMove={touchEnabled ? this.onTouchMove : null}
-            onTouchEnd={touchEnabled ? this.onTouchEnd : null}>
-            {content ? this.renderCustomContent() : this.renderNotification()}
-          </div>
-        </Col>
-      </Row>
+      <div
+        className={classnames(
+          styles.rootNotice,
+          styles[CONTAINER_TYPE[container]]
+        )}
+        ref={this.rootElementRef}
+        onAnimationEnd={onAnimationEnd}
+        onTransitionEnd={onTransitionEnd}
+        style={parentStyle}>
+        <div
+          className={classnames(styles.notificationParent)}
+          onTouchStart={touchEnabled ? this.onTouchStart : null}
+          onTouchMove={touchEnabled ? this.onTouchMove : null}
+          onTouchEnd={touchEnabled ? this.onTouchEnd : null}>
+          {content ? this.renderCustomContent() : this.renderNotification()}
+        </div>
+      </div>
     )
   }
 }

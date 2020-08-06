@@ -12,8 +12,8 @@ import NotificationContainer, { store } from './'
     insert: "top",
     container: position,
     dismiss: {
-      duration: 4000,
-      onScreen: false,
+      duration: 2000,
+      onScreen: true,
       showIcon: true,
     }
     })}
