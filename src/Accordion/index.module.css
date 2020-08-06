@@ -1,5 +1,4 @@
 .element {
-
   border-radius: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -8,11 +7,34 @@
 .element .title {
   font-family: var(--font-bold);
   border-radius: 2rem;
-  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: .4s;
+}
+
+.default .title{
   padding: 0 1rem;
+}
+
+.small .title{
+  padding: 0;
+}
+
+.small .hide {
+  padding: 0;
+}
+
+.small .show {
+  padding: 0;
+}
+
+.default .hide {
+  padding: 0rem 1.5rem;
+}
+
+.default .show {
+  padding: 1rem 1.5rem;
 }
 
 .element .title .content {
@@ -20,5 +42,19 @@
 }
 
 .element .body {
-  padding: 1rem;
+  overflow: hidden;
 }
+
+.show {
+  transition: all .4s ease-out;
+}
+
+.hide {
+  transition: all .4s ease-out;
+  height: 0;
+  visibility: hidden;
+}
+
+/* .element .collapse {
+  max-height: 80px;
+} */

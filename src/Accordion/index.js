@@ -1,13 +1,26 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { oneOf } from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import classes from '../classes.module.css'
 
-const AccordionElement = props => {
-  const { index, title, body, active, onClick, titleBg, contentBg } = props
+const AccordionElement = ({
+  index,
+  title,
+  body,
+  active,
+  onClick,
+  titleBg,
+  size,
+  contentBg,
+}) => {
   return (
-    <div className={classnames(styles.element, classes[`${contentBg}-bg`])}>
+    <div
+      className={classnames(
+        styles.element,
+        styles[size],
+        classes[`${contentBg}-bg`]
+      )}>
       <div
         className={classnames(styles.title, classes[`${titleBg}-bg`])}
         style={title.style}
@@ -16,8 +29,14 @@ const AccordionElement = props => {
         <span className={styles.content}>{title.content}</span>
         {title.suffix}
       </div>
-      {body && active && (
-        <div className={classnames(styles.body)}>{body.content}</div>
+      {body && (
+        <div
+          className={classnames(
+            styles.body,
+            active ? styles.show : styles.hide
+          )}>
+          {body.content}
+        </div>
       )}
     </div>
   )
@@ -32,10 +51,12 @@ const Accordion = props => {
     activeItems,
     defaultActiveItems,
     titleBg,
+    size,
     contentBg,
   } = props
 
   const [act, setAct] = useState(defaultActiveItems || [])
+
   const handleChange = (index, active) => {
     active
       ? setAct(
@@ -58,6 +79,7 @@ const Accordion = props => {
             index={index}
             titleBg={titleBg}
             contentBg={contentBg}
+            size={size}
             title={item.title}
             body={item.body}
             active={active}
@@ -72,6 +94,7 @@ const Accordion = props => {
 Accordion.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  size: PropTypes.oneOf(['small', 'default']),
   onChange: PropTypes.func,
   /** Окрашивание заголовка в цвет из списка цветов */
   titleBg: PropTypes.string,
@@ -130,8 +153,9 @@ Accordion.propTypes = {
 
 Accordion.defaultProps = {
   onChange: i => {},
+  size: 'default',
   items: [],
-  titleBg: 'bg-grey-2',
-  contentBg: 'bg-grey-3',
+  titleBg: 'transparent',
+  contentBg: 'transparent',
 }
 export default Accordion
