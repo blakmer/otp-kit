@@ -59,7 +59,7 @@ const Button = props => {
         block && styles.block,
         className
       )}>
-      {!ghost && prefix && (
+      {prefix && (
         <Icon.Small
           type={prefix}
           fill={!disabled ? prefixFill : 'text-disabled'}
@@ -68,7 +68,7 @@ const Button = props => {
 
       {children}
 
-      {!ghost && suffix && (
+      {suffix && (
         <Icon.Small
           type={suffix}
           fill={!disabled ? suffixFill : 'text-disabled'}
