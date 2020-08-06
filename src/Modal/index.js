@@ -53,9 +53,7 @@ const Modal = props => {
           <Col {...size}>
             <div className={classnames(styles.modal)}>
               <section className={styles.header}>
-                <Typography.Lead highlighted className={styles.headerText}>
-                  {header}
-                </Typography.Lead>
+                {header}
                 <RoundButton
                   className={styles.closeButton}
                   icon="close"
