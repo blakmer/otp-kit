@@ -9,32 +9,32 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Label input field">
             <Input onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Warning label">
             <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Error label">
             <Input status="error" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Label input field" description="Description input field">
             <Input onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Disabled" description="Disabled description">
             <Input status="disabled" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Label" description="Warning description">
             <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
@@ -73,7 +73,7 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem label="Default" description="Default description">
             <Select
                 listDirection="top"
@@ -86,7 +86,7 @@ const { Container, Row, Col } = Grid
             />
         </FormItem>
     </Col>
-     <Col md={4}>
+     <Col md={8}>
         <FormItem label="Warning" description="Warning description">
             <Select
                 status="warning"
@@ -100,7 +100,7 @@ const { Container, Row, Col } = Grid
             />
         </FormItem>
     </Col>
-     <Col md={4}>
+     <Col md={8}>
         <FormItem label="Error" description="Error description">
             <Select
                 status="error"
@@ -128,17 +128,17 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem description="Default description" flat label={<span>Label input field with star <Star/> </span>}>
             <Input onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem description="Warning description" flat label="Warning label">
             <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
         <FormItem description="Error description" flat label="Error label">
             <Input status="error" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
