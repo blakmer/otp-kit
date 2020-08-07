@@ -2,8 +2,10 @@
 
 ```js
 import React, { Fragment } from 'react'
+import Grid from '../Grid'
 import Button from '../Button'
 import NotificationContainer, { store } from './'
+const { Container, Row, Col } = Grid
 
   const handleClick = (type, position) => {
     store.addNotification({
@@ -13,42 +15,53 @@ import NotificationContainer, { store } from './'
     container: position,
     dismiss: {
       duration: 2000,
-      onScreen: true,
+      onScreen: false,
       showIcon: true,
     }
     })}
 
-; <Fragment>
+; 
+  <Container>
     <NotificationContainer/>
-    <Button 
-      fill="primary"
-      onClick={() => handleClick("success", "top-center")}
-      ghost
-      >
-    Success
-    </Button>
-    <Button 
-      fill="error"
-      onClick={() => handleClick("error", "top-center")}
-      ghost
-      >
-    Error
-    </Button>
-    <Button 
-      fill="primary"
-      onClick={() => handleClick("error", "top-right")}
-      ghost
-      >
-    Top right
-    </Button>
-    <Button 
-      fill="primary"
-      onClick={() => handleClick("error", "top-left")}
-      ghost
-      >
-    Top left
-    </Button>
-  </Fragment>
+      <Row>
+        <Col md={4}>
+          <Button 
+            fill="primary"
+            onClick={() => handleClick("success", "top-center")}
+            ghost
+            >
+          Success
+          </Button>
+        </Col>
+        <Col md={4}>
+          <Button 
+            fill="error"
+            onClick={() => handleClick("error", "top-center")}
+            ghost
+            >
+          Error
+          </Button>
+        </Col>
+        <Col md={4}>
+          <Button 
+            fill="primary"
+            onClick={() => handleClick("error", "top-right")}
+            ghost
+            >
+          Top right
+          </Button>
+        </Col>
+        <Col md={4}>
+          <Button 
+            fill="primary"
+            onClick={() => handleClick("error", "top-left")}
+            ghost
+            >
+          Top left
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   
 
 ```
