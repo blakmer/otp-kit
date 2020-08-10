@@ -49,7 +49,11 @@ const FormItem = props => {
         className
       )}
       style={style}>
-      <div className={classnames(styles.child)}>
+      <div
+        className={classnames(
+          styles.child,
+          !description && styles.paddingInput
+        )}>
         {label && (
           <span
             className={classnames(

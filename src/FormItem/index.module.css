@@ -100,6 +100,10 @@ label.disabled,
   width: 100%;
 }
 
+.paddingInput {
+  padding-bottom: 20px;
+}
+
 .description {
   color: var(--color-text-secondary);
   margin: 0;

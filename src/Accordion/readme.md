@@ -3,15 +3,34 @@
 ```js
 import Icon from '../Icon'
 import Input from '../Input'
+import Block from '../Block'
+import Typography from '../Typography'
 
 const items = [
   {
     title:  {
-        prefix: <Icon.Medium type="car" fill="primary" />,
-        content: 'Новые',
-      },
+          prefix: <Icon.Medium type="vintage-car" fill="primary" />,
+          content: 'Новые',
+        }, 
     body:  {
-        content: (<div> Новые: <Input block suffix={<Icon.Medium type="car" />} /></div>)
+        content: (
+          <div> 
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          </div>
+          )
       } 
   },
   {
@@ -40,7 +59,7 @@ const items = [
 
 ;<React.Fragment>
   <Accordion
-    onChange={i=>console.log(i)}
+    onChange={i=>console.log(i)} 
     items={items}
   />
 </React.Fragment>
