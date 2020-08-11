@@ -46,6 +46,7 @@ const Input = props => {
     block,
     readOnly,
     placeholder,
+    noBorder,
     ...otherProps
   } = props
 
@@ -84,6 +85,7 @@ const Input = props => {
           suffix && styles.withSuffix,
           prefix && styles.withPrefix,
           styles[status],
+          noBorder && styles.noBorder,
           className
         )}
         style={style}
@@ -131,6 +133,8 @@ Input.propTypes = {
   inputRef: PropTypes.any,
   /** Преобразование к вводу валюты */
   currency: PropTypes.bool,
+  /** Делает бордеры прозрачными */
+  noBorder: PropTypes.bool,
 }
 
 Input.defaultProps = {
