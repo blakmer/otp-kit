@@ -238,6 +238,7 @@ import Xml from './types/xml'
 import DocumentHand from './types/document-hand'
 import DashboardTiles from './types/dashboard-tiles'
 import Delete from './types/delete'
+import ImageAdd from './types/image-add'
 
 const REFERENCES = {
   edit: Edit,
@@ -475,6 +476,7 @@ const REFERENCES = {
   'document-hand': DocumentHand,
   'dashboard-tiles': DashboardTiles,
   delete: Delete,
+  'image-add': ImageAdd,
 }
 
 const Medium = props => {
