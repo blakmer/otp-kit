@@ -2,7 +2,7 @@
 
 ```js
 import React, { useState } from 'react'
-let [currentPage, changePage] = useState(0)
+const [currentPage, changePage] = useState(0)
 const handlePageChange = page => {
   console.log(page)
   changePage(page)

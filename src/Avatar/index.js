@@ -144,8 +144,6 @@ Avatar.propTypes = {
   borderColor: PropTypes.string,
   /** Окрашивание иконки в цвет из списка цветов */
   iconFill: PropTypes.string,
-  /** Окрашивание иконки слева в цвет из списка цветов */
-  block: PropTypes.bool,
 }
 
 export default Avatar

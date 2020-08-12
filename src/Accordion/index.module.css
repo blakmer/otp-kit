@@ -21,20 +21,12 @@
   padding: 0;
 }
 
-.small .hide {
-  padding: 0;
-}
-
-.small .show {
-  padding: 0;
-}
-
-.default .hide {
-  padding: 0rem 1.5rem;
-}
-
-.default .show {
+.default .contentBody {
   padding: 1rem 1.5rem;
+}
+
+.small .contentBody {
+  padding: 0;
 }
 
 .element .title .content {
@@ -43,18 +35,6 @@
 
 .element .body {
   overflow: hidden;
+  transition: height .4s;
+  box-sizing: border-box;
 }
-
-.show {
-  transition: all .4s ease-out;
-}
-
-.hide {
-  transition: all .4s ease-out;
-  height: 0;
-  visibility: hidden;
-}
-
-/* .element .collapse {
-  max-height: 80px;
-} */
