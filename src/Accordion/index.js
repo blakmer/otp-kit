@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes, { oneOf } from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
@@ -14,6 +14,16 @@ const AccordionElement = ({
   size,
   contentBg,
 }) => {
+  const [height, setHeight] = useState(0)
+  const element = useRef(null)
+  // className={classnames(
+  //   styles.body
+  //   active ? styles.show : styles.hide
+  // )}
+  useEffect(() => {
+    const height = element.current.scrollHeight
+    setHeight(height)
+  }, [])
   return (
     <div
       className={classnames(
@@ -31,11 +41,10 @@ const AccordionElement = ({
       </div>
       {body && (
         <div
-          className={classnames(
-            styles.body,
-            active ? styles.show : styles.hide
-          )}>
-          {body.content}
+          ref={element}
+          className={classnames(styles.body)}
+          style={{ height: active ? `${height}px` : '0px' }}>
+          <div className={styles.contentBody}>{body.content}</div>
         </div>
       )}
     </div>
