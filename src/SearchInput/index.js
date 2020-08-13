@@ -34,6 +34,7 @@ const SearchIcon = props => {
 const SearchInput = props => {
   const {
     className,
+    inputClassName,
     style,
     compact,
     block,
@@ -46,8 +47,10 @@ const SearchInput = props => {
     autoComplete,
     autoFocus,
     prefix,
+    searchIcon,
     tabIndex,
     onRemove,
+    noBorder,
     onEnter,
   } = props
 
@@ -70,18 +73,27 @@ const SearchInput = props => {
       )}
       style={style}>
       <Input
-        className={classnames(styles.searchInput)}
+        className={classnames(styles.searchInput, inputClassName)}
         placeholder={placeholder}
         suffix={
           <SearchIcon
             inside
-            type={controlled ? value && 'delete' : searchValue && 'delete'}
+            type={
+              controlled
+                ? value
+                  ? 'close'
+                  : searchIcon
+                : searchValue
+                ? 'close'
+                : searchIcon
+            }
             onClick={() => {
               onRemove()
               !controlled && setSearchValue('')
             }}
           />
         }
+        noBorder={noBorder}
         value={value || searchValue}
         onChange={e => {
           onChange(e)
@@ -103,6 +115,7 @@ const SearchInput = props => {
       />
       {!searchVisible && compact && (
         <SearchIcon
+          type={searchIcon}
           onClick={() => {
             setSearchVisible(!searchVisible)
           }}
@@ -114,6 +127,7 @@ const SearchInput = props => {
 
 SearchInput.propTypes = {
   className: propTypes.string,
+  inputClassName: propTypes.string,
   style: propTypes.object,
   /** Изменение размера неактивного элемента */
   compact: propTypes.bool,
@@ -141,6 +155,8 @@ SearchInput.propTypes = {
   onRemove: propTypes.func,
   /** Callback, вызываемый при нажатии кнопки ввода */
   onEnter: propTypes.func,
+  /** Делает границы элемента Input прозрачными */
+  noBorder: propTypes.bool,
 }
 
 SearchInput.defaultProps = {
