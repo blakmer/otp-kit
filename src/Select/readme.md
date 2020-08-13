@@ -242,7 +242,6 @@ const items = [
       items={items}
       defaultValue={[{...items[0].items[0]},{...items[1].items[1]}]}
       onChange={val => console.log(val)}
-      multi
       block
     />
   </Col>
