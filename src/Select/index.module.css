@@ -262,3 +262,9 @@
 .tick {
   padding-right: .6rem;    
 }
+
+.highlight {
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-bold)
+}

@@ -183,7 +183,8 @@ const elements = [
         ]
 
 const [items, setItems] = useState(elements)
-const filterItems = val => elements.filter(e=>e.title.toLowerCase().indexOf(val.toLowerCase()) >= 0)
+const [search, setSearch] = useState(undefined)
+const filterItems = val => elements.filter(e => e.title.toLowerCase().indexOf(val.toLowerCase()) >= 0)
 
 ;<Row align="center">
   <Col md={8}>
@@ -191,8 +192,15 @@ const filterItems = val => elements.filter(e=>e.title.toLowerCase().indexOf(val.
       items={items}
       showSearch
       onChange={e=>{console.log(e)}}
-      onSearchChange={e => setItems(filterItems(e.target.value))}
-      onSearchRemove={e => setItems(filterItems(''))}
+      highlight={search}
+      onSearchChange={e => {
+        setSearch(e.target.value)
+        setItems(filterItems(e.target.value))
+      }}
+      onSearchRemove={e => {
+        setSearch('')
+        setItems(filterItems(''))
+      }}
       block
     />
   </Col>

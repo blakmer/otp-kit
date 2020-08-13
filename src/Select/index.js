@@ -10,6 +10,7 @@ import Spinner from '../Spinner'
 import SearchInput from '../SearchInput'
 import Divider from '../Divider'
 import Icon from '../Icon'
+import Highlighter from 'react-highlight-words'
 
 const STATUSES = {
   default: 'default',
@@ -46,6 +47,8 @@ const Select = props => {
     onSearchChange,
     onSearchEnter,
     onSearchRemove,
+    highlight,
+    highlightClassName,
     itemToString,
     hasMore,
     initialLoad,
@@ -161,7 +164,12 @@ const Select = props => {
               : addSelectedItem(item)
           },
         })}>
-        <span style={{ flex: 1 }}>{item.title}</span>
+        <Highlighter
+          style={{ flex: 1 }}
+          highlightClassName={highlightClassName || styles.highlight}
+          searchWords={highlight ? [highlight] : []}
+          textToHighlight={item.title}
+        />
         {(multi && isSelected && (
           <Icon.Medium
             className={styles.tick}
@@ -448,6 +456,10 @@ Select.propTypes = {
   multi: PropTypes.bool,
   /** Отображает выбранные элементы внутри компонента в виде отдельных блоков */
   multiChips: PropTypes.bool,
+  /** Строка, подсвечиваемая в элементах списка */
+  highlight: PropTypes.string,
+  /** Класс, задаваемый для подсветки выбранных элементов */
+  highlightClassName: PropTypes.string,
 }
 
 Select.defaultProps = {
