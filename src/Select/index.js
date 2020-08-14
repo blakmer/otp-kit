@@ -184,26 +184,28 @@ const Select = props => {
   }
 
   const renderGroup = (group, index) => {
-    const [closed, setClosed] = useState(false)
+    const [expanded, setExpanded] = useState(group.expanded)
     return (
       <Fragment key={index}>
         <div
           className={styles.groupTitle}
           style={{ cursor: group.closable && 'pointer' }}
           onClick={() => {
-            group.closable && setClosed(!closed)
+            group.closable && setExpanded(!expanded)
           }}>
           {group.group}
           {group.closable && (
             <Icon.Medium
               className={styles.groupArrow}
-              type={closed ? 'arrow-down' : 'arrow-up'}
+              type={expanded ? 'arrow-up' : 'arrow-down'}
               fill="primary"
               noGap
             />
           )}
         </div>
-        <div className={styles.group} style={{ display: closed && 'none' }}>
+        <div
+          className={styles.group}
+          style={{ display: group.closable && !expanded && 'none' }}>
           {group.items.map((item, i) =>
             renderItem({ ...item, groupTitle: group.group }, index + i)
           )}
@@ -373,12 +375,17 @@ Select.propTypes = {
         title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       }),
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-          value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        })
-      ),
+      PropTypes.shape({
+        group: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        closable: PropTypes.bool,
+        expanded: PropTypes.bool,
+        items: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+          })
+        ),
+      }),
     ])
   ),
   /** Элемент из списка, выбранный по умолчанию */

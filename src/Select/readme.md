@@ -222,7 +222,7 @@ const items = [
       {title: 'item3', value: 3},
       {title: 'item4', value: 4}
     ]},
-    {group: 'group-3', closable: true, items: [
+    {group: 'group-3', closable: true, expanded: true, items: [
       {title: 'item3', value: 5},
       {title: 'item4', value: 6}
     ]},
