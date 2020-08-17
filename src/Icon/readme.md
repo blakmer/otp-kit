@@ -1318,6 +1318,18 @@ const checkVisible = title => title.indexOf(search) >= 0 ? {} : {display: 'none'
       <Icon.Medium type="delete" />
       <div style={{ wordWrap: 'break-word' }}>delete</div>
     </Col>
+    <Col style={{ textAlign: 'center', ...checkVisible("communication") }} sm={2} md={2}>
+      <Icon.Medium type="communication" />
+      <div style={{ wordWrap: 'break-word' }}>communication</div>
+    </Col>
+    <Col style={{ textAlign: 'center', ...checkVisible("paper-write") }} sm={2} md={2}>
+      <Icon.Medium type="paper-write" />
+      <div style={{ wordWrap: 'break-word' }}>paper-write</div>
+    </Col>
+    <Col style={{ textAlign: 'center', ...checkVisible("user-contact") }} sm={2} md={2}>
+      <Icon.Medium type="user-contact" />
+      <div style={{ wordWrap: 'break-word' }}>user-contact</div>
+    </Col>
   </Row>
 </Container>
 ```

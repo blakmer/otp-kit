@@ -238,6 +238,9 @@ import Xml from './types/xml'
 import DocumentHand from './types/document-hand'
 import DashboardTiles from './types/dashboard-tiles'
 import Delete from './types/delete'
+import Communication from './types/communication'
+import PaperWrite from './types/paper-write'
+import UserContact from './types/user-contact'
 
 const REFERENCES = {
   edit: Edit,
@@ -475,6 +478,9 @@ const REFERENCES = {
   'document-hand': DocumentHand,
   'dashboard-tiles': DashboardTiles,
   delete: Delete,
+  communication: Communication,
+  'paper-write': PaperWrite,
+  'user-contact': UserContact,
 }
 
 const Medium = props => {
