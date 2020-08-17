@@ -7,13 +7,7 @@ import Button from '../Button'
 import Block from '../Block'
 import Textarea from '../Textarea'
 import Typography from '../Typography'
-import Multiselect from '../Multiselect'
 
-const carsOfficial = [
-    { title: 'Renault', value: '1' },
-    { title: 'Peugeot', value: '2' },
-    { title: 'Audi', value: '3' }
-  ]
 const items = [
   {
     title:  {
@@ -37,7 +31,7 @@ const items = [
           content: 'С пробегом',
         },    
     body:  {
-        content: (<Multiselect items={carsOfficial} onChange={e=>{console.log(e)}} block />)
+        content: (<Input onChange={e=>{console.log(e)}} block />)
       } 
   },
   {
