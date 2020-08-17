@@ -50,7 +50,7 @@ const Button = props => {
         styles.button,
         styles[size],
         !ghost && (flag ? classes[`${fill}-hover-bg`] : classes[`${fill}-bg`]),
-        !ghost && classes[`text-inverse-text`],
+        !ghost && classes[`bg-input-text`],
         ghost ? styles.pulse : styles.ripple,
         ghost && styles.ghost,
         ghost && classes[`${fill}-text`],
