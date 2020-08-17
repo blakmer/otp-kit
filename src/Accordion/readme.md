@@ -7,6 +7,7 @@ import Button from '../Button'
 import Block from '../Block'
 import Textarea from '../Textarea'
 import Typography from '../Typography'
+import Multiselect from '../Multiselect'
 
 const carsOfficial = [
     { title: 'Renault', value: '1' },
@@ -23,6 +24,9 @@ const items = [
         content: (
           <div> 
           Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
+          Новые: <Input block suffix={<Icon.Medium type="car" />} />
           </div>
           )
       } 
@@ -33,7 +37,7 @@ const items = [
           content: 'С пробегом',
         },    
     body:  {
-        content: "С пробегом" 
+        content: (<Multiselect items={carsOfficial} onChange={e=>{console.log(e)}} block />)
       } 
   },
   {
@@ -60,7 +64,6 @@ const items = [
   />
  <Block padding={['1rem 2rem']} color='bg-grey-3' membrane borderRadius={24}>
     <Accordion
-      //activeItems={openProfile ? [0] : []}
       size='small'
       items={[
         {
@@ -73,7 +76,7 @@ const items = [
           body: {
             content: (
               <div> 
-                <Input block/>
+                <Textarea block/>
               </div>
             )
           }

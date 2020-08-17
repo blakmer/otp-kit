@@ -13,20 +13,23 @@ const AccordionElement = ({
   titleBg,
   size,
   contentBg,
+  classNameElement,
 }) => {
-  const [height, setHeight] = useState(0)
-  const element = useRef(null)
-  // className={classnames(
-  //   styles.body
-  //   active ? styles.show : styles.hide
-  // )}
-  useEffect(() => {
-    const height = element.current.scrollHeight
-    setHeight(height)
-  }, [])
+  // const [height, setHeight] = useState(0)
+  // const element = useRef(null)
+  // // className={classnames(
+  // //   styles.body
+  // //   active ? styles.show : styles.hide
+  // // )}
+  // useEffect(() => {
+  //   const height = element.current.scrollHeight
+  //   console.log(element)
+  //   setHeight(height)
+  // }, [])
   return (
     <div
       className={classnames(
+        classNameElement,
         styles.element,
         styles[size],
         classes[`${contentBg}-bg`]
@@ -41,9 +44,11 @@ const AccordionElement = ({
       </div>
       {body && (
         <div
-          ref={element}
-          className={classnames(styles.body)}
-          style={{ height: active ? `${height}px` : '0px' }}>
+          className={classnames(
+            styles.body,
+            active ? styles.show : styles.hide
+          )}
+          style={{ maxHeight: active ? '200vh' : '0px' }}>
           <div className={styles.contentBody}>{body.content}</div>
         </div>
       )}
@@ -54,6 +59,7 @@ const AccordionElement = ({
 const Accordion = props => {
   const {
     className,
+    classNameElement,
     style,
     items,
     onChange,
@@ -88,6 +94,7 @@ const Accordion = props => {
             index={index}
             titleBg={titleBg}
             contentBg={contentBg}
+            classNameElement={classNameElement}
             size={size}
             title={item.title}
             body={item.body}
