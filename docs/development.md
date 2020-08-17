@@ -391,3 +391,5 @@
 - Полностью переработан компонент Select (включает в себя Combobox, Multiselect)
 - Вырезан компонент Multiselect
 - Исправлены баги в компоненте Accordion
+- Исправлены баги в отображении компонентов Button, RoundButton, Breadcrumb
+- Исправлена логика работы компонента Filters

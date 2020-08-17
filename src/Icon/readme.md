@@ -1329,6 +1329,7 @@ const checkVisible = title => title.indexOf(search) >= 0 ? {} : {display: 'none'
     <Col style={{ textAlign: 'center', ...checkVisible("user-contact") }} sm={2} md={2}>
       <Icon.Medium type="user-contact" />
       <div style={{ wordWrap: 'break-word' }}>user-contact</div>
+    </Col>
     <Col style={{ textAlign: 'center' }} sm={2} md={2}>
       <Icon.Medium type="image-add" />
       <div style={{ wordWrap: 'break-word' }}>image-add</div>
