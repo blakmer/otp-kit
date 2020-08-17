@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import PropTypes, { oneOf } from 'prop-types'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import classes from '../classes.module.css'
@@ -15,17 +15,6 @@ const AccordionElement = ({
   contentBg,
   classNameElement,
 }) => {
-  // const [height, setHeight] = useState(0)
-  // const element = useRef(null)
-  // // className={classnames(
-  // //   styles.body
-  // //   active ? styles.show : styles.hide
-  // // )}
-  // useEffect(() => {
-  //   const height = element.current.scrollHeight
-  //   console.log(element)
-  //   setHeight(height)
-  // }, [])
   return (
     <div
       className={classnames(
