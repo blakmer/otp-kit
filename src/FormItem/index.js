@@ -9,8 +9,7 @@ const FormItem = props => {
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
   const isSimple = children ? !children.length : false
-
-  const nonFluidComponents = ['Select', 'Multiselect', 'DropdownInput']
+  const nonFluidComponents = ['Select', 'DropdownInput']
 
   useEffect(() => {
     const el =
@@ -59,6 +58,7 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               flat ? styles.flat : styles.fluid,
+              children.props.listDirection === 'top' && styles.labelTop,
               styles[isSimple ? children.props.status : null],
               !flat && focus && styles.focused
             )}>

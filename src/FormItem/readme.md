@@ -76,13 +76,12 @@ const { Container, Row, Col } = Grid
     <Col md={8}>
         <FormItem label="Default" description="Default description">
             <Select
-                listDirection="top"
                 items={[
                 { title: 'one', value: 1 },
                 { title: 'two', value: 2 },
                 ]}
-                label="numbers"
                 onChange={val => console.log(val)}
+                block
             />
         </FormItem>
     </Col>
@@ -90,13 +89,12 @@ const { Container, Row, Col } = Grid
         <FormItem label="Warning" description="Warning description">
             <Select
                 status="warning"
-                listDirection="top"
                 items={[
                 { title: 'one', value: 1 },
                 { title: 'two', value: 2 },
                 ]}
-                label="numbers"
                 onChange={val => console.log(val)}
+                block
             />
         </FormItem>
     </Col>
@@ -104,13 +102,12 @@ const { Container, Row, Col } = Grid
         <FormItem label="Error" description="Error description">
             <Select
                 status="error"
-                listDirection="top"
                 items={[
                 { title: 'one', value: 1 },
                 { title: 'two', value: 2 },
                 ]}
-                label="numbers"
                 onChange={val => console.log(val)}
+                block
             />
         </FormItem>
     </Col>
