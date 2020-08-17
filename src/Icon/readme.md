@@ -1329,6 +1329,9 @@ const checkVisible = title => title.indexOf(search) >= 0 ? {} : {display: 'none'
     <Col style={{ textAlign: 'center', ...checkVisible("user-contact") }} sm={2} md={2}>
       <Icon.Medium type="user-contact" />
       <div style={{ wordWrap: 'break-word' }}>user-contact</div>
+    <Col style={{ textAlign: 'center' }} sm={2} md={2}>
+      <Icon.Medium type="image-add" />
+      <div style={{ wordWrap: 'break-word' }}>image-add</div>
     </Col>
   </Row>
 </Container>
@@ -1523,6 +1526,10 @@ const checkVisible = title => title.indexOf(search) >= 0 ? {} : {display: 'none'
     <Col style={{ textAlign: 'center', ...checkVisible("ui-components") }} sm={2} md={3}>
       <Icon.ClipArt type="ui-components" fill="blue" />
       <div style={{ wordWrap: 'break-word' }}>ui-components</div>
+    </Col>
+     <Col style={{ textAlign: 'center' }} sm={2} md={3}>
+      <Icon.ClipArt type="no-result" />
+      <div style={{ wordWrap: 'break-word' }}>no-result</div>
     </Col>
   </Row>
 </Container>

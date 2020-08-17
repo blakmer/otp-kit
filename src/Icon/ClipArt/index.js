@@ -29,6 +29,7 @@ import InstantLoan from './types/instant-loan'
 import MachineLearningTags from './types/machine-learning-tags'
 import Photo from './types/photo'
 import Store from './types/store'
+import NoResult from './types/no-result'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -58,6 +59,7 @@ const REFERENCES = {
   'machine-learning-tags': MachineLearningTags,
   photo: Photo,
   store: Store,
+  'no-result': NoResult,
 }
 
 const ClipArt = props => {

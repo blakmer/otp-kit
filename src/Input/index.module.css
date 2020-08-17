@@ -100,3 +100,7 @@ input.withPrefix {
 .input.warning {
   border: 1px solid var(--color-highlighted);
 }
+
+.input.noBorder, .input.noBorder:hover {
+    border-color: transparent;
+}
