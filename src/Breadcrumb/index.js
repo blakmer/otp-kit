@@ -9,7 +9,14 @@ const Breadcrumb = props => {
 
   const getSeparator = index => {
     if (data.length - 1 !== index) {
-      return <Icon.Small type="arrow-right" fill="text-disabled" />
+      return (
+        <Icon.Small
+          className={styles.separator}
+          noGap
+          type="arrow-right"
+          fill="text-disabled"
+        />
+      )
     }
   }
 
