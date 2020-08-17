@@ -2,14 +2,29 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  right: -456px;
   width: 456px;
   height: 100vh;
-  border-radius: 40px 0 0 40px;
   box-sizing: border-box;
-  background-color: var(--color-bg-grey-2);
-  padding: 24px;
+}
+
+.right {
   transition: right 0.4s;
+  border-radius: 40px 0 0 40px;
+  right: -456px;
+}
+
+.left {
+  transition: left 0.4s;
+  border-radius: 0 40px 40px 0;
+  left: -456px;
+}
+
+.right.show {
+  right: 0;
+}
+
+.left.show {
+  left: 0;
 }
 
 .header {
@@ -28,10 +43,6 @@
 .midContent,
 .bottomContent {
   margin-top: 24px;
-}
-
-.show {
-  right: 0;
 }
 
 .overlay {
