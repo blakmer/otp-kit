@@ -1,5 +1,5 @@
 const GetFillFromExt = ext => {
-  switch (ext) {
+  switch (ext.toUpperCase()) {
     case 'PDF':
       return 'error'
     case 'DOC':
