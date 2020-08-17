@@ -5,6 +5,14 @@ import classnames from 'classnames'
 import Icon from '../Icon'
 import classes from '../classes.module.css'
 
+const SHADOWS = {
+  small: 'smallShadow',
+  normal: 'normalShadow',
+  big: 'bigShadow',
+  membrane: 'membrane',
+  none: '',
+}
+
 const RoundButton = props => {
   const {
     className,
@@ -16,6 +24,7 @@ const RoundButton = props => {
     fill,
     iconFill,
     animation,
+    shadow,
   } = props
 
   const [flag, setFlag] = useState(false)
@@ -45,7 +54,8 @@ const RoundButton = props => {
         styles.button,
         styles[animation],
         !disabled &&
-          ((flag && classes[`${fill}-hover-bg`]) || classes[`${fill}-bg`])
+          ((flag && classes[`${fill}-hover-bg`]) || classes[`${fill}-bg`]),
+        !disabled && !flag && shadow && styles[SHADOWS[shadow]]
       )}>
       {icon && (
         <Icon.Medium
@@ -66,6 +76,7 @@ RoundButton.defaultProps = {
   iconFill: 'text-primary',
   animation: 'ripple',
   onClick: e => {},
+  shadow: 'small',
 }
 
 RoundButton.propTypes = {
@@ -82,6 +93,8 @@ RoundButton.propTypes = {
   icon: PropTypes.string,
   /** Окрашивание иконки в цвет из списка цветов */
   iconFill: PropTypes.string,
+  /** Создаёт тень под кнопкой */
+  shadow: PropTypes.oneOf(Object.keys(SHADOWS)),
 }
 
 export default RoundButton

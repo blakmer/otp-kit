@@ -8,8 +8,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  box-shadow: 0px 0.25rem 0.5rem var(--color-shadow);
+  transition: background-color 0.3s box-shadow 0.1s ease-in-out;
 }
 
 .button * {
@@ -29,4 +28,21 @@
 /** PULSE ANIMATION */
 .pulse {
   composes: pulse from '../Button/index.module.css';
+}
+
+.button.smallShadow {
+  box-shadow: 0px 4px 8px var(--color-shadow);
+}
+
+.button.normalShadow {
+  box-shadow: 0px 16px 48px var(--color-shadow);
+}
+
+.button.bigShadow {
+  box-shadow: 0px 16px 48px var(--color-shadow);
+}
+
+.button.membrane {
+  box-shadow: 0px 20px 40px rgba(211, 217, 229, 0.9),
+    0px -16px 60px rgba(255, 255, 255, 0.9);
 }
