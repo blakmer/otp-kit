@@ -30,6 +30,7 @@ import MachineLearningTags from './types/machine-learning-tags'
 import Photo from './types/photo'
 import Store from './types/store'
 import NoResult from './types/no-result'
+import DefaultApp from './types/default-app'
 
 const REFERENCES = {
   'project-tag': ProjectTag,
@@ -60,6 +61,7 @@ const REFERENCES = {
   photo: Photo,
   store: Store,
   'no-result': NoResult,
+  'default-app': DefaultApp,
 }
 
 const ClipArt = props => {
@@ -74,6 +76,8 @@ const ClipArt = props => {
             classes[`${fill}-stroke`],
             classes[`${fill}-fill`]
           )}
+          strokeClass={classes[`${fill}-stroke`]}
+          fillClass={classes[`${fill}-fill`]}
         />
       }
     </span>
