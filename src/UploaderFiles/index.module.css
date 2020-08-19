@@ -9,6 +9,10 @@
   margin-left: 1rem;
 }
 
+.inputColor {
+  color: var(--color-bg-input)
+}
+
 .uploadIcon {
   padding: .3rem 0;
 }
