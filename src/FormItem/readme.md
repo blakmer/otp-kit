@@ -94,6 +94,7 @@ const { Container, Row, Col } = Grid
                 { title: 'two', value: 2 },
                 ]}
                 onChange={val => console.log(val)}
+                listDirection="top"
                 block
             />
         </FormItem>

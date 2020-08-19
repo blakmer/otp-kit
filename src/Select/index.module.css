@@ -112,7 +112,7 @@
   outline: none;
   box-sizing: border-box;
   transition: .3s;
-  z-index: 999;
+  z-index: 996;
   opacity: 1;
   padding: .5rem;
   padding-right: .3rem;
@@ -222,7 +222,7 @@
 
 .container .searchinput:focus,
 .container .searchinput:not([disabled]):hover {
-  padding-left: calc(1rem-1px);
+  padding-left: calc(1rem - 1px);
 }
 
 .labelContainer.error + .menu {

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Typography from '../Typography'
 import UploadIcon from '../util/upload-icon'
 import Icon from '../Icon'
-import NotificationProvider from '../Notification'
 import styles from './index.module.css'
 import propTypes from 'prop-types'
 import classes from '../classes.module.css'
@@ -21,11 +20,12 @@ const UploaderFiles = props => {
     multiple,
     onChange,
     maxFileSize,
+    onError,
   } = props
 
   const [hover, setHover] = useState(false)
 
-  const handleCheckErrors = (maxFileSize, files, showNotification) => {
+  const handleCheckErrors = (maxFileSize, files) => {
     const errors = []
     for (let i in files) {
       if (toMB(files[i].size) >= maxFileSize) {
@@ -35,26 +35,26 @@ const UploaderFiles = props => {
       }
     }
     if (errors.length > 0) {
-      errors.forEach(i => showNotification.error(i))
+      errors.forEach(err => onError(err))
     }
     return errors.length > 0
   }
 
-  const handleChange = (e, showNotification, isDrop) => {
+  const handleChange = (e, isDrop) => {
     const files = isDrop ? e.dataTransfer.files : e.target.files
     let checkErrors = false
     if (maxFileSize) {
-      checkErrors = handleCheckErrors(maxFileSize, files, showNotification)
+      checkErrors = handleCheckErrors(maxFileSize, files)
     }
     if (!checkErrors) {
-      onChange && onChange(files)
+      onChange(files)
     }
     e.target.value = ''
   }
 
-  const renderInput = showNotification => (
+  const renderInput = () => (
     <input
-      onChange={e => handleChange(e, showNotification)}
+      onChange={e => handleChange(e)}
       type="file"
       accept={accept}
       multiple={multiple}
@@ -63,7 +63,7 @@ const UploaderFiles = props => {
   )
 
   const renderType = {
-    default: showNotification => (
+    default: () => (
       <section
         className={classnames(styles.uploaderContainer, className)}
         style={style}>
@@ -74,13 +74,13 @@ const UploaderFiles = props => {
             файлы.
           </Typography.Text>
           <label className={styles.defaultUploader}>
-            <span>Выбрать файлы</span>
-            {renderInput(showNotification)}
+            <span className={styles.inputColor}>Выбрать файлы</span>
+            {renderInput()}
           </label>
         </div>
       </section>
     ),
-    dropzone: showNotification => (
+    dropzone: () => (
       <label
         className={classnames(
           styles.dropzone,
@@ -97,7 +97,7 @@ const UploaderFiles = props => {
         }}
         onDrop={e => {
           e.preventDefault()
-          handleChange(e, showNotification, true)
+          handleChange(e, true)
         }}>
         <Icon.Medium type="document-hand" fill="primary" />
         <Typography.Text type="highlighted">
@@ -105,21 +105,15 @@ const UploaderFiles = props => {
           <span className={classes['primary-text']}>выберите</span> файлы для
           загрузки
         </Typography.Text>
-        {renderInput(showNotification)}
+        {renderInput()}
       </label>
     ),
   }
 
   return (
-    <NotificationProvider>
-      {showNotification => (
-        <div>
-          {type === 'dropzone'
-            ? renderType.dropzone(showNotification)
-            : renderType.default(showNotification)}
-        </div>
-      )}
-    </NotificationProvider>
+    <div>
+      {type === 'dropzone' ? renderType.dropzone() : renderType.default()}
+    </div>
   )
 }
 
@@ -130,11 +124,14 @@ UploaderFiles.propTypes = {
   accept: propTypes.string,
   multiple: propTypes.bool,
   onChange: propTypes.func,
+  onError: propTypes.func,
 }
 
 UploaderFiles.defaultProps = {
   multiple: true,
   type: 'default',
+  onError: e => {},
+  onChange: e => {},
 }
 
 export default UploaderFiles

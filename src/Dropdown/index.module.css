@@ -9,7 +9,7 @@
 
 .listArrow {
   position: absolute;
-  z-index: 999;
+  z-index: 997;
   line-height: 0.75rem;
   text-shadow: 0 0 3rem var(--color-shadow);
 }
@@ -50,7 +50,7 @@
 }
 
 .list {
-  z-index: 998;
+  z-index: 996;
   list-style-type: none;
   margin: 0;
   background: var(--color-bg-input);

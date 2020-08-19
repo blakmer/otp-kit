@@ -1,6 +1,6 @@
 #### Default
 ```js
-;<UploaderFiles onChange={e=>console.log(e)}/>
+;<UploaderFiles onChange={e=>console.log(e)} onError={e=>{console.log(e)}} maxFileSize={1}/>
 ```
 
 #### Default with FileList
