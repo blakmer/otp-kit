@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Typography from '../Typography'
@@ -10,6 +10,7 @@ const FormItem = props => {
   const element = useRef(null)
   const isSimple = children ? !children.length : false
   const nonFluidComponents = ['Select', 'DropdownInput']
+  let childClone = null
 
   useEffect(() => {
     const el =
@@ -38,6 +39,26 @@ const FormItem = props => {
     setFocus(true)
   }
 
+  if (isSimple && !flat && children.type.name === 'Select') {
+    childClone = React.cloneElement(children, {
+      renderMenu: menu => (
+        <Fragment>
+          <span
+            className={classnames(
+              styles.label,
+              styles.fluid,
+              styles[isSimple ? children.props.status : null],
+              focus && styles.focused
+            )}
+            style={{ marginLeft: '-2px', marginTop: '-2px' }}>
+            {label}
+          </span>
+          {children.props.renderMenu(menu)}
+        </Fragment>
+      ),
+    })
+  }
+
   return (
     <div
       ref={element}
@@ -58,14 +79,13 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               flat ? styles.flat : styles.fluid,
-              children.props.listDirection === 'top' && styles.labelTop,
               styles[isSimple ? children.props.status : null],
               !flat && focus && styles.focused
             )}>
             {label}
           </span>
         )}
-        {children}
+        {childClone ? childClone : children}
       </div>
       {!description &&
         count >= 0 &&
