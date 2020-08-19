@@ -137,5 +137,9 @@ module.exports = {
       name: 'Charts',
       components: ['src/BarChart/index.js'],
     },
+    {
+      name: 'Tests',
+      content: 'docs/tests.md',
+    },
   ],
 }
