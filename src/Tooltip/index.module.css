@@ -1,6 +1,7 @@
 .contentContainer {
   position: relative;
   cursor: pointer;
+  z-index: 998;
 }
 
 .contentContainer:hover > .tooltipContainer {
