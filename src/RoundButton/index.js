@@ -28,15 +28,22 @@ const RoundButton = props => {
   } = props
 
   const [flag, setFlag] = useState(false)
+  const camelToKebabCase = str =>
+    str.replace(/[A-Z]/, e => `-${e.toLowerCase()}`)
+  const stringStyle =
+    style &&
+    Object.keys(style)
+      .map(key => `${camelToKebabCase(key)}: ${style[key]};`)
+      .join(' ')
 
   const handleClick = event => {
     const r = event.currentTarget.getBoundingClientRect()
     const d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2
 
-    event.currentTarget.style.cssText = `--s: 0; --o: 1;`
+    event.currentTarget.style.cssText = `--s: 0; --o: 1; ${stringStyle}`
     event.currentTarget.offsetTop
     event.currentTarget.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${event.clientX -
-      r.left}; --y:${event.clientY - r.top};`
+      r.left}; --y:${event.clientY - r.top}; ${stringStyle}`
 
     onClick(event)
   }
