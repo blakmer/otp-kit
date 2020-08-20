@@ -15,14 +15,14 @@ const columns = [
       </div>
     ),
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Название',
     dataIndex: 'name',
     size: {
-      md: 4,
+      md: 8,
     },
   },
   {
@@ -30,7 +30,7 @@ const columns = [
     dataIndex: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
-      md: 3,
+      md: 6,
     },
   },
   {
@@ -38,17 +38,17 @@ const columns = [
     dataIndex: 'tags',
     align: 'right',
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Дата',
     dataIndex: 'date',
     size: {
-      md: 2,
+      md: 4,
     },
     offset: {
-      md: 1,
+      md: 2,
     },
   },
 ]
@@ -88,14 +88,14 @@ const columns = [
       </div>
     ),
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Название',
     dataIndex: 'name',
     size: {
-      md: 4,
+      md: 8,
     },
   },
   {
@@ -103,7 +103,7 @@ const columns = [
     dataIndex: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
-      md: 3,
+      md: 6,
     },
   },
   {
@@ -111,17 +111,17 @@ const columns = [
     dataIndex: 'tags',
     align: 'right',
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Дата',
     dataIndex: 'date',
     size: {
-      md: 2,
+      md: 4,
     },
     offset: {
-      md: 1,
+      md: 2,
     },
   },
 ]
@@ -161,14 +161,14 @@ const columns = [
       </div>
     ),
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Название',
     dataIndex: 'name',
     size: {
-      md: 4,
+      md: 8,
     },
   },
   {
@@ -176,7 +176,7 @@ const columns = [
     dataIndex: 'progress',
     render: val => <Progress value={val} max={1500} />,
     size: {
-      md: 3,
+      md: 6,
     },
   },
   {
@@ -184,17 +184,17 @@ const columns = [
     dataIndex: 'tags',
     align: 'right',
     size: {
-      md: 1,
+      md: 2,
     },
   },
   {
     title: 'Дата',
     dataIndex: 'date',
     size: {
-      md: 2,
+      md: 4,
     },
     offset: {
-      md: 1,
+      md: 2,
     },
   },
 ]

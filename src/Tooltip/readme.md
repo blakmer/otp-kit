@@ -5,12 +5,12 @@ import Grid from '../Grid'
 const { Container, Row, Col } = Grid
 ;<Container>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip content="content" position="topLeft" fill="primary">
         Top left
       </Tooltip>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip
         content="content wery wery wery looonnnng"
         position="topCenter"
@@ -18,20 +18,20 @@ const { Container, Row, Col } = Grid
         Top center
       </Tooltip>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip content="content" position="topRight">
         Top right
       </Tooltip>
     </Col>
   </Row>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip content="content wery wery wery looonnnng" position="middleLeft">
         Middle left
       </Tooltip>
     </Col>
-    <Col md={4}></Col>
-    <Col md={4}>
+    <Col md={8}></Col>
+    <Col md={8}>
       <Tooltip
         content="content wery wery wery looonnnng"
         position="middleRight"
@@ -41,19 +41,19 @@ const { Container, Row, Col } = Grid
     </Col>
   </Row>
   <Row>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip content="content" position="bottomLeft" fill="highlighted">
         Bottom left
       </Tooltip>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip
         content="content wery wery wery looonnnng"
         position="bottomCenter">
         Bottom center
       </Tooltip>
     </Col>
-    <Col md={4}>
+    <Col md={8}>
       <Tooltip content="content" position="bottomRight" fill="highlighted">
         Bottom right
       </Tooltip>

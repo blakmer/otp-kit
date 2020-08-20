@@ -7,20 +7,20 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row justify="between">
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         title="Tag title"
         fill="primary"
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag title="Tag title" fill="chart-purple" />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag title="Tag title" onRemove={() => console.log('tag')} />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         disabled
         fill="chart-purple"
@@ -41,7 +41,7 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row justify="between">
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="primary"
@@ -49,7 +49,7 @@ const { Container, Row, Col } = Grid
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="chart-purple"
@@ -57,7 +57,7 @@ const { Container, Row, Col } = Grid
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="highlighted"
@@ -65,7 +65,7 @@ const { Container, Row, Col } = Grid
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="chart-blue"
@@ -73,7 +73,7 @@ const { Container, Row, Col } = Grid
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="error"
@@ -81,7 +81,7 @@ const { Container, Row, Col } = Grid
         onRemove={() => console.log('tag')}
       />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag
         secondary
         fill="chart-yellow"
@@ -102,13 +102,13 @@ const { Container, Row, Col } = Grid
 
 ;<Container>
   <Row justify="between">
-    <Col md={2}>
+    <Col md={4}>
       <Tag fillHex="#FF7777" onRemove={() => console.log('tag')} />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag secondary fillHex="#77CC77" onRemove={() => console.log('tag')} />
     </Col>
-    <Col md={2}>
+    <Col md={4}>
       <Tag fillHex="#7777FF" onRemove={() => console.log('tag')} disabled />
     </Col>
   </Row>
