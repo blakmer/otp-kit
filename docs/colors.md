@@ -108,7 +108,7 @@ const Sphere = ({ name, fill, border }) =>
         marginTop: '1rem',
       }}>
       <CopyToClipboard
-        text={name}
+        text={`var(--${name})`}
         onCopy={val => {
           openNotification(`Copied to clipboard: "${val}"`)
         }}>
