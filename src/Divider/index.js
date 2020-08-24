@@ -21,6 +21,7 @@ const Divider = props => {
     dashed,
     type,
     childFill,
+    lineLength,
   } = props
   const orient = ORIENTATIONS[orientation] ? orientation : 'center'
   const renderHorisontal = () => {
@@ -35,7 +36,13 @@ const Divider = props => {
           classes[`${fill}-border-after`],
           className
         )}
-        style={style}>
+        style={{
+          ...style,
+          width:
+            lineLength && typeof lineLength === 'number'
+              ? `${lineLength} px`
+              : lineLength,
+        }}>
         {children && (
           <Typography.Text fill={childFill}>{children}</Typography.Text>
         )}
@@ -51,7 +58,13 @@ const Divider = props => {
           classes[`${fill}-border-before`],
           className
         )}
-        style={style}
+        style={{
+          ...style,
+          height:
+            lineLength && typeof lineLength === 'number'
+              ? `${lineLength} px`
+              : lineLength,
+        }}
       />
     )
   }
