@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { useCombobox, useMultipleSelection } from 'downshift'
@@ -61,6 +61,21 @@ const Select = props => {
     multi,
     multiChips,
   } = props
+
+  const scroller = useRef(null)
+  const onMouseWheel = e => {
+    let delta = e.wheelDelta || -e.detail
+    scroller.current.scrollTop += (delta < 0 ? 1 : -1) * 7
+    e.preventDefault()
+  }
+  useEffect(() => {
+    scroller.current.addEventListener('mousewheel', onMouseWheel, {
+      passive: false,
+    })
+    return () => {
+      scroller.current.removeEventListener('mousewheel', onMouseWheel)
+    }
+  }, [])
 
   const toFlat = items => {
     const flat = []
@@ -326,6 +341,7 @@ const Select = props => {
               </Fragment>
             )}
             <div
+              ref={scroller}
               className={classnames(
                 styles.listparent,
                 showSearch && styles.withSearch

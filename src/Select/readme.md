@@ -118,7 +118,7 @@ const style = {display: 'flex', justifyContent: 'center'}
       ]}
       onChange={val => console.log(val)}
       block
-      renderMenu={menu=>(<div><div style={style}>Custom render of Menu</div> {menu} <div style={style}><Button size="small">+</Button></div></div>)}
+      renderMenu={menu=>(<div><div style={style}>Custom render of Menu</div> {menu} <div style={style}><Button size="small">+ Add Item</Button></div></div>)}
     />
   </Col>
 </Row>
@@ -275,15 +275,15 @@ const { Row, Col } = Grid
 ;<Select
   items={[
     { title: 'one', value: 1 },
-    { title: 'tweafwasdfo', value: 2 },
-    { title: 'owefane', value: 3 },
-    { title: 'twaso', value: 4 },
-    { title: 'onasce', value: 5 },
-    { title: 'twasco', value: 6 },
-    { title: 'onase', value: 7 },
-    { title: 'two', value: 8 },
-    { title: 'osne', value: 9 },
-    { title: 'twasdo', value: 10 },
+    { title: 'two', value: 2 },
+    { title: 'three', value: 3 },
+    { title: 'four', value: 4 },
+    { title: 'five', value: 5 },
+    { title: 'six', value: 6 },
+    { title: 'seven', value: 7 },
+    { title: 'eight', value: 8 },
+    { title: 'nine', value: 9 },
+    { title: 'ten', value: 10 },
   ]}
   onChange={val => console.log(val)}
   multi
@@ -306,12 +306,12 @@ const { Row, Col } = Grid
       items={[
         { title: 'one', value: 1 },
         { title: 'two', value: 2 },
-        { title: 'tree', value: 3 },
-        { title: 'one', value: 4 },
-        { title: 'two', value: 5 },
-        { title: 'tree', value: 6 },
-        { title: 'one', value: 7 },
-        { title: 'two', value: 8 },
+        { title: 'three', value: 3 },
+        { title: 'four', value: 4 },
+        { title: 'five', value: 5 },
+        { title: 'six', value: 6 },
+        { title: 'seven', value: 7 },
+        { title: 'eight', value: 8 },
       ]}
       value={a}
       onChange={(item, isSelected)=>!isSelected ? set([...a, item]) : set(a.filter(e=>e.value!==item.value))}
