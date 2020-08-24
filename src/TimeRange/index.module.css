@@ -24,7 +24,6 @@
     cursor: pointer;
     display: block;
     position: relative;
-    transition: left 0.3s ease-out, width 0.3s ease-out;
 }
 
 .trackActive {
@@ -42,7 +41,6 @@
 }
 
 .sliderContainer {
-    transition: left 0.3s ease-out;
     top: -0.6875rem;
 }
 
