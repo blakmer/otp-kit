@@ -28,10 +28,10 @@
   --color-black: #000000;
 
   /** background colors */
-  --color-bg-grey-1: #474d59;
-  --color-bg-grey-2: #333740;
-  --color-bg-grey-3: #292c33;
-  --color-bg-grey-4: #1f2226;
+  --color-bg-grey-1: #1f2226;
+  --color-bg-grey-2: #292c33;
+  --color-bg-grey-3: #333740;
+  --color-bg-grey-4: #474d59;
 
   --color-bg-input: #292c33;
   --color-bg-input-disabled: #393b4040;

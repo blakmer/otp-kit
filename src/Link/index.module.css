@@ -21,3 +21,7 @@
 .link:hover {
     text-decoration-line: underline;
 }
+
+.link .sideIcons {
+    margin-top: 1px;
+}

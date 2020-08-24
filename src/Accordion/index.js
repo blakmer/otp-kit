@@ -129,31 +129,9 @@ Accordion.propTypes = {
     })
   ),
   /** Открытый элемент */
-  activeItem: PropTypes.shape({
-    title: PropTypes.shape({
-      prefix: PropTypes.node,
-      content: PropTypes.node,
-      suffix: PropTypes.node,
-      style: PropTypes.object,
-    }).isRequired,
-    body: PropTypes.shape({
-      content: PropTypes.node,
-      style: PropTypes.object,
-    }).isRequired,
-  }),
+  activeItems: PropTypes.arrayOf(PropTypes.number),
   /** Открытый элемент по умолчанию */
-  defaultActiveItems: PropTypes.shape({
-    title: PropTypes.shape({
-      prefix: PropTypes.node,
-      content: PropTypes.node,
-      suffix: PropTypes.node,
-      style: PropTypes.object,
-    }).isRequired,
-    body: PropTypes.shape({
-      content: PropTypes.node,
-      style: PropTypes.object,
-    }).isRequired,
-  }),
+  defaultActiveItems: PropTypes.arrayOf(PropTypes.number),
 }
 
 Accordion.defaultProps = {

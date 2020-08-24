@@ -14,9 +14,13 @@ const Link = props => {
       className={classnames(styles.link, classes[`${fill}-text`], className)}
       style={style}
       onClick={onClick}>
-      {prefix && <Icon.Small type={prefix} fill={fill} />}
+      {prefix && (
+        <Icon.Small className={styles.sideIcons} type={prefix} fill={fill} />
+      )}
       {children}
-      {suffix && <Icon.Small type={suffix} fill={fill} />}
+      {suffix && (
+        <Icon.Small className={styles.sideIcons} type={suffix} fill={fill} />
+      )}
     </span>
   )
 }

@@ -10,9 +10,10 @@
   right: -0.5rem;
   height: 1rem;
   min-width: 1rem;
-  background-color: var(--color-highlighted);
-  color: var(--color-text-inverse);
-  font-weight: bold;
+
+  background-color: var(--color-highlighted-hover);
+  color: var(--color-bg-pastel-orange);
+  font-family: var(--font-bold);
   font-size: 0.875rem;
   text-align: center;
   line-height: 1rem;
