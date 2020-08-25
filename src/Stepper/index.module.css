@@ -67,16 +67,16 @@
 
 .stepTitle {
   color: var(--color-text-disabled);
-  line-height: 1.5rem;
-  font-style: normal;
-  font-weight: bold;
+  font-family: var(--font-bold);
+  font-size: 14px;
+  margin-top: 8px;
 }
 
 .stepDescription {
   color: var(--color-primary);
-  line-height: 1rem;
-  font-style: normal;
-  font-weight: normal;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  margin-top: 6px;
   display: none;
   cursor: pointer;
 }
@@ -94,7 +94,7 @@
 .step.successStep > .stepCircle {
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
-  color: var(--color-text-inverse);
+  color: var(--color-white);
 }
 
 .step.successStep:not(:last-child)::after,
