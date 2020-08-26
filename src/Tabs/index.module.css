@@ -12,8 +12,7 @@
 
 .tabContainer.inner {
   background: var(--color-bg-grey-3);
-  box-shadow: 0px -12px 40px var(--color-shadow),
-    0px 20px 30px rgba(27, 31, 39, 0.06);
+  box-shadow: 0px 20px 40px rgba(211, 217, 229, 0.9), 0px -16px 60px rgba(255, 255, 255, 0.9);
 }
 
 .tabContainer.outer {
@@ -32,8 +31,7 @@
 }
 
 .tab {
-  min-width: 7.5rem;
-  min-width: 10rem;
+  width: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +44,7 @@
 }
 
 .tab.activeTab {
-  color: var(--color-text-inverse);
+  color: var(--color-white);
   background: var(--color-primary);
   border-radius: 2rem;
 }
