@@ -38,11 +38,6 @@
   background-color: var(--color-notification-error);
 }
 
-.notificationClose {
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-}
-
 .notificationText {
   align-self: center;
   width: 95%;

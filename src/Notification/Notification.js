@@ -344,7 +344,7 @@ class Notification extends React.Component {
           </div>
           {showIcon && (
             <div className={styles.notificationClose} onClick={this.onClick}>
-              <Icon.Small type="close" fill="text-inverse" />
+              <Icon.Small type="close" fill="bg-input" />
             </div>
           )}
         </div>
