@@ -4,12 +4,13 @@ import classnames from 'classnames'
 import styles from './index.module.css'
 import RoundButton from '../RoundButton'
 import Grid from '../Grid'
+import classes from '../classes.module.css'
 
 const RANGE_SIZE = 10
 const { Visible, Hidden } = Grid
 
 const Pagination = props => {
-  const { total, current, onPageChanged, className, style } = props
+  const { total, current, onPageChanged, className, style, background } = props
 
   /**
    * @getRange - массив типа [мин значение, макс значение, разрыв слева, разрыв справа]
@@ -79,7 +80,13 @@ const Pagination = props => {
   }
 
   return (
-    <div className={classnames(styles.wrapper, className)} style={style}>
+    <div
+      className={classnames(
+        styles.wrapper,
+        background && classes[`${background}-bg`],
+        className
+      )}
+      style={style}>
       <RoundButton
         key="prev"
         icon="arrow-left"
