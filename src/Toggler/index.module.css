@@ -16,14 +16,15 @@
   height: 100%;
   margin-left: 0;
   border-radius: 1rem;
-  border: 1px solid var(--color-text-disabled);
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
   transition: all 0.3s;
 }
 
 .circle {
   position: absolute;
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
   background-color: var(--color-text-disabled);
   transition: all 0.3s;
@@ -33,21 +34,20 @@
 }
 
 .disabled {
-  background-color: var(--color-text-disabled);
+  background-color: var(--color-input-disabled);
   cursor: not-allowed;
 }
 
 .disabled + .circle {
-  background-color: var(--color-bg-input);
+  background-color: var(--color-text-disabled);
 }
 
-.input:checked + .switch + .circle {
+input:checked + .switch + .circle {
   transform: translateX(1.5rem);
   background-color: var(--color-bg-input);
 }
 
-.input:checked + .switch.disabled {
+.input:checked + .switch.disabled + .circle {
   background-color: var(--color-text-disabled);
   cursor: not-allowed;
-  border: 1px solid transparent;
 }

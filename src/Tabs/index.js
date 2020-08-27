@@ -17,9 +17,11 @@ const Tabs = props => {
     size,
     block,
     className,
+    width,
     style,
   } = props
   const [val, setVal] = useState(defaultActive)
+  const otherWidth = width && typeof width === 'number' ? `${width}px` : width
   return (
     <div
       className={classnames(
@@ -37,6 +39,7 @@ const Tabs = props => {
             setVal(j)
             onChange(i.value, j)
           }}
+          style={{ width: otherWidth }}
           className={classnames(styles.tab, val === j && styles.activeTab)}>
           {i.title || i.value}
         </div>
@@ -62,6 +65,8 @@ Tabs.propTypes = {
   level: propTypes.oneOf(Object.values(LEVELS)),
   /** Размер вкладок */
   size: propTypes.oneOf(Object.values(SIZES)),
+  /** Ширина вкладок */
+  width: propTypes.string,
   className: propTypes.string,
   style: propTypes.object,
 }
