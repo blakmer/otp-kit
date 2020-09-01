@@ -6,14 +6,20 @@ import Grid from '../src/Grid'
 import FormItem from '../src/FormItem'
 import Select from '../src/Select'
 import Tooltip from '../src/Tooltip'
+import Filters from '../src/Filters'
+import Typography from '../src/Typography'
 import Dropdown from '../src/Dropdown'
 import Button from '../src/Button'
+import RoundButton from '../src/RoundButton'
 import Block from '../src/Block'
 import Modal from '../src/Modal'
 import NotificationContainer, { store } from '../src/Notification'
+
 const {Col, Row} = Grid
 
 const [modal, toggleModal] = useState(false)
+const [show, toggleShow] = useState(false)
+
 const selectItems = [
                 {title: 'First el', value: 1},
                 {title: 'Second el', value: 2},
@@ -96,5 +102,48 @@ const openNotification = () => {
     }}
   />
     <NotificationContainer />
+      <Button onClick={() => toggleShow(true)}>Показать фильтры</Button>
+  <Filters
+    show={show}
+    overlay
+    onClose={() => {
+      toggleShow(false)
+      setColor('')
+    }}>
+      <Fragment>
+        <div style={{  display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <Typography.Heading level={2}>Название тайтла</Typography.Heading>
+          <RoundButton
+            fill="bg-input"
+            iconFill="primary"
+            icon="arrow-right"
+            onClick={() => {
+              toggleShow(false)
+              setColor('')
+            }}
+          />
+        </div>
+        <div style={{marginTop: '1.5rem'}}>
+          <Row>
+            <Col>
+              <Button
+                ghost
+                block
+                onClick={() => {
+                  toggleShow(false)
+                }}>
+                Отмена
+              </Button>
+            </Col>
+            <Col>
+              <Button block>Сохранить</Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col />
+          </Row>
+        </div>
+        </Fragment>
+    </Filters>
 </Fragment>
 ```
