@@ -9,7 +9,6 @@
 }
 
 .modal {
-  background-color: var(--color-bg-grey-3);
   border-radius: 2rem;
   padding: 1.5rem;
   z-index: 999;
@@ -40,4 +39,12 @@
 .headerText {
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.closeButton path{
+  transition: stroke .4s ease;
+}
+
+.closeButton:hover path {
+  stroke: var(--color-primary-hover);
 }

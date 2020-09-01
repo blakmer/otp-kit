@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import Button from '../Button'
 import RoundButton from '../RoundButton'
 import Grid from '../Grid'
-import Typography from '../Typography'
+import classes from '../classes.module.css'
 
 const { Container, Row, Col } = Grid
 
@@ -19,7 +19,9 @@ const Modal = props => {
     closable,
     header,
     body,
+    padding,
     okConfig,
+    bgColor,
     cancelConfig,
     onOpen,
     onClose,
@@ -37,7 +39,7 @@ const Modal = props => {
     setOpen(false)
     handler && handler()
   }
-
+  const strPadding = typeof padding === 'number' ? `${padding}px` : padding
   return open ? (
     <section className={classnames(styles.modalCanvas, className)}>
       <Container fluid style={style}>
@@ -51,12 +53,15 @@ const Modal = props => {
               closable && handleClick(onClose)
           }}>
           <Col {...size}>
-            <div className={classnames(styles.modal)}>
+            <div
+              className={classnames(styles.modal, classes[`${bgColor}-bg`])}
+              style={{ padding: strPadding }}>
               <section className={styles.header}>
                 {header}
                 <RoundButton
                   className={styles.closeButton}
                   icon="close"
+                  shadow={bgColor === 'white' ? 'small' : 'none'}
                   fill="bg-input"
                   iconFill="primary"
                   onClick={() => handleClick(onClose)}
@@ -102,7 +107,10 @@ Modal.propTypes = {
   /** Отображение кнопки закрыть */
   closable: PropTypes.bool,
   header: PropTypes.node,
+  padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   body: PropTypes.node,
+  /** Окрашивание фона в цвет из списка цветов */
+  bgColor: PropTypes.string,
   /** Конфигурация кнопки Ок */
   okConfig: PropTypes.object,
   /** Конфигурация кнопки Отмена */
@@ -118,7 +126,9 @@ Modal.propTypes = {
 Modal.defaultProps = {
   size: {},
   closable: true,
+  padding: 24,
   isOpen: false,
+  bgColor: 'bg-grey-3',
 }
 
 export default Modal
