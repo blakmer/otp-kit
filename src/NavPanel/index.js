@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Input from '../Input'
+import Tooltip from '../Tooltip'
 import Typography from '../Typography'
 import Icon from '../Icon'
 import classnames from 'classnames'
@@ -35,7 +36,16 @@ const NavPanel = props => {
         )}
         {actions.map((i, k) => (
           <span key={k} onClick={i.action} className={styles.actionIcon}>
-            <Icon.Medium fill="primary" type={i.icon} />
+            {i.tooltipNode ? (
+              <Tooltip
+                content={i.tooltipNode}
+                position="bottomCenter"
+                fill="bg-input">
+                <Icon.Medium fill="primary" type={i.icon} />
+              </Tooltip>
+            ) : (
+              <Icon.Medium fill="primary" type={i.icon} />
+            )}
           </span>
         ))}
       </span>
@@ -49,7 +59,11 @@ NavPanel.propTypes = {
   header: PropTypes.node,
   /** Перечень элементов справа */
   actions: PropTypes.arrayOf(
-    PropTypes.shape({ icon: PropTypes.string, action: PropTypes.func })
+    PropTypes.shape({
+      icon: PropTypes.string,
+      action: PropTypes.func,
+      tooltipNode: PropTypes.node,
+    })
   ),
   /** Действие при вводе текста в поиск */
   onSearch: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
