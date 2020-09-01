@@ -102,7 +102,7 @@ const openNotification = () => {
     }}
   />
     <NotificationContainer />
-      <Button onClick={() => toggleShow(true)}>Показать фильтры</Button>
+      <Button onClick={() => toggleShow(true)}>Sidebar</Button>
   <Filters
     show={show}
     overlay
@@ -112,7 +112,7 @@ const openNotification = () => {
     }}>
       <Fragment>
         <div style={{  display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <Typography.Heading level={2}>Название тайтла</Typography.Heading>
+          <Typography.Heading level={2}>Header</Typography.Heading>
           <RoundButton
             fill="bg-input"
             iconFill="primary"
