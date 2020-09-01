@@ -177,4 +177,6 @@ DropdownInput.defaultProps = {
   status: 'default',
 }
 
+DropdownInput.displayName = 'DropdownInput' //Needed for FormItem component
+
 export default DropdownInput

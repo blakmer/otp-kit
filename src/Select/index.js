@@ -509,4 +509,6 @@ Select.defaultProps = {
   ),
 }
 
+Select.displayName = 'Select' //Needed for FormItem component
+
 export default Select

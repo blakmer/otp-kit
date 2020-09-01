@@ -5,6 +5,7 @@ FormItem
 import Grid from '../Grid'
 import Input from '../Input'
 import Divider from '../Divider'
+import DropdownInput from '../DropdownInput'
 const { Container, Row, Col } = Grid
 
 ;<Container>
@@ -39,6 +40,20 @@ const { Container, Row, Col } = Grid
             <Input status="warning" onChange={e=>{console.log(e.target.value)}}/>   
         </FormItem>
     </Col>
+     <FormItem label='Адрес приложения' description={"dddd"}>
+            <DropdownInput
+              status={'default'}
+              dropdownItems={['https', 'http']}
+              onDropdownChange={(value) => {
+                setFieldValue('protocol', value)
+              }}
+              dropdownValue={ 'https'}
+              block
+              name='path'
+            //   onChange={handleChange}
+            //   value={values.path}
+            />
+          </FormItem>
   </Row>
 </Container>
 ```
