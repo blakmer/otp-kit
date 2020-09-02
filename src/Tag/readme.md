@@ -1,4 +1,4 @@
-### Tag component
+### Tag regular component
 
 ```js
 import Grid from '../Grid'
@@ -18,12 +18,11 @@ const { Container, Row, Col } = Grid
       <Tag title="Tag title" fill="chart-purple" />
     </Col>
     <Col md={4}>
-      <Tag title="Tag title" onRemove={() => console.log('tag')} />
+      <Tag title="Tag title" fill="highlighted" onRemove={() => console.log('tag')} />
     </Col>
     <Col md={4}>
       <Tag
-        disabled
-        fill="chart-purple"
+        fill="error"
         title="Disabled"
         onRemove={() => console.log('tag')}
       />
@@ -32,7 +31,7 @@ const { Container, Row, Col } = Grid
 </Container>
 ```
 
-### Tag component secondary
+### Tag component with ghost and marker
 
 ```js
 import Grid from '../Grid'
@@ -43,49 +42,55 @@ const { Container, Row, Col } = Grid
   <Row justify="between">
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="primary"
-        title="green"
+        title="Green"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="chart-purple"
-        title="purple"
+        title="Purple"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="highlighted"
-        title="orange"
+        title="Orange"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="chart-blue"
-        title="blue"
+        title="Blue"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="error"
-        title="red"
+        title="Red"
         onRemove={() => console.log('tag')}
       />
     </Col>
     <Col md={4}>
       <Tag
-        secondary
+        ghost
+        hasMarker
         fill="chart-yellow"
-        title="yellow"
+        title="Yellow"
         onRemove={() => console.log('tag')}
       />
     </Col>
@@ -103,13 +108,13 @@ const { Container, Row, Col } = Grid
 ;<Container>
   <Row justify="between">
     <Col md={4}>
-      <Tag fillHex="#FF7777" onRemove={() => console.log('tag')} />
+      <Tag fillHex="#FF7777" hasMarker onRemove={() => console.log('tag')} />
     </Col>
     <Col md={4}>
-      <Tag secondary fillHex="#77CC77" onRemove={() => console.log('tag')} />
+      <Tag ghost fillHex="#77CC77" hasMarker onRemove={() => console.log('tag')} />
     </Col>
     <Col md={4}>
-      <Tag fillHex="#7777FF" onRemove={() => console.log('tag')} disabled />
+      <Tag fillHex="#7777FF" hasMarker onRemove={() => console.log('tag')} disabled />
     </Col>
   </Row>
 </Container>

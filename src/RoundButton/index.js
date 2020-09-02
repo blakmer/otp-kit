@@ -62,7 +62,7 @@ const RoundButton = props => {
         styles[animation],
         !disabled &&
           ((flag && classes[`${fill}-hover-bg`]) || classes[`${fill}-bg`]),
-        !disabled && !flag && shadow && styles[SHADOWS[shadow]]
+        !disabled && shadow && styles[SHADOWS[shadow]]
       )}>
       {icon && (
         <Icon.Medium

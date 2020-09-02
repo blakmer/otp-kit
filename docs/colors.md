@@ -58,10 +58,6 @@ const ITEMS = [
         { name: 'color-hero-bg-pastel-lime', light: ' #aad17d', dark: ' #aad17d' },
         { name: 'color-hero-bg-pastel-coral', light: ' #84bdb1', dark: ' #84bdb1' },
     ]},
-    {group: 'Notification Colors', colors: [
-        { name: 'color-notification-success', light: ' #298d37', dark: ' #298d37' },
-        { name: 'color-notification-error', light: ' #ff435a', dark: ' #ff435a' },
-    ]},
     {group: 'Chart Colors', colors: [
         { name: 'color-chart-blue', light: ' #1b82e3', dark: ' #1b82e3' },
         { name: 'color-chart-yellow', light: ' #ffcc00', dark: ' #ffcc00' },
@@ -77,10 +73,14 @@ const ITEMS = [
         { name: 'color-text-terminal-primary', light: ' #e6eaf2', dark: ' #e6eaf2'},
         { name: 'color-text-terminal-secondary',light: ' #a1a7b3',dark: ' #a1a7b3'},
     ]},
-    {group: 'Logo Colors', colors: [
+    {group: 'Brand Colors', colors: [
         { name: 'color-logo-1', light: ' #006648', dark: ' #006648' },
         { name: 'color-logo-2', light: ' #52ae30', dark: ' #52ae30' },
-    ]}
+    ]},
+    {group: 'Other Colors', colors: [
+        { name: 'color-notification-success', light: ' #298d37', dark: ' #298d37' },
+        { name: 'color-notification-error', light: ' #ff435a', dark: ' #ff435a' },
+    ]},
 ]
 
 const openNotification = (msg) => {

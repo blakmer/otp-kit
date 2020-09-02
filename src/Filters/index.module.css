@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  z-index: 100;
+  z-index: 998;
   top: 0;
   width: 456px;
   height: 100vh;
@@ -52,5 +52,5 @@
   right: 0;
   bottom: 0;
   background-color: transparent;
-  z-index: 99;
+  z-index: 999;
 }

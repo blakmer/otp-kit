@@ -31,7 +31,8 @@ const FormItem = props => {
   if (
     !focus &&
     (isSimple
-      ? nonFluidComponents.filter(e => e === children.type.name).length ||
+      ? nonFluidComponents.filter(e => e === children.type.displayName)
+          .length ||
         children.props.value ||
         children.props.defaultValue
       : true)
@@ -39,7 +40,7 @@ const FormItem = props => {
     setFocus(true)
   }
 
-  if (isSimple && !flat && children.type.name === 'Select') {
+  if (isSimple && !flat && children.type.displayName === 'Select') {
     childClone = React.cloneElement(children, {
       renderMenu: menu => (
         <Fragment>
