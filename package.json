@@ -12,7 +12,8 @@
     "prepublishOnly": "npm run compile",
     "lint": "eslint src/**/*.js",
     "static": "styleguidist build",
-    "colorgen": "node ./color-gen.js"
+    "colorgen": "node ./color-gen.js",
+    "icongen": "node ./icon-gen.js"
   },
   "repository": {
     "type": "git",
