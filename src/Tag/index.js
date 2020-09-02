@@ -10,29 +10,34 @@ const Tag = props => {
     className,
     onRemove,
     fill,
+    hasMarker,
     fillHex,
     style,
     title,
     disabled,
-    secondary,
+    ghost,
   } = props
 
   return (
     <div
       style={{
-        border: fillHex && secondary && !disabled && '2px solid ' + fillHex,
+        border:
+          hasMarker && fillHex && ghost && !disabled && '2px solid ' + fillHex,
         ...style,
       }}
       className={classnames(
         styles.tag,
-        secondary && !disabled && !fillHex && classes[`${fill}-border`],
-        !disabled && secondary
+        !hasMarker
+          ? classes[`${fill}-bg`]
+          : !disabled && ghost
           ? classes[`bg-input-bg`]
           : classes[`bg-grey-3-bg`],
+        hasMarker && styles.paddingNone,
+        ghost && !disabled && !fillHex && classes[`${fill}-border`],
         disabled && styles.tagDisabled,
         className
       )}>
-      {fill || fillHex ? (
+      {hasMarker || fillHex ? (
         <span
           style={{
             backgroundColor: fillHex,
@@ -41,9 +46,17 @@ const Tag = props => {
           className={classnames(styles.marker, classes[`${fill}-bg`])}
         />
       ) : null}
-      <span className={styles.title}>{title}</span>
+      <span
+        className={classnames(styles.title, { [styles.hasMarker]: hasMarker })}>
+        {title}
+      </span>
       {onRemove && !disabled && (
-        <Icon.Small type="close" className={styles.icon} onClick={onRemove} />
+        <Icon.Small
+          type="close"
+          fill={hasMarker ? 'text-secondary' : 'white'}
+          className={styles.icon}
+          onClick={onRemove}
+        />
       )}
     </div>
   )
@@ -52,6 +65,8 @@ const Tag = props => {
 Tag.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  /** Признак наличия маркера */
+  hasMarker: PropTypes.bool,
   /** Окрашивание элемента в произвольный цвет */
   fillHex: PropTypes.string,
   /** Callback, вызываемый при удалении элемента */
@@ -62,13 +77,13 @@ Tag.propTypes = {
   /** Заголовок элемента */
   title: PropTypes.string,
   /** Делает элемент прозрачным */
-  secondary: PropTypes.bool,
+  ghost: PropTypes.bool,
 }
 
 Tag.defaultProps = {
   title: 'My tag',
   disabled: false,
-  secondary: false,
+  ghost: false,
 }
 
 export default Tag

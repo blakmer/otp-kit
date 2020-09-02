@@ -7,6 +7,7 @@
   align-items: center;
   box-sizing: border-box;
   border: 2px solid transparent;
+  padding: 0 1rem;
 }
 
 .tagSecondary {
@@ -26,8 +27,20 @@
 }
 
 .title {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   white-space: nowrap;
+  margin-top: -1px;
+  font-size: 14px;
+  color: var(--color-white);
+}
+
+.paddingNone {
+  padding: 0;
+}
+
+.hasMarker {
+  color: var(--color-text-primary);
+  font-size: 16px;
 }
 
 .icon {
