@@ -25,10 +25,11 @@
 }
 
 .notificationItem .notificationMessage {
-  margin-left: 1rem;
+  margin: 0 1rem;
   color: #fff;
   flex: 1;
   width: 95%;
+  word-break: break-word;
 }
 
 .notificationItem .notificationContent {
@@ -37,7 +38,9 @@
 }
 
 .notificationItem .notificationClose {
-  align-self: start;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
   cursor: pointer;
 }
 
