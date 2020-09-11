@@ -38,7 +38,6 @@
 
 .hide {
   transition: max-height 0.4s cubic-bezier(0, 1, 0, 1)
-  
 }
 
 .element .body {
@@ -46,6 +45,15 @@
   box-sizing: border-box;
 }
 
+.show.body {
+  overflow: visible;
+  animation: 1s delay-overflow; /* добавляем overflow: visible после того как аккордеон раскрылся */
+}
+
 .mrNone {
   margin-bottom: 0;
+}
+
+@keyframes delay-overflow {
+  from { overflow: hidden; }
 }
