@@ -18,6 +18,7 @@ const [a, setA] = useState(0)
       { title: 'Title', description: 'Text description' },
     ]}
     currentStep={a}
+    markSuccessfulWithTick={true}
   />
 </Fragment>
 ```

@@ -1,6 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { string, bool } from 'prop-types'
 import classnames from 'classnames'
+import Icon from '../Icon'
 
 import styles from './index.module.css'
 
@@ -10,6 +11,7 @@ const Steps = props => {
     style,
     steps,
     currentStep,
+    markSuccessfulWithTick,
     onChange,
     closeNextStepPerClick,
   } = props
@@ -39,7 +41,11 @@ const Steps = props => {
               <div
                 onClick={() => handleChange(k)}
                 className={classnames(styles.stepCircle)}>
-                {k + 1}
+                {currentStep > k && markSuccessfulWithTick ? (
+                  <Icon.Medium fill="white" type="tick" />
+                ) : (
+                  k + 1
+                )}
               </div>
               <div className={classnames(styles.stepLine)}></div>
             </div>
@@ -72,6 +78,8 @@ Steps.propTypes = {
   ),
   /** Установка шага */
   currentStep: PropTypes.number,
+  /** Маркер успешных шагов - галочка */
+  markSuccessfulWithTick: PropTypes.bool,
   onChange: PropTypes.func,
   /** Запрет перехода на следующий шаг при клике на него */
   closeNextStepPerClick: PropTypes.bool,
@@ -81,6 +89,7 @@ Steps.defaultProps = {
   steps: [],
   currentStep: 0,
   closeNextStepPerClick: true,
+  markSuccessfulWithTick: false,
 }
 
 export default Steps
