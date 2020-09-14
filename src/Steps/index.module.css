@@ -23,7 +23,7 @@
 }
 
 .step:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 
 .stepVerticalWrapper {
@@ -49,9 +49,18 @@
 .stepLine {
   position: absolute;
   top: 2.5rem;
-  left: 50%;
+  left: 15px;
   height: calc(100% - 2.5rem);
   border-left: 1px solid var(--color-text-disabled);
+}
+
+.step:first-child .stepLine {
+  border-left-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.step:last-child .stepLine {
+  display: none;
 }
 
 .stepTextWrapper {
@@ -89,29 +98,13 @@
   color: var(--color-white);
 }
 
-.step.successStep:not(:last-child)::after,
-.step.successStep:not(:first-child)::before {
-  background-color: var(--color-primary);
+.step.successStep .stepLine {
+  border-left-color: var(--color-primary);
+  border-width: 2px;
 }
 
 .step.currentStep .stepCircle {
   border: 2px solid var(--color-alert);
   background-color: var(--color-alert);
   color: var(--color-text-primary);
-}
-
-.step.currentStep:not(:first-child)::before {
-  background: linear-gradient(
-    to left,
-    var(--color-alert),
-    var(--color-primary)
-  );
-}
-
-.step.currentStep:not(:last-child)::after {
-  background: linear-gradient(
-    to right,
-    var(--color-alert),
-    var(--color-text-disabled)
-  );
 }
