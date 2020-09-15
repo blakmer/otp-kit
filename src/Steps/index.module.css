@@ -33,17 +33,15 @@
 .stepCircle {
   width: 2rem;
   height: 2rem;
-  border: 2px solid var(--color-text-disabled);
-  box-sizing: border-box;
+  border: 1px solid var(--color-text-disabled);
   border-radius: 1.5rem;
   color: var(--color-text-disabled);
+  font-family: var(--font-bold);
   line-height: 1.25rem;
-  font-style: normal;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .stepLine {
@@ -68,14 +66,13 @@
   flex-direction: column;
   max-width: 95px;
   margin-left: 8px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
-.stepTitle {
-  color: var(--color-text-disabled);
-  font-family: var(--font-bold);
-  font-size: 16px;
-  margin-top: 8px;
+.interactive .stepCircle,
+.interactive .stepTitle {
+  cursor: pointer;
 }
 
 .stepDescription {
@@ -84,7 +81,6 @@
   font-size: 14px;
   line-height: 16px;
   margin-top: 4px;
-  cursor: pointer;
 }
 
 .step.successStep .stepTitle,
@@ -93,9 +89,14 @@
 }
 
 .step.successStep .stepCircle {
-  border: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-white);
+}
+
+.step.successStep.interactive .stepCircle:hover {
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
 }
 
 .step.successStep .stepLine {
@@ -104,7 +105,7 @@
 }
 
 .step.currentStep .stepCircle {
-  border: 2px solid var(--color-alert);
+  border-color: var(--color-alert);
   background-color: var(--color-alert);
   color: var(--color-text-primary);
 }

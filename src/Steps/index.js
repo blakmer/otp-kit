@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes, { string, bool } from 'prop-types'
 import classnames from 'classnames'
 import Icon from '../Icon'
+import Typography from '../Typography'
 
 import styles from './index.module.css'
 
@@ -34,7 +35,8 @@ const Steps = props => {
             className={classnames(
               styles.step,
               currentStep > k && styles.successStep,
-              currentStep === k && styles.currentStep
+              currentStep === k && styles.currentStep,
+              !closeNextStepPerClick && styles.interactive
             )}
             key={k}>
             <div className={classnames(styles.stepVerticalWrapper)}>
@@ -50,12 +52,17 @@ const Steps = props => {
               <div className={classnames(styles.stepLine)}></div>
             </div>
             <div className={classnames(styles.stepTextWrapper)}>
-              <div className={classnames(styles.stepTitle)}>{i.title}</div>
-              <div
-                onClick={() => handleChange(k)}
+              <Typography.Paragraph
+                highlighted
+                className={classnames(styles.stepTitle)}
+                onClick={() => handleChange(k)}>
+                {i.title}
+              </Typography.Paragraph>
+              <Typography.Text
+                size="small"
                 className={classnames(styles.stepDescription)}>
                 {i.description}
-              </div>
+              </Typography.Text>
             </div>
           </div>
         ))}
