@@ -8,7 +8,6 @@ const FormItem = props => {
   const { label, className, description, children, count, flat, style } = props
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
-  const isSimple = children ? !children.length : false
   const nonFluidComponents = ['Select', 'DropdownInput']
   let childClone = null
 
@@ -30,17 +29,14 @@ const FormItem = props => {
 
   if (
     !focus &&
-    (isSimple
-      ? nonFluidComponents.filter(e => e === children.type.displayName)
-          .length ||
-        children.props.value ||
-        children.props.defaultValue
-      : true)
+    (nonFluidComponents.filter(e => e === children.type.displayName).length ||
+      children.props.value ||
+      children.props.defaultValue)
   ) {
     setFocus(true)
   }
 
-  if (isSimple && !flat && children.type.displayName === 'Select') {
+  if (!flat && children.type.displayName === 'Select') {
     childClone = React.cloneElement(children, {
       renderMenu: menu => (
         <Fragment>
@@ -48,7 +44,7 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               styles.fluid,
-              styles[isSimple ? children.props.status : null],
+              styles[children.props.status || null],
               focus && styles.focused
             )}
             style={{ marginLeft: '-2px', marginTop: '-2px' }}>
@@ -65,7 +61,7 @@ const FormItem = props => {
       ref={element}
       className={classnames(
         styles.wrapper,
-        isSimple ? !!children.props.block && styles.block : null,
+        !!children.props.block && styles.block,
         flat && styles.flat,
         className
       )}
@@ -80,7 +76,7 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               flat ? styles.flat : styles.fluid,
-              styles[isSimple ? children.props.status : null],
+              styles[children.props.status || null],
               !flat && focus && styles.focused
             )}>
             {label}
@@ -88,20 +84,18 @@ const FormItem = props => {
         )}
         {childClone ? childClone : children}
       </div>
-      {!description &&
-        count >= 0 &&
-        (isSimple ? !!children.props.maxLength : null) && (
-          <small
-            className={
-              styles.limit
-            }>{`${count}/${children.props.maxLength}`}</small>
-        )}
+      {!description && count >= 0 && !!children.props.maxLength && (
+        <small
+          className={
+            styles.limit
+          }>{`${count}/${children.props.maxLength}`}</small>
+      )}
 
       {description && (
         <Typography.Text
           className={classnames(
             styles.description,
-            styles[isSimple ? children.props.status : null],
+            styles[children.props.status || null],
             flat && styles.flat
           )}>
           {description}
