@@ -71,7 +71,7 @@
 
 .wrapper:focus-within .label,
 .child:hover .focused.default,
-.focused :not(.label) {
+.focused :not(.error) :not(.label) {
   color: var(--color-primary);
 }
 
