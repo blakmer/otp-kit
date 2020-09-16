@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './index.module.css'
 import classnames from 'classnames'
@@ -24,7 +24,6 @@ const Button = props => {
     suffixFill,
   } = props
 
-  const [flag, setFlag] = useState(false)
   const camelToKebabCase = str =>
     str.replace(/[A-Z]/, e => `-${e.toLowerCase()}`)
   const stringStyle =
@@ -51,14 +50,14 @@ const Button = props => {
       disabled={disabled}
       onClick={handleClick}
       type={htmlType}
-      onMouseEnter={() => setFlag(true)}
-      onMouseLeave={() => setFlag(false)}
       className={classnames(
         styles.button,
         styles[size],
-        !ghost && (flag ? classes[`${fill}-hover-bg`] : classes[`${fill}-bg`]),
+        !ghost && classes[`${fill}-bg`],
+        !ghost && classes[`${fill}-hover-bg-hover`],
+        !ghost && classes[`${fill}-active-bg-active`],
         !ghost && classes[`bg-input-text`],
-        ghost ? styles.pulse : styles.ripple,
+        ghost && styles.pulse,
         ghost && styles.ghost,
         ghost && classes[`${fill}-text`],
         ghost && !disabled && classes[`${fill}-border`],
