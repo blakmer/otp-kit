@@ -31,6 +31,22 @@
               border-color: var(--color-primary-hover) !important
             }
         
+            .primary-active-text, .primary-active-text-before:before, .primary-active-text-after:after {
+                color: var(--color-primary-active)
+            }
+            .primary-active-bg, .primary-active-bg-before:before, .primary-active-bg-after:after {
+                background-color: var(--color-primary-active)
+            }
+            .primary-active-fill {
+                fill: var(--color-primary-active)
+            }
+            .primary-active-stroke {
+                stroke: var(--color-primary-active)
+            }
+            .primary-active-border, .primary-active-border-before:before, .primary-active-border-after:after {
+              border-color: var(--color-primary-active) !important
+            }
+        
             .highlighted-text, .highlighted-text-before:before, .highlighted-text-after:after {
                 color: var(--color-highlighted)
             }
@@ -61,6 +77,22 @@
             }
             .highlighted-hover-border, .highlighted-hover-border-before:before, .highlighted-hover-border-after:after {
               border-color: var(--color-highlighted-hover) !important
+            }
+        
+            .highlighted-active-text, .highlighted-active-text-before:before, .highlighted-active-text-after:after {
+                color: var(--color-highlighted-active)
+            }
+            .highlighted-active-bg, .highlighted-active-bg-before:before, .highlighted-active-bg-after:after {
+                background-color: var(--color-highlighted-active)
+            }
+            .highlighted-active-fill {
+                fill: var(--color-highlighted-active)
+            }
+            .highlighted-active-stroke {
+                stroke: var(--color-highlighted-active)
+            }
+            .highlighted-active-border, .highlighted-active-border-before:before, .highlighted-active-border-after:after {
+              border-color: var(--color-highlighted-active) !important
             }
         
             .blue-text, .blue-text-before:before, .blue-text-after:after {
@@ -95,6 +127,22 @@
               border-color: var(--color-blue-hover) !important
             }
         
+            .blue-active-text, .blue-active-text-before:before, .blue-active-text-after:after {
+                color: var(--color-blue-active)
+            }
+            .blue-active-bg, .blue-active-bg-before:before, .blue-active-bg-after:after {
+                background-color: var(--color-blue-active)
+            }
+            .blue-active-fill {
+                fill: var(--color-blue-active)
+            }
+            .blue-active-stroke {
+                stroke: var(--color-blue-active)
+            }
+            .blue-active-border, .blue-active-border-before:before, .blue-active-border-after:after {
+              border-color: var(--color-blue-active) !important
+            }
+        
             .error-text, .error-text-before:before, .error-text-after:after {
                 color: var(--color-error)
             }
@@ -127,6 +175,22 @@
               border-color: var(--color-error-hover) !important
             }
         
+            .error-active-text, .error-active-text-before:before, .error-active-text-after:after {
+                color: var(--color-error-active)
+            }
+            .error-active-bg, .error-active-bg-before:before, .error-active-bg-after:after {
+                background-color: var(--color-error-active)
+            }
+            .error-active-fill {
+                fill: var(--color-error-active)
+            }
+            .error-active-stroke {
+                stroke: var(--color-error-active)
+            }
+            .error-active-border, .error-active-border-before:before, .error-active-border-after:after {
+              border-color: var(--color-error-active) !important
+            }
+        
             .alert-text, .alert-text-before:before, .alert-text-after:after {
                 color: var(--color-alert)
             }
@@ -141,6 +205,38 @@
             }
             .alert-border, .alert-border-before:before, .alert-border-after:after {
               border-color: var(--color-alert) !important
+            }
+        
+            .alert-hover-text, .alert-hover-text-before:before, .alert-hover-text-after:after {
+                color: var(--color-alert-hover)
+            }
+            .alert-hover-bg, .alert-hover-bg-before:before, .alert-hover-bg-after:after {
+                background-color: var(--color-alert-hover)
+            }
+            .alert-hover-fill {
+                fill: var(--color-alert-hover)
+            }
+            .alert-hover-stroke {
+                stroke: var(--color-alert-hover)
+            }
+            .alert-hover-border, .alert-hover-border-before:before, .alert-hover-border-after:after {
+              border-color: var(--color-alert-hover) !important
+            }
+        
+            .alert-active-text, .alert-active-text-before:before, .alert-active-text-after:after {
+                color: var(--color-alert-active)
+            }
+            .alert-active-bg, .alert-active-bg-before:before, .alert-active-bg-after:after {
+                background-color: var(--color-alert-active)
+            }
+            .alert-active-fill {
+                fill: var(--color-alert-active)
+            }
+            .alert-active-stroke {
+                stroke: var(--color-alert-active)
+            }
+            .alert-active-border, .alert-active-border-before:before, .alert-active-border-after:after {
+              border-color: var(--color-alert-active) !important
             }
         
             .white-text, .white-text-before:before, .white-text-after:after {

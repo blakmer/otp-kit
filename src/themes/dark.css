@@ -17,13 +17,19 @@
   /** main colors */
   --color-primary: #52ae30;
   --color-primary-hover: #74bf1e;
+  --color-primary-active: #428b26;
   --color-highlighted: #ff6600;
   --color-highlighted-hover: #ff802b;
+  --color-highlighted-active: #cc5200;
   --color-blue: #1b82e3;
   --color-blue-hover: #3e9ef7;
+  --color-blue-active: #1668b6;
   --color-error: #ff435a;
   --color-error-hover: #ff5c6f;
+  --color-error-active: #cc3648;
   --color-alert: #ffcc00;
+  --color-alert-hover: #ffd633;
+  --color-alert-active: #cca300;
   --color-white: #ffffff;
   --color-black: #000000;
 
