@@ -27,8 +27,20 @@ function createFiles(vars) {
             .${matches[1]}-text, .${matches[1]}-text-before:before, .${matches[1]}-text-after:after {
                 color: var(--color-${matches[1]})
             }
+            .${matches[1]}-text-hover:hover, .${matches[1]}-text-before-hover:hover:before, .${matches[1]}-text-after-hover:hover:after {
+              color: var(--color-${matches[1]})
+            }
+            .${matches[1]}-text-active:active, .${matches[1]}-text-before-active:active:before, .${matches[1]}-text-after-active:active:after {
+              color: var(--color-${matches[1]})
+            }
             .${matches[1]}-bg, .${matches[1]}-bg-before:before, .${matches[1]}-bg-after:after {
                 background-color: var(--color-${matches[1]})
+            }
+            .${matches[1]}-bg-hover:hover, .${matches[1]}-bg-before-hover:hover:before, .${matches[1]}-bg-after-hover:hover:after {
+              background-color: var(--color-${matches[1]})
+            }
+            .${matches[1]}-bg-active:active, .${matches[1]}-bg-before-active:active:before, .${matches[1]}-bg-after-active:active:after {
+              background-color: var(--color-${matches[1]})
             }
             .${matches[1]}-fill {
                 fill: var(--color-${matches[1]})

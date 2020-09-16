@@ -2,8 +2,20 @@
             .primary-text, .primary-text-before:before, .primary-text-after:after {
                 color: var(--color-primary)
             }
+            .primary-text-hover:hover, .primary-text-before-hover:hover:before, .primary-text-after-hover:hover:after {
+              color: var(--color-primary)
+            }
+            .primary-text-active:active, .primary-text-before-active:active:before, .primary-text-after-active:active:after {
+              color: var(--color-primary)
+            }
             .primary-bg, .primary-bg-before:before, .primary-bg-after:after {
                 background-color: var(--color-primary)
+            }
+            .primary-bg-hover:hover, .primary-bg-before-hover:hover:before, .primary-bg-after-hover:hover:after {
+              background-color: var(--color-primary)
+            }
+            .primary-bg-active:active, .primary-bg-before-active:active:before, .primary-bg-after-active:active:after {
+              background-color: var(--color-primary)
             }
             .primary-fill {
                 fill: var(--color-primary)
@@ -18,8 +30,20 @@
             .primary-hover-text, .primary-hover-text-before:before, .primary-hover-text-after:after {
                 color: var(--color-primary-hover)
             }
+            .primary-hover-text-hover:hover, .primary-hover-text-before-hover:hover:before, .primary-hover-text-after-hover:hover:after {
+              color: var(--color-primary-hover)
+            }
+            .primary-hover-text-active:active, .primary-hover-text-before-active:active:before, .primary-hover-text-after-active:active:after {
+              color: var(--color-primary-hover)
+            }
             .primary-hover-bg, .primary-hover-bg-before:before, .primary-hover-bg-after:after {
                 background-color: var(--color-primary-hover)
+            }
+            .primary-hover-bg-hover:hover, .primary-hover-bg-before-hover:hover:before, .primary-hover-bg-after-hover:hover:after {
+              background-color: var(--color-primary-hover)
+            }
+            .primary-hover-bg-active:active, .primary-hover-bg-before-active:active:before, .primary-hover-bg-after-active:active:after {
+              background-color: var(--color-primary-hover)
             }
             .primary-hover-fill {
                 fill: var(--color-primary-hover)
@@ -34,8 +58,20 @@
             .primary-active-text, .primary-active-text-before:before, .primary-active-text-after:after {
                 color: var(--color-primary-active)
             }
+            .primary-active-text-hover:hover, .primary-active-text-before-hover:hover:before, .primary-active-text-after-hover:hover:after {
+              color: var(--color-primary-active)
+            }
+            .primary-active-text-active:active, .primary-active-text-before-active:active:before, .primary-active-text-after-active:active:after {
+              color: var(--color-primary-active)
+            }
             .primary-active-bg, .primary-active-bg-before:before, .primary-active-bg-after:after {
                 background-color: var(--color-primary-active)
+            }
+            .primary-active-bg-hover:hover, .primary-active-bg-before-hover:hover:before, .primary-active-bg-after-hover:hover:after {
+              background-color: var(--color-primary-active)
+            }
+            .primary-active-bg-active:active, .primary-active-bg-before-active:active:before, .primary-active-bg-after-active:active:after {
+              background-color: var(--color-primary-active)
             }
             .primary-active-fill {
                 fill: var(--color-primary-active)
@@ -50,8 +86,20 @@
             .highlighted-text, .highlighted-text-before:before, .highlighted-text-after:after {
                 color: var(--color-highlighted)
             }
+            .highlighted-text-hover:hover, .highlighted-text-before-hover:hover:before, .highlighted-text-after-hover:hover:after {
+              color: var(--color-highlighted)
+            }
+            .highlighted-text-active:active, .highlighted-text-before-active:active:before, .highlighted-text-after-active:active:after {
+              color: var(--color-highlighted)
+            }
             .highlighted-bg, .highlighted-bg-before:before, .highlighted-bg-after:after {
                 background-color: var(--color-highlighted)
+            }
+            .highlighted-bg-hover:hover, .highlighted-bg-before-hover:hover:before, .highlighted-bg-after-hover:hover:after {
+              background-color: var(--color-highlighted)
+            }
+            .highlighted-bg-active:active, .highlighted-bg-before-active:active:before, .highlighted-bg-after-active:active:after {
+              background-color: var(--color-highlighted)
             }
             .highlighted-fill {
                 fill: var(--color-highlighted)
@@ -66,8 +114,20 @@
             .highlighted-hover-text, .highlighted-hover-text-before:before, .highlighted-hover-text-after:after {
                 color: var(--color-highlighted-hover)
             }
+            .highlighted-hover-text-hover:hover, .highlighted-hover-text-before-hover:hover:before, .highlighted-hover-text-after-hover:hover:after {
+              color: var(--color-highlighted-hover)
+            }
+            .highlighted-hover-text-active:active, .highlighted-hover-text-before-active:active:before, .highlighted-hover-text-after-active:active:after {
+              color: var(--color-highlighted-hover)
+            }
             .highlighted-hover-bg, .highlighted-hover-bg-before:before, .highlighted-hover-bg-after:after {
                 background-color: var(--color-highlighted-hover)
+            }
+            .highlighted-hover-bg-hover:hover, .highlighted-hover-bg-before-hover:hover:before, .highlighted-hover-bg-after-hover:hover:after {
+              background-color: var(--color-highlighted-hover)
+            }
+            .highlighted-hover-bg-active:active, .highlighted-hover-bg-before-active:active:before, .highlighted-hover-bg-after-active:active:after {
+              background-color: var(--color-highlighted-hover)
             }
             .highlighted-hover-fill {
                 fill: var(--color-highlighted-hover)
@@ -82,8 +142,20 @@
             .highlighted-active-text, .highlighted-active-text-before:before, .highlighted-active-text-after:after {
                 color: var(--color-highlighted-active)
             }
+            .highlighted-active-text-hover:hover, .highlighted-active-text-before-hover:hover:before, .highlighted-active-text-after-hover:hover:after {
+              color: var(--color-highlighted-active)
+            }
+            .highlighted-active-text-active:active, .highlighted-active-text-before-active:active:before, .highlighted-active-text-after-active:active:after {
+              color: var(--color-highlighted-active)
+            }
             .highlighted-active-bg, .highlighted-active-bg-before:before, .highlighted-active-bg-after:after {
                 background-color: var(--color-highlighted-active)
+            }
+            .highlighted-active-bg-hover:hover, .highlighted-active-bg-before-hover:hover:before, .highlighted-active-bg-after-hover:hover:after {
+              background-color: var(--color-highlighted-active)
+            }
+            .highlighted-active-bg-active:active, .highlighted-active-bg-before-active:active:before, .highlighted-active-bg-after-active:active:after {
+              background-color: var(--color-highlighted-active)
             }
             .highlighted-active-fill {
                 fill: var(--color-highlighted-active)
@@ -98,8 +170,20 @@
             .blue-text, .blue-text-before:before, .blue-text-after:after {
                 color: var(--color-blue)
             }
+            .blue-text-hover:hover, .blue-text-before-hover:hover:before, .blue-text-after-hover:hover:after {
+              color: var(--color-blue)
+            }
+            .blue-text-active:active, .blue-text-before-active:active:before, .blue-text-after-active:active:after {
+              color: var(--color-blue)
+            }
             .blue-bg, .blue-bg-before:before, .blue-bg-after:after {
                 background-color: var(--color-blue)
+            }
+            .blue-bg-hover:hover, .blue-bg-before-hover:hover:before, .blue-bg-after-hover:hover:after {
+              background-color: var(--color-blue)
+            }
+            .blue-bg-active:active, .blue-bg-before-active:active:before, .blue-bg-after-active:active:after {
+              background-color: var(--color-blue)
             }
             .blue-fill {
                 fill: var(--color-blue)
@@ -114,8 +198,20 @@
             .blue-hover-text, .blue-hover-text-before:before, .blue-hover-text-after:after {
                 color: var(--color-blue-hover)
             }
+            .blue-hover-text-hover:hover, .blue-hover-text-before-hover:hover:before, .blue-hover-text-after-hover:hover:after {
+              color: var(--color-blue-hover)
+            }
+            .blue-hover-text-active:active, .blue-hover-text-before-active:active:before, .blue-hover-text-after-active:active:after {
+              color: var(--color-blue-hover)
+            }
             .blue-hover-bg, .blue-hover-bg-before:before, .blue-hover-bg-after:after {
                 background-color: var(--color-blue-hover)
+            }
+            .blue-hover-bg-hover:hover, .blue-hover-bg-before-hover:hover:before, .blue-hover-bg-after-hover:hover:after {
+              background-color: var(--color-blue-hover)
+            }
+            .blue-hover-bg-active:active, .blue-hover-bg-before-active:active:before, .blue-hover-bg-after-active:active:after {
+              background-color: var(--color-blue-hover)
             }
             .blue-hover-fill {
                 fill: var(--color-blue-hover)
@@ -130,8 +226,20 @@
             .blue-active-text, .blue-active-text-before:before, .blue-active-text-after:after {
                 color: var(--color-blue-active)
             }
+            .blue-active-text-hover:hover, .blue-active-text-before-hover:hover:before, .blue-active-text-after-hover:hover:after {
+              color: var(--color-blue-active)
+            }
+            .blue-active-text-active:active, .blue-active-text-before-active:active:before, .blue-active-text-after-active:active:after {
+              color: var(--color-blue-active)
+            }
             .blue-active-bg, .blue-active-bg-before:before, .blue-active-bg-after:after {
                 background-color: var(--color-blue-active)
+            }
+            .blue-active-bg-hover:hover, .blue-active-bg-before-hover:hover:before, .blue-active-bg-after-hover:hover:after {
+              background-color: var(--color-blue-active)
+            }
+            .blue-active-bg-active:active, .blue-active-bg-before-active:active:before, .blue-active-bg-after-active:active:after {
+              background-color: var(--color-blue-active)
             }
             .blue-active-fill {
                 fill: var(--color-blue-active)
@@ -146,8 +254,20 @@
             .error-text, .error-text-before:before, .error-text-after:after {
                 color: var(--color-error)
             }
+            .error-text-hover:hover, .error-text-before-hover:hover:before, .error-text-after-hover:hover:after {
+              color: var(--color-error)
+            }
+            .error-text-active:active, .error-text-before-active:active:before, .error-text-after-active:active:after {
+              color: var(--color-error)
+            }
             .error-bg, .error-bg-before:before, .error-bg-after:after {
                 background-color: var(--color-error)
+            }
+            .error-bg-hover:hover, .error-bg-before-hover:hover:before, .error-bg-after-hover:hover:after {
+              background-color: var(--color-error)
+            }
+            .error-bg-active:active, .error-bg-before-active:active:before, .error-bg-after-active:active:after {
+              background-color: var(--color-error)
             }
             .error-fill {
                 fill: var(--color-error)
@@ -162,8 +282,20 @@
             .error-hover-text, .error-hover-text-before:before, .error-hover-text-after:after {
                 color: var(--color-error-hover)
             }
+            .error-hover-text-hover:hover, .error-hover-text-before-hover:hover:before, .error-hover-text-after-hover:hover:after {
+              color: var(--color-error-hover)
+            }
+            .error-hover-text-active:active, .error-hover-text-before-active:active:before, .error-hover-text-after-active:active:after {
+              color: var(--color-error-hover)
+            }
             .error-hover-bg, .error-hover-bg-before:before, .error-hover-bg-after:after {
                 background-color: var(--color-error-hover)
+            }
+            .error-hover-bg-hover:hover, .error-hover-bg-before-hover:hover:before, .error-hover-bg-after-hover:hover:after {
+              background-color: var(--color-error-hover)
+            }
+            .error-hover-bg-active:active, .error-hover-bg-before-active:active:before, .error-hover-bg-after-active:active:after {
+              background-color: var(--color-error-hover)
             }
             .error-hover-fill {
                 fill: var(--color-error-hover)
@@ -178,8 +310,20 @@
             .error-active-text, .error-active-text-before:before, .error-active-text-after:after {
                 color: var(--color-error-active)
             }
+            .error-active-text-hover:hover, .error-active-text-before-hover:hover:before, .error-active-text-after-hover:hover:after {
+              color: var(--color-error-active)
+            }
+            .error-active-text-active:active, .error-active-text-before-active:active:before, .error-active-text-after-active:active:after {
+              color: var(--color-error-active)
+            }
             .error-active-bg, .error-active-bg-before:before, .error-active-bg-after:after {
                 background-color: var(--color-error-active)
+            }
+            .error-active-bg-hover:hover, .error-active-bg-before-hover:hover:before, .error-active-bg-after-hover:hover:after {
+              background-color: var(--color-error-active)
+            }
+            .error-active-bg-active:active, .error-active-bg-before-active:active:before, .error-active-bg-after-active:active:after {
+              background-color: var(--color-error-active)
             }
             .error-active-fill {
                 fill: var(--color-error-active)
@@ -194,8 +338,20 @@
             .alert-text, .alert-text-before:before, .alert-text-after:after {
                 color: var(--color-alert)
             }
+            .alert-text-hover:hover, .alert-text-before-hover:hover:before, .alert-text-after-hover:hover:after {
+              color: var(--color-alert)
+            }
+            .alert-text-active:active, .alert-text-before-active:active:before, .alert-text-after-active:active:after {
+              color: var(--color-alert)
+            }
             .alert-bg, .alert-bg-before:before, .alert-bg-after:after {
                 background-color: var(--color-alert)
+            }
+            .alert-bg-hover:hover, .alert-bg-before-hover:hover:before, .alert-bg-after-hover:hover:after {
+              background-color: var(--color-alert)
+            }
+            .alert-bg-active:active, .alert-bg-before-active:active:before, .alert-bg-after-active:active:after {
+              background-color: var(--color-alert)
             }
             .alert-fill {
                 fill: var(--color-alert)
@@ -210,8 +366,20 @@
             .alert-hover-text, .alert-hover-text-before:before, .alert-hover-text-after:after {
                 color: var(--color-alert-hover)
             }
+            .alert-hover-text-hover:hover, .alert-hover-text-before-hover:hover:before, .alert-hover-text-after-hover:hover:after {
+              color: var(--color-alert-hover)
+            }
+            .alert-hover-text-active:active, .alert-hover-text-before-active:active:before, .alert-hover-text-after-active:active:after {
+              color: var(--color-alert-hover)
+            }
             .alert-hover-bg, .alert-hover-bg-before:before, .alert-hover-bg-after:after {
                 background-color: var(--color-alert-hover)
+            }
+            .alert-hover-bg-hover:hover, .alert-hover-bg-before-hover:hover:before, .alert-hover-bg-after-hover:hover:after {
+              background-color: var(--color-alert-hover)
+            }
+            .alert-hover-bg-active:active, .alert-hover-bg-before-active:active:before, .alert-hover-bg-after-active:active:after {
+              background-color: var(--color-alert-hover)
             }
             .alert-hover-fill {
                 fill: var(--color-alert-hover)
@@ -226,8 +394,20 @@
             .alert-active-text, .alert-active-text-before:before, .alert-active-text-after:after {
                 color: var(--color-alert-active)
             }
+            .alert-active-text-hover:hover, .alert-active-text-before-hover:hover:before, .alert-active-text-after-hover:hover:after {
+              color: var(--color-alert-active)
+            }
+            .alert-active-text-active:active, .alert-active-text-before-active:active:before, .alert-active-text-after-active:active:after {
+              color: var(--color-alert-active)
+            }
             .alert-active-bg, .alert-active-bg-before:before, .alert-active-bg-after:after {
                 background-color: var(--color-alert-active)
+            }
+            .alert-active-bg-hover:hover, .alert-active-bg-before-hover:hover:before, .alert-active-bg-after-hover:hover:after {
+              background-color: var(--color-alert-active)
+            }
+            .alert-active-bg-active:active, .alert-active-bg-before-active:active:before, .alert-active-bg-after-active:active:after {
+              background-color: var(--color-alert-active)
             }
             .alert-active-fill {
                 fill: var(--color-alert-active)
@@ -242,8 +422,20 @@
             .white-text, .white-text-before:before, .white-text-after:after {
                 color: var(--color-white)
             }
+            .white-text-hover:hover, .white-text-before-hover:hover:before, .white-text-after-hover:hover:after {
+              color: var(--color-white)
+            }
+            .white-text-active:active, .white-text-before-active:active:before, .white-text-after-active:active:after {
+              color: var(--color-white)
+            }
             .white-bg, .white-bg-before:before, .white-bg-after:after {
                 background-color: var(--color-white)
+            }
+            .white-bg-hover:hover, .white-bg-before-hover:hover:before, .white-bg-after-hover:hover:after {
+              background-color: var(--color-white)
+            }
+            .white-bg-active:active, .white-bg-before-active:active:before, .white-bg-after-active:active:after {
+              background-color: var(--color-white)
             }
             .white-fill {
                 fill: var(--color-white)
@@ -258,8 +450,20 @@
             .black-text, .black-text-before:before, .black-text-after:after {
                 color: var(--color-black)
             }
+            .black-text-hover:hover, .black-text-before-hover:hover:before, .black-text-after-hover:hover:after {
+              color: var(--color-black)
+            }
+            .black-text-active:active, .black-text-before-active:active:before, .black-text-after-active:active:after {
+              color: var(--color-black)
+            }
             .black-bg, .black-bg-before:before, .black-bg-after:after {
                 background-color: var(--color-black)
+            }
+            .black-bg-hover:hover, .black-bg-before-hover:hover:before, .black-bg-after-hover:hover:after {
+              background-color: var(--color-black)
+            }
+            .black-bg-active:active, .black-bg-before-active:active:before, .black-bg-after-active:active:after {
+              background-color: var(--color-black)
             }
             .black-fill {
                 fill: var(--color-black)
@@ -274,8 +478,20 @@
             .bg-grey-1-text, .bg-grey-1-text-before:before, .bg-grey-1-text-after:after {
                 color: var(--color-bg-grey-1)
             }
+            .bg-grey-1-text-hover:hover, .bg-grey-1-text-before-hover:hover:before, .bg-grey-1-text-after-hover:hover:after {
+              color: var(--color-bg-grey-1)
+            }
+            .bg-grey-1-text-active:active, .bg-grey-1-text-before-active:active:before, .bg-grey-1-text-after-active:active:after {
+              color: var(--color-bg-grey-1)
+            }
             .bg-grey-1-bg, .bg-grey-1-bg-before:before, .bg-grey-1-bg-after:after {
                 background-color: var(--color-bg-grey-1)
+            }
+            .bg-grey-1-bg-hover:hover, .bg-grey-1-bg-before-hover:hover:before, .bg-grey-1-bg-after-hover:hover:after {
+              background-color: var(--color-bg-grey-1)
+            }
+            .bg-grey-1-bg-active:active, .bg-grey-1-bg-before-active:active:before, .bg-grey-1-bg-after-active:active:after {
+              background-color: var(--color-bg-grey-1)
             }
             .bg-grey-1-fill {
                 fill: var(--color-bg-grey-1)
@@ -290,8 +506,20 @@
             .bg-grey-2-text, .bg-grey-2-text-before:before, .bg-grey-2-text-after:after {
                 color: var(--color-bg-grey-2)
             }
+            .bg-grey-2-text-hover:hover, .bg-grey-2-text-before-hover:hover:before, .bg-grey-2-text-after-hover:hover:after {
+              color: var(--color-bg-grey-2)
+            }
+            .bg-grey-2-text-active:active, .bg-grey-2-text-before-active:active:before, .bg-grey-2-text-after-active:active:after {
+              color: var(--color-bg-grey-2)
+            }
             .bg-grey-2-bg, .bg-grey-2-bg-before:before, .bg-grey-2-bg-after:after {
                 background-color: var(--color-bg-grey-2)
+            }
+            .bg-grey-2-bg-hover:hover, .bg-grey-2-bg-before-hover:hover:before, .bg-grey-2-bg-after-hover:hover:after {
+              background-color: var(--color-bg-grey-2)
+            }
+            .bg-grey-2-bg-active:active, .bg-grey-2-bg-before-active:active:before, .bg-grey-2-bg-after-active:active:after {
+              background-color: var(--color-bg-grey-2)
             }
             .bg-grey-2-fill {
                 fill: var(--color-bg-grey-2)
@@ -306,8 +534,20 @@
             .bg-grey-3-text, .bg-grey-3-text-before:before, .bg-grey-3-text-after:after {
                 color: var(--color-bg-grey-3)
             }
+            .bg-grey-3-text-hover:hover, .bg-grey-3-text-before-hover:hover:before, .bg-grey-3-text-after-hover:hover:after {
+              color: var(--color-bg-grey-3)
+            }
+            .bg-grey-3-text-active:active, .bg-grey-3-text-before-active:active:before, .bg-grey-3-text-after-active:active:after {
+              color: var(--color-bg-grey-3)
+            }
             .bg-grey-3-bg, .bg-grey-3-bg-before:before, .bg-grey-3-bg-after:after {
                 background-color: var(--color-bg-grey-3)
+            }
+            .bg-grey-3-bg-hover:hover, .bg-grey-3-bg-before-hover:hover:before, .bg-grey-3-bg-after-hover:hover:after {
+              background-color: var(--color-bg-grey-3)
+            }
+            .bg-grey-3-bg-active:active, .bg-grey-3-bg-before-active:active:before, .bg-grey-3-bg-after-active:active:after {
+              background-color: var(--color-bg-grey-3)
             }
             .bg-grey-3-fill {
                 fill: var(--color-bg-grey-3)
@@ -322,8 +562,20 @@
             .bg-grey-4-text, .bg-grey-4-text-before:before, .bg-grey-4-text-after:after {
                 color: var(--color-bg-grey-4)
             }
+            .bg-grey-4-text-hover:hover, .bg-grey-4-text-before-hover:hover:before, .bg-grey-4-text-after-hover:hover:after {
+              color: var(--color-bg-grey-4)
+            }
+            .bg-grey-4-text-active:active, .bg-grey-4-text-before-active:active:before, .bg-grey-4-text-after-active:active:after {
+              color: var(--color-bg-grey-4)
+            }
             .bg-grey-4-bg, .bg-grey-4-bg-before:before, .bg-grey-4-bg-after:after {
                 background-color: var(--color-bg-grey-4)
+            }
+            .bg-grey-4-bg-hover:hover, .bg-grey-4-bg-before-hover:hover:before, .bg-grey-4-bg-after-hover:hover:after {
+              background-color: var(--color-bg-grey-4)
+            }
+            .bg-grey-4-bg-active:active, .bg-grey-4-bg-before-active:active:before, .bg-grey-4-bg-after-active:active:after {
+              background-color: var(--color-bg-grey-4)
             }
             .bg-grey-4-fill {
                 fill: var(--color-bg-grey-4)
@@ -338,8 +590,20 @@
             .bg-input-text, .bg-input-text-before:before, .bg-input-text-after:after {
                 color: var(--color-bg-input)
             }
+            .bg-input-text-hover:hover, .bg-input-text-before-hover:hover:before, .bg-input-text-after-hover:hover:after {
+              color: var(--color-bg-input)
+            }
+            .bg-input-text-active:active, .bg-input-text-before-active:active:before, .bg-input-text-after-active:active:after {
+              color: var(--color-bg-input)
+            }
             .bg-input-bg, .bg-input-bg-before:before, .bg-input-bg-after:after {
                 background-color: var(--color-bg-input)
+            }
+            .bg-input-bg-hover:hover, .bg-input-bg-before-hover:hover:before, .bg-input-bg-after-hover:hover:after {
+              background-color: var(--color-bg-input)
+            }
+            .bg-input-bg-active:active, .bg-input-bg-before-active:active:before, .bg-input-bg-after-active:active:after {
+              background-color: var(--color-bg-input)
             }
             .bg-input-fill {
                 fill: var(--color-bg-input)
@@ -354,8 +618,20 @@
             .bg-input-disabled-text, .bg-input-disabled-text-before:before, .bg-input-disabled-text-after:after {
                 color: var(--color-bg-input-disabled)
             }
+            .bg-input-disabled-text-hover:hover, .bg-input-disabled-text-before-hover:hover:before, .bg-input-disabled-text-after-hover:hover:after {
+              color: var(--color-bg-input-disabled)
+            }
+            .bg-input-disabled-text-active:active, .bg-input-disabled-text-before-active:active:before, .bg-input-disabled-text-after-active:active:after {
+              color: var(--color-bg-input-disabled)
+            }
             .bg-input-disabled-bg, .bg-input-disabled-bg-before:before, .bg-input-disabled-bg-after:after {
                 background-color: var(--color-bg-input-disabled)
+            }
+            .bg-input-disabled-bg-hover:hover, .bg-input-disabled-bg-before-hover:hover:before, .bg-input-disabled-bg-after-hover:hover:after {
+              background-color: var(--color-bg-input-disabled)
+            }
+            .bg-input-disabled-bg-active:active, .bg-input-disabled-bg-before-active:active:before, .bg-input-disabled-bg-after-active:active:after {
+              background-color: var(--color-bg-input-disabled)
             }
             .bg-input-disabled-fill {
                 fill: var(--color-bg-input-disabled)
@@ -370,8 +646,20 @@
             .border-text, .border-text-before:before, .border-text-after:after {
                 color: var(--color-border)
             }
+            .border-text-hover:hover, .border-text-before-hover:hover:before, .border-text-after-hover:hover:after {
+              color: var(--color-border)
+            }
+            .border-text-active:active, .border-text-before-active:active:before, .border-text-after-active:active:after {
+              color: var(--color-border)
+            }
             .border-bg, .border-bg-before:before, .border-bg-after:after {
                 background-color: var(--color-border)
+            }
+            .border-bg-hover:hover, .border-bg-before-hover:hover:before, .border-bg-after-hover:hover:after {
+              background-color: var(--color-border)
+            }
+            .border-bg-active:active, .border-bg-before-active:active:before, .border-bg-after-active:active:after {
+              background-color: var(--color-border)
             }
             .border-fill {
                 fill: var(--color-border)
@@ -386,8 +674,20 @@
             .modal-overlay-text, .modal-overlay-text-before:before, .modal-overlay-text-after:after {
                 color: var(--color-modal-overlay)
             }
+            .modal-overlay-text-hover:hover, .modal-overlay-text-before-hover:hover:before, .modal-overlay-text-after-hover:hover:after {
+              color: var(--color-modal-overlay)
+            }
+            .modal-overlay-text-active:active, .modal-overlay-text-before-active:active:before, .modal-overlay-text-after-active:active:after {
+              color: var(--color-modal-overlay)
+            }
             .modal-overlay-bg, .modal-overlay-bg-before:before, .modal-overlay-bg-after:after {
                 background-color: var(--color-modal-overlay)
+            }
+            .modal-overlay-bg-hover:hover, .modal-overlay-bg-before-hover:hover:before, .modal-overlay-bg-after-hover:hover:after {
+              background-color: var(--color-modal-overlay)
+            }
+            .modal-overlay-bg-active:active, .modal-overlay-bg-before-active:active:before, .modal-overlay-bg-after-active:active:after {
+              background-color: var(--color-modal-overlay)
             }
             .modal-overlay-fill {
                 fill: var(--color-modal-overlay)
@@ -402,8 +702,20 @@
             .text-primary-text, .text-primary-text-before:before, .text-primary-text-after:after {
                 color: var(--color-text-primary)
             }
+            .text-primary-text-hover:hover, .text-primary-text-before-hover:hover:before, .text-primary-text-after-hover:hover:after {
+              color: var(--color-text-primary)
+            }
+            .text-primary-text-active:active, .text-primary-text-before-active:active:before, .text-primary-text-after-active:active:after {
+              color: var(--color-text-primary)
+            }
             .text-primary-bg, .text-primary-bg-before:before, .text-primary-bg-after:after {
                 background-color: var(--color-text-primary)
+            }
+            .text-primary-bg-hover:hover, .text-primary-bg-before-hover:hover:before, .text-primary-bg-after-hover:hover:after {
+              background-color: var(--color-text-primary)
+            }
+            .text-primary-bg-active:active, .text-primary-bg-before-active:active:before, .text-primary-bg-after-active:active:after {
+              background-color: var(--color-text-primary)
             }
             .text-primary-fill {
                 fill: var(--color-text-primary)
@@ -418,8 +730,20 @@
             .text-secondary-text, .text-secondary-text-before:before, .text-secondary-text-after:after {
                 color: var(--color-text-secondary)
             }
+            .text-secondary-text-hover:hover, .text-secondary-text-before-hover:hover:before, .text-secondary-text-after-hover:hover:after {
+              color: var(--color-text-secondary)
+            }
+            .text-secondary-text-active:active, .text-secondary-text-before-active:active:before, .text-secondary-text-after-active:active:after {
+              color: var(--color-text-secondary)
+            }
             .text-secondary-bg, .text-secondary-bg-before:before, .text-secondary-bg-after:after {
                 background-color: var(--color-text-secondary)
+            }
+            .text-secondary-bg-hover:hover, .text-secondary-bg-before-hover:hover:before, .text-secondary-bg-after-hover:hover:after {
+              background-color: var(--color-text-secondary)
+            }
+            .text-secondary-bg-active:active, .text-secondary-bg-before-active:active:before, .text-secondary-bg-after-active:active:after {
+              background-color: var(--color-text-secondary)
             }
             .text-secondary-fill {
                 fill: var(--color-text-secondary)
@@ -434,8 +758,20 @@
             .text-disabled-text, .text-disabled-text-before:before, .text-disabled-text-after:after {
                 color: var(--color-text-disabled)
             }
+            .text-disabled-text-hover:hover, .text-disabled-text-before-hover:hover:before, .text-disabled-text-after-hover:hover:after {
+              color: var(--color-text-disabled)
+            }
+            .text-disabled-text-active:active, .text-disabled-text-before-active:active:before, .text-disabled-text-after-active:active:after {
+              color: var(--color-text-disabled)
+            }
             .text-disabled-bg, .text-disabled-bg-before:before, .text-disabled-bg-after:after {
                 background-color: var(--color-text-disabled)
+            }
+            .text-disabled-bg-hover:hover, .text-disabled-bg-before-hover:hover:before, .text-disabled-bg-after-hover:hover:after {
+              background-color: var(--color-text-disabled)
+            }
+            .text-disabled-bg-active:active, .text-disabled-bg-before-active:active:before, .text-disabled-bg-after-active:active:after {
+              background-color: var(--color-text-disabled)
             }
             .text-disabled-fill {
                 fill: var(--color-text-disabled)
@@ -450,8 +786,20 @@
             .text-inverse-text, .text-inverse-text-before:before, .text-inverse-text-after:after {
                 color: var(--color-text-inverse)
             }
+            .text-inverse-text-hover:hover, .text-inverse-text-before-hover:hover:before, .text-inverse-text-after-hover:hover:after {
+              color: var(--color-text-inverse)
+            }
+            .text-inverse-text-active:active, .text-inverse-text-before-active:active:before, .text-inverse-text-after-active:active:after {
+              color: var(--color-text-inverse)
+            }
             .text-inverse-bg, .text-inverse-bg-before:before, .text-inverse-bg-after:after {
                 background-color: var(--color-text-inverse)
+            }
+            .text-inverse-bg-hover:hover, .text-inverse-bg-before-hover:hover:before, .text-inverse-bg-after-hover:hover:after {
+              background-color: var(--color-text-inverse)
+            }
+            .text-inverse-bg-active:active, .text-inverse-bg-before-active:active:before, .text-inverse-bg-after-active:active:after {
+              background-color: var(--color-text-inverse)
             }
             .text-inverse-fill {
                 fill: var(--color-text-inverse)
@@ -466,8 +814,20 @@
             .chart-blue-text, .chart-blue-text-before:before, .chart-blue-text-after:after {
                 color: var(--color-chart-blue)
             }
+            .chart-blue-text-hover:hover, .chart-blue-text-before-hover:hover:before, .chart-blue-text-after-hover:hover:after {
+              color: var(--color-chart-blue)
+            }
+            .chart-blue-text-active:active, .chart-blue-text-before-active:active:before, .chart-blue-text-after-active:active:after {
+              color: var(--color-chart-blue)
+            }
             .chart-blue-bg, .chart-blue-bg-before:before, .chart-blue-bg-after:after {
                 background-color: var(--color-chart-blue)
+            }
+            .chart-blue-bg-hover:hover, .chart-blue-bg-before-hover:hover:before, .chart-blue-bg-after-hover:hover:after {
+              background-color: var(--color-chart-blue)
+            }
+            .chart-blue-bg-active:active, .chart-blue-bg-before-active:active:before, .chart-blue-bg-after-active:active:after {
+              background-color: var(--color-chart-blue)
             }
             .chart-blue-fill {
                 fill: var(--color-chart-blue)
@@ -482,8 +842,20 @@
             .chart-yellow-text, .chart-yellow-text-before:before, .chart-yellow-text-after:after {
                 color: var(--color-chart-yellow)
             }
+            .chart-yellow-text-hover:hover, .chart-yellow-text-before-hover:hover:before, .chart-yellow-text-after-hover:hover:after {
+              color: var(--color-chart-yellow)
+            }
+            .chart-yellow-text-active:active, .chart-yellow-text-before-active:active:before, .chart-yellow-text-after-active:active:after {
+              color: var(--color-chart-yellow)
+            }
             .chart-yellow-bg, .chart-yellow-bg-before:before, .chart-yellow-bg-after:after {
                 background-color: var(--color-chart-yellow)
+            }
+            .chart-yellow-bg-hover:hover, .chart-yellow-bg-before-hover:hover:before, .chart-yellow-bg-after-hover:hover:after {
+              background-color: var(--color-chart-yellow)
+            }
+            .chart-yellow-bg-active:active, .chart-yellow-bg-before-active:active:before, .chart-yellow-bg-after-active:active:after {
+              background-color: var(--color-chart-yellow)
             }
             .chart-yellow-fill {
                 fill: var(--color-chart-yellow)
@@ -498,8 +870,20 @@
             .chart-purple-text, .chart-purple-text-before:before, .chart-purple-text-after:after {
                 color: var(--color-chart-purple)
             }
+            .chart-purple-text-hover:hover, .chart-purple-text-before-hover:hover:before, .chart-purple-text-after-hover:hover:after {
+              color: var(--color-chart-purple)
+            }
+            .chart-purple-text-active:active, .chart-purple-text-before-active:active:before, .chart-purple-text-after-active:active:after {
+              color: var(--color-chart-purple)
+            }
             .chart-purple-bg, .chart-purple-bg-before:before, .chart-purple-bg-after:after {
                 background-color: var(--color-chart-purple)
+            }
+            .chart-purple-bg-hover:hover, .chart-purple-bg-before-hover:hover:before, .chart-purple-bg-after-hover:hover:after {
+              background-color: var(--color-chart-purple)
+            }
+            .chart-purple-bg-active:active, .chart-purple-bg-before-active:active:before, .chart-purple-bg-after-active:active:after {
+              background-color: var(--color-chart-purple)
             }
             .chart-purple-fill {
                 fill: var(--color-chart-purple)
@@ -514,8 +898,20 @@
             .chart-violet-text, .chart-violet-text-before:before, .chart-violet-text-after:after {
                 color: var(--color-chart-violet)
             }
+            .chart-violet-text-hover:hover, .chart-violet-text-before-hover:hover:before, .chart-violet-text-after-hover:hover:after {
+              color: var(--color-chart-violet)
+            }
+            .chart-violet-text-active:active, .chart-violet-text-before-active:active:before, .chart-violet-text-after-active:active:after {
+              color: var(--color-chart-violet)
+            }
             .chart-violet-bg, .chart-violet-bg-before:before, .chart-violet-bg-after:after {
                 background-color: var(--color-chart-violet)
+            }
+            .chart-violet-bg-hover:hover, .chart-violet-bg-before-hover:hover:before, .chart-violet-bg-after-hover:hover:after {
+              background-color: var(--color-chart-violet)
+            }
+            .chart-violet-bg-active:active, .chart-violet-bg-before-active:active:before, .chart-violet-bg-after-active:active:after {
+              background-color: var(--color-chart-violet)
             }
             .chart-violet-fill {
                 fill: var(--color-chart-violet)
@@ -530,8 +926,20 @@
             .chart-coral-text, .chart-coral-text-before:before, .chart-coral-text-after:after {
                 color: var(--color-chart-coral)
             }
+            .chart-coral-text-hover:hover, .chart-coral-text-before-hover:hover:before, .chart-coral-text-after-hover:hover:after {
+              color: var(--color-chart-coral)
+            }
+            .chart-coral-text-active:active, .chart-coral-text-before-active:active:before, .chart-coral-text-after-active:active:after {
+              color: var(--color-chart-coral)
+            }
             .chart-coral-bg, .chart-coral-bg-before:before, .chart-coral-bg-after:after {
                 background-color: var(--color-chart-coral)
+            }
+            .chart-coral-bg-hover:hover, .chart-coral-bg-before-hover:hover:before, .chart-coral-bg-after-hover:hover:after {
+              background-color: var(--color-chart-coral)
+            }
+            .chart-coral-bg-active:active, .chart-coral-bg-before-active:active:before, .chart-coral-bg-after-active:active:after {
+              background-color: var(--color-chart-coral)
             }
             .chart-coral-fill {
                 fill: var(--color-chart-coral)
@@ -546,8 +954,20 @@
             .chart-green-text, .chart-green-text-before:before, .chart-green-text-after:after {
                 color: var(--color-chart-green)
             }
+            .chart-green-text-hover:hover, .chart-green-text-before-hover:hover:before, .chart-green-text-after-hover:hover:after {
+              color: var(--color-chart-green)
+            }
+            .chart-green-text-active:active, .chart-green-text-before-active:active:before, .chart-green-text-after-active:active:after {
+              color: var(--color-chart-green)
+            }
             .chart-green-bg, .chart-green-bg-before:before, .chart-green-bg-after:after {
                 background-color: var(--color-chart-green)
+            }
+            .chart-green-bg-hover:hover, .chart-green-bg-before-hover:hover:before, .chart-green-bg-after-hover:hover:after {
+              background-color: var(--color-chart-green)
+            }
+            .chart-green-bg-active:active, .chart-green-bg-before-active:active:before, .chart-green-bg-after-active:active:after {
+              background-color: var(--color-chart-green)
             }
             .chart-green-fill {
                 fill: var(--color-chart-green)
@@ -562,8 +982,20 @@
             .bg-pastel-yellow-text, .bg-pastel-yellow-text-before:before, .bg-pastel-yellow-text-after:after {
                 color: var(--color-bg-pastel-yellow)
             }
+            .bg-pastel-yellow-text-hover:hover, .bg-pastel-yellow-text-before-hover:hover:before, .bg-pastel-yellow-text-after-hover:hover:after {
+              color: var(--color-bg-pastel-yellow)
+            }
+            .bg-pastel-yellow-text-active:active, .bg-pastel-yellow-text-before-active:active:before, .bg-pastel-yellow-text-after-active:active:after {
+              color: var(--color-bg-pastel-yellow)
+            }
             .bg-pastel-yellow-bg, .bg-pastel-yellow-bg-before:before, .bg-pastel-yellow-bg-after:after {
                 background-color: var(--color-bg-pastel-yellow)
+            }
+            .bg-pastel-yellow-bg-hover:hover, .bg-pastel-yellow-bg-before-hover:hover:before, .bg-pastel-yellow-bg-after-hover:hover:after {
+              background-color: var(--color-bg-pastel-yellow)
+            }
+            .bg-pastel-yellow-bg-active:active, .bg-pastel-yellow-bg-before-active:active:before, .bg-pastel-yellow-bg-after-active:active:after {
+              background-color: var(--color-bg-pastel-yellow)
             }
             .bg-pastel-yellow-fill {
                 fill: var(--color-bg-pastel-yellow)
@@ -578,8 +1010,20 @@
             .bg-pastel-orange-text, .bg-pastel-orange-text-before:before, .bg-pastel-orange-text-after:after {
                 color: var(--color-bg-pastel-orange)
             }
+            .bg-pastel-orange-text-hover:hover, .bg-pastel-orange-text-before-hover:hover:before, .bg-pastel-orange-text-after-hover:hover:after {
+              color: var(--color-bg-pastel-orange)
+            }
+            .bg-pastel-orange-text-active:active, .bg-pastel-orange-text-before-active:active:before, .bg-pastel-orange-text-after-active:active:after {
+              color: var(--color-bg-pastel-orange)
+            }
             .bg-pastel-orange-bg, .bg-pastel-orange-bg-before:before, .bg-pastel-orange-bg-after:after {
                 background-color: var(--color-bg-pastel-orange)
+            }
+            .bg-pastel-orange-bg-hover:hover, .bg-pastel-orange-bg-before-hover:hover:before, .bg-pastel-orange-bg-after-hover:hover:after {
+              background-color: var(--color-bg-pastel-orange)
+            }
+            .bg-pastel-orange-bg-active:active, .bg-pastel-orange-bg-before-active:active:before, .bg-pastel-orange-bg-after-active:active:after {
+              background-color: var(--color-bg-pastel-orange)
             }
             .bg-pastel-orange-fill {
                 fill: var(--color-bg-pastel-orange)
@@ -594,8 +1038,20 @@
             .bg-pastel-red-text, .bg-pastel-red-text-before:before, .bg-pastel-red-text-after:after {
                 color: var(--color-bg-pastel-red)
             }
+            .bg-pastel-red-text-hover:hover, .bg-pastel-red-text-before-hover:hover:before, .bg-pastel-red-text-after-hover:hover:after {
+              color: var(--color-bg-pastel-red)
+            }
+            .bg-pastel-red-text-active:active, .bg-pastel-red-text-before-active:active:before, .bg-pastel-red-text-after-active:active:after {
+              color: var(--color-bg-pastel-red)
+            }
             .bg-pastel-red-bg, .bg-pastel-red-bg-before:before, .bg-pastel-red-bg-after:after {
                 background-color: var(--color-bg-pastel-red)
+            }
+            .bg-pastel-red-bg-hover:hover, .bg-pastel-red-bg-before-hover:hover:before, .bg-pastel-red-bg-after-hover:hover:after {
+              background-color: var(--color-bg-pastel-red)
+            }
+            .bg-pastel-red-bg-active:active, .bg-pastel-red-bg-before-active:active:before, .bg-pastel-red-bg-after-active:active:after {
+              background-color: var(--color-bg-pastel-red)
             }
             .bg-pastel-red-fill {
                 fill: var(--color-bg-pastel-red)
@@ -610,8 +1066,20 @@
             .bg-pastel-blue-text, .bg-pastel-blue-text-before:before, .bg-pastel-blue-text-after:after {
                 color: var(--color-bg-pastel-blue)
             }
+            .bg-pastel-blue-text-hover:hover, .bg-pastel-blue-text-before-hover:hover:before, .bg-pastel-blue-text-after-hover:hover:after {
+              color: var(--color-bg-pastel-blue)
+            }
+            .bg-pastel-blue-text-active:active, .bg-pastel-blue-text-before-active:active:before, .bg-pastel-blue-text-after-active:active:after {
+              color: var(--color-bg-pastel-blue)
+            }
             .bg-pastel-blue-bg, .bg-pastel-blue-bg-before:before, .bg-pastel-blue-bg-after:after {
                 background-color: var(--color-bg-pastel-blue)
+            }
+            .bg-pastel-blue-bg-hover:hover, .bg-pastel-blue-bg-before-hover:hover:before, .bg-pastel-blue-bg-after-hover:hover:after {
+              background-color: var(--color-bg-pastel-blue)
+            }
+            .bg-pastel-blue-bg-active:active, .bg-pastel-blue-bg-before-active:active:before, .bg-pastel-blue-bg-after-active:active:after {
+              background-color: var(--color-bg-pastel-blue)
             }
             .bg-pastel-blue-fill {
                 fill: var(--color-bg-pastel-blue)
@@ -626,8 +1094,20 @@
             .bg-pastel-green-text, .bg-pastel-green-text-before:before, .bg-pastel-green-text-after:after {
                 color: var(--color-bg-pastel-green)
             }
+            .bg-pastel-green-text-hover:hover, .bg-pastel-green-text-before-hover:hover:before, .bg-pastel-green-text-after-hover:hover:after {
+              color: var(--color-bg-pastel-green)
+            }
+            .bg-pastel-green-text-active:active, .bg-pastel-green-text-before-active:active:before, .bg-pastel-green-text-after-active:active:after {
+              color: var(--color-bg-pastel-green)
+            }
             .bg-pastel-green-bg, .bg-pastel-green-bg-before:before, .bg-pastel-green-bg-after:after {
                 background-color: var(--color-bg-pastel-green)
+            }
+            .bg-pastel-green-bg-hover:hover, .bg-pastel-green-bg-before-hover:hover:before, .bg-pastel-green-bg-after-hover:hover:after {
+              background-color: var(--color-bg-pastel-green)
+            }
+            .bg-pastel-green-bg-active:active, .bg-pastel-green-bg-before-active:active:before, .bg-pastel-green-bg-after-active:active:after {
+              background-color: var(--color-bg-pastel-green)
             }
             .bg-pastel-green-fill {
                 fill: var(--color-bg-pastel-green)
@@ -642,8 +1122,20 @@
             .hero-bg-pastel-ocher-text, .hero-bg-pastel-ocher-text-before:before, .hero-bg-pastel-ocher-text-after:after {
                 color: var(--color-hero-bg-pastel-ocher)
             }
+            .hero-bg-pastel-ocher-text-hover:hover, .hero-bg-pastel-ocher-text-before-hover:hover:before, .hero-bg-pastel-ocher-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-ocher)
+            }
+            .hero-bg-pastel-ocher-text-active:active, .hero-bg-pastel-ocher-text-before-active:active:before, .hero-bg-pastel-ocher-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-ocher)
+            }
             .hero-bg-pastel-ocher-bg, .hero-bg-pastel-ocher-bg-before:before, .hero-bg-pastel-ocher-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-ocher)
+            }
+            .hero-bg-pastel-ocher-bg-hover:hover, .hero-bg-pastel-ocher-bg-before-hover:hover:before, .hero-bg-pastel-ocher-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-ocher)
+            }
+            .hero-bg-pastel-ocher-bg-active:active, .hero-bg-pastel-ocher-bg-before-active:active:before, .hero-bg-pastel-ocher-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-ocher)
             }
             .hero-bg-pastel-ocher-fill {
                 fill: var(--color-hero-bg-pastel-ocher)
@@ -658,8 +1150,20 @@
             .hero-bg-pastel-yellow-text, .hero-bg-pastel-yellow-text-before:before, .hero-bg-pastel-yellow-text-after:after {
                 color: var(--color-hero-bg-pastel-yellow)
             }
+            .hero-bg-pastel-yellow-text-hover:hover, .hero-bg-pastel-yellow-text-before-hover:hover:before, .hero-bg-pastel-yellow-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-yellow)
+            }
+            .hero-bg-pastel-yellow-text-active:active, .hero-bg-pastel-yellow-text-before-active:active:before, .hero-bg-pastel-yellow-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-yellow)
+            }
             .hero-bg-pastel-yellow-bg, .hero-bg-pastel-yellow-bg-before:before, .hero-bg-pastel-yellow-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-yellow)
+            }
+            .hero-bg-pastel-yellow-bg-hover:hover, .hero-bg-pastel-yellow-bg-before-hover:hover:before, .hero-bg-pastel-yellow-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-yellow)
+            }
+            .hero-bg-pastel-yellow-bg-active:active, .hero-bg-pastel-yellow-bg-before-active:active:before, .hero-bg-pastel-yellow-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-yellow)
             }
             .hero-bg-pastel-yellow-fill {
                 fill: var(--color-hero-bg-pastel-yellow)
@@ -674,8 +1178,20 @@
             .hero-bg-pastel-orange-text, .hero-bg-pastel-orange-text-before:before, .hero-bg-pastel-orange-text-after:after {
                 color: var(--color-hero-bg-pastel-orange)
             }
+            .hero-bg-pastel-orange-text-hover:hover, .hero-bg-pastel-orange-text-before-hover:hover:before, .hero-bg-pastel-orange-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-orange)
+            }
+            .hero-bg-pastel-orange-text-active:active, .hero-bg-pastel-orange-text-before-active:active:before, .hero-bg-pastel-orange-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-orange)
+            }
             .hero-bg-pastel-orange-bg, .hero-bg-pastel-orange-bg-before:before, .hero-bg-pastel-orange-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-orange)
+            }
+            .hero-bg-pastel-orange-bg-hover:hover, .hero-bg-pastel-orange-bg-before-hover:hover:before, .hero-bg-pastel-orange-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-orange)
+            }
+            .hero-bg-pastel-orange-bg-active:active, .hero-bg-pastel-orange-bg-before-active:active:before, .hero-bg-pastel-orange-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-orange)
             }
             .hero-bg-pastel-orange-fill {
                 fill: var(--color-hero-bg-pastel-orange)
@@ -690,8 +1206,20 @@
             .hero-bg-pastel-red-text, .hero-bg-pastel-red-text-before:before, .hero-bg-pastel-red-text-after:after {
                 color: var(--color-hero-bg-pastel-red)
             }
+            .hero-bg-pastel-red-text-hover:hover, .hero-bg-pastel-red-text-before-hover:hover:before, .hero-bg-pastel-red-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-red)
+            }
+            .hero-bg-pastel-red-text-active:active, .hero-bg-pastel-red-text-before-active:active:before, .hero-bg-pastel-red-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-red)
+            }
             .hero-bg-pastel-red-bg, .hero-bg-pastel-red-bg-before:before, .hero-bg-pastel-red-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-red)
+            }
+            .hero-bg-pastel-red-bg-hover:hover, .hero-bg-pastel-red-bg-before-hover:hover:before, .hero-bg-pastel-red-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-red)
+            }
+            .hero-bg-pastel-red-bg-active:active, .hero-bg-pastel-red-bg-before-active:active:before, .hero-bg-pastel-red-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-red)
             }
             .hero-bg-pastel-red-fill {
                 fill: var(--color-hero-bg-pastel-red)
@@ -706,8 +1234,20 @@
             .hero-bg-pastel-purple-text, .hero-bg-pastel-purple-text-before:before, .hero-bg-pastel-purple-text-after:after {
                 color: var(--color-hero-bg-pastel-purple)
             }
+            .hero-bg-pastel-purple-text-hover:hover, .hero-bg-pastel-purple-text-before-hover:hover:before, .hero-bg-pastel-purple-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-purple)
+            }
+            .hero-bg-pastel-purple-text-active:active, .hero-bg-pastel-purple-text-before-active:active:before, .hero-bg-pastel-purple-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-purple)
+            }
             .hero-bg-pastel-purple-bg, .hero-bg-pastel-purple-bg-before:before, .hero-bg-pastel-purple-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-purple)
+            }
+            .hero-bg-pastel-purple-bg-hover:hover, .hero-bg-pastel-purple-bg-before-hover:hover:before, .hero-bg-pastel-purple-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-purple)
+            }
+            .hero-bg-pastel-purple-bg-active:active, .hero-bg-pastel-purple-bg-before-active:active:before, .hero-bg-pastel-purple-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-purple)
             }
             .hero-bg-pastel-purple-fill {
                 fill: var(--color-hero-bg-pastel-purple)
@@ -722,8 +1262,20 @@
             .hero-bg-pastel-violet-text, .hero-bg-pastel-violet-text-before:before, .hero-bg-pastel-violet-text-after:after {
                 color: var(--color-hero-bg-pastel-violet)
             }
+            .hero-bg-pastel-violet-text-hover:hover, .hero-bg-pastel-violet-text-before-hover:hover:before, .hero-bg-pastel-violet-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-violet)
+            }
+            .hero-bg-pastel-violet-text-active:active, .hero-bg-pastel-violet-text-before-active:active:before, .hero-bg-pastel-violet-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-violet)
+            }
             .hero-bg-pastel-violet-bg, .hero-bg-pastel-violet-bg-before:before, .hero-bg-pastel-violet-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-violet)
+            }
+            .hero-bg-pastel-violet-bg-hover:hover, .hero-bg-pastel-violet-bg-before-hover:hover:before, .hero-bg-pastel-violet-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-violet)
+            }
+            .hero-bg-pastel-violet-bg-active:active, .hero-bg-pastel-violet-bg-before-active:active:before, .hero-bg-pastel-violet-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-violet)
             }
             .hero-bg-pastel-violet-fill {
                 fill: var(--color-hero-bg-pastel-violet)
@@ -738,8 +1290,20 @@
             .hero-bg-pastel-blue-text, .hero-bg-pastel-blue-text-before:before, .hero-bg-pastel-blue-text-after:after {
                 color: var(--color-hero-bg-pastel-blue)
             }
+            .hero-bg-pastel-blue-text-hover:hover, .hero-bg-pastel-blue-text-before-hover:hover:before, .hero-bg-pastel-blue-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-blue)
+            }
+            .hero-bg-pastel-blue-text-active:active, .hero-bg-pastel-blue-text-before-active:active:before, .hero-bg-pastel-blue-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-blue)
+            }
             .hero-bg-pastel-blue-bg, .hero-bg-pastel-blue-bg-before:before, .hero-bg-pastel-blue-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-blue)
+            }
+            .hero-bg-pastel-blue-bg-hover:hover, .hero-bg-pastel-blue-bg-before-hover:hover:before, .hero-bg-pastel-blue-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-blue)
+            }
+            .hero-bg-pastel-blue-bg-active:active, .hero-bg-pastel-blue-bg-before-active:active:before, .hero-bg-pastel-blue-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-blue)
             }
             .hero-bg-pastel-blue-fill {
                 fill: var(--color-hero-bg-pastel-blue)
@@ -754,8 +1318,20 @@
             .hero-bg-pastel-green-text, .hero-bg-pastel-green-text-before:before, .hero-bg-pastel-green-text-after:after {
                 color: var(--color-hero-bg-pastel-green)
             }
+            .hero-bg-pastel-green-text-hover:hover, .hero-bg-pastel-green-text-before-hover:hover:before, .hero-bg-pastel-green-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-green)
+            }
+            .hero-bg-pastel-green-text-active:active, .hero-bg-pastel-green-text-before-active:active:before, .hero-bg-pastel-green-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-green)
+            }
             .hero-bg-pastel-green-bg, .hero-bg-pastel-green-bg-before:before, .hero-bg-pastel-green-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-green)
+            }
+            .hero-bg-pastel-green-bg-hover:hover, .hero-bg-pastel-green-bg-before-hover:hover:before, .hero-bg-pastel-green-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-green)
+            }
+            .hero-bg-pastel-green-bg-active:active, .hero-bg-pastel-green-bg-before-active:active:before, .hero-bg-pastel-green-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-green)
             }
             .hero-bg-pastel-green-fill {
                 fill: var(--color-hero-bg-pastel-green)
@@ -770,8 +1346,20 @@
             .hero-bg-pastel-lime-text, .hero-bg-pastel-lime-text-before:before, .hero-bg-pastel-lime-text-after:after {
                 color: var(--color-hero-bg-pastel-lime)
             }
+            .hero-bg-pastel-lime-text-hover:hover, .hero-bg-pastel-lime-text-before-hover:hover:before, .hero-bg-pastel-lime-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-lime)
+            }
+            .hero-bg-pastel-lime-text-active:active, .hero-bg-pastel-lime-text-before-active:active:before, .hero-bg-pastel-lime-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-lime)
+            }
             .hero-bg-pastel-lime-bg, .hero-bg-pastel-lime-bg-before:before, .hero-bg-pastel-lime-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-lime)
+            }
+            .hero-bg-pastel-lime-bg-hover:hover, .hero-bg-pastel-lime-bg-before-hover:hover:before, .hero-bg-pastel-lime-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-lime)
+            }
+            .hero-bg-pastel-lime-bg-active:active, .hero-bg-pastel-lime-bg-before-active:active:before, .hero-bg-pastel-lime-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-lime)
             }
             .hero-bg-pastel-lime-fill {
                 fill: var(--color-hero-bg-pastel-lime)
@@ -786,8 +1374,20 @@
             .hero-bg-pastel-coral-text, .hero-bg-pastel-coral-text-before:before, .hero-bg-pastel-coral-text-after:after {
                 color: var(--color-hero-bg-pastel-coral)
             }
+            .hero-bg-pastel-coral-text-hover:hover, .hero-bg-pastel-coral-text-before-hover:hover:before, .hero-bg-pastel-coral-text-after-hover:hover:after {
+              color: var(--color-hero-bg-pastel-coral)
+            }
+            .hero-bg-pastel-coral-text-active:active, .hero-bg-pastel-coral-text-before-active:active:before, .hero-bg-pastel-coral-text-after-active:active:after {
+              color: var(--color-hero-bg-pastel-coral)
+            }
             .hero-bg-pastel-coral-bg, .hero-bg-pastel-coral-bg-before:before, .hero-bg-pastel-coral-bg-after:after {
                 background-color: var(--color-hero-bg-pastel-coral)
+            }
+            .hero-bg-pastel-coral-bg-hover:hover, .hero-bg-pastel-coral-bg-before-hover:hover:before, .hero-bg-pastel-coral-bg-after-hover:hover:after {
+              background-color: var(--color-hero-bg-pastel-coral)
+            }
+            .hero-bg-pastel-coral-bg-active:active, .hero-bg-pastel-coral-bg-before-active:active:before, .hero-bg-pastel-coral-bg-after-active:active:after {
+              background-color: var(--color-hero-bg-pastel-coral)
             }
             .hero-bg-pastel-coral-fill {
                 fill: var(--color-hero-bg-pastel-coral)
@@ -802,8 +1402,20 @@
             .notification-success-text, .notification-success-text-before:before, .notification-success-text-after:after {
                 color: var(--color-notification-success)
             }
+            .notification-success-text-hover:hover, .notification-success-text-before-hover:hover:before, .notification-success-text-after-hover:hover:after {
+              color: var(--color-notification-success)
+            }
+            .notification-success-text-active:active, .notification-success-text-before-active:active:before, .notification-success-text-after-active:active:after {
+              color: var(--color-notification-success)
+            }
             .notification-success-bg, .notification-success-bg-before:before, .notification-success-bg-after:after {
                 background-color: var(--color-notification-success)
+            }
+            .notification-success-bg-hover:hover, .notification-success-bg-before-hover:hover:before, .notification-success-bg-after-hover:hover:after {
+              background-color: var(--color-notification-success)
+            }
+            .notification-success-bg-active:active, .notification-success-bg-before-active:active:before, .notification-success-bg-after-active:active:after {
+              background-color: var(--color-notification-success)
             }
             .notification-success-fill {
                 fill: var(--color-notification-success)
@@ -818,8 +1430,20 @@
             .notification-error-text, .notification-error-text-before:before, .notification-error-text-after:after {
                 color: var(--color-notification-error)
             }
+            .notification-error-text-hover:hover, .notification-error-text-before-hover:hover:before, .notification-error-text-after-hover:hover:after {
+              color: var(--color-notification-error)
+            }
+            .notification-error-text-active:active, .notification-error-text-before-active:active:before, .notification-error-text-after-active:active:after {
+              color: var(--color-notification-error)
+            }
             .notification-error-bg, .notification-error-bg-before:before, .notification-error-bg-after:after {
                 background-color: var(--color-notification-error)
+            }
+            .notification-error-bg-hover:hover, .notification-error-bg-before-hover:hover:before, .notification-error-bg-after-hover:hover:after {
+              background-color: var(--color-notification-error)
+            }
+            .notification-error-bg-active:active, .notification-error-bg-before-active:active:before, .notification-error-bg-after-active:active:after {
+              background-color: var(--color-notification-error)
             }
             .notification-error-fill {
                 fill: var(--color-notification-error)
@@ -834,8 +1458,20 @@
             .text-terminal-primary-text, .text-terminal-primary-text-before:before, .text-terminal-primary-text-after:after {
                 color: var(--color-text-terminal-primary)
             }
+            .text-terminal-primary-text-hover:hover, .text-terminal-primary-text-before-hover:hover:before, .text-terminal-primary-text-after-hover:hover:after {
+              color: var(--color-text-terminal-primary)
+            }
+            .text-terminal-primary-text-active:active, .text-terminal-primary-text-before-active:active:before, .text-terminal-primary-text-after-active:active:after {
+              color: var(--color-text-terminal-primary)
+            }
             .text-terminal-primary-bg, .text-terminal-primary-bg-before:before, .text-terminal-primary-bg-after:after {
                 background-color: var(--color-text-terminal-primary)
+            }
+            .text-terminal-primary-bg-hover:hover, .text-terminal-primary-bg-before-hover:hover:before, .text-terminal-primary-bg-after-hover:hover:after {
+              background-color: var(--color-text-terminal-primary)
+            }
+            .text-terminal-primary-bg-active:active, .text-terminal-primary-bg-before-active:active:before, .text-terminal-primary-bg-after-active:active:after {
+              background-color: var(--color-text-terminal-primary)
             }
             .text-terminal-primary-fill {
                 fill: var(--color-text-terminal-primary)
@@ -850,8 +1486,20 @@
             .text-terminal-secondary-text, .text-terminal-secondary-text-before:before, .text-terminal-secondary-text-after:after {
                 color: var(--color-text-terminal-secondary)
             }
+            .text-terminal-secondary-text-hover:hover, .text-terminal-secondary-text-before-hover:hover:before, .text-terminal-secondary-text-after-hover:hover:after {
+              color: var(--color-text-terminal-secondary)
+            }
+            .text-terminal-secondary-text-active:active, .text-terminal-secondary-text-before-active:active:before, .text-terminal-secondary-text-after-active:active:after {
+              color: var(--color-text-terminal-secondary)
+            }
             .text-terminal-secondary-bg, .text-terminal-secondary-bg-before:before, .text-terminal-secondary-bg-after:after {
                 background-color: var(--color-text-terminal-secondary)
+            }
+            .text-terminal-secondary-bg-hover:hover, .text-terminal-secondary-bg-before-hover:hover:before, .text-terminal-secondary-bg-after-hover:hover:after {
+              background-color: var(--color-text-terminal-secondary)
+            }
+            .text-terminal-secondary-bg-active:active, .text-terminal-secondary-bg-before-active:active:before, .text-terminal-secondary-bg-after-active:active:after {
+              background-color: var(--color-text-terminal-secondary)
             }
             .text-terminal-secondary-fill {
                 fill: var(--color-text-terminal-secondary)
@@ -866,8 +1514,20 @@
             .bg-terminal-4-text, .bg-terminal-4-text-before:before, .bg-terminal-4-text-after:after {
                 color: var(--color-bg-terminal-4)
             }
+            .bg-terminal-4-text-hover:hover, .bg-terminal-4-text-before-hover:hover:before, .bg-terminal-4-text-after-hover:hover:after {
+              color: var(--color-bg-terminal-4)
+            }
+            .bg-terminal-4-text-active:active, .bg-terminal-4-text-before-active:active:before, .bg-terminal-4-text-after-active:active:after {
+              color: var(--color-bg-terminal-4)
+            }
             .bg-terminal-4-bg, .bg-terminal-4-bg-before:before, .bg-terminal-4-bg-after:after {
                 background-color: var(--color-bg-terminal-4)
+            }
+            .bg-terminal-4-bg-hover:hover, .bg-terminal-4-bg-before-hover:hover:before, .bg-terminal-4-bg-after-hover:hover:after {
+              background-color: var(--color-bg-terminal-4)
+            }
+            .bg-terminal-4-bg-active:active, .bg-terminal-4-bg-before-active:active:before, .bg-terminal-4-bg-after-active:active:after {
+              background-color: var(--color-bg-terminal-4)
             }
             .bg-terminal-4-fill {
                 fill: var(--color-bg-terminal-4)
@@ -882,8 +1542,20 @@
             .bg-terminal-2-text, .bg-terminal-2-text-before:before, .bg-terminal-2-text-after:after {
                 color: var(--color-bg-terminal-2)
             }
+            .bg-terminal-2-text-hover:hover, .bg-terminal-2-text-before-hover:hover:before, .bg-terminal-2-text-after-hover:hover:after {
+              color: var(--color-bg-terminal-2)
+            }
+            .bg-terminal-2-text-active:active, .bg-terminal-2-text-before-active:active:before, .bg-terminal-2-text-after-active:active:after {
+              color: var(--color-bg-terminal-2)
+            }
             .bg-terminal-2-bg, .bg-terminal-2-bg-before:before, .bg-terminal-2-bg-after:after {
                 background-color: var(--color-bg-terminal-2)
+            }
+            .bg-terminal-2-bg-hover:hover, .bg-terminal-2-bg-before-hover:hover:before, .bg-terminal-2-bg-after-hover:hover:after {
+              background-color: var(--color-bg-terminal-2)
+            }
+            .bg-terminal-2-bg-active:active, .bg-terminal-2-bg-before-active:active:before, .bg-terminal-2-bg-after-active:active:after {
+              background-color: var(--color-bg-terminal-2)
             }
             .bg-terminal-2-fill {
                 fill: var(--color-bg-terminal-2)
@@ -898,8 +1570,20 @@
             .bg-terminal-1-text, .bg-terminal-1-text-before:before, .bg-terminal-1-text-after:after {
                 color: var(--color-bg-terminal-1)
             }
+            .bg-terminal-1-text-hover:hover, .bg-terminal-1-text-before-hover:hover:before, .bg-terminal-1-text-after-hover:hover:after {
+              color: var(--color-bg-terminal-1)
+            }
+            .bg-terminal-1-text-active:active, .bg-terminal-1-text-before-active:active:before, .bg-terminal-1-text-after-active:active:after {
+              color: var(--color-bg-terminal-1)
+            }
             .bg-terminal-1-bg, .bg-terminal-1-bg-before:before, .bg-terminal-1-bg-after:after {
                 background-color: var(--color-bg-terminal-1)
+            }
+            .bg-terminal-1-bg-hover:hover, .bg-terminal-1-bg-before-hover:hover:before, .bg-terminal-1-bg-after-hover:hover:after {
+              background-color: var(--color-bg-terminal-1)
+            }
+            .bg-terminal-1-bg-active:active, .bg-terminal-1-bg-before-active:active:before, .bg-terminal-1-bg-after-active:active:after {
+              background-color: var(--color-bg-terminal-1)
             }
             .bg-terminal-1-fill {
                 fill: var(--color-bg-terminal-1)
@@ -914,8 +1598,20 @@
             .logo-1-text, .logo-1-text-before:before, .logo-1-text-after:after {
                 color: var(--color-logo-1)
             }
+            .logo-1-text-hover:hover, .logo-1-text-before-hover:hover:before, .logo-1-text-after-hover:hover:after {
+              color: var(--color-logo-1)
+            }
+            .logo-1-text-active:active, .logo-1-text-before-active:active:before, .logo-1-text-after-active:active:after {
+              color: var(--color-logo-1)
+            }
             .logo-1-bg, .logo-1-bg-before:before, .logo-1-bg-after:after {
                 background-color: var(--color-logo-1)
+            }
+            .logo-1-bg-hover:hover, .logo-1-bg-before-hover:hover:before, .logo-1-bg-after-hover:hover:after {
+              background-color: var(--color-logo-1)
+            }
+            .logo-1-bg-active:active, .logo-1-bg-before-active:active:before, .logo-1-bg-after-active:active:after {
+              background-color: var(--color-logo-1)
             }
             .logo-1-fill {
                 fill: var(--color-logo-1)
@@ -930,8 +1626,20 @@
             .logo-2-text, .logo-2-text-before:before, .logo-2-text-after:after {
                 color: var(--color-logo-2)
             }
+            .logo-2-text-hover:hover, .logo-2-text-before-hover:hover:before, .logo-2-text-after-hover:hover:after {
+              color: var(--color-logo-2)
+            }
+            .logo-2-text-active:active, .logo-2-text-before-active:active:before, .logo-2-text-after-active:active:after {
+              color: var(--color-logo-2)
+            }
             .logo-2-bg, .logo-2-bg-before:before, .logo-2-bg-after:after {
                 background-color: var(--color-logo-2)
+            }
+            .logo-2-bg-hover:hover, .logo-2-bg-before-hover:hover:before, .logo-2-bg-after-hover:hover:after {
+              background-color: var(--color-logo-2)
+            }
+            .logo-2-bg-active:active, .logo-2-bg-before-active:active:before, .logo-2-bg-after-active:active:after {
+              background-color: var(--color-logo-2)
             }
             .logo-2-fill {
                 fill: var(--color-logo-2)
