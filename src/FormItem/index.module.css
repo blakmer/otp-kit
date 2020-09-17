@@ -74,9 +74,9 @@
   color: var(--color-primary);
 }
 
-.child:hover .focused.default {
+/* .child:hover .focused.default {
   transition: none;
-}
+} */
 
 .error,
 .wrapper:focus-within .label.error,
