@@ -1,4 +1,10 @@
-import React, { useRef, useEffect, useState, Fragment } from 'react'
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+  Fragment,
+} from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Typography from '../Typography'
@@ -11,19 +17,33 @@ const FormItem = props => {
   const nonFluidComponents = ['Select', 'DropdownInput']
   let childClone = null
 
+  const handleChange = useCallback(e => {
+    if (e.target.value && !focus) {
+      setFocus(true)
+    }
+    if (!e.target.value) {
+      setFocus(false)
+    }
+  }, [])
+
+  const handleBlur = useCallback(e => {
+    setFocus(!!e.target.value)
+  }, [])
+
   useEffect(() => {
     const el =
       element.current.querySelector('textarea') ||
       element.current.querySelector('input')
     if (el) {
-      el.addEventListener('change', e => {
-        if (e.target.value && !focus) {
-          setFocus(true)
+      el.addEventListener('change', handleChange)
+      el.addEventListener('blur', handleBlur)
+
+      return () => {
+        if (el) {
+          el.removeEventListener('change', handleChange)
+          el.removeEventListener('blur', handleBlur)
         }
-        if (!e.target.value) {
-          setFocus(false)
-        }
-      })
+      }
     }
   }, [])
 
