@@ -9,7 +9,7 @@ const FormItem = props => {
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
   const isSimple = children ? !children.length : false
-  const nonFluidComponents = ['Select', 'DropdownInput']
+  const nonFluidComponents = ['Select', 'DropdownInput', 'DatePicker']
   let childClone = null
 
   useEffect(() => {
