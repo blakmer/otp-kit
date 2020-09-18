@@ -44,6 +44,11 @@
   box-sizing: border-box;
 }
 
+.stepCircleInner {
+  position: relative;
+  top: -1px;
+}
+
 .stepLine {
   position: absolute;
   top: 2.5rem;

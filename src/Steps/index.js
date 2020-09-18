@@ -43,11 +43,13 @@ const Steps = props => {
               <div
                 onClick={() => handleChange(k)}
                 className={classnames(styles.stepCircle)}>
-                {currentStep > k && markSuccessfulWithTick ? (
-                  <Icon.Medium fill="white" type="tick" />
-                ) : (
-                  k + 1
-                )}
+                <div className={classnames(styles.stepCircleInner)}>
+                  {currentStep > k && markSuccessfulWithTick ? (
+                    <Icon.Medium fill="white" type="tick" />
+                  ) : (
+                    k + 1
+                  )}
+                </div>
               </div>
               <div className={classnames(styles.stepLine)}></div>
             </div>
