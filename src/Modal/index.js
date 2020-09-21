@@ -32,11 +32,15 @@ const Modal = props => {
 
   useEffect(() => {
     setOpen(isOpen)
+    if (isOpen) {
+      document.body.style.overflowY = 'hidden'
+    }
     if (isOpen && onOpen) onOpen()
   }, [isOpen])
 
   const handleClick = handler => {
     setOpen(false)
+    document.body.style.overflowY = 'auto'
     handler && handler()
   }
   const strPadding = typeof padding === 'number' ? `${padding}px` : padding

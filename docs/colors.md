@@ -44,7 +44,7 @@ const ITEMS = [
         { name: 'color-bg-pastel-red', light: ' #ffe0e3', dark: ' #ffe0e3' },
         { name: 'color-bg-pastel-blue', light: ' #dbf4fa', dark: ' #dbf4fa' },
         { name: 'color-bg-pastel-green', light: ' #def7ea', dark: ' #def7ea' },
-        { name: 'color-modal-overlay', light: ' #1b1f2750', dark: ' #1b1f2750' },
+        { name: 'color-modal-overlay', light: ' #1b1f2780', dark: ' #1b1f2780' },
     ]},
     {group: 'Hero Background Colors', colors: [
         { name: 'color-hero-bg-pastel-ocher', light: ' #e9c597', dark: ' #e9c597' },
