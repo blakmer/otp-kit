@@ -1,0 +1,115 @@
+.pubStepContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.currentTitle {
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1rem;
+  color: var(--color-text-primary);
+  padding: 1rem;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+}
+
+.step:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.stepVerticalWrapper {
+  position: relative;
+}
+
+.stepCircle {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--color-text-disabled);
+  border-radius: 1.5rem;
+  color: var(--color-text-disabled);
+  font-family: var(--font-bold);
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.stepCircleInner {
+  position: relative;
+  top: -1px;
+}
+
+.stepLine {
+  position: absolute;
+  top: 2.5rem;
+  left: 15px;
+  height: calc(100% - 2.5rem);
+  border-left: 1px solid var(--color-text-disabled);
+}
+
+.step:first-child .stepLine {
+  border-left-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.step:last-child .stepLine {
+  display: none;
+}
+
+.stepTextWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+.interactive .stepCircle,
+.interactive .stepTitle {
+  cursor: pointer;
+}
+
+.stepDescription {
+  color: var(--color-text-secondary);
+  font-family: var(--font-regular);
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 4px;
+}
+
+.step.successStep .stepTitle,
+.step.currentStep .stepTitle {
+  color: var(--color-text-primary);
+}
+
+.step.successStep .stepCircle {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.step.successStep.interactive .stepCircle:hover {
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
+}
+
+.step.successStep .stepLine {
+  border-left-color: var(--color-primary);
+  border-width: 2px;
+}
+
+.step.currentStep .stepCircle {
+  border-color: var(--color-alert);
+  background-color: var(--color-alert);
+  color: var(--color-text-primary);
+}
