@@ -471,4 +471,4 @@
 - Исправлен overflow: hidden в компоненте Accordion, чтобы не обрезался контент внутри (дропдауны)
 - Исправлены цвета placeholder в компоненте FormItem
 - Исправлены hover и active состояния у компонентов Button и Roundbutton
-- Datepicker добавлен в non fluid components для
+- Datepicker добавлен в non fluid components
