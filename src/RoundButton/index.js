@@ -60,8 +60,9 @@ const RoundButton = props => {
         className,
         styles.button,
         styles[animation],
-        !disabled &&
-          ((flag && classes[`${fill}-hover-bg`]) || classes[`${fill}-bg`]),
+        !disabled && classes[`${fill}-bg`],
+        !disabled && classes[`${fill}-hover-bg-hover`],
+        !disabled && classes[`${fill}-active-bg-active`],
         !disabled && shadow && styles[SHADOWS[shadow]]
       )}>
       {icon && (
@@ -81,7 +82,7 @@ RoundButton.defaultProps = {
   htmlType: 'button',
   fill: 'primary',
   iconFill: 'text-primary',
-  animation: 'ripple',
+  animation: 'none',
   onClick: e => {},
   shadow: 'small',
 }

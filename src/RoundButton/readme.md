@@ -16,10 +16,10 @@ const mr = {marginRight: '1rem'}
     <RoundButton style={mr} shadow="none" fill="blue" icon="arrow-up" onClick={handleClick} animation="pulse"/>
     <RoundButton style={mr} shadow="none" fill="error" icon="arrow-up" onClick={handleClick} animation="pulse"/>
   </div>
-  <h1>Simple</h1>
+  <h1>Ripple</h1>
   <div>
-    <RoundButton style={mr} icon="arrow-up" animation="none" onClick={handleClick}/>
-    <RoundButton style={mr} fill="blue" icon="arrow-up" animation="none" onClick={handleClick}/>
+    <RoundButton style={mr} icon="arrow-up" animation="ripple" onClick={handleClick}/>
+    <RoundButton style={mr} fill="blue" icon="arrow-up" animation="ripple" onClick={handleClick}/>
   </div>
   <h1>Disabled</h1>
   <div>

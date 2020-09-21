@@ -8,11 +8,15 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: background-color 0.3s box-shadow 0.1s ease-in-out;
+  transition: background .4s, box-shadow .2s;
 }
 
 .button * {
   pointer-events: none;
+}
+
+.button:active {
+  transition: background .4s, box-shadow .2s;
 }
 
 .button:disabled {
