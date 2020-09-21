@@ -10,15 +10,21 @@ const { Row, Col } = Grid
 
 const ITEMS = [
     {group: 'Primary Colors', colors: [
+        { name: 'color-primary-active', light: ' #428b26', dark: ' #428b26' },
         { name: 'color-primary', light: ' #52ae30', dark: ' #52ae30' },
         { name: 'color-primary-hover', light: ' #74bf1e', dark: ' #74bf1e' },
+        { name: 'color-highlighted-active', light: ' #cc5200', dark: ' #cc5200' },
         { name: 'color-highlighted', light: ' #ff6600', dark: ' #ff6600' },
         { name: 'color-highlighted-hover', light: ' #ff802b', dark: ' #ff802b' },
+        { name: 'color-blue-active', light: ' #1668b6', dark: ' #1668b6' },
         { name: 'color-blue', light: ' #1b82e3', dark: ' #1b82e3' },
         { name: 'color-blue-hover', light: ' #3e9ef7', dark: ' #3e9ef7' },
+        { name: 'color-error-active', light: ' #cc3648', dark: ' #cc3648' },
         { name: 'color-error', light: ' #ff435a', dark: ' #ff435a' },
         { name: 'color-error-hover', light: ' #ff5c6f', dark: ' #ff5c6f' },
+        { name: 'color-alert-active', light: ' #cca300', dark: ' #cca300' },
         { name: 'color-alert', light: ' #ffcc00', dark: ' #ffcc00' },
+        { name: 'color-alert-hover', light: ' #ffd633', dark: ' #ffd633' },
         { name: 'color-white', light: ' #ffffff', dark: ' #ffffff', border: '1px solid #AAA' },
         { name: 'color-black', light: ' #000000', dark: ' #000000' },
     ]},
@@ -44,7 +50,7 @@ const ITEMS = [
         { name: 'color-bg-pastel-red', light: ' #ffe0e3', dark: ' #ffe0e3' },
         { name: 'color-bg-pastel-blue', light: ' #dbf4fa', dark: ' #dbf4fa' },
         { name: 'color-bg-pastel-green', light: ' #def7ea', dark: ' #def7ea' },
-        { name: 'color-modal-overlay', light: ' #1b1f2750', dark: ' #1b1f2750' },
+        { name: 'color-modal-overlay', light: ' #1b1f2780', dark: ' #1b1f2780' },
     ]},
     {group: 'Hero Background Colors', colors: [
         { name: 'color-hero-bg-pastel-ocher', light: ' #e9c597', dark: ' #e9c597' },

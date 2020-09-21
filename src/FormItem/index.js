@@ -1,4 +1,10 @@
-import React, { useRef, useEffect, useState, Fragment } from 'react'
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+  Fragment,
+} from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Typography from '../Typography'
@@ -12,35 +18,46 @@ const FormItem = props => {
   const nonFluidComponents = ['Select', 'DropdownInput', 'DatePicker']
   let childClone = null
 
+  const handleChange = useCallback(e => {
+    if (e.target.value && !focus) {
+      setFocus(true)
+    }
+    if (!e.target.value) {
+      setFocus(false)
+    }
+  }, [])
+
+  const handleBlur = useCallback(e => {
+    setFocus(!!e.target.value)
+  }, [])
+
   useEffect(() => {
     const el =
       element.current.querySelector('textarea') ||
       element.current.querySelector('input')
     if (el) {
-      el.addEventListener('change', e => {
-        if (e.target.value && !focus) {
-          setFocus(true)
+      el.addEventListener('change', handleChange)
+      el.addEventListener('blur', handleBlur)
+
+      return () => {
+        if (el) {
+          el.removeEventListener('change', handleChange)
+          el.removeEventListener('blur', handleBlur)
         }
-        if (!e.target.value) {
-          setFocus(false)
-        }
-      })
+      }
     }
   }, [])
 
   if (
     !focus &&
-    (isSimple
-      ? nonFluidComponents.filter(e => e === children.type.displayName)
-          .length ||
-        children.props.value ||
-        children.props.defaultValue
-      : true)
+    (nonFluidComponents.filter(e => e === children.type.displayName).length ||
+      children.props.value ||
+      children.props.defaultValue)
   ) {
     setFocus(true)
   }
 
-  if (isSimple && !flat && children.type.displayName === 'Select') {
+  if (!flat && children.type.displayName === 'Select') {
     childClone = React.cloneElement(children, {
       renderMenu: menu => (
         <Fragment>
@@ -48,7 +65,7 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               styles.fluid,
-              styles[isSimple ? children.props.status : null],
+              styles[children.props.status || null],
               focus && styles.focused
             )}
             style={{ marginLeft: '-2px', marginTop: '-2px' }}>
@@ -65,7 +82,7 @@ const FormItem = props => {
       ref={element}
       className={classnames(
         styles.wrapper,
-        isSimple ? !!children.props.block && styles.block : null,
+        !!children.props.block && styles.block,
         flat && styles.flat,
         className
       )}
@@ -80,7 +97,7 @@ const FormItem = props => {
             className={classnames(
               styles.label,
               flat ? styles.flat : styles.fluid,
-              styles[isSimple ? children.props.status : null],
+              styles[children.props.status || null],
               !flat && focus && styles.focused
             )}>
             {label}
@@ -88,20 +105,18 @@ const FormItem = props => {
         )}
         {childClone ? childClone : children}
       </div>
-      {!description &&
-        count >= 0 &&
-        (isSimple ? !!children.props.maxLength : null) && (
-          <small
-            className={
-              styles.limit
-            }>{`${count}/${children.props.maxLength}`}</small>
-        )}
+      {!description && count >= 0 && !!children.props.maxLength && (
+        <small
+          className={
+            styles.limit
+          }>{`${count}/${children.props.maxLength}`}</small>
+      )}
 
       {description && (
         <Typography.Text
           className={classnames(
             styles.description,
-            styles[isSimple ? children.props.status : null],
+            styles[children.props.status || null],
             flat && styles.flat
           )}>
           {description}
