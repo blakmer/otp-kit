@@ -14,7 +14,8 @@ const FormItem = props => {
   const { label, className, description, children, count, flat, style } = props
   const [focus, setFocus] = useState(false)
   const element = useRef(null)
-  const nonFluidComponents = ['Select', 'DropdownInput']
+  const isSimple = children ? !children.length : false
+  const nonFluidComponents = ['Select', 'DropdownInput', 'DatePicker']
   let childClone = null
 
   const handleChange = useCallback(e => {
