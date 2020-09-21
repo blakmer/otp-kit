@@ -358,6 +358,8 @@ DatePicker.defaultProps = {
   position: 'under',
 }
 
+DatePicker.displayName = 'DatePicker' //Needed for FormItem component
+
 DatePicker.propTypes = {
   /** Задаваемое значение */
   value: PropTypes.string,
