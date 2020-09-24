@@ -30,30 +30,6 @@ const { Container, Row, Col } = Grid
 />
 ```
 
-#### Input with mask
-
-```js
-import Divider from '../Divider'
-import Typography from '../Typography'
-;<Input
-  mask="999 999 99 99"
-  prefix={
-    <Typography.Text
-      fill="text-primary"
-      type="highlighted"
-      style={{ height: '100%', display: 'inline-flex', alignItems: 'center' }}>
-      {' '}
-      +7
-      <Divider
-        style={{ margin: '.2rem' }}
-        type="vertical"
-        lineLength={'1.5rem'}
-      />
-    </Typography.Text>
-  }
-/>
-```
-
 #### Input for currency
 
 ```js
