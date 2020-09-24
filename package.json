@@ -33,6 +33,7 @@
     "downshift": "^5.4.2",
     "react-grid-system": "^7.0.3",
     "react-highlight-words": "^0.16.0",
+    "react-imask": "^6.0.5",
     "react-infinite-scroller": "^1.2.4",
     "react-input-mask": "^2.0.4",
     "react-input-range": "^1.3.0",

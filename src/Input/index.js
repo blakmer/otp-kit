@@ -1,5 +1,4 @@
 import React from 'react'
-import InputMask from 'react-input-mask'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -27,6 +26,7 @@ const Input = props => {
     suffix,
     prefix,
     inputRef,
+    innerRef,
     currency,
     /** html props */
     type,
@@ -41,8 +41,6 @@ const Input = props => {
     onChange,
     className,
     style,
-    mask,
-    maskChar,
     block,
     readOnly,
     placeholder,
@@ -58,12 +56,10 @@ const Input = props => {
         styles[status]
       )}>
       <span className={styles.prefix}>{prefix}</span>
-      <InputMask
-        inputRef={inputRef}
+      <input
+        ref={innerRef}
         placeholder={placeholder}
         onBlur={onBlur}
-        mask={mask}
-        maskChar={maskChar}
         type={type}
         autoComplete={
           typeof autoComplete === 'string'
@@ -116,10 +112,6 @@ Input.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
-  /** Посимвольная фильтрация */
-  maskChar: PropTypes.string,
-  /** Фильтрация значния по маске */
-  mask: PropTypes.string,
   /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
   /** Запрет ручного ввода данных */
@@ -140,8 +132,6 @@ Input.propTypes = {
 Input.defaultProps = {
   status: STATUSES.default,
   type: 'text',
-  maskChar: ' ',
-  mask: undefined,
 }
 
 export default Input
