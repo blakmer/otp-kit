@@ -7,7 +7,7 @@ import Icon from '../Icon'
 import Years from './elements/years'
 import Months from './elements/months'
 import Days from './elements/days'
-import Input from '../Input'
+import InputWithMask from '../InputWithMask'
 import Arrow from '../util/arrow'
 import PropTypes from 'prop-types'
 import DateRangePicker from '../DateRangePicker'
@@ -291,13 +291,12 @@ const DatePicker = props => {
         className={styles.inputWrapper}
         onMouseEnter={() => showResetIcon()}
         onMouseLeave={() => toggleResetIconStatus(false)}>
-        <Input
+        <InputWithMask
           value={inputValue}
-          onChange={event => setInputValue(event.target.value)}
+          onAccept={value => setInputValue(value)}
           onBlur={event => handleBlur(event.target.value)}
           onFocus={() => toggleShowPicker(true)}
-          mask="99.99.9999"
-          maskChar=" "
+          mask={Date}
           label="Введите дату"
           name={name}
           status={status}
