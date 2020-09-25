@@ -15,7 +15,15 @@ import DateRangePicker from '../DateRangePicker'
 moment.locale('ru')
 
 const DatePicker = props => {
-  const { value, onChangeDate, disabled, name, readOnly, position } = props
+  const {
+    value,
+    onChangeDate,
+    disabled,
+    name,
+    readOnly,
+    position,
+    status,
+  } = props
 
   const [showPicker, toggleShowPicker] = useState(false)
   const [resetIconStatus, toggleResetIconStatus] = useState(false)
@@ -227,20 +235,26 @@ const DatePicker = props => {
     }
   }
 
+  const iconFillColor = status && status === 'error' ? 'error' : 'primary'
+
   const renderSuffix = () => {
     if (resetIconStatus) {
       return (
         <Icon.Medium
           className={styles.icon}
           type="close"
-          fill="primary"
+          fill={iconFillColor}
           onClick={resetPickerValues}
         />
       )
     }
 
     return (
-      <Icon.Medium className={styles.icon} type="calendar" fill="primary" />
+      <Icon.Medium
+        className={styles.icon}
+        type="calendar"
+        fill={iconFillColor}
+      />
     )
   }
 
@@ -286,6 +300,7 @@ const DatePicker = props => {
           maskChar=" "
           label="Введите дату"
           name={name}
+          status={status}
           readOnly={readOnly}
           disabled={disabled}
           suffix={renderSuffix()}
