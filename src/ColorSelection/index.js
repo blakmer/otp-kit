@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import InputMask from 'react-input-mask'
 import { IMaskInput } from 'react-imask'
 import styles from './index.module.css'
 import classnames from 'classnames'
