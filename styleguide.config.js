@@ -124,6 +124,7 @@ module.exports = {
         'src/DropdownInput/index.js',
         'src/Kebab/index.js',
         'src/FormItem/index.js',
+        'src/FormTooltip/index.js',
       ],
     },
     {
