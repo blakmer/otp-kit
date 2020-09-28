@@ -6,7 +6,17 @@ import styles from './index.module.css'
 import classes from '../classes.module.css'
 
 const Tooltip = props => {
-  const { className, style, children, content, position, fill } = props
+  const {
+    className,
+    style,
+    children,
+    content,
+    position,
+    fill,
+    textFill,
+    hoverable,
+    visible,
+  } = props
   const [pos, setPos] = useState('topCenter')
   const getAutoPosition = el => {
     const { innerHeight, innerWidth } = window
@@ -25,10 +35,16 @@ const Tooltip = props => {
         return 'middleRight'
     }
   }
+  const block = children.props && children.props.block
 
   return (
     <span
-      className={classnames(styles.contentContainer, className)}
+      className={classnames(
+        styles.contentContainer,
+        hoverable && styles.hoverable,
+        block && styles.block,
+        className
+      )}
       style={style}
       onMouseEnter={({ target }) => {
         setPos(getAutoPosition(target))
@@ -36,13 +52,17 @@ const Tooltip = props => {
       <span
         className={classnames(
           styles.tooltipContainer,
-          styles[position === 'auto' ? pos : position]
+          styles[position === 'auto' ? pos : position],
+          visible && styles.visible,
+          block && styles.block
         )}>
         <div
           className={classnames(
             styles.tooltip,
             styles[position === 'auto' ? pos : position],
-            classes[`${fill}-bg`]
+            classes[`${fill}-bg`],
+            classes[`${textFill}-text`],
+            block && styles.block
           )}>
           {content}
           <span
@@ -68,6 +88,8 @@ Tooltip.propTypes = {
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   /** Окрашивание в цвет из списка цветов */
   fill: PropTypes.string,
+  /** Окрашивание элементов внутри */
+  textFill: PropTypes.string,
   /** Направление всплывающего меню */
   position: PropTypes.oneOf([
     'auto',
@@ -80,11 +102,15 @@ Tooltip.propTypes = {
     'bottomCenter',
     'bottomLeft',
   ]),
+  /** Управление отображением элемента снаружи */
+  visible: PropTypes.bool,
 }
 
 Tooltip.defaultProps = {
   position: 'auto',
   fill: 'blue',
+  textFill: 'bg-input',
+  hoverable: true,
 }
 
 export default Tooltip
