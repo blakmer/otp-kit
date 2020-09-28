@@ -39,7 +39,7 @@ const NavPanel = props => {
             {i.tooltipNode ? (
               <Tooltip
                 content={i.tooltipNode}
-                position="bottomCenter"
+                position="bottomRight"
                 fill="bg-input">
                 <Icon.Medium fill="primary" type={i.icon} />
               </Tooltip>
