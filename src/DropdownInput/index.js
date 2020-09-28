@@ -1,5 +1,4 @@
 import React from 'react'
-import InputMask from 'react-input-mask'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Dropdown from '../Dropdown'
@@ -80,12 +79,10 @@ const DropdownInput = props => {
         <Divider className={styles.divider} type="vertical" />
       </div>
 
-      <InputMask
+      <input
         inputRef={inputRef}
         placeholder={placeholder}
         onBlur={onBlur}
-        mask={mask}
-        maskChar={maskChar}
         type={type}
         autoComplete={
           typeof autoComplete === 'string'
