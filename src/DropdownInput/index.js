@@ -38,8 +38,6 @@ const DropdownInput = props => {
     onChange,
     className,
     style,
-    mask,
-    maskChar,
     block,
     readOnly,
     placeholder,
@@ -80,7 +78,7 @@ const DropdownInput = props => {
       </div>
 
       <input
-        inputRef={inputRef}
+        ref={inputRef}
         placeholder={placeholder}
         onBlur={onBlur}
         type={type}
@@ -149,10 +147,6 @@ DropdownInput.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
-  /** Посимвольная фильтрация */
-  maskChar: PropTypes.string,
-  /** Фильтрация значния по маске */
-  mask: PropTypes.string,
   /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
   /** Запрет ручного ввода данных */
@@ -169,8 +163,6 @@ DropdownInput.propTypes = {
 DropdownInput.defaultProps = {
   showArrow: false,
   type: 'text',
-  maskChar: ' ',
-  mask: undefined,
   status: 'default',
 }
 
