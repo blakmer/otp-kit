@@ -7,6 +7,7 @@ import Months from './elements/months'
 import Days from './elements/days'
 import Icon from '../Icon'
 import InputWithMask from '../InputWithMask'
+import IMask from 'imask'
 import PropTypes from 'prop-types'
 import TimeRange from '../TimeRange'
 import { timeChecks } from '../TimeRange/utils'
@@ -780,13 +781,34 @@ const DateRangePicker = props => {
         onMouseLeave={() => toggleResetIconStatus(false)}>
         <InputWithMask
           mask={
-            !timeRangeOptions ? 'date – date' : 'date | 00:00 – date | 00:00'
+            !timeRangeOptions
+              ? 'date – `date'
+              : 'date | `HH:`MM - `date | `HH:`MM'
           }
           blocks={{
             date: {
               mask: Date,
+              lazy: false,
+              placeholderChar: ' ',
+            },
+            HH: {
+              mask: IMask.MaskedRange,
+              from: 0,
+              to: 23,
+              maxLength: 2,
+              lazy: false,
+              placeholderChar: ' ',
+            },
+            MM: {
+              mask: IMask.MaskedRange,
+              from: 0,
+              to: 59,
+              maxLength: 2,
+              lazy: false,
+              placeholderChar: ' ',
             },
           }}
+          placeholderChar=" "
           value={inputValue}
           onAccept={value => {
             setInputValue(value)
