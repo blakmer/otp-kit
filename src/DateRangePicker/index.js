@@ -6,7 +6,7 @@ import Years from './elements/years'
 import Months from './elements/months'
 import Days from './elements/days'
 import Icon from '../Icon'
-import Input from '../Input'
+import InputWithMask from '../InputWithMask'
 import PropTypes from 'prop-types'
 import TimeRange from '../TimeRange'
 import { timeChecks } from '../TimeRange/utils'
@@ -778,15 +778,19 @@ const DateRangePicker = props => {
         style={{ width: timeRangeOptions ? 417 : 248 }}
         onMouseEnter={() => showResetIcon()}
         onMouseLeave={() => toggleResetIconStatus(false)}>
-        <Input
+        <InputWithMask
           mask={
-            !timeRangeOptions
-              ? '99.99.9999 – 99.99.9999'
-              : '99.99.9999 | 99:99 – 99.99.9999 | 99:99'
+            !timeRangeOptions ? 'date – date' : 'date | 00:00 – date | 00:00'
           }
-          maskChar=" "
+          blocks={{
+            date: {
+              mask: Date,
+            },
+          }}
           value={inputValue}
-          onChange={event => setInputValue(event.target.value)}
+          onAccept={value => {
+            setInputValue(value)
+          }}
           onBlur={event =>
             !timeRangeOptions
               ? handleBlur(event.target.value)
