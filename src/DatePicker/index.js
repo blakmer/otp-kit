@@ -296,7 +296,14 @@ const DatePicker = props => {
           onAccept={value => setInputValue(value)}
           onBlur={event => handleBlur(event.target.value)}
           onFocus={() => toggleShowPicker(true)}
-          mask={Date}
+          mask={'date'}
+          blocks={{
+            date: {
+              mask: Date,
+              lazy: false,
+              placeholderChar: ' ',
+            },
+          }}
           label="Введите дату"
           name={name}
           status={status}
