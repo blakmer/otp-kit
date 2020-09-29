@@ -25,6 +25,7 @@ const Modal = props => {
     cancelConfig,
     onOpen,
     onClose,
+    setCloseButton,
     isOpen,
   } = props
 
@@ -62,14 +63,18 @@ const Modal = props => {
               style={{ padding: strPadding }}>
               <section className={styles.header}>
                 {header}
-                <RoundButton
-                  className={styles.closeButton}
-                  icon="close"
-                  shadow={bgColor === 'white' ? 'small' : 'none'}
-                  fill="bg-input"
-                  iconFill="primary"
-                  onClick={() => handleClick(onClose)}
-                />
+                {setCloseButton ? (
+                  setCloseButton(() => handleClick(onClose))
+                ) : (
+                  <RoundButton
+                    className={styles.closeButton}
+                    icon="close"
+                    shadow={bgColor === 'white' ? 'small' : 'none'}
+                    fill="bg-input"
+                    iconFill="primary"
+                    onClick={() => handleClick(onClose)}
+                  />
+                )}
               </section>
               <section className={styles.body}>{body}</section>
               {(cancelConfig || okConfig) && (
@@ -125,6 +130,8 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   /** Управление отображением модального окна */
   isOpen: PropTypes.bool,
+  /** Кастомный рендер кнопки закрыть (closeFn)=>{} */
+  setCloseButton: PropTypes.func,
 }
 
 Modal.defaultProps = {
