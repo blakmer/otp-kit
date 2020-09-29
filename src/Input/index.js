@@ -45,7 +45,7 @@ const Input = props => {
         block && styles.block,
         styles[status]
       )}>
-      <span className={styles.prefix}>{prefix}</span>
+      {prefix && <span className={styles.prefix}>{prefix}</span>}
       <input
         ref={innerRef}
         placeholder={placeholder}
@@ -78,7 +78,7 @@ const Input = props => {
         readOnly={readOnly}
         {...otherProps}
       />
-      <span className={styles.suffix}>{suffix}</span>
+      {suffix && <span className={styles.suffix}>{suffix}</span>}
     </label>
   )
 }
