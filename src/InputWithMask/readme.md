@@ -25,3 +25,20 @@ const [value, setValue] = React.useState('')
   onAccept={value => setValue(value)}
 />
 ```
+
+#### Input with mask for currency
+
+```js
+const [value, setValue] = React.useState('1000')
+;<InputWithMask
+  value={value}
+  mask="num"
+  blocks={{
+    num: {
+      mask: Number,
+      thousandsSeparator: ',',
+    },
+  }}
+  onAccept={value => setValue(value)}
+/>
+```

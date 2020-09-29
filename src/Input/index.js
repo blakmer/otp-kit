@@ -11,15 +11,6 @@ const STATUSES = {
   disabled: 'disabled',
 }
 
-const toCurrency = number => {
-  let n = number
-  if (typeof n === 'string') {
-    n = n.replace(/[^0-9]*/g, '')
-  }
-  const res = isNaN(parseInt(n)) ? '' : parseInt(n)
-  return res.toLocaleString()
-}
-
 const Input = props => {
   const {
     status,
@@ -27,7 +18,6 @@ const Input = props => {
     prefix,
     inputRef,
     innerRef,
-    currency,
     /** html props */
     type,
     autoComplete,
@@ -74,7 +64,7 @@ const Input = props => {
         tabIndex={tabIndex}
         disabled={status === STATUSES.disabled}
         defaultValue={defaultValue}
-        value={currency ? toCurrency(value) : value}
+        value={value}
         onChange={onChange}
         className={classnames(
           styles.input,
@@ -123,8 +113,6 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** Ссылка на элемент */
   inputRef: PropTypes.any,
-  /** Преобразование к вводу валюты */
-  currency: PropTypes.bool,
   /** Делает бордеры прозрачными */
   noBorder: PropTypes.bool,
 }

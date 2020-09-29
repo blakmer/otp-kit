@@ -30,13 +30,6 @@ const { Container, Row, Col } = Grid
 />
 ```
 
-#### Input for currency
-
-```js
-const [value, setValue] = React.useState(1000)
-;<Input currency value={value} onChange={e => setValue(e.target.value)} />
-```
-
 #### Input fits to its parent width
 
 ```js
