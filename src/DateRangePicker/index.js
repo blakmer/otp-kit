@@ -783,7 +783,7 @@ const DateRangePicker = props => {
           mask={
             !timeRangeOptions
               ? 'date – `date'
-              : 'date | `HH:`MM - `date | `HH:`MM'
+              : 'date | `HH:`MM – `date | `HH:`MM'
           }
           blocks={{
             date: {
