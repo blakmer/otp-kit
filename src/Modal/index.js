@@ -26,6 +26,8 @@ const Modal = props => {
     onOpen,
     onClose,
     isOpen,
+    contentClassName,
+    contentStyle,
   } = props
 
   const [open, setOpen] = useState(isOpen)
@@ -56,10 +58,14 @@ const Modal = props => {
             if (e.target.dataset.role === 'modal')
               closable && handleClick(onClose)
           }}>
-          <Col {...size}>
+          <Col {...size} align="center">
             <div
-              className={classnames(styles.modal, classes[`${bgColor}-bg`])}
-              style={{ padding: strPadding }}>
+              className={classnames(
+                styles.modal,
+                classes[`${bgColor}-bg`],
+                contentClassName
+              )}
+              style={{ padding: strPadding, ...contentStyle }}>
               <section className={styles.header}>
                 {header}
                 <RoundButton
@@ -125,6 +131,10 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   /** Управление отображением модального окна */
   isOpen: PropTypes.bool,
+  /** Класс внутреннего окна */
+  contentClassName: PropTypes.string,
+  /** Стиль внутреннего окна */
+  contentStyle: PropTypes.object,
 }
 
 Modal.defaultProps = {

@@ -1,0 +1,45 @@
+.contentContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.contentContainer.block {
+    display: block;
+}
+
+.formTooltip {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.tooltipArrow {
+    position: absolute;
+}
+
+.tooltipArrow.bottomLeft {
+    left: 25%;
+    line-height: 0.75rem;
+    transform: rotate(180deg);
+    bottom: 100%;
+}
+  
+.tooltipArrow.bottomCenter {
+    left: 50%;
+    line-height: 0.75rem;
+    transform: rotate(180deg) translate(50%, 0);
+    bottom: 100%;
+}
+  
+.tooltipArrow.bottomRight {
+    left: 75%;
+    line-height: 0.75rem;
+    transform: rotate(180deg) translate(50%, 0);
+    bottom: 100%;
+}
+  

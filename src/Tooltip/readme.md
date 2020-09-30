@@ -69,3 +69,26 @@ const { Container, Row, Col } = Grid
   Tooltip text
 </Tooltip>
 ```
+
+
+###### Tooltip with form elements
+```js
+import Grid from '../Grid'
+import Input from '../Input'
+const { Container, Row, Col } = Grid
+
+;<Container>
+  <Row>
+    <Col md={8}>
+        <Tooltip position="bottomCenter" content="bottomCenter" fill="bg-pastel-red" textFill="text-primary" visible>
+            <Input status="error" onChange={e=>{console.log(e.target.value)}} block/>   
+        </Tooltip>
+    </Col>
+    <Col md={8}>
+        <Tooltip position="middleRight" content="middleRight" fill="bg-pastel-red" textFill="text-primary" visible>
+            <Input status="error" onChange={e=>{console.log(e.target.value)}} block/>   
+        </Tooltip>
+    </Col>
+  </Row>
+</Container>
+```
