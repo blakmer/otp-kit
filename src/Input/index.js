@@ -1,5 +1,4 @@
 import React from 'react'
-import InputMask from 'react-input-mask'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -12,22 +11,13 @@ const STATUSES = {
   disabled: 'disabled',
 }
 
-const toCurrency = number => {
-  let n = number
-  if (typeof n === 'string') {
-    n = n.replace(/[^0-9]*/g, '')
-  }
-  const res = isNaN(parseInt(n)) ? '' : parseInt(n)
-  return res.toLocaleString()
-}
-
 const Input = props => {
   const {
     status,
     suffix,
     prefix,
     inputRef,
-    currency,
+    innerRef,
     /** html props */
     type,
     autoComplete,
@@ -41,8 +31,6 @@ const Input = props => {
     onChange,
     className,
     style,
-    mask,
-    maskChar,
     block,
     readOnly,
     placeholder,
@@ -57,13 +45,11 @@ const Input = props => {
         block && styles.block,
         styles[status]
       )}>
-      <span className={styles.prefix}>{prefix}</span>
-      <InputMask
-        inputRef={inputRef}
+      {prefix && <span className={styles.prefix}>{prefix}</span>}
+      <input
+        ref={innerRef}
         placeholder={placeholder}
         onBlur={onBlur}
-        mask={mask}
-        maskChar={maskChar}
         type={type}
         autoComplete={
           typeof autoComplete === 'string'
@@ -78,7 +64,7 @@ const Input = props => {
         tabIndex={tabIndex}
         disabled={status === STATUSES.disabled}
         defaultValue={defaultValue}
-        value={currency ? toCurrency(value) : value}
+        value={value}
         onChange={onChange}
         className={classnames(
           styles.input,
@@ -92,7 +78,7 @@ const Input = props => {
         readOnly={readOnly}
         {...otherProps}
       />
-      <span className={styles.suffix}>{suffix}</span>
+      {suffix && <span className={styles.suffix}>{suffix}</span>}
     </label>
   )
 }
@@ -116,10 +102,6 @@ Input.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
-  /** Посимвольная фильтрация */
-  maskChar: PropTypes.string,
-  /** Фильтрация значния по маске */
-  mask: PropTypes.string,
   /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
   /** Запрет ручного ввода данных */
@@ -131,8 +113,6 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** Ссылка на элемент */
   inputRef: PropTypes.any,
-  /** Преобразование к вводу валюты */
-  currency: PropTypes.bool,
   /** Делает бордеры прозрачными */
   noBorder: PropTypes.bool,
 }
@@ -140,8 +120,6 @@ Input.propTypes = {
 Input.defaultProps = {
   status: STATUSES.default,
   type: 'text',
-  maskChar: ' ',
-  mask: undefined,
 }
 
 export default Input

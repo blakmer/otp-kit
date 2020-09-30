@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import moment from 'moment'
+import 'moment/locale/ru'
 import Icon from '../Icon'
 import Years from './elements/years'
 import Months from './elements/months'
 import Days from './elements/days'
-import Input from '../Input'
+import InputWithMask from '../InputWithMask'
 import Arrow from '../util/arrow'
 import PropTypes from 'prop-types'
 import DateRangePicker from '../DateRangePicker'
@@ -14,7 +15,15 @@ import DateRangePicker from '../DateRangePicker'
 moment.locale('ru')
 
 const DatePicker = props => {
-  const { value, onChangeDate, disabled, name, readOnly, position } = props
+  const {
+    value,
+    onChangeDate,
+    disabled,
+    name,
+    readOnly,
+    position,
+    status,
+  } = props
 
   const [showPicker, toggleShowPicker] = useState(false)
   const [resetIconStatus, toggleResetIconStatus] = useState(false)
@@ -226,20 +235,26 @@ const DatePicker = props => {
     }
   }
 
+  const iconFillColor = status && status === 'error' ? 'error' : 'primary'
+
   const renderSuffix = () => {
     if (resetIconStatus) {
       return (
         <Icon.Medium
           className={styles.icon}
           type="close"
-          fill="primary"
+          fill={iconFillColor}
           onClick={resetPickerValues}
         />
       )
     }
 
     return (
-      <Icon.Medium className={styles.icon} type="calendar" fill="primary" />
+      <Icon.Medium
+        className={styles.icon}
+        type="calendar"
+        fill={iconFillColor}
+      />
     )
   }
 
@@ -276,15 +291,22 @@ const DatePicker = props => {
         className={styles.inputWrapper}
         onMouseEnter={() => showResetIcon()}
         onMouseLeave={() => toggleResetIconStatus(false)}>
-        <Input
+        <InputWithMask
           value={inputValue}
-          onChange={event => setInputValue(event.target.value)}
+          onAccept={value => setInputValue(value)}
           onBlur={event => handleBlur(event.target.value)}
           onFocus={() => toggleShowPicker(true)}
-          mask="99.99.9999"
-          maskChar=" "
+          mask={'date'}
+          blocks={{
+            date: {
+              mask: Date,
+              lazy: false,
+              placeholderChar: ' ',
+            },
+          }}
           label="Введите дату"
           name={name}
+          status={status}
           readOnly={readOnly}
           disabled={disabled}
           suffix={renderSuffix()}
@@ -357,6 +379,8 @@ export default DatePicker
 DatePicker.defaultProps = {
   position: 'under',
 }
+
+DatePicker.displayName = 'DatePicker' //Needed for FormItem component
 
 DatePicker.propTypes = {
   /** Задаваемое значение */

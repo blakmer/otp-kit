@@ -1,5 +1,4 @@
 import React from 'react'
-import InputMask from 'react-input-mask'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Dropdown from '../Dropdown'
@@ -39,8 +38,6 @@ const DropdownInput = props => {
     onChange,
     className,
     style,
-    mask,
-    maskChar,
     block,
     readOnly,
     placeholder,
@@ -80,12 +77,10 @@ const DropdownInput = props => {
         <Divider className={styles.divider} type="vertical" />
       </div>
 
-      <InputMask
-        inputRef={inputRef}
+      <input
+        ref={inputRef}
         placeholder={placeholder}
         onBlur={onBlur}
-        mask={mask}
-        maskChar={maskChar}
         type={type}
         autoComplete={
           typeof autoComplete === 'string'
@@ -152,10 +147,6 @@ DropdownInput.propTypes = {
   onChange: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
-  /** Посимвольная фильтрация */
-  maskChar: PropTypes.string,
-  /** Фильтрация значния по маске */
-  mask: PropTypes.string,
   /** Располагает элемент во всю ширину относительно родителя */
   block: PropTypes.bool,
   /** Запрет ручного ввода данных */
@@ -172,8 +163,6 @@ DropdownInput.propTypes = {
 DropdownInput.defaultProps = {
   showArrow: false,
   type: 'text',
-  maskChar: ' ',
-  mask: undefined,
   status: 'default',
 }
 
