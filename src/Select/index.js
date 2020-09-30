@@ -44,6 +44,9 @@ const Select = props => {
     renderMenu,
     elementHeight,
     showSearch,
+    searchIcon,
+    isSearchInputChange,
+    isLoadingSearchResults,
     onSearchChange,
     onSearchEnter,
     onSearchRemove,
@@ -127,14 +130,17 @@ const Select = props => {
     ...(!multi &&
       value && {
         inputValue: (() => {
-          const inputValue = getValueFromItems(value)
+          const inputValue = value.title ? getValueFromItems(value) : value
           return inputValue && iToString(inputValue)
         })(),
       }),
-    stateReducer,
     itemToString: itemToString ? itemToString : iToString,
     onSelectedItemChange: ({ selectedItem }) => {
       onChange(selectedItem)
+    },
+    ...{ ...(!isSearchInputChange && stateReducer) },
+    onInputValueChange: ({ inputValue }) => {
+      isSearchInputChange ? onSearchChange(inputValue) : loadMore(inputValue)
     },
   })
 
@@ -179,12 +185,16 @@ const Select = props => {
               : addSelectedItem(item)
           },
         })}>
-        <Highlighter
-          style={{ flex: 1 }}
-          highlightClassName={highlightClassName || styles.highlight}
-          searchWords={highlight ? [highlight] : []}
-          textToHighlight={item.title}
-        />
+        {item.customRender ? (
+          item.customRender()
+        ) : (
+          <Highlighter
+            style={{ flex: 1 }}
+            highlightClassName={highlightClassName || styles.highlight}
+            searchWords={highlight ? [highlight] : []}
+            textToHighlight={item.title}
+          />
+        )}
         {(multi && isSelected && (
           <Icon.Medium
             className={styles.tick}
@@ -229,7 +239,7 @@ const Select = props => {
     )
   }
 
-  const renderList = () => {
+  const renderList = loader => {
     let i = 0
     const list = []
     items.map(item => {
@@ -238,6 +248,7 @@ const Select = props => {
         : list.push(renderItem(item, i))
       i += item.items ? item.items.length : 1
     })
+    loader && list.push(loader)
     return list
   }
 
@@ -267,6 +278,7 @@ const Select = props => {
     </div>
   )
 
+  const toggleButtonProps = getToggleButtonProps()
   return (
     <div
       className={classnames(styles.container, block && styles.block, className)}
@@ -280,7 +292,8 @@ const Select = props => {
           isOpen && styles.opened,
           multi && styles.multi
         )}
-        {...(status === STATUSES.disabled ? {} : getToggleButtonProps())}>
+        {...(status === STATUSES.disabled ? {} : toggleButtonProps)}
+        onClick={!isSearchInputChange ? toggleButtonProps.onClick : e => {}}>
         {multi &&
           (multiChips ? (
             renderChips()
@@ -298,17 +311,24 @@ const Select = props => {
               })()}
             </span>
           ))}
+
         <input
+          style={{ zIndex: isSearchInputChange && 999 }}
           className={classnames(styles.flexed, styles.inside)}
           placeholder={placeholder}
-          readOnly
+          readOnly={!showSearch}
           {...getInputProps(getDropdownProps({ preventKeyAction: isOpen }))}
         />
-        {isOpen ? (
-          <ArrowUp className={styles.arrowIcon} fill={STATUSFILLS[status]} />
-        ) : (
-          <ArrowDown className={styles.arrowIcon} fill={STATUSFILLS[status]} />
-        )}
+        {!showSearch ? (
+          !isOpen ? (
+            <ArrowUp className={styles.arrowIcon} fill={STATUSFILLS[status]} />
+          ) : (
+            <ArrowDown
+              className={styles.arrowIcon}
+              fill={STATUSFILLS[status]}
+            />
+          )
+        ) : null}
       </div>
       <div
         className={classnames(
@@ -326,15 +346,24 @@ const Select = props => {
           <Fragment>
             {showSearch && (
               <Fragment>
-                <SearchInput
-                  inputClassName={styles.searchinput}
-                  noBorder
-                  searchIcon="arrow-up"
-                  block
-                  onEnter={onSearchEnter}
-                  onChange={onSearchChange}
-                  onRemove={onSearchRemove}
-                />
+                {isSearchInputChange ? (
+                  <div className={styles.searchInput}>
+                    {searchIcon && (
+                      <Icon.Medium type={searchIcon} fill="primary" />
+                    )}
+                  </div>
+                ) : (
+                  <SearchInput
+                    щтautoFocus
+                    inputClassName={styles.searchinput}
+                    noBorder
+                    searchIcon="arrow-up"
+                    block
+                    onEnter={onSearchEnter}
+                    onChange={onSearchChange}
+                    onRemove={onSearchRemove}
+                  />
+                )}
                 <Divider
                   style={{ height: '0.1rem', padding: '0 .25rem .8rem' }}
                 />
@@ -356,14 +385,14 @@ const Select = props => {
                 className={styles.list}
                 pageStart={pageStart}
                 loadMore={loadMore}
-                hasMore={hasMore}
+                hasMore={!isSearchInputChange && hasMore}
                 threshold={threshold}
                 initialLoad={initialLoad}
                 isReverse={isReverse}
                 useWindow={false}
                 loader={loader}>
-                {renderList()}
-                {!items.length && (
+                {renderList(isSearchInputChange && hasMore ? loader : '')}
+                {!isSearchInputChange && !items.length && (
                   <div className={styles.emptyState} key={'empty-0'}>
                     <Icon.ClipArt
                       className={styles.emptyIcon}
@@ -503,7 +532,7 @@ Select.defaultProps = {
   loader: (
     <Spinner
       style={{ margin: '0 auto', width: '100%' }}
-      key={0}
+      key={`'loader-0'`}
       size="medium"
     />
   ),

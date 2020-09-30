@@ -164,6 +164,7 @@
   border-radius: 1rem;
   padding-left: 1rem;
   line-height: 1.5rem;
+  text-align: start;
   cursor: pointer;
   font-family: var(--font-regular)
 }
@@ -216,14 +217,18 @@
   font-style: italic;
 }
 
-.container .searchinput {
+.searchInput {
+  height: 3rem;
+}
+
+/* .container .searchinput {
   padding-left: 1rem;
 }
 
 .container .searchinput:focus,
 .container .searchinput:not([disabled]):hover {
   padding-left: calc(1rem - 1px);
-}
+} */
 
 .labelContainer.error + .menu {
   border-color: var(--color-error);
