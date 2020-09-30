@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import InputMask from 'react-input-mask'
+import { IMaskInput } from 'react-imask'
 import styles from './index.module.css'
 import classnames from 'classnames'
 import Typography from '../Typography'
@@ -158,8 +158,8 @@ const ColorSelection = props => {
     }
   }
 
-  const onChangeInput = event => {
-    const transformedValue = event.target.value.replace(/\_/g, '')
+  const onChangeInput = value => {
+    const transformedValue = value.replace(/\_/g, '')
 
     setInput(transformedValue)
   }
@@ -203,14 +203,13 @@ const ColorSelection = props => {
           </span>
           <span className={styles.inputPrefixText}>HEX #</span>
         </div>
-        <InputMask
-          formatChars={{ H: '[0-9A-Fa-f]' }}
-          mask="HHHHHH"
+        <IMaskInput
+          mask={/^[0-9A-Fa-f]{0,6}$/}
           type="text"
           className={classnames(styles.input, { [styles.notAllowed]: accept })}
-          value={flag && input}
+          value={flag ? input : ''}
           placeholder="Введите номер цвета"
-          onChange={onChangeInput}
+          onAccept={value => onChangeInput(value)}
           onKeyPress={onKeyAcceptHEX}
           disabled={!flag}
           readOnly={accept}

@@ -84,6 +84,7 @@ module.exports = {
         'src/Dropdown/index.js',
         'src/FileList/index.js',
         'src/Input/index.js',
+        'src/InputWithMask/index.js',
         'src/InputNumber/index.js',
         'src/Link/index.js',
         'src/Pagination/index.js',
