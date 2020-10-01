@@ -328,11 +328,11 @@ const Select = props => {
             isSearchInputChange && styles.onTop
           )}
           placeholder={placeholder}
-          inputProps={inputProps}
+          inputProps={{ ...inputProps, defaultValue: undefined }}
           readOnly={!showSearch}
           inputRef={inputProps.ref}
-          value={inputProps.value}
-          defaultValue={null}
+          value={inputProps.value || ''}
+          defaultValue={undefined}
           onAccept={value => inputProps.onChange({ target: { value } })}
           {...maskProps}
         />
