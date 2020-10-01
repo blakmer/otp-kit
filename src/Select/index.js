@@ -11,6 +11,7 @@ import SearchInput from '../SearchInput'
 import Divider from '../Divider'
 import Icon from '../Icon'
 import Highlighter from 'react-highlight-words'
+import InputWithMask from '../InputWithMask'
 
 const STATUSES = {
   default: 'default',
@@ -46,7 +47,6 @@ const Select = props => {
     showSearch,
     searchIcon,
     isSearchInputChange,
-    isLoadingSearchResults,
     onSearchChange,
     onSearchEnter,
     onSearchRemove,
@@ -63,6 +63,7 @@ const Select = props => {
     listMaxHeight,
     multi,
     multiChips,
+    maskProps,
   } = props
 
   const scroller = useRef(null)
@@ -124,6 +125,7 @@ const Select = props => {
     selectedItem,
     getComboboxProps,
     getItemProps,
+    highlightedIndex,
   } = useCombobox({
     items: flat,
     initialSelectedItem: defaultValue && getValueFromItems(defaultValue),
@@ -166,7 +168,11 @@ const Select = props => {
       : selectedItem && selectedItem.value === item.value
     return (
       <div
-        className={classnames(styles.item, isSelected && styles.selected)}
+        className={classnames(
+          styles.item,
+          isSelected && styles.selected,
+          highlightedIndex === index && styles.highlighted
+        )}
         style={{ height: `${elementHeight}px` }}
         key={index}
         {...getItemProps({
@@ -279,6 +285,9 @@ const Select = props => {
   )
 
   const toggleButtonProps = getToggleButtonProps()
+  const inputProps = getInputProps(
+    getDropdownProps({ preventKeyAction: isOpen })
+  )
   return (
     <div
       className={classnames(styles.container, block && styles.block, className)}
@@ -311,16 +320,24 @@ const Select = props => {
               })()}
             </span>
           ))}
-
-        <input
-          style={{ zIndex: isSearchInputChange && 999 }}
-          className={classnames(styles.flexed, styles.inside)}
+        <InputWithMask
+          simple
+          className={classnames(
+            styles.flexed,
+            styles.inside,
+            isSearchInputChange && styles.onTop
+          )}
           placeholder={placeholder}
+          inputProps={{ ...inputProps, defaultValue: undefined }}
           readOnly={!showSearch}
-          {...getInputProps(getDropdownProps({ preventKeyAction: isOpen }))}
+          inputRef={inputProps.ref}
+          value={inputProps.value || ''}
+          defaultValue={undefined}
+          onAccept={value => inputProps.onChange({ target: { value } })}
+          {...maskProps}
         />
-        {!showSearch ? (
-          !isOpen ? (
+        {!isSearchInputChange ? (
+          isOpen ? (
             <ArrowUp className={styles.arrowIcon} fill={STATUSFILLS[status]} />
           ) : (
             <ArrowDown
@@ -354,7 +371,7 @@ const Select = props => {
                   </div>
                 ) : (
                   <SearchInput
-                    щтautoFocus
+                    autoFocus
                     inputClassName={styles.searchinput}
                     noBorder
                     searchIcon="arrow-up"
@@ -392,15 +409,16 @@ const Select = props => {
                 useWindow={false}
                 loader={loader}>
                 {renderList(isSearchInputChange && hasMore ? loader : '')}
-                {!isSearchInputChange && !items.length && (
-                  <div className={styles.emptyState} key={'empty-0'}>
-                    <Icon.ClipArt
-                      className={styles.emptyIcon}
-                      type={'no-result'}
-                    />
-                    <span className={styles.emptyText}>{emptyText}</span>
-                  </div>
-                )}
+                {isSearchInputChange ||
+                  (!hasMore && !items.length && (
+                    <div className={styles.emptyState} key={'empty-0'}>
+                      <Icon.ClipArt
+                        className={styles.emptyIcon}
+                        type={'no-result'}
+                      />
+                      <span className={styles.emptyText}>{emptyText}</span>
+                    </div>
+                  ))}
               </Infinite>
             </div>
           </Fragment>
@@ -512,6 +530,10 @@ Select.propTypes = {
   highlight: PropTypes.string,
   /** Класс, задаваемый для подсветки выбранных элементов */
   highlightClassName: PropTypes.string,
+  /** Свойства для маскирования инпута внутри */
+  maskProps: PropTypes.object,
+  /** Добавляет возможность ввода значения прямо в поле поиска */
+  isSearchInputChange: PropTypes.bool,
 }
 
 Select.defaultProps = {

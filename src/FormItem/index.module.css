@@ -69,14 +69,10 @@
   font-size: 0.875rem;
 }
 
-.wrapper:focus-within .label,
+.wrapper:focus-within .label:not(.disabled),
 .child:hover .focused.default {
   color: var(--color-primary);
 }
-
-/* .child:hover .focused.default {
-  transition: none;
-} */
 
 .error,
 .wrapper:focus-within .label.error,
