@@ -4,9 +4,15 @@ import { IMaskMixin } from 'react-imask'
 import IMask from 'imask'
 import Input from '../Input'
 
-const InputWithMask = IMaskMixin(({ inputRef, ...props }) => {
-  return <Input {...props} innerRef={inputRef} />
-})
+const InputWithMask = IMaskMixin(
+  ({ inputRef, inputProps, simple, ...props }) => {
+    return simple ? (
+      <input {...props} {...inputProps} ref={inputRef} />
+    ) : (
+      <Input {...props} {...inputProps} innerRef={inputRef} />
+    )
+  }
+)
 
 InputWithMask.propTypes = {
   value: PropTypes.string.isRequired,
