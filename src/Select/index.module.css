@@ -40,6 +40,10 @@
   background: transparent;
 }
 
+.labelContainer.opened .onTop {
+  z-index: 998;
+}
+
 .labelContainer.multi input {
   display: none;
 }
@@ -169,7 +173,7 @@
   font-family: var(--font-regular)
 }
 
-.list .item.selected, .menu .item:hover {
+.list .item.selected, .menu .item:hover, .menu .item.highlighted {
   background-color: var(--color-bg-grey-3);
 }
 
