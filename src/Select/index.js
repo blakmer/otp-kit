@@ -409,15 +409,16 @@ const Select = props => {
                 useWindow={false}
                 loader={loader}>
                 {renderList(isSearchInputChange && hasMore ? loader : '')}
-                {!hasMore && isSearchInputChange && !items.length && (
-                  <div className={styles.emptyState} key={'empty-0'}>
-                    <Icon.ClipArt
-                      className={styles.emptyIcon}
-                      type={'no-result'}
-                    />
-                    <span className={styles.emptyText}>{emptyText}</span>
-                  </div>
-                )}
+                {isSearchInputChange ||
+                  (!hasMore && !items.length && (
+                    <div className={styles.emptyState} key={'empty-0'}>
+                      <Icon.ClipArt
+                        className={styles.emptyIcon}
+                        type={'no-result'}
+                      />
+                      <span className={styles.emptyText}>{emptyText}</span>
+                    </div>
+                  ))}
               </Infinite>
             </div>
           </Fragment>
