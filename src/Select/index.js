@@ -336,8 +336,8 @@ const Select = props => {
           onAccept={value => inputProps.onChange({ target: { value } })}
           {...maskProps}
         />
-        {!showSearch ? (
-          !isOpen ? (
+        {!isSearchInputChange ? (
+          isOpen ? (
             <ArrowUp className={styles.arrowIcon} fill={STATUSFILLS[status]} />
           ) : (
             <ArrowDown
