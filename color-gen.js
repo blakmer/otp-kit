@@ -1,6 +1,21 @@
 const fs = require('fs')
 const readline = require('readline')
 
+const chunkBefore = `/** == GENERATED FROM \`./color-gen.js\` FILE == **/
+            .big-shadow {
+              box-shadow: 0px 16px 48px rgba(27, 31, 39, 0.3);
+            }
+            .small-shadow {
+              box-shadow: 0px 4px 8px rgba(73, 92, 136, 0.15);
+            }
+            .normal-shadow {
+              box-shadow: 0px 16px 48px rgba(73, 92, 136, 0.15);
+            }
+            .membrane {
+              box-shadow: 0px 20px 40px rgba(211, 217, 229, 0.9),
+                0px -16px 60px rgba(255, 255, 255, 0.9);
+            }`
+
 async function readFile() {
   const fileStream = fs.createReadStream('./src/themes/light.css')
 
@@ -19,7 +34,7 @@ async function readFile() {
 
 function createFiles(vars) {
   const path = './src/classes.module.css'
-  fs.writeFileSync(path, '/** == GENERATED FROM `./color-gen.js` FILE == **/')
+  fs.writeFileSync(path, chunkBefore)
   vars.forEach(element => {
     const matches = element.match(/\-\-color\-([a-z0-9\-]*)\:\ [a-f0-9#]*\;/)
     if (matches) {

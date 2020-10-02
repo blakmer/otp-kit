@@ -1,4 +1,17 @@
 /** == GENERATED FROM `./color-gen.js` FILE == **/
+            .big-shadow {
+              box-shadow: 0px 16px 48px rgba(27, 31, 39, 0.3);
+            }
+            .small-shadow {
+              box-shadow: 0px 4px 8px rgba(73, 92, 136, 0.15);
+            }
+            .normal-shadow {
+              box-shadow: 0px 16px 48px rgba(73, 92, 136, 0.15);
+            }
+            .membrane {
+              box-shadow: 0px 20px 40px rgba(211, 217, 229, 0.9),
+                0px -16px 60px rgba(255, 255, 255, 0.9);
+            }
             .primary-text, .primary-text-before:before, .primary-text-after:after {
                 color: var(--color-primary)
             }
@@ -669,34 +682,6 @@
             }
             .border-border, .border-border-before:before, .border-border-after:after {
               border-color: var(--color-border) !important
-            }
-        
-            .modal-overlay-text, .modal-overlay-text-before:before, .modal-overlay-text-after:after {
-                color: var(--color-modal-overlay)
-            }
-            .modal-overlay-text-hover:hover, .modal-overlay-text-before-hover:hover:before, .modal-overlay-text-after-hover:hover:after {
-              color: var(--color-modal-overlay)
-            }
-            .modal-overlay-text-active:active, .modal-overlay-text-before-active:active:before, .modal-overlay-text-after-active:active:after {
-              color: var(--color-modal-overlay)
-            }
-            .modal-overlay-bg, .modal-overlay-bg-before:before, .modal-overlay-bg-after:after {
-                background-color: var(--color-modal-overlay)
-            }
-            .modal-overlay-bg-hover:hover, .modal-overlay-bg-before-hover:hover:before, .modal-overlay-bg-after-hover:hover:after {
-              background-color: var(--color-modal-overlay)
-            }
-            .modal-overlay-bg-active:active, .modal-overlay-bg-before-active:active:before, .modal-overlay-bg-after-active:active:after {
-              background-color: var(--color-modal-overlay)
-            }
-            .modal-overlay-fill {
-                fill: var(--color-modal-overlay)
-            }
-            .modal-overlay-stroke {
-                stroke: var(--color-modal-overlay)
-            }
-            .modal-overlay-border, .modal-overlay-border-before:before, .modal-overlay-border-after:after {
-              border-color: var(--color-modal-overlay) !important
             }
         
             .text-primary-text, .text-primary-text-before:before, .text-primary-text-after:after {
