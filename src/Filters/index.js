@@ -31,6 +31,7 @@ const Filters = props => {
 
   return (
     <Fragment>
+      {overlay && show && <div className={styles.overlay} onClick={onClose} />}
       <div
         className={classnames(
           styles.wrapper,
@@ -45,7 +46,6 @@ const Filters = props => {
         <div className={styles.header}>{header}</div>
         <div className={styles.content}>{children}</div>
       </div>
-      {overlay && show && <div className={styles.overlay} onClick={onClose} />}
     </Fragment>
   )
 }
