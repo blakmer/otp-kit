@@ -114,7 +114,8 @@ Tooltip.propTypes = {
   ]),
   /** Управление отображением элемента снаружи */
   visible: PropTypes.bool,
-  shadow: PropTypes.oneOf(['none', 'small', 'normal', 'big', 'membrane']),
+  /** Управление тенями */
+  shadow: PropTypes.oneOf(Object.keys(SHADOWS)),
 }
 
 Tooltip.defaultProps = {
