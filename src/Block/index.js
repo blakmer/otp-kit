@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import classes from '../classes.module.css'
-import styles from './index.module.css'
 
 const Block = props => {
   const {
@@ -28,7 +27,7 @@ const Block = props => {
       style={{ padding: strPadding, borderRadius, ...style }}
       className={classnames(
         classes[`${color}-bg`],
-        membrane ? styles.membrane : styles[`${shadow}-shadow`],
+        membrane ? classes.membrane : classes[`${shadow}-shadow`],
         className
       )}>
       {children}
