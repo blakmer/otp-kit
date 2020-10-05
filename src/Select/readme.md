@@ -193,13 +193,9 @@ const filterItems = val => elements.filter(e => e.title.toLowerCase().indexOf(va
       showSearch
       onChange={e=>{console.log(e)}}
       highlight={search}
-      onSearchChange={e => {
-        setSearch(e.target.value)
-        setItems(filterItems(e.target.value))
-      }}
-      onSearchRemove={e => {
-        setSearch('')
-        setItems(filterItems(''))
+      onSearchChange={value => {
+        setSearch(value)
+        setItems(filterItems(value))
       }}
       block
     />
@@ -230,7 +226,8 @@ const filterItems = val => elements.filter(e => e.title.toLowerCase().indexOf(va
       maskProps={{mask: /^.{0,17}$/}}
       showSearch
       isSearchInputChange
-      onSearchChange={val => setItems(filterItems(val))}
+      onSearchChange={val => console.log('dsa', val)}
+      // onSearchChange={val => setItems(filterItems(val))}
       onChange={e=>{console.log('e', e)}}
       block
     />

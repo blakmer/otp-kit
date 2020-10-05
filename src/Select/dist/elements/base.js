@@ -18,6 +18,7 @@ const Base = ({ simpleProps, multiProps, ...props }) => {
     block,
     placeholder,
     isSearchInputChange,
+    showSearch,
     itemToString,
     multi,
     multiChips,
@@ -62,14 +63,14 @@ const Base = ({ simpleProps, multiProps, ...props }) => {
           className={classnames(
             styles.flexed,
             styles.inside,
-            isSearchInputChange && styles.onTop
+            (isSearchInputChange || showSearch) && styles.onTop
           )}
-          placeholder={placeholder}
+          placeholder={isOpen && showSearch ? 'Поиск...' : placeholder}
           inputProps={{
             ...inputProps,
             defaultValue: undefined,
           }}
-          readOnly={!isSearchInputChange}
+          readOnly={!isSearchInputChange && !showSearch}
           inputRef={inputProps.ref}
           value={inputProps.value || ''}
           defaultValue={undefined}

@@ -23,9 +23,6 @@ const Menu = ({ simpleProps, multiProps, ...props }) => {
     showSearch,
     searchIcon,
     isSearchInputChange,
-    onSearchChange,
-    onSearchEnter,
-    onSearchRemove,
     highlight,
     highlightClassName,
     hasMore,
@@ -71,23 +68,9 @@ const Menu = ({ simpleProps, multiProps, ...props }) => {
         <Fragment>
           {(showSearch || isSearchInputChange) && (
             <Fragment>
-              {isSearchInputChange ? (
-                <div className={styles.searchInput}>
-                  {searchIcon && (
-                    <Icon.Medium type={searchIcon} fill="primary" />
-                  )}
-                </div>
-              ) : (
-                <SearchInput
-                  inputClassName={styles.searchinput}
-                  noBorder
-                  searchIcon="arrow-up"
-                  block
-                  onEnter={onSearchEnter}
-                  onChange={onSearchChange}
-                  onRemove={onSearchRemove}
-                />
-              )}
+              <div className={styles.searchInput}>
+                {searchIcon && <Icon.Medium type={searchIcon} fill="primary" />}
+              </div>
               <Divider
                 style={{ height: '0.1rem', padding: '0 .25rem .8rem' }}
               />

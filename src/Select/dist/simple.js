@@ -39,9 +39,16 @@ const Simple = props => {
     },
     ...{ ...(!isSearchInputChange && stateReducer) },
     onInputValueChange: ({ inputValue }) => {
-      isSearchInputChange ? onSearchChange(inputValue) : loadMore(inputValue)
+      isSearchInputChange || showSearch
+        ? onSearchChange(inputValue)
+        : loadMore(inputValue)
     },
     onIsOpenChange: ({ isOpen, inputValue, selectedItem }) => {
+      if (!multi && showSearch) {
+        isOpen
+          ? setInputValue('')
+          : setInputValue(selectedItem ? selectedItem.title : '')
+      }
       if (!isOpen && !multi && isSearchInputChange) {
         if (editable) {
           ;((!selectedItem && inputValue) ||
@@ -54,7 +61,10 @@ const Simple = props => {
             setInputValue(selectedItem.title)
           inputValue && !selectedItem && setInputValue('')
         }
-        !inputValue && selectedItem && selectItem({ title: '', value: '' })
+        !inputValue &&
+          selectedItem &&
+          !showSearch &&
+          selectItem({ title: '', value: '' })
       }
     },
   })
