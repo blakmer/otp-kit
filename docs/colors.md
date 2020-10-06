@@ -25,6 +25,8 @@ const ITEMS = [
         { name: 'color-alert-active', light: ' #cca300', dark: ' #cca300' },
         { name: 'color-alert', light: ' #ffcc00', dark: ' #ffcc00' },
         { name: 'color-alert-hover', light: ' #ffd633', dark: ' #ffd633' },
+        { name: 'secondary-grey', light: '#a6adba', dark: '#a6adba' },
+        { name: 'secondary-grey-hover', light: '#7d828b', dark: '#7d828b' },
         { name: 'color-white', light: ' #ffffff', dark: ' #ffffff', border: '1px solid #AAA' },
         { name: 'color-black', light: ' #000000', dark: ' #000000' },
     ]},

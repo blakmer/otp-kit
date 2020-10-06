@@ -6,6 +6,14 @@ import styles from './index.module.css'
 import classes from '../classes.module.css'
 const POSITIONS = ['bottomRight', 'bottomCenter', 'bottomLeft']
 
+const SHADOWS = {
+  none: 'none',
+  small: 'small-shadow',
+  normal: 'normal-shadow',
+  big: 'big-shadow',
+  membrane: 'membrane',
+}
+
 const FormTooltip = props => {
   const {
     className,
@@ -16,6 +24,7 @@ const FormTooltip = props => {
     fill,
     textFill,
     visible,
+    shadow,
   } = props
 
   const block = children.props && children.props.block
@@ -35,7 +44,8 @@ const FormTooltip = props => {
             styles[status],
             styles[position],
             classes[`${fill}-bg`],
-            classes[`${textFill}-text`]
+            classes[`${textFill}-text`],
+            classes[SHADOWS[shadow]]
           )}>
           {content}
           <span className={classnames(styles.tooltipArrow, styles[position])}>
@@ -62,12 +72,15 @@ FormTooltip.propTypes = {
   position: PropTypes.oneOf(POSITIONS),
   /** Управление отображением элемента снаружи */
   visible: PropTypes.bool,
+  /** Управление тенями */
+  shadow: PropTypes.oneOf(Object.keys(SHADOWS)),
 }
 
 FormTooltip.defaultProps = {
   position: 'bottomCenter',
   fill: 'bg-pastel-red',
   textFill: 'text-primary',
+  shadow: 'none',
 }
 
 export default FormTooltip

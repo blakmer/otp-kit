@@ -5,10 +5,19 @@ import Arrow from '../util/arrow'
 import styles from './index.module.css'
 import classes from '../classes.module.css'
 
+const SHADOWS = {
+  none: 'none',
+  small: 'small-shadow',
+  normal: 'normal-shadow',
+  big: 'big-shadow',
+  membrane: 'membrane',
+}
+
 const Tooltip = props => {
   const {
     className,
     style,
+    shadow,
     children,
     content,
     position,
@@ -62,6 +71,7 @@ const Tooltip = props => {
             styles[position === 'auto' ? pos : position],
             classes[`${fill}-bg`],
             classes[`${textFill}-text`],
+            classes[SHADOWS[shadow]],
             block && styles.block
           )}>
           {content}
@@ -104,6 +114,8 @@ Tooltip.propTypes = {
   ]),
   /** Управление отображением элемента снаружи */
   visible: PropTypes.bool,
+  /** Управление тенями */
+  shadow: PropTypes.oneOf(Object.keys(SHADOWS)),
 }
 
 Tooltip.defaultProps = {
@@ -111,6 +123,7 @@ Tooltip.defaultProps = {
   fill: 'blue',
   textFill: 'bg-input',
   hoverable: true,
+  shadow: 'normal',
 }
 
 export default Tooltip
