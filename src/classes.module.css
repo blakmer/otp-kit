@@ -432,6 +432,62 @@
               border-color: var(--color-alert-active) !important
             }
         
+            .secondary-grey-text, .secondary-grey-text-before:before, .secondary-grey-text-after:after {
+                color: var(--color-secondary-grey)
+            }
+            .secondary-grey-text-hover:hover, .secondary-grey-text-before-hover:hover:before, .secondary-grey-text-after-hover:hover:after {
+              color: var(--color-secondary-grey)
+            }
+            .secondary-grey-text-active:active, .secondary-grey-text-before-active:active:before, .secondary-grey-text-after-active:active:after {
+              color: var(--color-secondary-grey)
+            }
+            .secondary-grey-bg, .secondary-grey-bg-before:before, .secondary-grey-bg-after:after {
+                background-color: var(--color-secondary-grey)
+            }
+            .secondary-grey-bg-hover:hover, .secondary-grey-bg-before-hover:hover:before, .secondary-grey-bg-after-hover:hover:after {
+              background-color: var(--color-secondary-grey)
+            }
+            .secondary-grey-bg-active:active, .secondary-grey-bg-before-active:active:before, .secondary-grey-bg-after-active:active:after {
+              background-color: var(--color-secondary-grey)
+            }
+            .secondary-grey-fill {
+                fill: var(--color-secondary-grey)
+            }
+            .secondary-grey-stroke {
+                stroke: var(--color-secondary-grey)
+            }
+            .secondary-grey-border, .secondary-grey-border-before:before, .secondary-grey-border-after:after {
+              border-color: var(--color-secondary-grey) !important
+            }
+        
+            .secondary-grey-hover-text, .secondary-grey-hover-text-before:before, .secondary-grey-hover-text-after:after {
+                color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-text-hover:hover, .secondary-grey-hover-text-before-hover:hover:before, .secondary-grey-hover-text-after-hover:hover:after {
+              color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-text-active:active, .secondary-grey-hover-text-before-active:active:before, .secondary-grey-hover-text-after-active:active:after {
+              color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-bg, .secondary-grey-hover-bg-before:before, .secondary-grey-hover-bg-after:after {
+                background-color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-bg-hover:hover, .secondary-grey-hover-bg-before-hover:hover:before, .secondary-grey-hover-bg-after-hover:hover:after {
+              background-color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-bg-active:active, .secondary-grey-hover-bg-before-active:active:before, .secondary-grey-hover-bg-after-active:active:after {
+              background-color: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-fill {
+                fill: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-stroke {
+                stroke: var(--color-secondary-grey-hover)
+            }
+            .secondary-grey-hover-border, .secondary-grey-hover-border-before:before, .secondary-grey-hover-border-after:after {
+              border-color: var(--color-secondary-grey-hover) !important
+            }
+        
             .white-text, .white-text-before:before, .white-text-after:after {
                 color: var(--color-white)
             }

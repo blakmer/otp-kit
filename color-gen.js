@@ -25,7 +25,7 @@ async function readFile() {
   })
   const variables = []
   for await (const line of rl) {
-    if (/\-\-color\-[a-z0-9\-]*\:\ [a-f0-9#]*\;/.test(line)) {
+    if (/\-\-color\-[a-z0-9\-]*\:\ [a-f0-9#]*\;/i.test(line)) {
       variables.push(line)
     }
   }
