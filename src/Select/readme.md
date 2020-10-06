@@ -193,14 +193,42 @@ const filterItems = val => elements.filter(e => e.title.toLowerCase().indexOf(va
       showSearch
       onChange={e=>{console.log(e)}}
       highlight={search}
-      onSearchChange={e => {
-        setSearch(e.target.value)
-        setItems(filterItems(e.target.value))
+      onSearchChange={value => {
+        setSearch(value)
+        setItems(filterItems(value))
       }}
-      onSearchRemove={e => {
-        setSearch('')
-        setItems(filterItems(''))
-      }}
+      block
+    />
+  </Col>
+</Row>
+```
+
+##### Combobox with input field
+```js
+import React, {useState} from 'react'
+import Grid from '../Grid'
+const { Row, Col } = Grid
+
+const elements = [
+          { title: 'First', value: 1 },
+          { title: 'Second', value: 2 },
+          { title: 'Third', value: 3 },
+        ]
+
+const [items, setItems] = useState(elements)
+const [search, setSearch] = useState(undefined)
+const filterItems = val => elements.filter(e => e.title.toLowerCase().indexOf(val.toLowerCase()) >= 0)
+
+;<Row align="center">
+  <Col md={8}>
+    <Select
+      items={items}
+      maskProps={{mask: /^.{0,17}$/}}
+      showSearch
+      isSearchInputChange
+      onSearchChange={val => console.log('dsa', val)}
+      // onSearchChange={val => setItems(filterItems(val))}
+      onChange={e=>{console.log('e', e)}}
       block
     />
   </Col>
