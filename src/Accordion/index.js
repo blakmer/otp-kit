@@ -29,7 +29,9 @@ const AccordionElement = ({
         onClick={() => onClick(index, active)}>
         {title.prefix}
         <span className={styles.content}>{title.content}</span>
-        {title.suffix}
+        {typeof title.suffix === 'function'
+          ? title.suffix(active)
+          : title.suffix}
       </div>
       {body && (
         <div
@@ -115,7 +117,7 @@ Accordion.propTypes = {
         /** Контент заголовка */
         content: PropTypes.node,
         /** Правая часть заголовка */
-        suffix: PropTypes.node,
+        suffix: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
         /** Стили заголовка */
         style: PropTypes.object,
       }).isRequired,
