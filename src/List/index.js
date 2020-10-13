@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './index.module.css'
 import Grid from '../Grid'
 import Pagination from '../Pagination'
+import Typography from '../Typography'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 const { Container, Row, Col } = Grid
 
@@ -24,29 +26,35 @@ const List = props => {
 
   const renderItems = data.map((item, idx) => (
     <li className={styles.item} key={idx}>
-      <Row>
-        {columns.map((column, idx) => {
-          const { dataIndex } = column
+      <div
+        className={classnames(item.clickAction && styles.pointer)}
+        onClick={item.clickAction || undefined}>
+        <Row>
+          {columns.map((column, idx) => {
+            const { dataIndex } = column
 
-          return (
-            <Col
-              className={styles.col}
-              style={{
-                justifyContent:
-                  column.align === 'right' ? 'flex-end' : 'flex-start',
-              }}
-              key={idx}
-              offset={{ ...column.offset }}
-              {...column.size}>
-              {column.hasOwnProperty('render') ? (
-                column.render(item[dataIndex], item)
-              ) : (
-                <span>{item[dataIndex]}</span>
-              )}
-            </Col>
-          )
-        })}
-      </Row>
+            return (
+              <Col
+                className={styles.col}
+                style={{
+                  justifyContent:
+                    column.align === 'right' ? 'flex-end' : 'flex-start',
+                }}
+                key={idx}
+                offset={{ ...column.offset }}
+                {...column.size}>
+                {column.hasOwnProperty('render') ? (
+                  column.render(item[dataIndex], item)
+                ) : (
+                  <Typography.Text size="small" fill="text-primary">
+                    {item[dataIndex]}
+                  </Typography.Text>
+                )}
+              </Col>
+            )
+          })}
+        </Row>
+      </div>
     </li>
   ))
 

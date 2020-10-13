@@ -22,13 +22,22 @@
 }
 
 .item {
-  padding: .3rem;
+  padding: 0.3rem;
   border-radius: 2.5rem;
   background-color: var(--color-bg-input);
+  transition: box-shadow 0.2s;
 }
 
 .item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+
+.item:hover {
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .col {
@@ -37,11 +46,11 @@
 }
 
 .col:first-child {
-  padding-left: .8rem !important;
+  padding-left: 0.8rem !important;
 }
 
 .col:last-child {
-  padding-right: .8rem !important;
+  padding-right: 0.8rem !important;
 }
 
 .pag {

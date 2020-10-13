@@ -14,6 +14,7 @@ const Text = props => {
     className,
     children,
     fill,
+    highlighted,
     ...otherProps
   } = props
 
@@ -22,7 +23,8 @@ const Text = props => {
     styles[size],
     styles[type],
     classes[`${fill}-text`],
-    compact && styles.compact
+    compact && styles.compact,
+    highlighted && styles.highlighted
   )
 
   return (
@@ -41,6 +43,7 @@ Text.propTypes = {
   compact: PropTypes.bool,
   size: PropTypes.oneOf(['default', 'small']),
   fill: PropTypes.string,
+  highlighted: PropTypes.bool,
 }
 
 Text.defaultProps = {
