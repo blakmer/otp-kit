@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './index.module.css'
 import Grid from '../Grid'
 import Pagination from '../Pagination'
+import Typography from '../Typography'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -45,7 +46,9 @@ const List = props => {
                 {column.hasOwnProperty('render') ? (
                   column.render(item[dataIndex], item)
                 ) : (
-                  <span>{item[dataIndex]}</span>
+                  <Typography.Text size="small" fill="text-primary">
+                    {item[dataIndex]}
+                  </Typography.Text>
                 )}
               </Col>
             )
