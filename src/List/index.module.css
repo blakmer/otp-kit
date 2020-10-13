@@ -25,10 +25,15 @@
   padding: 0.3rem;
   border-radius: 2.5rem;
   background-color: var(--color-bg-input);
+  transition: box-shadow 0.2s;
 }
 
 .item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+
+.item:hover {
+  box-shadow: 0 4px 8px var(--color-shadow);
 }
 
 .pointer {
