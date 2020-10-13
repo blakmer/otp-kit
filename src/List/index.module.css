@@ -22,7 +22,7 @@
 }
 
 .item {
-  padding: .3rem;
+  padding: 0.3rem;
   border-radius: 2.5rem;
   background-color: var(--color-bg-input);
 }
@@ -31,17 +31,21 @@
   margin-bottom: 0.5rem;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .col {
   display: flex;
   align-items: center;
 }
 
 .col:first-child {
-  padding-left: .8rem !important;
+  padding-left: 0.8rem !important;
 }
 
 .col:last-child {
-  padding-right: .8rem !important;
+  padding-right: 0.8rem !important;
 }
 
 .pag {
